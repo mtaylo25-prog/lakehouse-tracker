@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lake House Renovation Tracker</title>
+<style>
+  :root {
+    --bg: #f5f5f0;
+    --card: #ffffff;
+    --accent: #2d6a4f;
+    --accent-light: #40916c;
+    --danger: #d62828;
+    --warn: #f77f00;
+    --text: #1b1b1b;
+    --muted: #6c757d;
+    --border: #dee2e6;
+    --paid-bg: #d8f3dc;
+    --unpaid-bg: #fff3cd;
+    --partial-bg: #cce5ff;
+    --complete-bg: #b7e4c7;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+  header { text-align: center; padding: 30px 0 10px; }
+  header h1 { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+  header p { color: var(--muted); font-size: 0.95rem; margin-top: 4px; }
+
+  .hero { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
+  .hero-card { background: var(--card); border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .hero-card .label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 4px; }
+  .hero-card .value { font-size: 1.8rem; font-weight: 700; }
+  .hero-card.paid .value { color: var(--accent); }
+  .hero-card.remaining .value { color: var(--warn); }
+  .hero-card.total .value { color: var(--text); }
+
+  .progress-wrap { margin: 0 0 28px; }
+  .progress-bar { height: 28px; background: #e9ecef; border-radius: 14px; overflow: hidden; position: relative; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-light)); border-radius: 14px; transition: width 0.6s ease; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: #fff; font-weight: 600; font-size: 0.85rem; min-width: 45px; }
+  .progress-label { text-align: center; margin-top: 6px; font-size: 0.85rem; color: var(--muted); }
+
+  .tabs { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 2px solid var(--border); }
+  .tab { padding: 10px 20px; cursor: pointer; font-weight: 600; font-size: 0.9rem; color: var(--muted); border: none; background: none; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab:hover { color: var(--accent-light); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .table-card { background: var(--card); border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 20px; }
+  .table-card h3 { padding: 16px 20px 12px; font-size: 1rem; border-bottom: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; padding: 10px 16px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); background: #fafafa; }
+  td { padding: 10px 16px; border-top: 1px solid #f0f0f0; font-size: 0.9rem; }
+  tr:hover td { background: #f8f9fa; }
+  .amount { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .status-badge { display: inline-block; padding: 2px 10px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+  .status-paid { background: var(--paid-bg); color: #1b4332; }
+  .status-unpaid { background: var(--unpaid-bg); color: #7c4a00; }
+  .status-partial { background: var(--partial-bg); color: #004085; }
+
+  /* Action buttons */
+  .btn { padding: 4px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; }
+  .btn-pay { background: var(--accent); color: #fff; }
+  .btn-pay:hover { background: var(--accent-light); }
+  .btn-sm { padding: 2px 8px; font-size: 0.7rem; }
+
+  /* Modal */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 100; align-items: center; justify-content: center; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: var(--card); border-radius: 16px; padding: 28px; width: 90%; max-width: 400px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+  .modal h3 { margin-bottom: 16px; font-size: 1.1rem; }
+  .modal label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--muted); margin-bottom: 4px; margin-top: 12px; }
+  .modal input { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; }
+  .modal input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(45,106,79,0.15); }
+  .modal-actions { display: flex; gap: 10px; margin-top: 20px; }
+  .modal-actions .btn { flex: 1; padding: 10px; font-size: 0.9rem; }
+  .btn-cancel { background: #e9ecef; color: var(--text); }
+  .btn-cancel:hover { background: #dee2e6; }
+  .payment-info { background: #f8f9fa; border-radius: 8px; padding: 10px 14px; margin-top: 12px; font-size: 0.85rem; color: var(--muted); }
+  .payment-info strong { color: var(--text); }
+
+  /* Payment history on row */
+  .payment-history { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+
+  .scope-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .scope-card { background: var(--card); border-radius: 12px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .scope-card h4 { font-size: 0.95rem; margin-bottom: 8px; color: var(--accent); }
+  .scope-card ul { list-style: none; padding: 0; }
+  .scope-card li { padding: 4px 0; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; cursor: pointer; }
+  .scope-card li::before { content: ''; width: 16px; height: 16px; border: 2px solid var(--border); border-radius: 4px; flex-shrink: 0; }
+  .scope-card li.done { color: var(--muted); text-decoration: line-through; }
+  .scope-card li.done::before { background: var(--accent); border-color: var(--accent); background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 4L6 11L3 8' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); }
+  .scope-summary { margin-top: 10px; font-size: 0.8rem; color: var(--muted); }
+
+  .notes-card { background: var(--card); border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 20px; }
+  .notes-card h3 { font-size: 1rem; margin-bottom: 12px; }
+  .note-item { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; }
+  .note-item:last-child { border: none; }
+
+  @media (max-width: 600px) {
+    .hero { grid-template-columns: 1fr; }
+    .scope-grid { grid-template-columns: 1fr; }
+    .tabs { overflow-x: auto; }
+    td, th { padding: 8px 10px; font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Lake House Renovation</h1>
+    <p>Home Improvement Project Tracker</p>
+  </header>
+
+  <div class="hero">
+    <div class="hero-card paid">
+      <div class="label">Already Paid</div>
+      <div class="value" id="totalPaid">$0</div>
+    </div>
+    <div class="hero-card remaining">
+      <div class="label">Left to Pay</div>
+      <div class="value" id="totalRemaining">$0</div>
+    </div>
+    <div class="hero-card total">
+      <div class="label">Grand Total</div>
+      <div class="value" id="grandTotal">$0</div>
+    </div>
+    <div class="hero-card">
+      <div class="label">Daniel Contract</div>
+      <div class="value" style="color:var(--accent-light)" id="danielTotal">$0</div>
+    </div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill">0%</div></div>
+    <div class="progress-label" id="progressLabel"></div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="payments">Payments</button>
+    <button class="tab" data-tab="scope">Scope of Work</button>
+    <button class="tab" data-tab="electrical">Electrical</button>
+    <button class="tab" data-tab="notes">Notes</button>
+  </div>
+
+  <!-- Payments Tab -->
+  <div class="tab-panel active" id="tab-payments">
+    <div class="table-card">
+      <h3>Already Paid</h3>
+      <table>
+        <thead><tr><th>#</th><th>Description</th><th>Amount</th><th>Status</th></tr></thead>
+        <tbody id="paidTable"></tbody>
+        <tfoot><tr><td></td><td><strong>Total</strong></td><td class="amount" id="paidSubtotal"></td><td></td></tr></tfoot>
+      </table>
+    </div>
+    <div class="table-card">
+      <h3>Left to Pay</h3>
+      <table>
+        <thead><tr><th>#</th><th>Description</th><th>Amount</th><th>Action</th></tr></thead>
+        <tbody id="unpaidTable"></tbody>
+        <tfoot><tr><td></td><td><strong>Total</strong></td><td class="amount" id="unpaidSubtotal"></td><td></td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+
+  <!-- Scope Tab -->
+  <div class="tab-panel" id="tab-scope">
+    <div class="scope-grid" id="scopeGrid"></div>
+  </div>
+
+  <!-- Electrical Tab -->
+  <div class="tab-panel" id="tab-electrical">
+    <div class="hero" style="margin-top:0">
+      <div class="hero-card"><div class="label">Switches</div><div class="value">34</div></div>
+      <div class="hero-card"><div class="label">Outlets (net)</div><div class="value">47</div></div>
+      <div class="hero-card"><div class="label">Fixtures/Lights</div><div class="value">37</div></div>
+      <div class="hero-card"><div class="label">Rooms</div><div class="value">14</div></div>
+    </div>
+    <div class="table-card">
+      <h3>Electrical Scope by Room (Dunya) &mdash; $4,000 paid so far</h3>
+      <table>
+        <thead><tr><th>Room</th><th>Switches</th><th>Outlets</th><th>Fixtures</th><th>Notes</th></tr></thead>
+        <tbody id="electricalTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Notes Tab -->
+  <div class="tab-panel" id="tab-notes">
+    <div class="notes-card">
+      <h3>Account / Cash Notes</h3>
+      <div class="note-item">$12,790 goes back to Alana's account</div>
+      <div class="note-item">$10,000 already withdrawn</div>
+    </div>
+    <div class="notes-card">
+      <h3>Daniel Renovation Contract &mdash; $18,000 total</h3>
+      <div class="note-item">Original scope: $13,550 (incl. popcorn ceiling removal)</div>
+      <div class="note-item">Removed 2 walls in den</div>
+      <div class="note-item">Added closet</div>
+      <div class="note-item">Removing the wall in the garage</div>
+      <div class="note-item">Minor repairs after light installation</div>
+      <div class="note-item">Both bathrooms &mdash; $3,000</div>
+      <div class="note-item">Tub work &mdash; $300</div>
+      <div class="note-item">Misc &mdash; $97</div>
+      <div class="note-item">Ceiling popcorn removal (included)</div>
+    </div>
+    <div class="notes-card">
+      <h3>Key Info</h3>
+      <div class="note-item">220V laundry run (~120 ft) + 6 ft plumbing needed</div>
+      <div class="note-item">Multiple outlet/switch relocations throughout</div>
+    </div>
+  </div>
+</div>
+
+<!-- Payment Modal -->
+<div class="modal-overlay" id="paymentModal">
+  <div class="modal">
+    <h3 id="modalTitle">Record Payment</h3>
+    <div class="payment-info" id="modalInfo"></div>
+    <label for="paymentAmount">Payment Amount ($)</label>
+    <input type="number" id="paymentAmount" min="0" step="0.01" placeholder="0.00">
+    <label for="paymentNote" style="margin-top:12px">Note (optional)</label>
+    <input type="text" id="paymentNote" placeholder="e.g. check #1234">
+    <div class="modal-actions">
+      <button class="btn btn-cancel" id="modalCancel">Cancel</button>
+      <button class="btn btn-pay" id="modalConfirm">Record Payment</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// --- Base data (immutable starting point) ---
+const BASE_ITEMS = [
+  // Already paid items (locked)
+  { id: "paid-1",  desc: "Air duct removal",          originalAmt: 1450, section: "paid" },
+  { id: "paid-2",  desc: "Electric work",             originalAmt: 4000, section: "paid" },
+  { id: "paid-3",  desc: "Daniel (partial)",           originalAmt: 8500, section: "paid" },
+  { id: "paid-4",  desc: "Dumpster",                  originalAmt: 300,  section: "paid" },
+  { id: "paid-5",  desc: "Lights",                    originalAmt: 1407, section: "paid" },
+  { id: "paid-6",  desc: "Lowe's materials",          originalAmt: 108,  section: "paid" },
+  { id: "paid-7",  desc: "Tile for den",              originalAmt: 344,  section: "paid" },
+  { id: "paid-8",  desc: "Lowe's materials",          originalAmt: 1671, section: "paid" },
+  { id: "paid-9",  desc: "Plumbing leak",             originalAmt: 350,  section: "paid" },
+  { id: "paid-10", desc: "Toward card",               originalAmt: 800,  section: "paid" },
+  { id: "paid-11", desc: "Lowe's materials",          originalAmt: 1530, section: "paid" },
+  { id: "paid-12", desc: "Materials at Lowe's",       originalAmt: 890,  section: "paid" },
+  { id: "paid-13", desc: "Tile",                      originalAmt: 340,  section: "paid" },
+  { id: "paid-14", desc: "Lights",                    originalAmt: 200,  section: "paid" },
+  { id: "paid-15", desc: "Daniel — tub",              originalAmt: 300,  section: "paid" },
+  { id: "paid-16", desc: "Daniel — misc",             originalAmt: 97,   section: "paid" },
+  { id: "paid-17", desc: "Daniel — both bathrooms",   originalAmt: 3000, section: "paid" },
+  { id: "paid-18", desc: "Floors",                    originalAmt: 8960, section: "paid" },
+  // Unpaid items (can receive payments)
+  { id: "unpaid-1", desc: "Window",                          originalAmt: 500,  section: "unpaid" },
+  { id: "unpaid-2", desc: "Daniel balance",                  originalAmt: 9500, section: "unpaid" },
+  { id: "unpaid-3", desc: "Taylor (extra light movements)",  originalAmt: 300,  section: "unpaid" },
+  { id: "unpaid-4", desc: "Taylor materials",                originalAmt: 600,  section: "unpaid" },
+  { id: "unpaid-5", desc: "Floors (remaining)",              originalAmt: 640,  section: "unpaid" },
+];
+
+const SCOPE = [
+  { room: "Master Bedroom", items: [
+    "Remove wall", "Relocate door to hallway", "Place return vent in ceiling",
+    "Close closet door — replace with wall", "Remove wall separating both closets", "Seal off the right window"
+  ]},
+  { room: "Den", items: ["Remove 2 walls", "Add closet", "Tile work"] },
+  { room: "Garage", items: ["Remove wall"] },
+  { room: "Bathrooms (both)", items: ["Bathroom renovation ($3,000)", "Tub work ($300)"] },
+  { room: "Floors", items: ["Full floor installation"] },
+  { room: "Ceilings", items: ["Popcorn ceiling removal"] },
+  { room: "HVAC / Plumbing", items: ["Air duct removal", "AC relocation", "Plumbing leak repair", "6 ft plumbing run (kitchenette)"] },
+];
+
+const ELECTRICAL = [
+  { room: "Master Bedroom", sw: 7, out: 14, fix: 10, notes: "Relocate 2 switches + 3 outlets, 2 vanity lights" },
+  { room: "Hallway", sw: 7, out: 3, fix: 5, notes: "Replace track lighting → flush mounts" },
+  { room: "Garage", sw: 0, out: 0, fix: 4, notes: "4 flush mounts" },
+  { room: "Living Room", sw: 2, out: 2, fix: 5, notes: "5 cancelled outlets, 1 relocate" },
+  { room: "Dining Room", sw: 3, out: 9, fix: 2, notes: "Patch ceiling, tie exterior lights to 1 switch" },
+  { room: "Kitchen", sw: 8, out: 2, fix: 5, notes: "6 outlets cancelled" },
+  { room: "Pink Room", sw: 1, out: 4, fix: 0, notes: "1 switch cancelled" },
+  { room: "Bathroom Upstairs", sw: 0, out: 0, fix: 1, notes: "Fan/light combo, relocate GFI + 2 switches" },
+  { room: "Stairs", sw: 2, out: 0, fix: 2, notes: "" },
+  { room: "Kitchenette", sw: 1, out: 2, fix: 0, notes: "220V laundry run (~120 ft), 6 ft plumbing" },
+  { room: "Bathroom Downstairs", sw: 2, out: 1, fix: 1, notes: "Fan/light combo, vanity light" },
+  { room: "Entertainment (Down)", sw: 0, out: 2, fix: 0, notes: "2 relocated, 5 cancelled" },
+  { room: "Kids New Room & Addtl", sw: 1, out: 7, fix: 2, notes: "Relocate 2 lights to center" },
+  { room: "Kids Existing Room", sw: 0, out: 0, fix: 0, notes: "1 outlet cancelled" },
+];
+
+// --- State (persisted in localStorage) ---
+const STORAGE_KEY = "lakehouse_tracker_v2";
+function loadState() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; }
+}
+function saveState(s) { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }
+
+let state = loadState();
+if (!state.payments) state.payments = {};   // { "unpaid-2": [{ amount: 500, note: "check", date: "..." }] }
+if (!state.scopeChecks) state.scopeChecks = {};
+
+const fmt = n => "$" + n.toLocaleString("en-US");
+const today = () => new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" });
+
+// --- Computed helpers ---
+function getPaidForItem(id) {
+  return (state.payments[id] || []).reduce((s, p) => s + p.amount, 0);
+}
+
+function getRemainingForItem(item) {
+  return item.originalAmt - getPaidForItem(item.id);
+}
+
+function getItemStatus(item) {
+  if (item.section === "paid") return "paid";
+  const paid = getPaidForItem(item.id);
+  if (paid >= item.originalAmt) return "paid";
+  if (paid > 0) return "partial";
+  return "unpaid";
+}
+
+function getAllPaidItems() {
+  return BASE_ITEMS.filter(i => i.section === "paid" || getItemStatus(i) === "paid");
+}
+
+function getAllUnpaidItems() {
+  return BASE_ITEMS.filter(i => i.section === "unpaid" && getItemStatus(i) !== "paid");
+}
+
+function getTotalPaid() {
+  let total = 0;
+  for (const item of BASE_ITEMS) {
+    if (item.section === "paid") {
+      total += item.originalAmt;
+    } else {
+      total += getPaidForItem(item.id);
+    }
+  }
+  return total;
+}
+
+function getTotalRemaining() {
+  return BASE_ITEMS.filter(i => i.section === "unpaid").reduce((s, i) => s + getRemainingForItem(i), 0);
+}
+
+function getGrandTotal() {
+  return BASE_ITEMS.reduce((s, i) => s + i.originalAmt, 0);
+}
+
+// --- Render hero ---
+function renderHero() {
+  const totalPaid = getTotalPaid();
+  const totalRemaining = getTotalRemaining();
+  const grand = getGrandTotal();
+  const pct = Math.round((totalPaid / grand) * 100);
+
+  document.getElementById("totalPaid").textContent = fmt(totalPaid);
+  document.getElementById("totalRemaining").textContent = fmt(totalRemaining);
+  document.getElementById("grandTotal").textContent = fmt(grand);
+  document.getElementById("danielTotal").textContent = fmt(18000);
+
+  const fill = document.getElementById("progressFill");
+  fill.style.width = pct + "%";
+  fill.textContent = pct + "%";
+  document.getElementById("progressLabel").textContent = fmt(totalPaid) + " of " + fmt(grand) + " spent";
+}
+
+// --- Render paid table ---
+function renderPaid() {
+  const items = getAllPaidItems();
+  const tbody = document.getElementById("paidTable");
+  tbody.innerHTML = items.map((item, i) => {
+    const wasUnpaid = item.section === "unpaid";
+    const payments = state.payments[item.id] || [];
+    const historyHtml = wasUnpaid && payments.length
+      ? `<div class="payment-history">${payments.map(p => `${p.date}: ${fmt(p.amount)}${p.note ? " — " + p.note : ""}`).join("<br>")}</div>`
+      : "";
+    return `<tr>
+      <td>${i + 1}</td>
+      <td>${item.desc}${historyHtml}</td>
+      <td class="amount">${fmt(item.originalAmt)}</td>
+      <td><span class="status-badge status-paid">Paid</span></td>
+    </tr>`;
+  }).join("");
+  const total = items.reduce((s, i) => s + i.originalAmt, 0);
+  document.getElementById("paidSubtotal").textContent = fmt(total);
+}
+
+// --- Render unpaid table ---
+function renderUnpaid() {
+  const items = getAllUnpaidItems();
+  const tbody = document.getElementById("unpaidTable");
+  tbody.innerHTML = items.map((item, i) => {
+    const paid = getPaidForItem(item.id);
+    const remaining = getRemainingForItem(item);
+    const status = getItemStatus(item);
+    const payments = state.payments[item.id] || [];
+    const historyHtml = payments.length
+      ? `<div class="payment-history">${payments.map(p => `${p.date}: ${fmt(p.amount)}${p.note ? " — " + p.note : ""}`).join("<br>")}</div>`
+      : "";
+    const statusBadge = status === "partial"
+      ? `<span class="status-badge status-partial">${fmt(paid)} paid</span>`
+      : `<span class="status-badge status-unpaid">Unpaid</span>`;
+    return `<tr>
+      <td>${i + 1}</td>
+      <td>${item.desc}${historyHtml}</td>
+      <td class="amount">${fmt(remaining)}<br><span style="font-size:0.75rem;color:var(--muted);font-weight:400">of ${fmt(item.originalAmt)}</span></td>
+      <td>
+        ${statusBadge}<br>
+        <button class="btn btn-pay btn-sm" style="margin-top:4px" data-pay-id="${item.id}">Record Payment</button>
+      </td>
+    </tr>`;
+  }).join("");
+  const total = items.reduce((s, i) => s + getRemainingForItem(i), 0);
+  document.getElementById("unpaidSubtotal").textContent = fmt(total);
+
+  tbody.querySelectorAll("[data-pay-id]").forEach(el => {
+    el.addEventListener("click", () => openPaymentModal(el.dataset.payId));
+  });
+}
+
+// --- Payment modal ---
+let currentPayId = null;
+
+function openPaymentModal(id) {
+  currentPayId = id;
+  const item = BASE_ITEMS.find(i => i.id === id);
+  const remaining = getRemainingForItem(item);
+  document.getElementById("modalTitle").textContent = `Pay: ${item.desc}`;
+  document.getElementById("modalInfo").innerHTML = `
+    <strong>Total:</strong> ${fmt(item.originalAmt)}<br>
+    <strong>Already paid:</strong> ${fmt(getPaidForItem(id))}<br>
+    <strong>Remaining:</strong> ${fmt(remaining)}
+  `;
+  document.getElementById("paymentAmount").value = remaining;
+  document.getElementById("paymentAmount").max = remaining;
+  document.getElementById("paymentNote").value = "";
+  document.getElementById("paymentModal").classList.add("open");
+  document.getElementById("paymentAmount").focus();
+  document.getElementById("paymentAmount").select();
+}
+
+function closePaymentModal() {
+  document.getElementById("paymentModal").classList.remove("open");
+  currentPayId = null;
+}
+
+document.getElementById("modalCancel").addEventListener("click", closePaymentModal);
+document.getElementById("paymentModal").addEventListener("click", (e) => {
+  if (e.target === e.currentTarget) closePaymentModal();
+});
+
+document.getElementById("modalConfirm").addEventListener("click", () => {
+  if (!currentPayId) return;
+  const amount = parseFloat(document.getElementById("paymentAmount").value);
+  const note = document.getElementById("paymentNote").value.trim();
+  if (!amount || amount <= 0) return;
+
+  const item = BASE_ITEMS.find(i => i.id === currentPayId);
+  const remaining = getRemainingForItem(item);
+  const payAmount = Math.min(amount, remaining);
+
+  if (!state.payments[currentPayId]) state.payments[currentPayId] = [];
+  state.payments[currentPayId].push({ amount: payAmount, note, date: today() });
+  saveState(state);
+
+  closePaymentModal();
+  renderAll();
+});
+
+document.getElementById("paymentAmount").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") document.getElementById("modalConfirm").click();
+});
+
+// --- Render scope ---
+function renderScope() {
+  const grid = document.getElementById("scopeGrid");
+  grid.innerHTML = SCOPE.map((section, si) => {
+    const items = section.items.map((item, ii) => {
+      const key = si + "-" + ii;
+      const done = state.scopeChecks[key] ? "done" : "";
+      return `<li class="${done}" data-scope-key="${key}">${item}</li>`;
+    }).join("");
+    const doneCount = section.items.filter((_, ii) => state.scopeChecks[si + "-" + ii]).length;
+    return `<div class="scope-card">
+      <h4>${section.room}</h4>
+      <ul>${items}</ul>
+      <div class="scope-summary">${doneCount} / ${section.items.length} complete</div>
+    </div>`;
+  }).join("");
+
+  grid.querySelectorAll("[data-scope-key]").forEach(el => {
+    el.addEventListener("click", () => {
+      const key = el.dataset.scopeKey;
+      state.scopeChecks[key] = !state.scopeChecks[key];
+      saveState(state);
+      renderScope();
+    });
+  });
+}
+
+// --- Render electrical ---
+function renderElectrical() {
+  const tbody = document.getElementById("electricalTable");
+  tbody.innerHTML = ELECTRICAL.map(r =>
+    `<tr><td><strong>${r.room}</strong></td><td>${r.sw || "—"}</td><td>${r.out || "—"}</td><td>${r.fix || "—"}</td><td style="font-size:0.8rem;color:var(--muted)">${r.notes}</td></tr>`
+  ).join("");
+}
+
+// --- Tabs ---
+document.querySelectorAll(".tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+    tab.classList.add("active");
+    document.getElementById("tab-" + tab.dataset.tab).classList.add("active");
+  });
+});
+
+// --- Render all ---
+function renderAll() {
+  renderHero();
+  renderPaid();
+  renderUnpaid();
+  renderScope();
+  renderElectrical();
+}
+
+renderAll();
+</script>
+</body>
+</html>

@@ -6,25 +6,13 @@
 <title>Lake House Renovation Tracker</title>
 <style>
   :root {
-    --bg: #f5f5f0;
-    --card: #ffffff;
-    --accent: #2d6a4f;
-    --accent-light: #40916c;
-    --danger: #d62828;
-    --warn: #f77f00;
-    --text: #1b1b1b;
-    --muted: #6c757d;
-    --border: #dee2e6;
-    --paid-bg: #d8f3dc;
-    --unpaid-bg: #fff3cd;
-    --partial-bg: #cce5ff;
-    --complete-bg: #b7e4c7;
+    --bg: #f5f5f0; --card: #ffffff; --accent: #2d6a4f; --accent-light: #40916c;
+    --danger: #d62828; --warn: #f77f00; --text: #1b1b1b; --muted: #6c757d;
+    --border: #dee2e6; --paid-bg: #d8f3dc; --unpaid-bg: #fff3cd; --partial-bg: #cce5ff;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
-
   .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-
   header { text-align: center; padding: 30px 0 10px; }
   header h1 { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
   header p { color: var(--muted); font-size: 0.95rem; margin-top: 4px; }
@@ -38,7 +26,7 @@
   .hero-card.total .value { color: var(--text); }
 
   .progress-wrap { margin: 0 0 28px; }
-  .progress-bar { height: 28px; background: #e9ecef; border-radius: 14px; overflow: hidden; position: relative; }
+  .progress-bar { height: 28px; background: #e9ecef; border-radius: 14px; overflow: hidden; }
   .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-light)); border-radius: 14px; transition: width 0.6s ease; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: #fff; font-weight: 600; font-size: 0.85rem; min-width: 45px; }
   .progress-label { text-align: center; margin-top: 6px; font-size: 0.85rem; color: var(--muted); }
 
@@ -53,52 +41,64 @@
   .table-card h3 { padding: 16px 20px 12px; font-size: 1rem; border-bottom: 1px solid var(--border); }
   table { width: 100%; border-collapse: collapse; }
   th { text-align: left; padding: 10px 16px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); background: #fafafa; }
-  td { padding: 10px 16px; border-top: 1px solid #f0f0f0; font-size: 0.9rem; }
+  td { padding: 10px 16px; border-top: 1px solid #f0f0f0; font-size: 0.9rem; vertical-align: middle; }
   tr:hover td { background: #f8f9fa; }
   .amount { font-weight: 600; font-variant-numeric: tabular-nums; }
+
   .status-badge { display: inline-block; padding: 2px 10px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
   .status-paid { background: var(--paid-bg); color: #1b4332; }
   .status-unpaid { background: var(--unpaid-bg); color: #7c4a00; }
   .status-partial { background: var(--partial-bg); color: #004085; }
 
-  /* Action buttons */
-  .btn { padding: 4px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; }
+  .btn { padding: 5px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; }
   .btn-pay { background: var(--accent); color: #fff; }
   .btn-pay:hover { background: var(--accent-light); }
-  .btn-sm { padding: 2px 8px; font-size: 0.7rem; }
-
-  /* Modal */
-  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 100; align-items: center; justify-content: center; }
-  .modal-overlay.open { display: flex; }
-  .modal { background: var(--card); border-radius: 16px; padding: 28px; width: 90%; max-width: 400px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
-  .modal h3 { margin-bottom: 16px; font-size: 1.1rem; }
-  .modal label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--muted); margin-bottom: 4px; margin-top: 12px; }
-  .modal input { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; }
-  .modal input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(45,106,79,0.15); }
-  .modal-actions { display: flex; gap: 10px; margin-top: 20px; }
-  .modal-actions .btn { flex: 1; padding: 10px; font-size: 0.9rem; }
+  .btn-add { background: var(--accent); color: #fff; margin: 12px 20px 16px; }
+  .btn-add:hover { background: var(--accent-light); }
   .btn-cancel { background: #e9ecef; color: var(--text); }
   .btn-cancel:hover { background: #dee2e6; }
+  .btn-del { background: none; border: none; color: #ccc; cursor: pointer; font-size: 1.1rem; padding: 0 4px; line-height: 1; }
+  .btn-del:hover { color: var(--danger); }
+  .btn-sm { padding: 3px 10px; font-size: 0.7rem; }
+
+  .editable { cursor: pointer; border-bottom: 1px dashed transparent; transition: border-color 0.2s; }
+  .editable:hover { border-bottom-color: var(--accent-light); }
+  .inline-input { border: 1px solid var(--accent); border-radius: 4px; padding: 2px 6px; font-size: inherit; font-family: inherit; width: 100%; }
+  .inline-input:focus { outline: none; box-shadow: 0 0 0 2px rgba(45,106,79,0.2); }
+  .inline-input-sm { width: 90px; text-align: right; }
+
+  .payment-history { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 100; align-items: center; justify-content: center; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: var(--card); border-radius: 16px; padding: 28px; width: 90%; max-width: 420px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+  .modal h3 { margin-bottom: 16px; font-size: 1.1rem; }
+  .modal label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--muted); margin-bottom: 4px; margin-top: 12px; }
+  .modal input, .modal textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; font-family: inherit; }
+  .modal input:focus, .modal textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(45,106,79,0.15); }
+  .modal-actions { display: flex; gap: 10px; margin-top: 20px; }
+  .modal-actions .btn { flex: 1; padding: 10px; font-size: 0.9rem; }
   .payment-info { background: #f8f9fa; border-radius: 8px; padding: 10px 14px; margin-top: 12px; font-size: 0.85rem; color: var(--muted); }
   .payment-info strong { color: var(--text); }
 
-  /* Payment history on row */
-  .payment-history { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
-
   .scope-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
   .scope-card { background: var(--card); border-radius: 12px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-  .scope-card h4 { font-size: 0.95rem; margin-bottom: 8px; color: var(--accent); }
+  .scope-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .scope-card-header h4 { font-size: 0.95rem; color: var(--accent); }
   .scope-card ul { list-style: none; padding: 0; }
-  .scope-card li { padding: 4px 0; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; cursor: pointer; }
-  .scope-card li::before { content: ''; width: 16px; height: 16px; border: 2px solid var(--border); border-radius: 4px; flex-shrink: 0; }
-  .scope-card li.done { color: var(--muted); text-decoration: line-through; }
-  .scope-card li.done::before { background: var(--accent); border-color: var(--accent); background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 4L6 11L3 8' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); }
+  .scope-card li { padding: 4px 0; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; }
+  .scope-check { cursor: pointer; display: flex; align-items: center; gap: 8px; flex: 1; }
+  .scope-check::before { content: ''; width: 16px; height: 16px; border: 2px solid var(--border); border-radius: 4px; flex-shrink: 0; }
+  .scope-check.done { color: var(--muted); text-decoration: line-through; }
+  .scope-check.done::before { background: var(--accent); border-color: var(--accent); background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 4L6 11L3 8' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); }
   .scope-summary { margin-top: 10px; font-size: 0.8rem; color: var(--muted); }
 
   .notes-card { background: var(--card); border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 20px; }
-  .notes-card h3 { font-size: 1rem; margin-bottom: 12px; }
-  .note-item { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; }
+  .notes-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .notes-card-header h3 { font-size: 1rem; }
+  .note-item { padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; }
   .note-item:last-child { border: none; }
+  .note-text { flex: 1; }
 
   @media (max-width: 600px) {
     .hero { grid-template-columns: 1fr; }
@@ -116,22 +116,10 @@
   </header>
 
   <div class="hero">
-    <div class="hero-card paid">
-      <div class="label">Already Paid</div>
-      <div class="value" id="totalPaid">$0</div>
-    </div>
-    <div class="hero-card remaining">
-      <div class="label">Left to Pay</div>
-      <div class="value" id="totalRemaining">$0</div>
-    </div>
-    <div class="hero-card total">
-      <div class="label">Grand Total</div>
-      <div class="value" id="grandTotal">$0</div>
-    </div>
-    <div class="hero-card">
-      <div class="label">Daniel Contract</div>
-      <div class="value" style="color:var(--accent-light)" id="danielTotal">$0</div>
-    </div>
+    <div class="hero-card paid"><div class="label">Already Paid</div><div class="value" id="totalPaid">$0</div></div>
+    <div class="hero-card remaining"><div class="label">Left to Pay</div><div class="value" id="totalRemaining">$0</div></div>
+    <div class="hero-card total"><div class="label">Grand Total</div><div class="value" id="grandTotal">$0</div></div>
+    <div class="hero-card"><div class="label">Daniel Contract</div><div class="value" style="color:var(--accent-light)" id="danielTotal">$0</div></div>
   </div>
 
   <div class="progress-wrap">
@@ -146,72 +134,44 @@
     <button class="tab" data-tab="notes">Notes</button>
   </div>
 
-  <!-- Payments Tab -->
   <div class="tab-panel active" id="tab-payments">
     <div class="table-card">
       <h3>Already Paid</h3>
-      <table>
-        <thead><tr><th>#</th><th>Description</th><th>Amount</th><th>Status</th></tr></thead>
+      <table><thead><tr><th>#</th><th>Description</th><th>Amount</th><th>Status</th><th></th></tr></thead>
         <tbody id="paidTable"></tbody>
-        <tfoot><tr><td></td><td><strong>Total</strong></td><td class="amount" id="paidSubtotal"></td><td></td></tr></tfoot>
+        <tfoot><tr><td></td><td><strong>Total</strong></td><td class="amount" id="paidSubtotal"></td><td></td><td></td></tr></tfoot>
       </table>
+      <button class="btn btn-add" id="addPaidBtn">+ Add Paid Item</button>
     </div>
     <div class="table-card">
       <h3>Left to Pay</h3>
-      <table>
-        <thead><tr><th>#</th><th>Description</th><th>Amount</th><th>Action</th></tr></thead>
+      <table><thead><tr><th>#</th><th>Description</th><th>Amount</th><th>Action</th><th></th></tr></thead>
         <tbody id="unpaidTable"></tbody>
-        <tfoot><tr><td></td><td><strong>Total</strong></td><td class="amount" id="unpaidSubtotal"></td><td></td></tr></tfoot>
+        <tfoot><tr><td></td><td><strong>Total</strong></td><td class="amount" id="unpaidSubtotal"></td><td></td><td></td></tr></tfoot>
       </table>
+      <button class="btn btn-add" id="addUnpaidBtn">+ Add Unpaid Item</button>
     </div>
   </div>
 
-  <!-- Scope Tab -->
   <div class="tab-panel" id="tab-scope">
     <div class="scope-grid" id="scopeGrid"></div>
+    <button class="btn btn-add" id="addRoomBtn" style="margin-top:16px">+ Add Room</button>
   </div>
 
-  <!-- Electrical Tab -->
   <div class="tab-panel" id="tab-electrical">
-    <div class="hero" style="margin-top:0">
-      <div class="hero-card"><div class="label">Switches</div><div class="value">34</div></div>
-      <div class="hero-card"><div class="label">Outlets (net)</div><div class="value">47</div></div>
-      <div class="hero-card"><div class="label">Fixtures/Lights</div><div class="value">37</div></div>
-      <div class="hero-card"><div class="label">Rooms</div><div class="value">14</div></div>
-    </div>
+    <div class="hero" style="margin-top:0" id="elecHero"></div>
     <div class="table-card">
-      <h3>Electrical Scope by Room (Dunya) &mdash; $4,000 paid so far</h3>
-      <table>
-        <thead><tr><th>Room</th><th>Switches</th><th>Outlets</th><th>Fixtures</th><th>Notes</th></tr></thead>
+      <h3>Electrical Scope by Room (Dunya)</h3>
+      <table><thead><tr><th>Room</th><th>Switches</th><th>Outlets</th><th>Fixtures</th><th>Notes</th><th></th></tr></thead>
         <tbody id="electricalTable"></tbody>
       </table>
+      <button class="btn btn-add" id="addElecBtn">+ Add Room</button>
     </div>
   </div>
 
-  <!-- Notes Tab -->
   <div class="tab-panel" id="tab-notes">
-    <div class="notes-card">
-      <h3>Account / Cash Notes</h3>
-      <div class="note-item">$12,790 goes back to Alana's account</div>
-      <div class="note-item">$10,000 already withdrawn</div>
-    </div>
-    <div class="notes-card">
-      <h3>Daniel Renovation Contract &mdash; $18,000 total</h3>
-      <div class="note-item">Original scope: $13,550 (incl. popcorn ceiling removal)</div>
-      <div class="note-item">Removed 2 walls in den</div>
-      <div class="note-item">Added closet</div>
-      <div class="note-item">Removing the wall in the garage</div>
-      <div class="note-item">Minor repairs after light installation</div>
-      <div class="note-item">Both bathrooms &mdash; $3,000</div>
-      <div class="note-item">Tub work &mdash; $300</div>
-      <div class="note-item">Misc &mdash; $97</div>
-      <div class="note-item">Ceiling popcorn removal (included)</div>
-    </div>
-    <div class="notes-card">
-      <h3>Key Info</h3>
-      <div class="note-item">220V laundry run (~120 ft) + 6 ft plumbing needed</div>
-      <div class="note-item">Multiple outlet/switch relocations throughout</div>
-    </div>
+    <div id="notesContainer"></div>
+    <button class="btn btn-add" id="addNoteSectionBtn" style="margin-top:4px">+ Add Section</button>
   </div>
 </div>
 
@@ -222,7 +182,7 @@
     <div class="payment-info" id="modalInfo"></div>
     <label for="paymentAmount">Payment Amount ($)</label>
     <input type="number" id="paymentAmount" min="0" step="0.01" placeholder="0.00">
-    <label for="paymentNote" style="margin-top:12px">Note (optional)</label>
+    <label for="paymentNote">Note (optional)</label>
     <input type="text" id="paymentNote" placeholder="e.g. check #1234">
     <div class="modal-actions">
       <button class="btn btn-cancel" id="modalCancel">Cancel</button>
@@ -231,210 +191,229 @@
   </div>
 </div>
 
+<!-- Generic Add/Edit Modal -->
+<div class="modal-overlay" id="genericModal">
+  <div class="modal">
+    <h3 id="genModalTitle">Add Item</h3>
+    <div id="genModalFields"></div>
+    <div class="modal-actions">
+      <button class="btn btn-cancel" id="genModalCancel">Cancel</button>
+      <button class="btn btn-pay" id="genModalConfirm">Save</button>
+    </div>
+  </div>
+</div>
+
 <script>
-// --- Base data (immutable starting point) ---
-const BASE_ITEMS = [
-  // Already paid items (locked)
-  { id: "paid-1",  desc: "Air duct removal",          originalAmt: 1450, section: "paid" },
-  { id: "paid-2",  desc: "Electric work",             originalAmt: 4000, section: "paid" },
-  { id: "paid-3",  desc: "Daniel (partial)",           originalAmt: 8500, section: "paid" },
-  { id: "paid-4",  desc: "Dumpster",                  originalAmt: 300,  section: "paid" },
-  { id: "paid-5",  desc: "Lights",                    originalAmt: 1407, section: "paid" },
-  { id: "paid-6",  desc: "Lowe's materials",          originalAmt: 108,  section: "paid" },
-  { id: "paid-7",  desc: "Tile for den",              originalAmt: 344,  section: "paid" },
-  { id: "paid-8",  desc: "Lowe's materials",          originalAmt: 1671, section: "paid" },
-  { id: "paid-9",  desc: "Plumbing leak",             originalAmt: 350,  section: "paid" },
-  { id: "paid-10", desc: "Toward card",               originalAmt: 800,  section: "paid" },
-  { id: "paid-11", desc: "Lowe's materials",          originalAmt: 1530, section: "paid" },
-  { id: "paid-12", desc: "Materials at Lowe's",       originalAmt: 890,  section: "paid" },
-  { id: "paid-13", desc: "Tile",                      originalAmt: 340,  section: "paid" },
-  { id: "paid-14", desc: "Lights",                    originalAmt: 200,  section: "paid" },
-  { id: "paid-15", desc: "Daniel — tub",              originalAmt: 300,  section: "paid" },
-  { id: "paid-16", desc: "Daniel — misc",             originalAmt: 97,   section: "paid" },
-  { id: "paid-17", desc: "Daniel — both bathrooms",   originalAmt: 3000, section: "paid" },
-  { id: "paid-18", desc: "Floors",                    originalAmt: 8960, section: "paid" },
-  // Unpaid items (can receive payments)
-  { id: "unpaid-1", desc: "Window",                          originalAmt: 500,  section: "unpaid" },
-  { id: "unpaid-2", desc: "Daniel balance",                  originalAmt: 9500, section: "unpaid" },
-  { id: "unpaid-3", desc: "Taylor (extra light movements)",  originalAmt: 300,  section: "unpaid" },
-  { id: "unpaid-4", desc: "Taylor materials",                originalAmt: 600,  section: "unpaid" },
-  { id: "unpaid-5", desc: "Floors (remaining)",              originalAmt: 640,  section: "unpaid" },
-];
+// ===================== SEED DATA =====================
+const SEED = {
+  paid: [
+    { id: "p1",  desc: "Air duct removal", amount: 1450 },
+    { id: "p2",  desc: "Electric work", amount: 4000 },
+    { id: "p3",  desc: "Daniel (partial)", amount: 8500 },
+    { id: "p4",  desc: "Dumpster", amount: 300 },
+    { id: "p5",  desc: "Lights", amount: 1407 },
+    { id: "p6",  desc: "Lowe's materials", amount: 108 },
+    { id: "p7",  desc: "Tile for den", amount: 344 },
+    { id: "p8",  desc: "Lowe's materials", amount: 1671 },
+    { id: "p9",  desc: "Plumbing leak", amount: 350 },
+    { id: "p10", desc: "Toward card", amount: 800 },
+    { id: "p11", desc: "Lowe's materials", amount: 1530 },
+    { id: "p12", desc: "Materials at Lowe's", amount: 890 },
+    { id: "p13", desc: "Tile", amount: 340 },
+    { id: "p14", desc: "Lights", amount: 200 },
+    { id: "p15", desc: "Daniel — tub", amount: 300 },
+    { id: "p16", desc: "Daniel — misc", amount: 97 },
+    { id: "p17", desc: "Daniel — both bathrooms", amount: 3000 },
+    { id: "p18", desc: "Floors", amount: 8960 },
+  ],
+  unpaid: [
+    { id: "u1", desc: "Window", amount: 500, payments: [] },
+    { id: "u2", desc: "Daniel balance", amount: 9500, payments: [] },
+    { id: "u3", desc: "Taylor (extra light movements)", amount: 300, payments: [] },
+    { id: "u4", desc: "Taylor materials", amount: 600, payments: [] },
+    { id: "u5", desc: "Floors (remaining)", amount: 640, payments: [] },
+  ],
+  scope: [
+    { room: "Master Bedroom", items: [
+      { text: "Remove wall", done: false }, { text: "Relocate door to hallway", done: false },
+      { text: "Place return vent in ceiling", done: false }, { text: "Close closet door — replace with wall", done: false },
+      { text: "Remove wall separating both closets", done: false }, { text: "Seal off the right window", done: false },
+    ]},
+    { room: "Den", items: [{ text: "Remove 2 walls", done: false }, { text: "Add closet", done: false }, { text: "Tile work", done: false }] },
+    { room: "Garage", items: [{ text: "Remove wall", done: false }] },
+    { room: "Bathrooms (both)", items: [{ text: "Bathroom renovation ($3,000)", done: false }, { text: "Tub work ($300)", done: false }] },
+    { room: "Floors", items: [{ text: "Full floor installation", done: false }] },
+    { room: "Ceilings", items: [{ text: "Popcorn ceiling removal", done: false }] },
+    { room: "HVAC / Plumbing", items: [{ text: "Air duct removal", done: false }, { text: "AC relocation", done: false }, { text: "Plumbing leak repair", done: false }, { text: "6 ft plumbing run (kitchenette)", done: false }] },
+  ],
+  electrical: [
+    { room: "Master Bedroom", sw: 7, out: 14, fix: 10, notes: "Relocate 2 switches + 3 outlets, 2 vanity lights" },
+    { room: "Hallway", sw: 7, out: 3, fix: 5, notes: "Replace track lighting → flush mounts" },
+    { room: "Garage", sw: 0, out: 0, fix: 4, notes: "4 flush mounts" },
+    { room: "Living Room", sw: 2, out: 2, fix: 5, notes: "5 cancelled outlets, 1 relocate" },
+    { room: "Dining Room", sw: 3, out: 9, fix: 2, notes: "Patch ceiling, tie exterior lights to 1 switch" },
+    { room: "Kitchen", sw: 8, out: 2, fix: 5, notes: "6 outlets cancelled" },
+    { room: "Pink Room", sw: 1, out: 4, fix: 0, notes: "1 switch cancelled" },
+    { room: "Bathroom Upstairs", sw: 0, out: 0, fix: 1, notes: "Fan/light combo, relocate GFI + 2 switches" },
+    { room: "Stairs", sw: 2, out: 0, fix: 2, notes: "" },
+    { room: "Kitchenette", sw: 1, out: 2, fix: 0, notes: "220V laundry run (~120 ft), 6 ft plumbing" },
+    { room: "Bathroom Downstairs", sw: 2, out: 1, fix: 1, notes: "Fan/light combo, vanity light" },
+    { room: "Entertainment (Down)", sw: 0, out: 2, fix: 0, notes: "2 relocated, 5 cancelled" },
+    { room: "Kids New Room & Addtl", sw: 1, out: 7, fix: 2, notes: "Relocate 2 lights to center" },
+    { room: "Kids Existing Room", sw: 0, out: 0, fix: 0, notes: "1 outlet cancelled" },
+  ],
+  notes: [
+    { title: "Account / Cash Notes", items: ["$12,790 goes back to Alana's account", "$10,000 already withdrawn"] },
+    { title: "Daniel Renovation Contract — $18,000 total", items: [
+      "Original scope: $13,550 (incl. popcorn ceiling removal)", "Removed 2 walls in den", "Added closet",
+      "Removing the wall in the garage", "Minor repairs after light installation",
+      "Both bathrooms — $3,000", "Tub work — $300", "Misc — $97", "Ceiling popcorn removal (included)"
+    ]},
+    { title: "Key Info", items: ["220V laundry run (~120 ft) + 6 ft plumbing needed", "Multiple outlet/switch relocations throughout"] },
+  ],
+  danielContract: 18000,
+};
 
-const SCOPE = [
-  { room: "Master Bedroom", items: [
-    "Remove wall", "Relocate door to hallway", "Place return vent in ceiling",
-    "Close closet door — replace with wall", "Remove wall separating both closets", "Seal off the right window"
-  ]},
-  { room: "Den", items: ["Remove 2 walls", "Add closet", "Tile work"] },
-  { room: "Garage", items: ["Remove wall"] },
-  { room: "Bathrooms (both)", items: ["Bathroom renovation ($3,000)", "Tub work ($300)"] },
-  { room: "Floors", items: ["Full floor installation"] },
-  { room: "Ceilings", items: ["Popcorn ceiling removal"] },
-  { room: "HVAC / Plumbing", items: ["Air duct removal", "AC relocation", "Plumbing leak repair", "6 ft plumbing run (kitchenette)"] },
-];
+// ===================== STATE =====================
+const SK = "lakehouse_v3";
+function load() { try { return JSON.parse(localStorage.getItem(SK)); } catch { return null; } }
+function save() { localStorage.setItem(SK, JSON.stringify(D)); }
+let D = load() || JSON.parse(JSON.stringify(SEED));
+if (!D.notes) { D.notes = JSON.parse(JSON.stringify(SEED.notes)); save(); }
+if (D.danielContract === undefined) { D.danielContract = 18000; save(); }
 
-const ELECTRICAL = [
-  { room: "Master Bedroom", sw: 7, out: 14, fix: 10, notes: "Relocate 2 switches + 3 outlets, 2 vanity lights" },
-  { room: "Hallway", sw: 7, out: 3, fix: 5, notes: "Replace track lighting → flush mounts" },
-  { room: "Garage", sw: 0, out: 0, fix: 4, notes: "4 flush mounts" },
-  { room: "Living Room", sw: 2, out: 2, fix: 5, notes: "5 cancelled outlets, 1 relocate" },
-  { room: "Dining Room", sw: 3, out: 9, fix: 2, notes: "Patch ceiling, tie exterior lights to 1 switch" },
-  { room: "Kitchen", sw: 8, out: 2, fix: 5, notes: "6 outlets cancelled" },
-  { room: "Pink Room", sw: 1, out: 4, fix: 0, notes: "1 switch cancelled" },
-  { room: "Bathroom Upstairs", sw: 0, out: 0, fix: 1, notes: "Fan/light combo, relocate GFI + 2 switches" },
-  { room: "Stairs", sw: 2, out: 0, fix: 2, notes: "" },
-  { room: "Kitchenette", sw: 1, out: 2, fix: 0, notes: "220V laundry run (~120 ft), 6 ft plumbing" },
-  { room: "Bathroom Downstairs", sw: 2, out: 1, fix: 1, notes: "Fan/light combo, vanity light" },
-  { room: "Entertainment (Down)", sw: 0, out: 2, fix: 0, notes: "2 relocated, 5 cancelled" },
-  { room: "Kids New Room & Addtl", sw: 1, out: 7, fix: 2, notes: "Relocate 2 lights to center" },
-  { room: "Kids Existing Room", sw: 0, out: 0, fix: 0, notes: "1 outlet cancelled" },
-];
-
-// --- State (persisted in localStorage) ---
-const STORAGE_KEY = "lakehouse_tracker_v2";
-function loadState() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; }
-}
-function saveState(s) { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }
-
-let state = loadState();
-if (!state.payments) state.payments = {};   // { "unpaid-2": [{ amount: 500, note: "check", date: "..." }] }
-if (!state.scopeChecks) state.scopeChecks = {};
-
-const fmt = n => "$" + n.toLocaleString("en-US");
+const fmt = n => "$" + Number(n).toLocaleString("en-US");
 const today = () => new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" });
+let _id = Date.now();
+const uid = () => "id" + (_id++);
 
-// --- Computed helpers ---
-function getPaidForItem(id) {
-  return (state.payments[id] || []).reduce((s, p) => s + p.amount, 0);
+// ===================== INLINE EDITING =====================
+function inlineEdit(el, value, onSave) {
+  if (el.querySelector("input")) return;
+  const isNum = typeof value === "number";
+  const input = document.createElement("input");
+  input.className = "inline-input" + (isNum ? " inline-input-sm" : "");
+  input.type = isNum ? "number" : "text";
+  input.value = value;
+  if (isNum) { input.min = 0; input.step = "0.01"; }
+  el.textContent = "";
+  el.appendChild(input);
+  input.focus();
+  input.select();
+  const finish = () => {
+    const v = isNum ? parseFloat(input.value) || 0 : input.value.trim();
+    if (v !== "" && v !== 0) onSave(v);
+    renderAll();
+  };
+  input.addEventListener("blur", finish);
+  input.addEventListener("keydown", e => { if (e.key === "Enter") input.blur(); if (e.key === "Escape") { input.value = isNum ? value : value; input.blur(); } });
 }
 
-function getRemainingForItem(item) {
-  return item.originalAmt - getPaidForItem(item.id);
-}
-
-function getItemStatus(item) {
-  if (item.section === "paid") return "paid";
-  const paid = getPaidForItem(item.id);
-  if (paid >= item.originalAmt) return "paid";
-  if (paid > 0) return "partial";
-  return "unpaid";
-}
-
-function getAllPaidItems() {
-  return BASE_ITEMS.filter(i => i.section === "paid" || getItemStatus(i) === "paid");
-}
-
-function getAllUnpaidItems() {
-  return BASE_ITEMS.filter(i => i.section === "unpaid" && getItemStatus(i) !== "paid");
-}
-
-function getTotalPaid() {
-  let total = 0;
-  for (const item of BASE_ITEMS) {
-    if (item.section === "paid") {
-      total += item.originalAmt;
-    } else {
-      total += getPaidForItem(item.id);
-    }
-  }
-  return total;
-}
-
-function getTotalRemaining() {
-  return BASE_ITEMS.filter(i => i.section === "unpaid").reduce((s, i) => s + getRemainingForItem(i), 0);
-}
-
-function getGrandTotal() {
-  return BASE_ITEMS.reduce((s, i) => s + i.originalAmt, 0);
-}
-
-// --- Render hero ---
+// ===================== HERO =====================
 function renderHero() {
-  const totalPaid = getTotalPaid();
-  const totalRemaining = getTotalRemaining();
-  const grand = getGrandTotal();
-  const pct = Math.round((totalPaid / grand) * 100);
+  const totalPaid = D.paid.reduce((s, i) => s + i.amount, 0);
+  const unpaidPaid = D.unpaid.reduce((s, i) => s + (i.payments || []).reduce((a, p) => a + p.amount, 0), 0);
+  const allPaid = totalPaid + unpaidPaid;
+  const totalRemaining = D.unpaid.reduce((s, i) => {
+    const pp = (i.payments || []).reduce((a, p) => a + p.amount, 0);
+    return s + Math.max(0, i.amount - pp);
+  }, 0);
+  const grand = totalPaid + D.unpaid.reduce((s, i) => s + i.amount, 0);
+  const pct = grand > 0 ? Math.round((allPaid / grand) * 100) : 0;
 
-  document.getElementById("totalPaid").textContent = fmt(totalPaid);
+  document.getElementById("totalPaid").textContent = fmt(allPaid);
   document.getElementById("totalRemaining").textContent = fmt(totalRemaining);
   document.getElementById("grandTotal").textContent = fmt(grand);
-  document.getElementById("danielTotal").textContent = fmt(18000);
-
+  document.getElementById("danielTotal").textContent = fmt(D.danielContract);
   const fill = document.getElementById("progressFill");
   fill.style.width = pct + "%";
   fill.textContent = pct + "%";
-  document.getElementById("progressLabel").textContent = fmt(totalPaid) + " of " + fmt(grand) + " spent";
+  document.getElementById("progressLabel").textContent = fmt(allPaid) + " of " + fmt(grand) + " spent";
 }
 
-// --- Render paid table ---
+// ===================== PAID TABLE =====================
 function renderPaid() {
-  const items = getAllPaidItems();
   const tbody = document.getElementById("paidTable");
-  tbody.innerHTML = items.map((item, i) => {
-    const wasUnpaid = item.section === "unpaid";
-    const payments = state.payments[item.id] || [];
-    const historyHtml = wasUnpaid && payments.length
-      ? `<div class="payment-history">${payments.map(p => `${p.date}: ${fmt(p.amount)}${p.note ? " — " + p.note : ""}`).join("<br>")}</div>`
-      : "";
-    return `<tr>
+  tbody.innerHTML = D.paid.map((item, i) =>
+    `<tr>
       <td>${i + 1}</td>
-      <td>${item.desc}${historyHtml}</td>
-      <td class="amount">${fmt(item.originalAmt)}</td>
+      <td class="editable" data-paid-desc="${i}">${item.desc}</td>
+      <td class="amount editable" data-paid-amt="${i}">${fmt(item.amount)}</td>
       <td><span class="status-badge status-paid">Paid</span></td>
-    </tr>`;
-  }).join("");
-  const total = items.reduce((s, i) => s + i.originalAmt, 0);
+      <td><button class="btn-del" data-del-paid="${i}" title="Remove">&times;</button></td>
+    </tr>`
+  ).join("");
+
+  // Fully-paid unpaid items appear here too
+  D.unpaid.forEach((item, i) => {
+    const pp = (item.payments || []).reduce((a, p) => a + p.amount, 0);
+    if (pp >= item.amount) {
+      const hist = item.payments.map(p => `${p.date}: ${fmt(p.amount)}${p.note ? " — " + p.note : ""}`).join("<br>");
+      const row = document.createElement("tr");
+      row.innerHTML = `<td></td><td>${item.desc}<div class="payment-history">${hist}</div></td><td class="amount">${fmt(item.amount)}</td><td><span class="status-badge status-paid">Paid</span></td><td></td>`;
+      tbody.appendChild(row);
+    }
+  });
+
+  const total = D.paid.reduce((s, i) => s + i.amount, 0) + D.unpaid.filter(i => (i.payments||[]).reduce((a,p)=>a+p.amount,0) >= i.amount).reduce((s,i)=>s+i.amount,0);
   document.getElementById("paidSubtotal").textContent = fmt(total);
-}
 
-// --- Render unpaid table ---
-function renderUnpaid() {
-  const items = getAllUnpaidItems();
-  const tbody = document.getElementById("unpaidTable");
-  tbody.innerHTML = items.map((item, i) => {
-    const paid = getPaidForItem(item.id);
-    const remaining = getRemainingForItem(item);
-    const status = getItemStatus(item);
-    const payments = state.payments[item.id] || [];
-    const historyHtml = payments.length
-      ? `<div class="payment-history">${payments.map(p => `${p.date}: ${fmt(p.amount)}${p.note ? " — " + p.note : ""}`).join("<br>")}</div>`
-      : "";
-    const statusBadge = status === "partial"
-      ? `<span class="status-badge status-partial">${fmt(paid)} paid</span>`
-      : `<span class="status-badge status-unpaid">Unpaid</span>`;
-    return `<tr>
-      <td>${i + 1}</td>
-      <td>${item.desc}${historyHtml}</td>
-      <td class="amount">${fmt(remaining)}<br><span style="font-size:0.75rem;color:var(--muted);font-weight:400">of ${fmt(item.originalAmt)}</span></td>
-      <td>
-        ${statusBadge}<br>
-        <button class="btn btn-pay btn-sm" style="margin-top:4px" data-pay-id="${item.id}">Record Payment</button>
-      </td>
-    </tr>`;
-  }).join("");
-  const total = items.reduce((s, i) => s + getRemainingForItem(i), 0);
-  document.getElementById("unpaidSubtotal").textContent = fmt(total);
-
-  tbody.querySelectorAll("[data-pay-id]").forEach(el => {
-    el.addEventListener("click", () => openPaymentModal(el.dataset.payId));
+  tbody.querySelectorAll("[data-paid-desc]").forEach(el => {
+    el.addEventListener("click", () => inlineEdit(el, D.paid[el.dataset.paidDesc].desc, v => { D.paid[el.dataset.paidDesc].desc = v; save(); }));
+  });
+  tbody.querySelectorAll("[data-paid-amt]").forEach(el => {
+    el.addEventListener("click", () => inlineEdit(el, D.paid[el.dataset.paidAmt].amount, v => { D.paid[el.dataset.paidAmt].amount = v; save(); }));
+  });
+  tbody.querySelectorAll("[data-del-paid]").forEach(el => {
+    el.addEventListener("click", () => { if (confirm("Remove this paid item?")) { D.paid.splice(el.dataset.delPaid, 1); save(); renderAll(); } });
   });
 }
 
-// --- Payment modal ---
-let currentPayId = null;
+// ===================== UNPAID TABLE =====================
+function renderUnpaid() {
+  const active = D.unpaid.filter(i => (i.payments||[]).reduce((a,p)=>a+p.amount,0) < i.amount);
+  const tbody = document.getElementById("unpaidTable");
+  tbody.innerHTML = active.map((item) => {
+    const idx = D.unpaid.indexOf(item);
+    const pp = (item.payments || []).reduce((a, p) => a + p.amount, 0);
+    const remaining = item.amount - pp;
+    const hist = (item.payments||[]).length ? `<div class="payment-history">${item.payments.map(p => `${p.date}: ${fmt(p.amount)}${p.note ? " — " + p.note : ""}`).join("<br>")}</div>` : "";
+    const badge = pp > 0 ? `<span class="status-badge status-partial">${fmt(pp)} paid</span>` : `<span class="status-badge status-unpaid">Unpaid</span>`;
+    return `<tr>
+      <td>${active.indexOf(item) + 1}</td>
+      <td class="editable" data-unpaid-desc="${idx}">${item.desc}${hist}</td>
+      <td class="amount"><span class="editable" data-unpaid-amt="${idx}">${fmt(remaining)}</span><br><span style="font-size:0.75rem;color:var(--muted);font-weight:400">of ${fmt(item.amount)}</span></td>
+      <td>${badge}<br><button class="btn btn-pay btn-sm" style="margin-top:4px" data-pay-idx="${idx}">Record Payment</button></td>
+      <td><button class="btn-del" data-del-unpaid="${idx}" title="Remove">&times;</button></td>
+    </tr>`;
+  }).join("");
 
-function openPaymentModal(id) {
-  currentPayId = id;
-  const item = BASE_ITEMS.find(i => i.id === id);
-  const remaining = getRemainingForItem(item);
-  document.getElementById("modalTitle").textContent = `Pay: ${item.desc}`;
-  document.getElementById("modalInfo").innerHTML = `
-    <strong>Total:</strong> ${fmt(item.originalAmt)}<br>
-    <strong>Already paid:</strong> ${fmt(getPaidForItem(id))}<br>
-    <strong>Remaining:</strong> ${fmt(remaining)}
-  `;
+  const total = active.reduce((s, i) => s + i.amount - (i.payments||[]).reduce((a,p)=>a+p.amount,0), 0);
+  document.getElementById("unpaidSubtotal").textContent = fmt(total);
+
+  tbody.querySelectorAll("[data-unpaid-desc]").forEach(el => {
+    el.addEventListener("click", () => inlineEdit(el, D.unpaid[el.dataset.unpaidDesc].desc, v => { D.unpaid[el.dataset.unpaidDesc].desc = v; save(); }));
+  });
+  tbody.querySelectorAll("[data-unpaid-amt]").forEach(el => {
+    el.addEventListener("click", () => inlineEdit(el, D.unpaid[el.dataset.unpaidAmt].amount, v => { D.unpaid[el.dataset.unpaidAmt].amount = v; save(); }));
+  });
+  tbody.querySelectorAll("[data-pay-idx]").forEach(el => {
+    el.addEventListener("click", () => openPaymentModal(parseInt(el.dataset.payIdx)));
+  });
+  tbody.querySelectorAll("[data-del-unpaid]").forEach(el => {
+    el.addEventListener("click", () => { if (confirm("Remove this item?")) { D.unpaid.splice(el.dataset.delUnpaid, 1); save(); renderAll(); } });
+  });
+}
+
+// ===================== PAYMENT MODAL =====================
+let payIdx = null;
+function openPaymentModal(idx) {
+  payIdx = idx;
+  const item = D.unpaid[idx];
+  const pp = (item.payments || []).reduce((a, p) => a + p.amount, 0);
+  const remaining = item.amount - pp;
+  document.getElementById("modalTitle").textContent = "Pay: " + item.desc;
+  document.getElementById("modalInfo").innerHTML = `<strong>Total:</strong> ${fmt(item.amount)}<br><strong>Paid:</strong> ${fmt(pp)}<br><strong>Remaining:</strong> ${fmt(remaining)}`;
   document.getElementById("paymentAmount").value = remaining;
   document.getElementById("paymentAmount").max = remaining;
   document.getElementById("paymentNote").value = "";
@@ -442,75 +421,251 @@ function openPaymentModal(id) {
   document.getElementById("paymentAmount").focus();
   document.getElementById("paymentAmount").select();
 }
-
-function closePaymentModal() {
-  document.getElementById("paymentModal").classList.remove("open");
-  currentPayId = null;
-}
-
-document.getElementById("modalCancel").addEventListener("click", closePaymentModal);
-document.getElementById("paymentModal").addEventListener("click", (e) => {
-  if (e.target === e.currentTarget) closePaymentModal();
-});
-
+document.getElementById("modalCancel").addEventListener("click", () => document.getElementById("paymentModal").classList.remove("open"));
+document.getElementById("paymentModal").addEventListener("click", e => { if (e.target === e.currentTarget) e.target.classList.remove("open"); });
 document.getElementById("modalConfirm").addEventListener("click", () => {
-  if (!currentPayId) return;
-  const amount = parseFloat(document.getElementById("paymentAmount").value);
-  const note = document.getElementById("paymentNote").value.trim();
-  if (!amount || amount <= 0) return;
-
-  const item = BASE_ITEMS.find(i => i.id === currentPayId);
-  const remaining = getRemainingForItem(item);
-  const payAmount = Math.min(amount, remaining);
-
-  if (!state.payments[currentPayId]) state.payments[currentPayId] = [];
-  state.payments[currentPayId].push({ amount: payAmount, note, date: today() });
-  saveState(state);
-
-  closePaymentModal();
+  if (payIdx === null) return;
+  const amt = parseFloat(document.getElementById("paymentAmount").value);
+  if (!amt || amt <= 0) return;
+  const item = D.unpaid[payIdx];
+  if (!item.payments) item.payments = [];
+  const pp = item.payments.reduce((a, p) => a + p.amount, 0);
+  const remaining = item.amount - pp;
+  item.payments.push({ amount: Math.min(amt, remaining), note: document.getElementById("paymentNote").value.trim(), date: today() });
+  save();
+  document.getElementById("paymentModal").classList.remove("open");
+  payIdx = null;
   renderAll();
 });
+document.getElementById("paymentAmount").addEventListener("keydown", e => { if (e.key === "Enter") document.getElementById("modalConfirm").click(); });
 
-document.getElementById("paymentAmount").addEventListener("keydown", (e) => {
-  if (e.key === "Enter") document.getElementById("modalConfirm").click();
+// ===================== ADD PAID / UNPAID =====================
+document.getElementById("addPaidBtn").addEventListener("click", () => {
+  openGenericModal("Add Paid Item", [
+    { key: "desc", label: "Description", type: "text" },
+    { key: "amount", label: "Amount ($)", type: "number" },
+  ], data => { if (data.desc) { D.paid.push({ id: uid(), desc: data.desc, amount: parseFloat(data.amount) || 0 }); save(); renderAll(); } });
+});
+document.getElementById("addUnpaidBtn").addEventListener("click", () => {
+  openGenericModal("Add Unpaid Item", [
+    { key: "desc", label: "Description", type: "text" },
+    { key: "amount", label: "Amount ($)", type: "number" },
+  ], data => { if (data.desc) { D.unpaid.push({ id: uid(), desc: data.desc, amount: parseFloat(data.amount) || 0, payments: [] }); save(); renderAll(); } });
 });
 
-// --- Render scope ---
+// ===================== GENERIC MODAL =====================
+let genCallback = null;
+function openGenericModal(title, fields, callback) {
+  genCallback = callback;
+  document.getElementById("genModalTitle").textContent = title;
+  const container = document.getElementById("genModalFields");
+  container.innerHTML = fields.map(f =>
+    `<label for="gen_${f.key}">${f.label}</label><input id="gen_${f.key}" type="${f.type || 'text'}" ${f.type === 'number' ? 'min="0" step="0.01"' : ''} value="${f.value || ''}" placeholder="${f.placeholder || ''}">`
+  ).join("");
+  document.getElementById("genericModal").classList.add("open");
+  container.querySelector("input").focus();
+}
+document.getElementById("genModalCancel").addEventListener("click", () => document.getElementById("genericModal").classList.remove("open"));
+document.getElementById("genericModal").addEventListener("click", e => { if (e.target === e.currentTarget) e.target.classList.remove("open"); });
+document.getElementById("genModalConfirm").addEventListener("click", () => {
+  const inputs = document.getElementById("genModalFields").querySelectorAll("input, textarea");
+  const data = {};
+  inputs.forEach(inp => { data[inp.id.replace("gen_", "")] = inp.value.trim(); });
+  if (genCallback) genCallback(data);
+  document.getElementById("genericModal").classList.remove("open");
+  genCallback = null;
+});
+document.getElementById("genModalFields").addEventListener("keydown", e => { if (e.key === "Enter") document.getElementById("genModalConfirm").click(); });
+
+// ===================== SCOPE =====================
 function renderScope() {
   const grid = document.getElementById("scopeGrid");
-  grid.innerHTML = SCOPE.map((section, si) => {
+  grid.innerHTML = D.scope.map((section, si) => {
     const items = section.items.map((item, ii) => {
-      const key = si + "-" + ii;
-      const done = state.scopeChecks[key] ? "done" : "";
-      return `<li class="${done}" data-scope-key="${key}">${item}</li>`;
+      const done = item.done ? "done" : "";
+      return `<li>
+        <span class="scope-check ${done}" data-scope-toggle="${si}-${ii}">${item.text}</span>
+        <span class="editable" data-scope-edit="${si}-${ii}" style="font-size:0.7rem;color:var(--accent);cursor:pointer" title="Edit">&#9998;</span>
+        <button class="btn-del" data-scope-del="${si}-${ii}" title="Remove">&times;</button>
+      </li>`;
     }).join("");
-    const doneCount = section.items.filter((_, ii) => state.scopeChecks[si + "-" + ii]).length;
+    const doneCount = section.items.filter(i => i.done).length;
     return `<div class="scope-card">
-      <h4>${section.room}</h4>
+      <div class="scope-card-header">
+        <h4 class="editable" data-scope-room="${si}">${section.room}</h4>
+        <button class="btn-del" data-scope-del-room="${si}" title="Remove room">&times;</button>
+      </div>
       <ul>${items}</ul>
       <div class="scope-summary">${doneCount} / ${section.items.length} complete</div>
+      <div style="margin-top:6px"><input placeholder="Add task and press Enter" data-scope-add="${si}" style="width:100%;padding:4px 8px;border:1px solid var(--border);border-radius:4px;font-size:0.85rem"></div>
     </div>`;
   }).join("");
 
-  grid.querySelectorAll("[data-scope-key]").forEach(el => {
+  grid.querySelectorAll("[data-scope-toggle]").forEach(el => {
     el.addEventListener("click", () => {
-      const key = el.dataset.scopeKey;
-      state.scopeChecks[key] = !state.scopeChecks[key];
-      saveState(state);
-      renderScope();
+      const [si, ii] = el.dataset.scopeToggle.split("-").map(Number);
+      D.scope[si].items[ii].done = !D.scope[si].items[ii].done;
+      save(); renderScope();
+    });
+  });
+  grid.querySelectorAll("[data-scope-edit]").forEach(el => {
+    el.addEventListener("click", e => {
+      e.stopPropagation();
+      const [si, ii] = el.dataset.scopeEdit.split("-").map(Number);
+      const check = el.previousElementSibling;
+      inlineEdit(check, D.scope[si].items[ii].text, v => { D.scope[si].items[ii].text = v; save(); });
+    });
+  });
+  grid.querySelectorAll("[data-scope-del]").forEach(el => {
+    el.addEventListener("click", () => {
+      const [si, ii] = el.dataset.scopeDel.split("-").map(Number);
+      D.scope[si].items.splice(ii, 1); save(); renderScope();
+    });
+  });
+  grid.querySelectorAll("[data-scope-room]").forEach(el => {
+    el.addEventListener("click", () => {
+      const si = parseInt(el.dataset.scopeRoom);
+      inlineEdit(el, D.scope[si].room, v => { D.scope[si].room = v; save(); });
+    });
+  });
+  grid.querySelectorAll("[data-scope-del-room]").forEach(el => {
+    el.addEventListener("click", () => {
+      const si = parseInt(el.dataset.scopeDelRoom);
+      if (confirm("Remove " + D.scope[si].room + "?")) { D.scope.splice(si, 1); save(); renderScope(); }
+    });
+  });
+  grid.querySelectorAll("[data-scope-add]").forEach(el => {
+    el.addEventListener("keydown", e => {
+      if (e.key === "Enter" && el.value.trim()) {
+        const si = parseInt(el.dataset.scopeAdd);
+        D.scope[si].items.push({ text: el.value.trim(), done: false });
+        save(); renderScope();
+      }
     });
   });
 }
 
-// --- Render electrical ---
+document.getElementById("addRoomBtn").addEventListener("click", () => {
+  openGenericModal("Add Room", [{ key: "room", label: "Room Name", type: "text" }], data => {
+    if (data.room) { D.scope.push({ room: data.room, items: [] }); save(); renderScope(); }
+  });
+});
+
+// ===================== ELECTRICAL =====================
 function renderElectrical() {
+  const totals = D.electrical.reduce((t, r) => ({ sw: t.sw + (r.sw||0), out: t.out + (r.out||0), fix: t.fix + (r.fix||0) }), { sw: 0, out: 0, fix: 0 });
+  document.getElementById("elecHero").innerHTML = `
+    <div class="hero-card"><div class="label">Switches</div><div class="value">${totals.sw}</div></div>
+    <div class="hero-card"><div class="label">Outlets (net)</div><div class="value">${totals.out}</div></div>
+    <div class="hero-card"><div class="label">Fixtures/Lights</div><div class="value">${totals.fix}</div></div>
+    <div class="hero-card"><div class="label">Rooms</div><div class="value">${D.electrical.length}</div></div>`;
+
   const tbody = document.getElementById("electricalTable");
-  tbody.innerHTML = ELECTRICAL.map(r =>
-    `<tr><td><strong>${r.room}</strong></td><td>${r.sw || "—"}</td><td>${r.out || "—"}</td><td>${r.fix || "—"}</td><td style="font-size:0.8rem;color:var(--muted)">${r.notes}</td></tr>`
+  tbody.innerHTML = D.electrical.map((r, i) =>
+    `<tr>
+      <td><strong class="editable" data-elec-room="${i}">${r.room}</strong></td>
+      <td class="editable" data-elec-sw="${i}">${r.sw || "—"}</td>
+      <td class="editable" data-elec-out="${i}">${r.out || "—"}</td>
+      <td class="editable" data-elec-fix="${i}">${r.fix || "—"}</td>
+      <td class="editable" data-elec-notes="${i}" style="font-size:0.8rem;color:var(--muted)">${r.notes || "—"}</td>
+      <td><button class="btn-del" data-elec-del="${i}" title="Remove">&times;</button></td>
+    </tr>`
   ).join("");
+
+  tbody.querySelectorAll("[data-elec-room]").forEach(el => {
+    el.addEventListener("click", () => inlineEdit(el, D.electrical[el.dataset.elecRoom].room, v => { D.electrical[el.dataset.elecRoom].room = v; save(); }));
+  });
+  tbody.querySelectorAll("[data-elec-sw]").forEach(el => {
+    el.addEventListener("click", () => inlineEdit(el, D.electrical[el.dataset.elecSw].sw, v => { D.electrical[el.dataset.elecSw].sw = v; save(); }));
+  });
+  tbody.querySelectorAll("[data-elec-out]").forEach(el => {
+    el.addEventListener("click", () => inlineEdit(el, D.electrical[el.dataset.elecOut].out, v => { D.electrical[el.dataset.elecOut].out = v; save(); }));
+  });
+  tbody.querySelectorAll("[data-elec-fix]").forEach(el => {
+    el.addEventListener("click", () => inlineEdit(el, D.electrical[el.dataset.elecFix].fix, v => { D.electrical[el.dataset.elecFix].fix = v; save(); }));
+  });
+  tbody.querySelectorAll("[data-elec-notes]").forEach(el => {
+    el.addEventListener("click", () => inlineEdit(el, D.electrical[el.dataset.elecNotes].notes, v => { D.electrical[el.dataset.elecNotes].notes = v; save(); }));
+  });
+  tbody.querySelectorAll("[data-elec-del]").forEach(el => {
+    el.addEventListener("click", () => { if (confirm("Remove this room?")) { D.electrical.splice(el.dataset.elecDel, 1); save(); renderAll(); } });
+  });
 }
 
-// --- Tabs ---
+document.getElementById("addElecBtn").addEventListener("click", () => {
+  openGenericModal("Add Electrical Room", [
+    { key: "room", label: "Room", type: "text" },
+    { key: "sw", label: "Switches", type: "number", placeholder: "0" },
+    { key: "out", label: "Outlets", type: "number", placeholder: "0" },
+    { key: "fix", label: "Fixtures/Lights", type: "number", placeholder: "0" },
+    { key: "notes", label: "Notes", type: "text" },
+  ], data => {
+    if (data.room) { D.electrical.push({ room: data.room, sw: parseInt(data.sw)||0, out: parseInt(data.out)||0, fix: parseInt(data.fix)||0, notes: data.notes }); save(); renderAll(); }
+  });
+});
+
+// ===================== NOTES =====================
+function renderNotes() {
+  const container = document.getElementById("notesContainer");
+  container.innerHTML = D.notes.map((section, si) => {
+    const items = section.items.map((text, ii) =>
+      `<div class="note-item">
+        <span class="note-text editable" data-note-text="${si}-${ii}">${text}</span>
+        <button class="btn-del" data-note-del="${si}-${ii}" title="Remove">&times;</button>
+      </div>`
+    ).join("");
+    return `<div class="notes-card">
+      <div class="notes-card-header">
+        <h3 class="editable" data-note-title="${si}">${section.title}</h3>
+        <button class="btn-del" data-note-del-section="${si}" title="Remove section">&times;</button>
+      </div>
+      ${items}
+      <div style="margin-top:8px"><input placeholder="Add note and press Enter" data-note-add="${si}" style="width:100%;padding:6px 10px;border:1px solid var(--border);border-radius:6px;font-size:0.85rem"></div>
+    </div>`;
+  }).join("");
+
+  container.querySelectorAll("[data-note-title]").forEach(el => {
+    el.addEventListener("click", () => {
+      const si = parseInt(el.dataset.noteTitle);
+      inlineEdit(el, D.notes[si].title, v => { D.notes[si].title = v; save(); });
+    });
+  });
+  container.querySelectorAll("[data-note-text]").forEach(el => {
+    el.addEventListener("click", () => {
+      const [si, ii] = el.dataset.noteText.split("-").map(Number);
+      inlineEdit(el, D.notes[si].items[ii], v => { D.notes[si].items[ii] = v; save(); });
+    });
+  });
+  container.querySelectorAll("[data-note-del]").forEach(el => {
+    el.addEventListener("click", () => {
+      const [si, ii] = el.dataset.noteDel.split("-").map(Number);
+      D.notes[si].items.splice(ii, 1); save(); renderNotes();
+    });
+  });
+  container.querySelectorAll("[data-note-del-section]").forEach(el => {
+    el.addEventListener("click", () => {
+      const si = parseInt(el.dataset.noteDelSection);
+      if (confirm("Remove " + D.notes[si].title + "?")) { D.notes.splice(si, 1); save(); renderNotes(); }
+    });
+  });
+  container.querySelectorAll("[data-note-add]").forEach(el => {
+    el.addEventListener("keydown", e => {
+      if (e.key === "Enter" && el.value.trim()) {
+        const si = parseInt(el.dataset.noteAdd);
+        D.notes[si].items.push(el.value.trim());
+        save(); renderNotes();
+      }
+    });
+  });
+}
+
+document.getElementById("addNoteSectionBtn").addEventListener("click", () => {
+  openGenericModal("Add Note Section", [{ key: "title", label: "Section Title", type: "text" }], data => {
+    if (data.title) { D.notes.push({ title: data.title, items: [] }); save(); renderNotes(); }
+  });
+});
+
+// ===================== TABS =====================
 document.querySelectorAll(".tab").forEach(tab => {
   tab.addEventListener("click", () => {
     document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
@@ -520,15 +675,8 @@ document.querySelectorAll(".tab").forEach(tab => {
   });
 });
 
-// --- Render all ---
-function renderAll() {
-  renderHero();
-  renderPaid();
-  renderUnpaid();
-  renderScope();
-  renderElectrical();
-}
-
+// ===================== RENDER ALL =====================
+function renderAll() { renderHero(); renderPaid(); renderUnpaid(); renderScope(); renderElectrical(); renderNotes(); }
 renderAll();
 </script>
 </body>

@@ -1,0 +1,11 @@
+sku,spec,length_m,unit_cost_krw_landed_korea,implied_sell_krw_ex_vat,note
+4K_15M,HDMI 2.0 4K hybrid AOC,15,12680,15909,implied sell = cost divided by (1 minus 0.203) deal level margin; actual per SKU sell price not provided
+4K_20M,HDMI 2.0 4K hybrid AOC,20,14122,17719,implied sell derived from deal level margin
+4K_30M,HDMI 2.0 4K hybrid AOC,30,19542,24519,implied sell derived from deal level margin
+4K_40M,HDMI 2.0 4K hybrid AOC,40,22609,28368,implied sell derived from deal level margin
+8K_7M,HDMI 2.1 8K hybrid AOC,7,10525,13206,implied sell derived from deal level margin
+8K_10M,HDMI 2.1 8K hybrid AOC,10,11470,14392,implied sell derived from deal level margin; US hero SKU
+8K_15M,HDMI 2.1 8K hybrid AOC,15,13376,16783,implied sell derived from deal level margin
+8K_20M,HDMI 2.1 8K hybrid AOC,20,15266,19155,implied sell derived from deal level margin
+8K_25M,HDMI 2.1 8K hybrid AOC,25,17172,21546,implied sell derived from deal level margin
+8K_50M,HDMI 2.1 8K hybrid AOC,50,27349,34316,implied sell derived from deal level margin

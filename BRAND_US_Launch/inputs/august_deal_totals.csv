@@ -1,0 +1,12 @@
+metric,value,unit,source
+units_sold,1400,units,August 2026 H2 Company to Dioptek deal
+total_cost,19460000,KRW,August 2026 deal
+revenue_ex_vat,24400000,KRW,August 2026 deal
+gross_profit,4940000,KRW,August 2026 deal
+gross_margin,0.203,ratio,August 2026 deal
+gross_profit_usd_approx,3500,USD,August 2026 deal at about 1430 KRW per USD
+share_units_8k_short_runs,0.53,ratio,8K 7M 10M 20M share of units
+share_gp_8k_short_runs,0.54,ratio,8K 7M 10M 20M share of gross profit
+alibaba_benchmark_30ft_aoc_fob_low,17,USD,Alibaba quote for comparable 30ft AOC (higher than H2 costs; flag the gap)
+alibaba_benchmark_30ft_aoc_fob_high,22,USD,Alibaba quote for comparable 30ft AOC
+fx_krw_per_usd,1430,KRW/USD,Default; input cell in the model

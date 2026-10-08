@@ -1,0 +1,45 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Liberation Sans, Noto Sans KR, sans-serif','fontSize':'18px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':40,'rankSpacing':70,'curve':'basis','padding':14,'htmlLabels':true,'wrappingWidth':1200}}}%%
+flowchart TD
+  subgraph R1 ["1. Triage"]
+    direction LR
+    ISSUE["Customer reports no signal,<br/>flicker or a fault"] --> SELF["Self help: QR code setup video.<br/>Direction check: SOURCE end at the<br/>player, DISPLAY end at the TV<br/>Owner: VA"]
+    SELF --> FIX{"Resolved?"}
+    FIX -->|"Yes"| CLOSE["Close the case. Review follow up<br/>through Brand Registry"]
+    FIX -->|"No"| WIN{"Inside the Amazon return window?"}
+  end
+  subgraph R2 ["2. Amazon return path"]
+    direction LR
+    AR["Amazon return: refund to the<br/>customer, unit back to FBA, graded<br/>by Amazon"] --> RES["Returns reserve absorbs the cost.<br/>Base 3%, target 2% with the<br/>direction proof design"]
+  end
+  subgraph R3 ["3. 5 Year Signal Guarantee path"]
+    direction LR
+    GUAR["Guarantee claim through the<br/>registration list (Spec Match<br/>finder, trade up registration)"] --> VER["Verify registration, serial and<br/>symptoms<br/>Owner: Mark, VA"]
+    VER --> SHIP["Replacement shipped first, from<br/>the 3PL or FBA multi channel<br/>fulfillment, before the faulty<br/>unit comes back"]
+    SHIP --> LABEL["Prepaid return label sent to the<br/>customer"]
+  end
+  subgraph R4 ["4. Receiving, root cause, feedback"]
+    direction LR
+    RCV["Faulty unit received at the 3PL<br/>and inspected<br/>Owner: 3PL"] --> ROOT["Root cause log: direction error,<br/>connector damage, dead head<br/>electronics, in wall pull damage"]
+    ROOT --> CLAIM["Factory warranty credit claim on<br/>confirmed defects<br/>Owner: Lucy"]
+    ROOT --> KPI["Return rate KPI each month. Day<br/>90: pass at or below 4%, kill<br/>above 7%. Month 12: pass at or<br/>below 3%, kill above 5%<br/>Owner: Mark"]
+    KPI --> DESIGN["Design feedback to the factory:<br/>color coded ends, printed arrows,<br/>detachable head<br/>Owner: Lucy"]
+  end
+  R1 -->|"Inside the window: yes"| R2
+  R1 -->|"Inside the window: no"| R3
+  R2 -->|"Unsellable units removed to the 3PL"| R4
+  R3 -->|"Faulty unit comes back"| R4
+  LEG["Legend. QR: quick response code. VA: virtual assistant. FBA: Fulfillment by Amazon. 3PL: third party logistics<br/>warehouse. KPI: key performance indicator. Thresholds come from the kill criteria in the risk register."]
+
+  class ISSUE,SELF,AR,GUAR,VER,SHIP,LABEL,RCV,ROOT,CLAIM,DESIGN step
+  class FIX,WIN dec
+  class CLOSE good
+  class RES,KPI ext
+  class LEG legend
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:2px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:2px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef legend fill:#FFFFFF,stroke:#9AA5C4,stroke-width:1px,color:#141C36

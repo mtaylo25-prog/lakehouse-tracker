@@ -1,0 +1,55 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Liberation Sans, Noto Sans KR, sans-serif','fontSize':'18px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':40,'rankSpacing':70,'curve':'basis','padding':14,'htmlLabels':true,'wrappingWidth':1200}}}%%
+flowchart TD
+  subgraph Y1 ["Year 1: Amazon US only"]
+    direction LR
+    A1["Amazon US. 5 hero SKUs under one<br/>parent ASIN. FBA. Brand Registry"] --> G1{"Day 90 gate (chart 06)"}
+    G1 -->|"Pass"| G2{"Month 12 gate"}
+    G1 -->|"Kill"| PB["Plan B if Amazon fails: B2B<br/>installer distribution plus Korea<br/>wholesale. Own small P&L"]
+    G2 -->|"Kill"| PB
+    A2["Korea wholesale continues at H2<br/>Company in every year"] --> PB
+  end
+  subgraph Y2 ["Year 2: overflow and installers"]
+    direction LR
+    B1["Amazon US: full length ladder,<br/>ocean freight on proven SKUs"]
+    B2["eBay and Walmart Marketplace as<br/>overflow. Multi channel<br/>fulfillment, near zero extra<br/>effort"]
+    B3["B2B installer and AV integrator<br/>program. 3PL ships, price 60% of<br/>retail"]
+    B1 ~~~ B2 ~~~ B3
+  end
+  subgraph Y3 ["Year 3: own channel and new<br/>products"]
+    direction LR
+    C1["DTC site fed by the off Amazon<br/>email list (Spec Match finder,<br/>trade up registration)"]
+    C2["Roadmap SKUs: HDMI 2.2 16K, DP<br/>2.1, USB4 AOC"]
+    C1 ~~~ C2
+  end
+  subgraph Y4 ["Year 4: Canada and the pro line"]
+    direction LR
+    D1["Amazon Canada, stock transferred<br/>from the US"]
+    D2["Pro line: CL3, plenum, conduit<br/>pull, long run fiber KVM. Sold 60%<br/>B2B, 40% Amazon"]
+    D1 ~~~ D2
+  end
+  subgraph Y5 ["Year 5: scale"]
+    direction LR
+    E1["Scale every channel. Medium band<br/>target: a multi million dollar<br/>business with 10% to 15% net (see<br/>the model)"]
+    E2["Temu local seller program:<br/>optional, only after the Amazon<br/>price floor holds. Not in the base<br/>case"]
+    E1 ~~~ E2
+  end
+  Y1 -->|"Month 12 gate passed"| Y2
+  Y2 -->|"Amazon US and B2B profitable"| Y3
+  Y3 -->|"DTC list and roadmap SKUs live"| Y4
+  Y4 --> Y5
+  LEG["Legend. ASIN: Amazon Standard Identification Number. FBA: Fulfillment by Amazon. B2B: business to business.<br/>AV: audio video. 3PL: third party logistics warehouse. DTC: direct to consumer website. DP: DisplayPort. AOC:<br/>active optical cable. CL3: in wall cable rating. KVM: keyboard, video and mouse extension. P&L: profit and<br/>loss."]
+
+  class A1,A2,B1,B2,B3,C1,C2,D1,D2 step
+  class G1,G2 dec
+  class E1 good
+  class E2 ext
+  class PB kill
+  class LEG legend
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:2px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:2px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef legend fill:#FFFFFF,stroke:#9AA5C4,stroke-width:1px,color:#141C36

@@ -1,0 +1,38 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Noto Sans KR, Liberation Sans, sans-serif','fontSize':'30px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':12,'rankSpacing':50,'curve':'linear','padding':10,'htmlLabels':true,'wrappingWidth':2000}}}%%
+flowchart LR
+  subgraph KT ["3개월차 말 90일 게이트<br/>Lucy 결정, Mark 수치 준비<br/>1단계: 중단 트리거 5개, 하나라도 해당되면 중단"]
+    direction LR
+    K1["1. 주력 SKU 전환율<br/>5% 미만?"]
+    K2["2. 3개월차 TACOS<br/>40% 초과?"]
+    K3["3. 반품률 7% 초과?"]
+    K4["4. 주력 SKU 광고<br/>전 공헌이익 개당 $8<br/>미만?"]
+    K5["5. 현금 런웨이 2개월<br/>미만?"]
+    K1 ~~~ K2 ~~~ K3
+    K4 ~~~ K5
+  end
+  subgraph PT ["2단계: 통과 테스트 6개<br/>모두 통과해야 함"]
+    direction LR
+    P1["1. 출시 SKU 5개<br/>중 3개 전환율 8%<br/>이상?"]
+    P2["2. 3개월차 TACOS<br/>30% 이하, 매월<br/>하락?"]
+    P3["3. 반품률 4% 이하?"]
+    P4["4. 5개 중 3개<br/>SKU 광고 전 공헌이익<br/>개당 $11 이상?"]
+    P5["5. 다음 PO 자금<br/>확보 후 현금 런웨이<br/>4개월 이상?"]
+    P6["6. 리스팅 정지 없음,<br/>14일 초과 IP 신고<br/>없음?"]
+    P1 ~~~ P2 ~~~ P3
+    P4 ~~~ P5 ~~~ P6
+  end
+  KT -->|"하나라도 예"| KILL["KILL (중단). 추가 자본 없음.<br/>재고 소진, 패자 SKU 삭제,<br/>Plan B 전환: B2B 설치업체와<br/>한국 도매"]
+  KT -->|"모두 아니오"| PT
+  PT -->|"모두 예"| SCALE["SCALE (확대). 검증된 SKU는<br/>해상 운송 PO, 패자 SKU 삭제,<br/>신규 SKU는 항공 유지. 다음<br/>검토: 12개월차 게이트"]
+  PT -->|"하나라도 아니오"| HOLD["REVIEW (재검토). 실패한<br/>테스트 보완 후 30일 내 재검증.<br/>확정된 PO 외 신규 자본 없음.<br/>재검증은 1회, 이후 통과 또는 중단"]
+  class K1,K2,K3,K4,K5,P1,P2,P3,P4,P5,P6 dec
+  class KILL kill
+  class SCALE good
+  class HOLD ext
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:3px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:3px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:3px,color:#141C36

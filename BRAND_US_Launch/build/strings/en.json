@@ -1,0 +1,1640 @@
+{
+ "_readme": "Every visible string of 01_Business_Proposal_EN.pptx, keyed by slide and element. Tokens in curly braces ({m18_rev_M}) are filled by build/build_deck.js from build/figures.json and build/facts.json through build/fmt.js. Translate the values only; keep the tokens, the keys, the word BRAND, form numbers and Amazon listing wording in English. No hyphens or dashes in any value.",
+ "common": {
+  "footer": "BRAND US launch proposal. Figures from 03_Financial_Model_5Y.xlsx, Medium case, FX {fx} KRW per USD, Copper duty, unless stated",
+  "estimate": "Management estimate",
+  "evidence": "Evidence based",
+  "placeholder_prefix": "PLACEHOLDER",
+  "full_size": "Full size version: output/04_Flowcharts/{file}",
+  "scenario_low": "Low",
+  "scenario_medium": "Medium",
+  "scenario_high": "High",
+  "year": "Year {n}",
+  "month": "Month {n}",
+  "chart_month_axis": "Model month",
+  "chart_revenue": "Revenue",
+  "chart_net": "Net",
+  "low_revenue": "Low revenue",
+  "high_revenue": "High revenue",
+  "low_net": "Low net",
+  "high_net": "High net",
+  "medium_revenue": "Medium revenue",
+  "medium_net": "Medium net",
+  "none": "none"
+ },
+ "s01": {
+  "kicker": "BRAND",
+  "title": "Sell the signal, not the cable",
+  "subtitle": "US launch proposal for hybrid active optical HDMI cables. Amazon US first, then four more channels over five years.",
+  "meta_line1": "H2 Company (Seoul) and BRAND LLC (Wyoming, to be formed). Owner: Lucy (Hyejin Yoo). US operations support: Mark Taylor.",
+  "meta_line2": "Prepared {built}. Every figure comes from 03_Financial_Model_5Y.xlsx. BRAND is a placeholder until the US brand name is chosen.",
+  "notes": "This deck asks Lucy for three decisions: fund the launch, form the Wyoming LLC with her as sole owner, and run a 90 day test with written kill criteria. The numbers are the Medium case from the financial model unless a slide says otherwise. The brand name is still open, so BRAND stands in everywhere."
+ },
+ "s02": {
+  "title": "Executive summary in five numbers",
+  "stats": [
+   {
+    "value": "{m18_rev_M}",
+    "label": "18 month Amazon US revenue, Medium case",
+    "sub": "Low {m18_rev_L}, High {m18_rev_H}"
+   },
+   {
+    "value": "{m18_net_M}",
+    "label": "18 month net, {m18_margin_M} margin",
+    "sub": "Low {m18_net_L}, High {m18_net_H}"
+   },
+   {
+    "value": "{be_M}",
+    "label": "cumulative breakeven",
+    "sub": "High {be_H}; Low {be_L} within 18 months"
+   },
+   {
+    "value": "{y5_rev_M}",
+    "label": "Year 5 revenue at {y5_margin_M} net",
+    "sub": "High {y5_rev_H}, Low {y5_rev_L}"
+   },
+   {
+    "value": "{gap_M}",
+    "label": "line of credit needed by {gap_month_M}",
+    "sub": "peak cash need {peak_M} in {peak_month_M}"
+   }
+  ],
+  "points": [
+   "What we sell: long length fiber HDMI where copper physically fails past 3 m at 48Gbps. We do not compete with $8 copper.",
+   "Where: Amazon US with 5 hero SKUs (stock keeping units) under one parent ASIN (Amazon Standard Identification Number), then eBay and Walmart overflow, B2B (business to business) installers, a DTC (direct to consumer) site, Amazon Canada and a pro line.",
+   "What must be true: the factory cost holds near the H2 base (at the Alibaba benchmark the hero SKU loses money), the CBP duty ruling lands at copper or better, and the Day 90 gate passes."
+  ],
+  "notes": "Five numbers carry the story: {m18_rev_M} of revenue and {m18_net_M} of net in 18 months, breakeven in {be_M}, {y5_rev_M} in Year 5, and a {gap_M} line of credit needed by {gap_month_M}. The Low case never breaks even in 18 months and trips the Month 12 kill criteria. The two assumptions that matter most are the factory cost and the duty classification."
+ },
+ "s03": {
+  "title": "What we are deciding",
+  "cards": [
+   {
+    "n": "1",
+    "head": "Fund the launch",
+    "body": "Commit {opening_capital} of self funded opening capital (the August ask) and arrange a dated line of credit of {gap_M} by {gap_month_M} in the Medium case. The Low case needs {gap_L}; the High case {gap_H}."
+   },
+   {
+    "n": "2",
+    "head": "Form the US entity",
+    "body": "BRAND LLC, a Wyoming single member LLC owned 100% by Lucy. Mark works under a written consulting or commission agreement with no equity, so the LLC stays a disregarded entity and the treaty position stays clean."
+   },
+   {
+    "n": "3",
+    "head": "Run the 90 day test",
+    "body": "5 hero SKUs, 100 to 300 units each by air, one parent ASIN. The Day 90 gate on slide 19 decides scale, review or kill with numbers written down before the first order."
+   }
+  ],
+  "open_head": "Not decided today",
+  "open_items": [
+   "US brand name (BRAND placeholder; MBF was the Korean deck name and is not final)",
+   "Temu local seller program (optional, not in the base case)",
+   "Whether H2 Company incorporates first (question for the Korean tax accountant)"
+  ],
+  "notes": "The three decisions are sequenced: funding first, because the ODI report and the LLC bank account depend on it; entity second; the test third. Each decision has a number attached so it can be checked later. Items not decided today are parked, not forgotten."
+ },
+ "s04": {
+  "title": "Market and why fiber",
+  "subtitle": "Section 1 of 5",
+  "notes": "Section divider."
+ },
+ "s05": {
+  "title": "Why copper fails past 3 m at 48Gbps",
+  "left_head": "The physics in one paragraph",
+  "left_body": "Ultra High Speed HDMI carries 48Gbps. Signal loss in copper grows with frequency and with length, so a passive copper cable past about 3 m cannot carry 8K at 60Hz or 4K at 120Hz cleanly. The fix is either active electronics at each end or fiber. A hybrid active optical cable puts the video on fiber cores and keeps thin copper conductors for power and control signals.",
+  "left_rule": "Accurate wording: fiber optic HDMI, hybrid active optical. Never pure fiber or all glass.",
+  "table_head": [
+   "",
+   "Passive copper",
+   "Hybrid active optical (ours)"
+  ],
+  "table_rows": [
+   [
+    "Reliable length at 48Gbps",
+    "About 3 m",
+    "7 m to 50 m in the current line"
+   ],
+   [
+    "Weight and bend",
+    "Thick and stiff at length",
+    "Thin and light, pulls through conduit"
+   ],
+   [
+    "Interference",
+    "Picks up electrical noise",
+    "Fiber is immune to it"
+   ],
+   [
+    "Direction",
+    "Either way",
+    "Directional: SOURCE and DISPLAY ends (our direction proof design)"
+   ],
+   [
+    "Price point",
+    "Around $8 for short runs",
+    "{hero_price} for the hero 10 m SKU"
+   ]
+  ],
+  "footnote": "Length limits are a management summary of the HDMI specification; the brief's statement is that copper physically fails past 3 meters at 48Gbps.",
+  "notes": "The whole strategy rests on one physical fact: at 48Gbps passive copper stops working at about 3 m. Above that length the buyer needs active electronics or fiber, and that is where price competition with commodity copper disappears. The direction sensitivity of active cables is a real drawback that our direction proof design turns into a selling point."
+ },
+ "s06": {
+  "title": "Who buys long HDMI",
+  "segments": [
+   {
+    "head": "Home theater and projector owners",
+    "body": "Projector 10 m to 20 m from the AV receiver. Wants 4K 120Hz or 8K and eARC. Buys on Amazon.",
+    "size": "[PLACEHOLDER: segment size, source still to be found]"
+   },
+   {
+    "head": "Gamers with PS5 and Xbox",
+    "body": "4K at 120Hz needs 48Gbps. Shorter runs, but the 7 m and 10 m lengths fit desks and living rooms.",
+    "size": "[PLACEHOLDER: segment size, source still to be found]"
+   },
+   {
+    "head": "Custom installers and AV integrators",
+    "body": "In wall runs need CL3, conduit pulls need the detachable head. Buys B2B at 60% of retail from Year 2.",
+    "size": "[PLACEHOLDER: installer count, source still to be found]"
+   },
+   {
+    "head": "Conference rooms, classrooms, churches, signage",
+    "body": "Long runs from a rack to a display or projector. Repeat buyers with multiple rooms.",
+    "size": "[PLACEHOLDER: segment size, source still to be found]"
+   }
+  ],
+  "evidence_head": "What the Korea sales already show (evidence based)",
+  "evidence_body": "In the August 2026 deal of {deal_units} units, the 8K short runs (7 m, 10 m, 20 m) were {share_units} of units and {share_gp} of gross profit. The US launch leads with the same lengths.",
+  "notes": "Four segments buy long HDMI and every one of them is poorly served by copper. Segment sizes are placeholders until a source is found; we do not invent market sizes. The one hard data point is the Korea deal mix, which says the 8K short runs sell best and earn best."
+ },
+ "s07": {
+  "title": "Price ladder and positioning",
+  "line": "Sell the signal, not the cable.",
+  "line_sub": "Enter narrow. Own long length, high spec fiber. Do not compete with $8 copper.",
+  "table_head": [
+   "Launch SKU",
+   "Category name on the listing",
+   "Length",
+   "List price",
+   "Sale price (ASP input)",
+   "Net per unit by air",
+   "Net %"
+  ],
+  "table_note": "Prices and FBA fees are management estimates pending the Amazon rate card check. Net per unit uses the H2 cost base, Copper duty and air freight for launch lots.",
+  "ladder_head": "How the ladder works",
+  "ladder_items": [
+   "List price anchors value; the sale price is what the model uses as ASP.",
+   "Hero SKU: the 10 m 8K cable at {hero_price} (list {hero_list}).",
+   "One parent ASIN per line, children by length, so reviews and ads pool (lever 6).",
+   "Blended ASP in the 18 month model: {asp42} (evidence based, August model)."
+  ],
+  "notes": "The ladder runs from the 7 m to the 20 m 8K cable plus the 30 m 4K cable, all under one parent ASIN. The hero is the 10 m 8K cable at {hero_price}. The per unit net figures use the bottom up H2 cost base, so they are better than the August model's 38% landed assumption; slide 22 shows both."
+ },
+ "s08": {
+  "title": "Product",
+  "subtitle": "Section 2 of 5",
+  "notes": "Section divider."
+ },
+ "s09": {
+  "title": "Line today and the roadmap",
+  "table_head": [
+   "SKU",
+   "Line",
+   "Length",
+   "List",
+   "Sale",
+   "H2 cost (KRW)",
+   "Launch"
+  ],
+  "line_8k": "Ultra High Speed HDMI Cable (8K line)",
+  "line_4k": "Premium High Speed HDMI Cable (4K line, placeholder)",
+  "yes": "Yes",
+  "no": "No",
+  "roadmap_head": "Roadmap",
+  "roadmap": [
+   {
+    "when": "Year 3",
+    "what": "HDMI 2.2 16K, DP 2.1 and USB4 active optical cables. Modeled as a 3% mix uplift to ASP (management estimate)."
+   },
+   {
+    "when": "Year 4",
+    "what": "Pro line: CL3, plenum, conduit pull, long run fiber KVM. ASP $120, sold 60% B2B and 40% Amazon (management estimate)."
+   },
+   {
+    "when": "Years 4 to 5",
+    "what": "Amazon Canada with stock transferred from the US."
+   }
+  ],
+  "note": "H2 cost is the landed Korea purchase cost per unit from the August 2026 deal (evidence based). Spec names such as HDMI 2.1 are internal only and never appear on packaging or listings.",
+  "notes": "Ten SKUs exist today; five launch. The 8K 25 m and 50 m and the three remaining 4K lengths follow once the parent ASIN has reviews. The roadmap products are real factory items but their US timing and the 3% ASP uplift are management estimates."
+ },
+ "s10": {
+  "title": "Five differentiators",
+  "cards": [
+   {
+    "icon": "FiRepeat",
+    "head": "Direction proof design",
+    "body": "Color coded SOURCE and DISPLAY ends, printed arrows, QR code to a setup video. Lever 3: returns from 3% toward 2%."
+   },
+   {
+    "icon": "FiShield",
+    "head": "5 Year Signal Guarantee",
+    "body": "The replacement ships before the return arrives. Simple promise, simple process (flowchart 04)."
+   },
+   {
+    "icon": "FiHome",
+    "head": "CL3 in wall rating",
+    "body": "Claimed only after the factory's CL3 documentation is in hand. Opens the installer segment."
+   },
+   {
+    "icon": "FiTool",
+    "head": "Detachable head for conduit pulls",
+    "body": "The small head passes through conduit, then the connector clicks on. Installers ask for this first."
+   },
+   {
+    "icon": "FiMail",
+    "head": "Spec Match finder and trade up registration",
+    "body": "Buyers register for the guarantee and get a length and spec check. Builds the off Amazon email list (lever 11)."
+   }
+  ],
+  "notes": "Each differentiator is tied to a number in the model or to a channel. The direction proof design moves the return rate, the guarantee and the registration build the email list that feeds the DTC channel in Year 3, and CL3 plus the detachable head open the installer channel in Year 2. None of them require new tooling beyond the factory's existing line, pending confirmation."
+ },
+ "s11": {
+  "title": "Brand architecture and the HDMI naming rule",
+  "brand_root": "BRAND (US brand, name to be chosen)",
+  "lines": [
+   {
+    "head": "Ultra High Speed HDMI Cable",
+    "body": "The 8K line. One parent ASIN, children 7 m, 10 m, 15 m, 20 m, 25 m, 50 m."
+   },
+   {
+    "head": "Premium High Speed HDMI Cable",
+    "body": "The 4K line, pending certification (placeholder). One parent ASIN, children 15 m, 20 m, 30 m, 40 m."
+   },
+   {
+    "head": "Pro line (Year 4)",
+    "body": "CL3, plenum, conduit pull, long run fiber KVM. Sold 60% B2B, 40% Amazon."
+   }
+  ],
+  "rule_head": "The naming rule",
+  "rule_items": [
+   "Packaging and promotion never use HDMI version numbers. Use the cable category name: Ultra High Speed HDMI Cable.",
+   "Listing titles may state 48Gbps and 8K.",
+   "Say fiber optic HDMI or hybrid active optical. Never pure fiber or all glass.",
+   "The factory must be an HDMI Adopter with ATC test reports. HDMI LA runs seizures."
+  ],
+  "tm_head": "Trademark and Brand Registry",
+  "tm_items": [
+   "Foreign applicants file through a US licensed attorney: about {tm_fee} per class plus attorney fees [PLACEHOLDER: attorney quote].",
+   "Amazon Brand Registry accepts a pending application.",
+   "Brand Registry gates A+ content, Brand Store, video ads and hijacker protection."
+  ],
+  "notes": "The brand sits above two consumer lines and a pro line, each with one parent ASIN. The naming rule is a licensing requirement, not a style choice: version numbers on the box invite a seizure. The trademark is separate from the entity and must be filed by a US licensed attorney; a pending application is enough for Brand Registry."
+ },
+ "s12": {
+  "title": "Structure and compliance",
+  "subtitle": "Section 3 of 5",
+  "notes": "Section divider."
+ },
+ "s13": {
+  "title": "US entity and tax",
+  "cards": [
+   {
+    "head": "Wyoming single member LLC",
+    "items": [
+     "{wy_form} to form, about {wy_annual} per year, no state income tax, strong privacy.",
+     "Delaware costs about {de_annual} per year and is only worth it for raising investment.",
+     "BOI reporting is not required for US formed companies (FinCEN exemption finalized August 11, 2026).",
+     "EIN by phone or fax with Form SS-4, no SSN needed. Exact legal name match across state, IRS, bank and Amazon."
+    ]
+   },
+   {
+    "head": "Annual filing",
+    "items": [
+     "A foreign owned single member LLC files Form 5472 with a pro forma Form 1120 every year.",
+     "Penalty for missing it: {penalty_5472}.",
+     "Wyoming annual report about {wy_annual}.",
+     "California may assert income tax nexus from FBA inventory: on the CPA list."
+    ]
+   },
+   {
+    "head": "Treaty position",
+    "items": [
+     "1976 US Korea tax treaty: business profits are taxed only where the permanent establishment (PE) sits.",
+     "Goods stored and shipped from FBA warehouses do not create a PE under Article 9, paragraph 3(b).",
+     "Keep no US office, no US employees and no agent in the US who negotiates or signs contracts.",
+     "Amazon collects marketplace sales tax."
+    ]
+   },
+   {
+    "head": "Ownership",
+    "items": [
+     "Lucy owns 100%. Mark is paid under a written consulting or commission agreement.",
+     "If Mark became an owner the LLC would be a partnership: Form 1065 and 37% withholding on her share of profit.",
+     "Alternative kept open: Mark's own US company as distributor and importer of record, with Lucy at the wholesale layer."
+    ]
+   }
+  ],
+  "notes": "Wyoming is cheap, private and has no state income tax; Delaware only pays off if investors arrive. The two things that keep US tax to zero are the treaty PE rule and discipline about who signs contracts. Form 5472 is the filing people forget and the penalty is {penalty_5472}, so it goes on the compliance calendar on day one."
+ },
+ "s14": {
+  "title": "Korea filings around the capital transfer",
+  "steps": [
+   {
+    "when": "Before any capital moves",
+    "head": "Overseas direct investment (ODI) report",
+    "body": "Under the Foreign Exchange Transactions Act Lucy reports the investment to her foreign exchange bank before capital moves. Any stake of 10% or more, any amount. Enforcement against individual online sellers is rising."
+   },
+   {
+    "when": "After the transfer",
+    "head": "Follow up reports",
+    "body": "Remittance report, securities acquisition report, then the annual business performance report."
+   },
+   {
+    "when": "Every year",
+    "head": "Overseas financial account report",
+    "body": "Required once overseas accounts reach {kr_ofar} on a month end aggregate basis. Flag for the Korean tax accountant."
+   },
+   {
+    "when": "Week 2",
+    "head": "Question for the Korean tax accountant",
+    "body": "H2 Company's registration number {reg_no} (middle digits 64) indicates a sole proprietorship. Should H2 incorporate before it owns a US LLC? The plan assumes Lucy owns BRAND LLC personally until told otherwise."
+   }
+  ],
+  "side_head": "Order of events",
+  "side_items": [
+   "1. ODI report at the foreign exchange bank (week 2).",
+   "2. Capital transfer to the LLC account (week 3, only after the report).",
+   "3. Remittance and securities acquisition reports.",
+   "4. Annual business performance report and the overseas account report if the threshold is reached."
+  ],
+  "notes": "The ODI report is the step that cannot be done late: it comes before the capital transfer, not after. The follow up reports are routine but must be diarised. The sole proprietorship question is for the Korean tax accountant; the deck assumes personal ownership and flags the alternative."
+ },
+ "s15": {
+  "title": "Product compliance",
+  "cards": [
+   {
+    "icon": "FiAward",
+    "head": "HDMI Adopter and ATC",
+    "body": "The factory must be an HDMI Adopter with Authorized Test Center reports. HDMI LA runs seizures.",
+    "status": "[PLACEHOLDER: HDMI Adopter certificate number and ATC report from factory]"
+   },
+   {
+    "icon": "FiTag",
+    "head": "Naming on box and listing",
+    "body": "Category name only (Ultra High Speed HDMI Cable). Titles may say 48Gbps and 8K. No version numbers.",
+    "status": "Rule applied in the listing kit"
+   },
+   {
+    "icon": "FiRadio",
+    "head": "FCC",
+    "body": "AOC heads contain active electronics, so obtain the factory's FCC test report before the first shipment.",
+    "status": "[PLACEHOLDER: FCC test report from factory]"
+   },
+   {
+    "icon": "FiAlertTriangle",
+    "head": "California Prop 65",
+    "body": "Add the Prop 65 warning label to packaging and the listing.",
+    "status": "Label text in the listing kit"
+   },
+   {
+    "icon": "FiLayers",
+    "head": "CL3 in wall",
+    "body": "Claim in wall only after the CL3 documentation is in hand.",
+    "status": "[PLACEHOLDER: CL3 documentation from factory]"
+   },
+   {
+    "icon": "FiUmbrella",
+    "head": "Product liability insurance",
+    "body": "{ins_amount} cover is required once sales exceed {ins_trigger} in a month (Medium case: {ins_month_M}).",
+    "status": "Quote in week 3"
+   }
+  ],
+  "notes": "Six compliance items, three of them waiting on factory documents. Nothing ships until the HDMI Adopter proof and the FCC report are in the file, because a seizure at the port is the one failure that stops everything at once. The insurance trigger lands in {ins_month_M} of the Medium case."
+ },
+ "s16": {
+  "title": "Tariff stack and the duty ruling",
+  "table_head": [
+   "Scenario",
+   "HTS",
+   "MFN",
+   "Section 301 list",
+   "Section 301 forced labor",
+   "Pending action",
+   "Total"
+  ],
+  "rows": [
+   {
+    "name": "Copper (default)",
+    "hts": "8544.42.90",
+    "note": "evidence based"
+   },
+   {
+    "name": "Fiber",
+    "hts": "8544.70.00",
+    "note": "List 3 coverage is a broker check"
+   },
+   {
+    "name": "Stress",
+    "hts": "8544.42.90 plus second Section 301 action",
+    "note": "management estimate"
+   },
+   {
+    "name": "Fiber if also on List 3",
+    "hts": "8544.70.00",
+    "note": "check row only"
+   }
+  ],
+  "chart_title": "Net per hero unit by duty scenario",
+  "chart_cats": [
+   "Copper net",
+   "Fiber ruling uplift",
+   "Fiber net",
+   "Stress penalty",
+   "Stress net"
+  ],
+  "history_head": "What changed in 2026",
+  "history": [
+   "The Supreme Court struck down the IEEPA tariffs on {ieepa_date}.",
+   "The 10% Section 122 surcharge ran {s122_period} and expired.",
+   "A Section 301 forced labor action added {fl_rate} on all China origin goods in {fl_date}. It applies under either classification.",
+   "A second Section 301 investigation opened in {s301_2_opened} is pending: the stress case adds {pending_add}.",
+   "De minimis is gone. Every shipment needs formal entry through the broker. No parcel dropship model."
+  ],
+  "effect_head": "Effect in the Medium case",
+  "effect": "Fiber ruling: landed COGS {landed_copper} to {landed_fiber}, hero net per unit {hero_net_copper} to {hero_net_fiber}, 18 month net {m18_net_M} to {fiber_m18_net}, breakeven {fiber_be}. Stress: hero net {hero_net_stress}, 18 month net {stress_m18_net}.",
+  "notes": "Three duty scenarios bracket the plan. The binding ruling request goes to CBP in week 1 and takes 30 to 90 days. The fiber classification is worth about {fiber_m18_delta} of 18 month net and cuts the funding gap; the stress case costs {stress_m18_delta_abs}. The 12.5% forced labor rate applies either way, so the plan never assumes it away."
+ },
+ "s17": {
+  "title": "Launch",
+  "subtitle": "Section 4 of 5",
+  "notes": "Section divider."
+ },
+ "s18": {
+  "title": "Critical path to the Day 90 gate",
+  "caption": "Flowchart 01 with owner and weeks on every node. {full_size}",
+  "steps": [
+   "1. Brand name and trademark. Lucy, attorney. Weeks 1 to 2",
+   "2. Wyoming LLC and EIN, exact legal name match. Lucy, attorney. Weeks 1 to 2",
+   "3. Korean ODI report before the capital transfer. Lucy, tax accountant. Week 2",
+   "4. USD bank account (Mercury or Relay). Lucy, Mark. Weeks 2 to 3",
+   "5. Customs broker, continuous bond, binding ruling filed. Mark, broker. Week 1",
+   "6. Amazon Professional account, tax interview, Brand Registry. Lucy, Mark. Weeks 3 to 4",
+   "7. Test inventory: 5 hero SKUs, 100 to 300 units each, air DDP, QC before departure. Lucy, factory. Weeks 4 to 8",
+   "8. Listings, images, A+ content, video, PPC. Mark, VA. Weeks 6 to 9",
+   "9. 90 day validation: conversion, TACOS, return rate, contribution per SKU. Mark, Lucy. Weeks 10 to 22",
+   "10. Scale winners on ocean freight, delist losers. Lucy, Mark, 3PL. Week 22 onward"
+  ],
+  "notes": "Ten steps, each with an owner and a week: 1. Brand name and trademark. Lucy, attorney. Weeks 1 to 2 2. Wyoming LLC and EIN, exact legal name match. Lucy, attorney. Weeks 1 to 2 3. Korean ODI report before the capital transfer. Lucy, tax accountant. Week 2 4. USD bank account (Mercury or Relay). Lucy, Mark. Weeks 2 to 3 5. Customs broker, continuous bond, binding ruling filed. Mark, broker. Week 1 6. Amazon Professional account, tax interview, Brand Registry. Lucy, Mark. Weeks 3 to 4 7. Test inventory: 5 hero SKUs, 100 to 300 units each, air DDP, QC before departure. Lucy, factory. Weeks 4 to 8 8. Listings, images, A+ content, video, PPC. Mark, VA. Weeks 6 to 9 9. 90 day validation: conversion, TACOS, return rate, contribution per SKU. Mark, Lucy. Weeks 10 to 22 10. Scale winners on ocean freight, delist losers. Lucy, Mark, 3PL. Week 22 onward The three that gate everything else are the broker and ruling request in week 1, the ODI report before the capital transfer, and the Brand Registry application. Weeks 10 to 22 are the test itself; the gate decision is made at week 22.",
+  "gates_head": "The three items that gate everything else",
+  "gates": [
+   "Customs broker and binding ruling request in week 1: the ruling answer takes 30 to 90 days and sets the duty rate for ocean lots.",
+   "Korean ODI report at the foreign exchange bank in week 2, before any capital moves to the LLC bank account.",
+   "Amazon account and Brand Registry in weeks 3 to 4: Brand Registry gates A+ content, Brand Store, video ads and hijacker protection."
+  ]
+ },
+ "s19": {
+  "title": "Day 90 gate and kill criteria",
+  "d90_head": "Day 90 gate (end of Month 3)",
+  "m12_head": "Month 12 gate",
+  "table_head": [
+   "Metric",
+   "Pass",
+   "Kill",
+   "Medium model"
+  ],
+  "d90_rows": [
+   {
+    "metric": "Unit session conversion on 3 of 5 launch SKUs",
+    "pass": "at or above {gt_d90_conv_pass}",
+    "kill": "hero below {gt_d90_conv_kill}",
+    "model": "observed at the gate"
+   },
+   {
+    "metric": "TACOS in Month 3, falling month over month",
+    "pass": "at or below {gt_d90_tacos_pass}",
+    "kill": "above {gt_d90_tacos_kill}",
+    "model": "{d90_tacos_M}"
+   },
+   {
+    "metric": "Return rate",
+    "pass": "at or below {gt_d90_ret_pass}",
+    "kill": "above {gt_d90_ret_kill}",
+    "model": "{d90_ret_M}"
+   },
+   {
+    "metric": "Contribution per unit before advertising on 3 of 5 SKUs",
+    "pass": "at or above {gt_d90_cpu_pass}",
+    "kill": "hero below {gt_d90_cpu_kill}",
+    "model": "{d90_cpu_M}"
+   },
+   {
+    "metric": "Cash runway after funding the next PO",
+    "pass": "at or above {gt_d90_run_pass} months",
+    "kill": "below {gt_d90_run_kill} months",
+    "model": "{d90_runway_M} months"
+   },
+   {
+    "metric": "Suppressed listing or IP complaint",
+    "pass": "none open",
+    "kill": "open more than {gt_d90_ip_days} days",
+    "model": "observed at the gate"
+   }
+  ],
+  "m12_rows": [
+   {
+    "metric": "Monthly revenue in Month 12",
+    "pass": "at or above {gt_m12_rev_pass}",
+    "kill": "below {gt_m12_rev_kill}",
+    "model": "{m12_rev_M}"
+   },
+   {
+    "metric": "Cumulative net",
+    "pass": "at or above {gt_m12_cum_pass}",
+    "kill": "below {gt_m12_cum_kill}",
+    "model": "{m12_cum_M}"
+   },
+   {
+    "metric": "TACOS",
+    "pass": "at or below {gt_m12_tacos_pass}",
+    "kill": "above {gt_m12_tacos_kill}",
+    "model": "{m12_tacos_M}"
+   },
+   {
+    "metric": "Return rate",
+    "pass": "at or below {gt_m12_ret_pass}",
+    "kill": "above {gt_m12_ret_kill}",
+    "model": "{m12_ret_M}"
+   },
+   {
+    "metric": "Operating cash flow",
+    "pass": "positive two months in a row",
+    "kill": "three negative months with a funding gap above {gt_m12_gap_kill}",
+    "model": "{m12_opcf_M} (lower of Months 11 and 12)"
+   }
+  ],
+  "results_head": "Model results by scenario",
+  "results": [
+   {
+    "scenario": "Low",
+    "d90": "{gate_d90_L}",
+    "m12": "{gate_m12_L}"
+   },
+   {
+    "scenario": "Medium",
+    "d90": "{gate_d90_M}",
+    "m12": "{gate_m12_M}"
+   },
+   {
+    "scenario": "High",
+    "d90": "{gate_d90_H}",
+    "m12": "{gate_m12_H}"
+   }
+  ],
+  "rule": "KILL if any kill trigger fires. PASS if every threshold is met. REVIEW otherwise: fix and retest within 30 days. Kill means no further capital, sell down inventory, delist losers, move to Plan B.",
+  "notes": "The gate numbers are written down before the first purchase order so nobody argues with them later. Any single kill trigger kills; passing needs every threshold. The Low case reads {gate_d90_L} at Day 90 and {gate_m12_L} at Month 12, which is the point: the model itself says when to stop."
+ },
+ "s20": {
+  "title": "Economics",
+  "subtitle": "Section 5 of 5",
+  "notes": "Section divider."
+ },
+ "s21": {
+  "title": "Hero unit economics on Amazon US",
+  "chart_cats": [
+   "Price",
+   "Landed cost",
+   "Referral 15%",
+   "FBA fee",
+   "Advertising",
+   "Returns and storage",
+   "Net"
+  ],
+  "side": [
+   {
+    "label": "Net per unit",
+    "value": "{hero_net}",
+    "sub": "{hero_net_pct} of {hero_price}"
+   },
+   {
+    "label": "Same unit in Korea wholesale",
+    "value": "{hero_korea}",
+    "sub": "gross profit per unit, August deal"
+   },
+   {
+    "label": "Contribution before advertising",
+    "value": "{hero_cba42}",
+    "sub": "at the {asp42} blended ASP; the Day 90 gate asks for {gt_d90_cpu_pass}"
+   }
+  ],
+  "note": "Waterfall: price {hero_price} less landed cost {hero_landed}, referral {hero_ref}, FBA {hero_fba}, advertising {hero_ads}, returns and storage {hero_ret} = net {hero_net}. August model, evidence based: landed cost assumed at {hero_landed_pct} of price pending the customs ruling. Advertising {hero_ads} is the blended 18 month rate. At the Alibaba benchmark cost the same unit loses money (next slide).",
+  "notes": "One unit of the hero cable earns {hero_net} net on Amazon against {hero_korea} gross in Korea wholesale: more than four times the profit on the same physical product. The waterfall uses the August model's 38% landed cost assumption, which is conservative against the H2 cost base but optimistic against the Alibaba benchmark."
+ },
+ "s22": {
+  "title": "Factory cost cross check",
+  "table_head": [
+   "Cost base",
+   "Landed cost per hero unit",
+   "Net per unit at {hero_price}",
+   "Basis"
+  ],
+  "rows": [
+   {
+    "name": "H2 cost base (August deal, FOB = Korea landed cost times {fob_factor})",
+    "landed": "{cb_h2_landed}",
+    "net": "{cb_h2_net}",
+    "basis": "Evidence based cost; FOB factor is a management estimate"
+   },
+   {
+    "name": "August model assumption ({hero_landed_pct} of price)",
+    "landed": "{cb_aug_landed}",
+    "net": "{cb_aug_net}",
+    "basis": "Evidence based (August deck assumption)"
+   },
+   {
+    "name": "Alibaba benchmark, low ({ali_lo} FOB for a comparable 30 ft AOC)",
+    "landed": "{cb_ali_lo_landed}",
+    "net": "{cb_ali_lo_net}",
+    "basis": "Evidence based quote, flagged"
+   },
+   {
+    "name": "Alibaba benchmark, high ({ali_hi} FOB)",
+    "landed": "{cb_ali_hi_landed}",
+    "net": "{cb_ali_hi_net}",
+    "basis": "Evidence based quote, flagged"
+   }
+  ],
+  "chart_title": "Net per hero unit by cost base",
+  "chart_cats": [
+   "H2 base",
+   "August model",
+   "Alibaba low",
+   "Alibaba high"
+  ],
+  "callout_head": "Plain statement",
+  "callout": "At the Alibaba cost the hero SKU loses money at {hero_price}. The H2 cost base is {h2_fob} FOB per unit, far below the {ali_lo} to {ali_hi} quote. Until the factory confirms a written FOB price for US volumes, this gap is the largest risk in the plan.",
+  "action": "Action in week 1: written FOB quote sheet from the factory for the 5 launch SKUs at 300, 1,000 and 5,000 units [PLACEHOLDER: factory FOB quote sheet].",
+  "notes": "The model is built on the H2 purchase costs from the August deal, converted to an FOB value. An Alibaba quote for a comparable cable is two to three times higher. If the real US price is anywhere near that quote the hero SKU is a loss at {hero_price}, so the written factory quote is the first action, before any entity or account is opened.",
+  "table_note": "Net uses the August fee structure (FBA {hero_fba}); the price ladder on slide 7 uses the SKU tab FBA estimate of {hero_fba_sku}, hence {hero_net_sku_air} there."
+ },
+ "s23": {
+  "title": "Eighteen month Amazon US P&L",
+  "table_head": [
+   "",
+   "Low",
+   "Medium",
+   "High"
+  ],
+  "rows": [
+   {
+    "label": "Revenue",
+    "L": "{m18_rev_L}",
+    "M": "{m18_rev_M}",
+    "H": "{m18_rev_H}"
+   },
+   {
+    "label": "Net",
+    "L": "{m18_net_L}",
+    "M": "{m18_net_M}",
+    "H": "{m18_net_H}"
+   },
+   {
+    "label": "Net margin",
+    "L": "{m18_margin_L}",
+    "M": "{m18_margin_M}",
+    "H": "{m18_margin_H}"
+   },
+   {
+    "label": "Cumulative breakeven",
+    "L": "{be_L}",
+    "M": "{be_M}",
+    "H": "{be_H}"
+   },
+   {
+    "label": "Month 18 run rate",
+    "L": "{rr_L}",
+    "M": "{rr_M}",
+    "H": "{rr_H}"
+   },
+   {
+    "label": "Exit margin (Month 18)",
+    "L": "{exit_L}",
+    "M": "{exit_M}",
+    "H": "{exit_H}"
+   },
+   {
+    "label": "Units",
+    "L": "{m18_units_L}",
+    "M": "{m18_units_M}",
+    "H": "{m18_units_H}"
+   }
+  ],
+  "note": "Medium reproduces the August model (evidence based): ASP {asp42}, landed COGS {hero_landed_pct}, returns 3%, ad spend {ads_p1} then {ads_p2}, {ads_p3}, {ads_p4} of revenue by phase, fixed {fixed_monthly} per month, seller fee {seller_fee}, launch costs {launch_one_time}. Low and High are calibrated management estimates. The single variable separating Low from Medium is the duty ruling and the cost it implies.",
+  "notes": "The chart shows Medium revenue and net by month with Low and High as thinner lines. Medium breaks even on a cumulative basis in {be_M} and exits Month 18 at a {rr_M} run rate with a {exit_M} margin. Low never breaks even inside 18 months; High breaks even in {be_H}."
+ },
+ "s24": {
+  "title": "Five year trajectory",
+  "chart_series": [
+   "Amazon US",
+   "eBay and Walmart",
+   "B2B installers",
+   "DTC site",
+   "Amazon Canada",
+   "Pro line"
+  ],
+  "table_head": [
+   "",
+   "Year 1",
+   "Year 2",
+   "Year 3",
+   "Year 4",
+   "Year 5",
+   "Year 5 net"
+  ],
+  "rows": [
+   {
+    "label": "Low",
+    "key": "L"
+   },
+   {
+    "label": "Medium",
+    "key": "M"
+   },
+   {
+    "label": "High",
+    "key": "H"
+   }
+  ],
+  "note": "Stacked columns: Medium revenue by channel. Year 1 is Amazon US only and ties to the 18 month model. Year 2 adds eBay and Walmart overflow and B2B installers, Year 3 the DTC site and roadmap SKUs, Years 4 and 5 Amazon Canada and the pro line.",
+  "notes": "The Medium case reaches {y5_rev_M} in Year 5 at {y5_margin_M} net, inside the $4M to $5M target band. High reaches {y5_rev_H}; Low stalls at {y5_rev_L} with {y5_net_L} net, which is the kill case. Amazon US stays the largest channel in every year but falls to about half of revenue by Year 5."
+ },
+ "s25": {
+  "title": "What must be true for each band",
+  "col_head": [
+   "Driver",
+   "Low",
+   "Medium",
+   "High"
+  ],
+  "rows": [
+   {
+    "driver": "Amazon units: Year 1 and growth Years 3 to 5",
+    "L": "{y1_units_L} units, then {g3_L}, {g4_L}, {g5_L}",
+    "M": "{y1_units_M} units, then {g3_M}, {g4_M}, {g5_M}",
+    "H": "{y1_units_H} units, then {g3_H}, {g4_H}, {g5_H}"
+   },
+   {
+    "driver": "ASP Year 1 to Year 5",
+    "L": "{asp_y1_L} to {asp_y5_L}",
+    "M": "{asp_y1_M} to {asp_y5_M}",
+    "H": "{asp_y1_H} to {asp_y5_H}"
+   },
+   {
+    "driver": "Landed COGS Year 1 to Year 5",
+    "L": "{landed_y1_L} to {landed_y5_L}",
+    "M": "{landed_y1_M} to {landed_y5_M}",
+    "H": "{landed_y1_H} to {landed_y5_H}"
+   },
+   {
+    "driver": "Ad spend Year 1 to Year 5 (floor 8%)",
+    "L": "{ads_y1_L} to {ads_y5_L}",
+    "M": "{ads_y1_M} to {ads_y5_M}",
+    "H": "{ads_y1_H} to {ads_y5_H}"
+   },
+   {
+    "driver": "Return rate",
+    "L": "4% flat",
+    "M": "3%, then 2.5%",
+    "H": "2.5%, then 2%"
+   },
+   {
+    "driver": "Duty and freight",
+    "L": "Copper rate, air only",
+    "M": "Copper rate, ocean after the gate",
+    "H": "Fiber ruling, ocean, volume pricing"
+   },
+   {
+    "driver": "Channels beyond Amazon US",
+    "L": "eBay and Walmart overflow; B2B {y3_b2b_L} from Year 3",
+    "M": "B2B {y2_b2b_M} in Year 2 to {y5_b2b_M}; DTC, Canada, pro line",
+    "H": "1.8 times the Medium channel revenue"
+   },
+   {
+    "driver": "Lost quarter (listing suppression)",
+    "L": "Months 19 to 21 at 10% of trend",
+    "M": "none",
+    "H": "none"
+   },
+   {
+    "driver": "Year 5 result",
+    "L": "{y5_rev_L}, {y5_net_L} net",
+    "M": "{y5_rev_M}, {y5_net_M} net",
+    "H": "{y5_rev_H}, {y5_net_H} net"
+   }
+  ],
+  "note": "Year 1 Medium drivers are the August model (evidence based). Everything after Month 18 is a management estimate, calibrated so margin compresses at least 1 point a year and ad spend never falls below 8%.",
+  "notes": "Each band is a set of conditions, not a forecast. Medium needs ocean freight after the gate, 30% then 20% then 12% unit growth, and the channel adds on schedule. High needs the fiber ruling plus volume pricing. Low is what happens with the copper rate, air freight, flat units and one lost quarter from a listing suppression."
+ },
+ "s26": {
+  "title": "Channel expansion roadmap",
+  "caption": "Flowchart 07: channels by year. Each year starts only after its gate: Month 12 gate passed (Year 2), Amazon US and B2B profitable (Year 3), DTC list and roadmap SKUs live (Year 4). {full_size}",
+  "table_head": [
+   "Year",
+   "Channels added",
+   "Medium revenue"
+  ],
+  "rows": [
+   {
+    "year": "Year 1",
+    "what": "Amazon US only: 5 hero SKUs, one parent ASIN, FBA",
+    "rev": "{y1_rev_M}"
+   },
+   {
+    "year": "Year 2",
+    "what": "eBay and Walmart overflow ({y2_ebay_M}); B2B installer and AV integrator program ({y2_b2b_M})",
+    "rev": "{y2_rev_M}"
+   },
+   {
+    "year": "Year 3",
+    "what": "DTC site fed by the email list ({y3_dtc_M}); roadmap SKUs",
+    "rev": "{y3_rev_M}"
+   },
+   {
+    "year": "Year 4",
+    "what": "Amazon Canada ({y4_ca_M}); pro line ({y4_pro_M})",
+    "rev": "{y4_rev_M}"
+   },
+   {
+    "year": "Year 5",
+    "what": "Scale every channel. Temu local seller program optional, not in the base case",
+    "rev": "{y5_rev_M}"
+   }
+  ],
+  "notes": "Channels are added one at a time and only after the gate before them passes. eBay costs almost nothing extra; the B2B program is Mark's main Year 2 project; the DTC site waits until the email list exists. Amazon Canada and the pro line are Year 4 because they need the US line to be proven first. Channels added by year: Year 1 Amazon US only with 5 hero SKUs under one parent ASIN; Year 2 eBay and Walmart overflow ({y2_ebay_M}) and the B2B installer program ({y2_b2b_M}); Year 3 the DTC site ({y3_dtc_M}) and roadmap SKUs; Year 4 Amazon Canada ({y4_ca_M}) and the pro line ({y4_pro_M}); Year 5 scale every channel, Temu optional and not in the base case.",
+  "chips_head": "Medium revenue by year"
+ },
+ "s27": {
+  "title": "Cash by month with the peak need marked",
+  "chart_series": [
+   "Low",
+   "Medium",
+   "High",
+   "Minimum"
+  ],
+  "cards": [
+   {
+    "label": "Medium peak need",
+    "value": "{peak_M}",
+    "sub": "in {peak_month_M}; line of credit {gap_M} by {gap_month_M}"
+   },
+   {
+    "label": "Low peak need",
+    "value": "{peak_L}",
+    "sub": "in {peak_month_L}; line of credit {gap_L} by {gap_month_L}"
+   },
+   {
+    "label": "High peak need",
+    "value": "{peak_H}",
+    "sub": "in {peak_month_H}; line of credit {gap_H} by {gap_month_H}"
+   }
+  ],
+  "assump_head": "Cash assumptions",
+  "assump": [
+   "Opening capital {opening_capital}, self funded.",
+   "Inventory cover 2.5 months of forward units (Medium), 3.0 (Low), 2.0 (High).",
+   "PO terms 30% at order, 70% at shipment. Lead time 1 month by air, 2 months by ocean after the gate.",
+   "Amazon payout lag {payout_lag} days. In transit inventory is funded by the business.",
+   "Balance shown before new funding; the line of credit is sized at 1.2 times the peak need."
+  ],
+  "notes": "Working capital is what kills cable businesses, not margin. Even the Medium case, profitable from Month 4, dips to {peak_M} below zero in {peak_month_M} because inventory is bought two and a half months ahead and Amazon pays 14 days late. The line of credit must be in place by {gap_month_M}, before the balance first goes negative."
+ },
+ "s28": {
+  "title": "Funding plan",
+  "table_head": [
+   "",
+   "Low",
+   "Medium",
+   "High"
+  ],
+  "rows": [
+   {
+    "label": "Opening capital (Lucy, self funded)",
+    "L": "{opening_capital}",
+    "M": "{opening_capital}",
+    "H": "{opening_capital}"
+   },
+   {
+    "label": "Peak cash need before funding",
+    "L": "{peak_L}",
+    "M": "{peak_M}",
+    "H": "{peak_H}"
+   },
+   {
+    "label": "Month of the peak need",
+    "L": "{peak_month_L}",
+    "M": "{peak_month_M}",
+    "H": "{peak_month_H}"
+   },
+   {
+    "label": "Line of credit or investor amount (1.2 times peak)",
+    "L": "{gap_L}",
+    "M": "{gap_M}",
+    "H": "{gap_H}"
+   },
+   {
+    "label": "Must be in place by",
+    "L": "{gap_month_L}",
+    "M": "{gap_month_M}",
+    "H": "{gap_month_H}"
+   },
+   {
+    "label": "Runway at Day 90 after funding",
+    "L": "{runway_L} months",
+    "M": "{runway_M} months",
+    "H": "{runway_H} months"
+   },
+   {
+    "label": "Cash at end of Month 24 after funding",
+    "L": "{cash24_L}",
+    "M": "{cash24_M}",
+    "H": "{cash24_H}"
+   },
+   {
+    "label": "Cash at end of Year 5 after funding",
+    "L": "{cash_y5_L}",
+    "M": "{cash_y5_M}",
+    "H": "{cash_y5_H}"
+   }
+  ],
+  "order_head": "Order of funding",
+  "order": [
+   "1. Retained earnings first: every dollar of net stays in the LLC until Year 3.",
+   "2. A line of credit of {gap_M} (Medium) drawn as needed from {gap_month_M}; an investor amount of the same size is the alternative.",
+   "3. The fiber ruling cuts the Medium funding gap to {fiber_gap}; the stress case raises it to {stress_gap}.",
+   "4. Owner draws start only after the Month 12 gate passes and the line is repaid."
+  ],
+  "notes": "The August ask was {opening_capital}; the model says that covers the launch but not the inventory ramp. The honest number is {opening_capital} of capital plus a {gap_M} line in the Medium case, dated {gap_month_M}. The Low case needs more money and then fails the Month 12 gate, so the kill criteria protect the lender as much as the owner."
+ },
+ "s29": {
+  "title": "Sensitivity: what moves Year 5 net",
+  "chart_series": [
+   "Downside",
+   "Upside"
+  ],
+  "base_label": "Base: Medium Year 5 net {y5_net_base}",
+  "table_head": [
+   "Driver",
+   "Downside case",
+   "Year 5 net",
+   "Upside case",
+   "Year 5 net"
+  ],
+  "drivers": {
+   "Factory cost (FOB)": "Factory cost (FOB)",
+   "Duty rate": "Duty rate",
+   "ASP": "ASP",
+   "Ad spend": "Ad spend",
+   "FX (KRW per USD)": "FX (KRW per USD)",
+   "Return rate": "Return rate"
+  },
+  "labels": {
+   "Alibaba benchmark": "Alibaba benchmark",
+   "minus 10%": "minus 10%",
+   "plus 10%": "plus 10%",
+   "Stress 50.1%": "Stress 50.1%",
+   "Fiber 12.5%": "Fiber 12.5%",
+   "plus 3 points": "plus 3 points",
+   "minus 3 points": "minus 3 points",
+   "1,300": "1,300",
+   "1,550": "1,550",
+   "5%": "5%",
+   "2%": "2%"
+  },
+  "note": "One way sensitivity of Medium Year 5 net, live formulas in the Sensitivity tab. The factory cost bar is cut off on purpose: at the Alibaba benchmark Year 5 net is {ali_y5_net}.",
+  "notes": "Factory cost dominates every other driver, which is why the written FOB quote is the first action. After that the duty ruling, ASP and ad spend each move Year 5 net by roughly {sens_mid_swing}. FX matters less than people expect because the only KRW exposure is the purchase price."
+ },
+ "s30": {
+  "title": "Twelve levers and what each one moves",
+  "table_head": [
+   "#",
+   "Lever",
+   "Moves",
+   "From",
+   "To",
+   "Owner",
+   "18 month net effect",
+   "Basis"
+  ],
+  "levers": [
+   {
+    "lever": "CBP binding ruling: fiber classification 8544.70.00",
+    "moves": "Duty rate, landed COGS %",
+    "owner": "Broker, Mark",
+    "basis": "August deck lever"
+   },
+   {
+    "lever": "Air to ocean freight after the Day 90 gate",
+    "moves": "Freight per unit, landed COGS %",
+    "owner": "Lucy, 3PL",
+    "basis": "August deck lever"
+   },
+   {
+    "lever": "Direction proof connector design",
+    "moves": "Return rate",
+    "owner": "Lucy, factory",
+    "basis": "August deck lever"
+   },
+   {
+    "lever": "Keyword pruning and negative keywords",
+    "moves": "Ad spend %",
+    "owner": "Mark, VA",
+    "basis": "August deck lever"
+   },
+   {
+    "lever": "Review velocity (Vine, insert card, Brand Registry follow up)",
+    "moves": "Conversion, unit ramp",
+    "owner": "Mark",
+    "basis": "August deck lever"
+   },
+   {
+    "lever": "Length variations under one parent ASIN",
+    "moves": "Conversion, review pooling, ad efficiency",
+    "owner": "Mark",
+    "basis": "August deck lever"
+   },
+   {
+    "lever": "Factory volume pricing tiers",
+    "moves": "FOB cost",
+    "owner": "Lucy",
+    "basis": "Management estimate"
+   },
+   {
+    "lever": "Packaging to a smaller FBA size tier",
+    "moves": "FBA fee per unit",
+    "owner": "Lucy, factory",
+    "basis": "Management estimate"
+   },
+   {
+    "lever": "3PL feeding FBA, avoid aged inventory surcharges",
+    "moves": "Storage and inbound %",
+    "owner": "3PL, Lucy",
+    "basis": "Management estimate"
+   },
+   {
+    "lever": "Price ladder and coupons (list versus sale price)",
+    "moves": "ASP",
+    "owner": "Mark",
+    "basis": "Management estimate"
+   },
+   {
+    "lever": "Off Amazon email list (Spec Match finder, trade up registration)",
+    "moves": "DTC revenue, ad %",
+    "owner": "Mark",
+    "basis": "Management estimate"
+   },
+   {
+    "lever": "B2B installer program (AV integrators, custom installers)",
+    "moves": "B2B channel revenue",
+    "owner": "Mark, Lucy",
+    "basis": "Management estimate"
+   }
+  ],
+  "from_to": {
+   "1": [
+    "{landed_copper}",
+    "{landed_fiber}"
+   ],
+   "2": [
+    "air {air_kg} per kg",
+    "ocean {ocean_kg} per kg"
+   ],
+   "3": [
+    "3%",
+    "2.5% (target 2%)"
+   ],
+   "4": [
+    "phase rate",
+    "minus 2 points"
+   ],
+   "5": [
+    "base ramp",
+    "plus 10% units"
+   ],
+   "6": [
+    "separate ASINs",
+    "one parent"
+   ],
+   "7": [
+    "H2 base",
+    "minus 5% at 5,000 units per quarter"
+   ],
+   "8": [
+    "{fba_from}",
+    "{fba_to} on 7 m and 10 m"
+   ],
+   "9": [
+    "2%",
+    "1.5%"
+   ],
+   "10": [
+    "{asp42}",
+    "plus or minus 5% test"
+   ],
+   "11": [
+    "0",
+    "DTC from Year 3 ({y3_dtc_M})"
+   ],
+   "12": [
+    "0",
+    "Year 2 {y2_b2b_M}"
+   ]
+  },
+  "effect_notes": {
+   "6": "supports levers 4 and 5",
+   "11": "Year 3 DTC contribution",
+   "12": "Year 2 B2B contribution"
+  },
+  "notes": "Every lever maps to one assumption cell in the workbook, so each can be tested on its own. The ruling, ocean freight and the FBA size tier are worth the most in 18 months. Levers 11 and 12 are channel levers whose effect shows up in Years 2 and 3, not in the 18 month block."
+ },
+ "s31": {
+  "title": "Marketing playbook",
+  "cards": [
+   {
+    "icon": "FiTarget",
+    "head": "Ad spend by phase",
+    "body": "{ads_p1} of revenue in Months 1 to 3, {ads_p2} in Months 4 to 6, {ads_p3} in Months 7 to 12, {ads_p4} in Months 13 to 18. Never below 8%. TACOS gate: {gt_d90_tacos_pass} at Month 3, {gt_m12_tacos_pass} at Month 12."
+   },
+   {
+    "icon": "FiStar",
+    "head": "Review velocity",
+    "body": "Vine on launch, insert card with the guarantee registration, Brand Registry follow up messages. Target: reviews pooled on one parent ASIN."
+   },
+   {
+    "icon": "FiImage",
+    "head": "Content",
+    "body": "7 image slots plus the video slot, A+ content with 7 modules, Brand Store. Titles state 48Gbps and 8K; category name only, no version numbers."
+   },
+   {
+    "icon": "FiSearch",
+    "head": "Keyword discipline",
+    "body": "Weekly pruning and negative keywords (lever 4). Rank for long length and fiber terms, not for cheap copper terms."
+   },
+   {
+    "icon": "FiPercent",
+    "head": "Price ladder and coupons",
+    "body": "List price {hero_list} anchors the hero at {hero_price}. Coupons test plus or minus 5% (lever 10). The Amazon price floor is set before any Temu test."
+   },
+   {
+    "icon": "FiUsers",
+    "head": "Off Amazon list",
+    "body": "Spec Match finder and trade up registration collect emails at zero ad cost. Feeds the DTC site in Year 3 (lever 11) and the installer program (lever 12)."
+   }
+  ],
+  "notes": "The playbook is deliberately narrow: win the long length fiber searches, pool reviews on one parent, and spend heavily only in the first three months. Each card points at a lever on slide 30 so marketing activity and model assumptions stay connected."
+ },
+ "s32": {
+  "title": "Operating model and team",
+  "people": [
+   {
+    "icon": "FiUser",
+    "head": "Lucy (Hyejin Yoo), owner",
+    "body": "Owns BRAND LLC 100%. Factory relationship, purchasing, QC, Korea filings, capital. Decides at every gate."
+   },
+   {
+    "icon": "FiUserCheck",
+    "head": "Mark Taylor, US operations support",
+    "body": "Written consulting or commission agreement, no equity. Listings, PPC, broker and 3PL coordination, gate preparation, B2B program. Not an agent who negotiates or signs contracts."
+   },
+   {
+    "icon": "FiBriefcase",
+    "head": "Attorney, broker, Korean tax accountant, US CPA",
+    "body": "Trademark and LLC; customs entries, bond and the binding ruling; ODI and Korean reports; Form 5472 and the California nexus question."
+   },
+   {
+    "icon": "FiTruck",
+    "head": "Factory, 3PL, virtual assistant",
+    "body": "HDMI Adopter factory with FNSKU labels at source; 3PL holds bulk and feeds FBA; a VA from Year 3 for customer service and keyword work."
+   }
+  ],
+  "cost_head": "Fixed cost ramp (Medium, from the model)",
+  "cost_rows": [
+   {
+    "year": "Year 1",
+    "amount": "{fixed_y1_M}",
+    "what": "software, insurance, misc at {fixed_monthly} per month plus the {seller_fee} seller fee. Launch costs of {launch_one_time} are shown separately in Month 1"
+   },
+   {
+    "year": "Year 2",
+    "amount": "{fixed_y2_M}",
+    "what": "plus compliance: Form 5472 preparation, Wyoming report, bond, product liability insurance"
+   },
+   {
+    "year": "Year 3",
+    "amount": "{fixed_y3_M}",
+    "what": "adds Mark consulting retainer, virtual assistant, tools and insurance"
+   },
+   {
+    "year": "Year 4",
+    "amount": "{fixed_y4_M}",
+    "what": "part time operations help"
+   },
+   {
+    "year": "Year 5",
+    "amount": "{fixed_y5_M}",
+    "what": "small team, still no US office or employees"
+   }
+  ],
+  "notes": "Two people run this for the first two years with four outside professionals. The treaty position shapes the org chart: no US office, no US employees, and Mark never signs a contract for the LLC. Fixed costs stay under {fixed_y2_M} a year until Year 3, when the consulting retainer and a VA are added."
+ },
+ "s33": {
+  "title": "Risk register summary: top 8",
+  "table_head": [
+   "Risk",
+   "Early warning signal",
+   "Mitigation",
+   "Owner"
+  ],
+  "rows": [
+   {
+    "risk": "Factory cost gap (H2 base versus Alibaba benchmark)",
+    "signal": "Written FOB quote above the H2 base",
+    "mitigation": "Quote in week 1; reprice the ladder or stop before the LLC is formed",
+    "owner": "Lucy"
+   },
+   {
+    "risk": "Duty classification lands at copper or worse",
+    "signal": "Ruling answer; second Section 301 action",
+    "mitigation": "Model carries the copper rate; stress case funded; ocean lots wait for the ruling",
+    "owner": "Broker, Mark"
+   },
+   {
+    "risk": "HDMI LA seizure or licensing complaint",
+    "signal": "Missing Adopter proof or ATC report",
+    "mitigation": "No shipment without the documents; category name only on packaging",
+    "owner": "Lucy"
+   },
+   {
+    "risk": "Account suspension or listing suppression",
+    "signal": "Account health notice; IP complaint",
+    "mitigation": "Brand Registry, compliant claims, 14 day response rule; one lost quarter is in the Low case",
+    "owner": "Mark"
+   },
+   {
+    "risk": "Cash: inventory bought ahead of sales",
+    "signal": "Balance below the funding trigger",
+    "mitigation": "Line of credit {gap_M} in place by {gap_month_M}; cover months by scenario",
+    "owner": "Lucy"
+   },
+   {
+    "risk": "Returns from direction confusion",
+    "signal": "Return rate above {gt_d90_ret_pass}",
+    "mitigation": "Direction proof design, QR setup video, guarantee replacement process",
+    "owner": "Lucy, factory"
+   },
+   {
+    "risk": "Korea or US filing missed (ODI, Form 5472)",
+    "signal": "Calendar item overdue",
+    "mitigation": "Compliance calendar; ODI before capital; Form 5472 penalty {penalty_5472}",
+    "owner": "Lucy, accountants"
+   },
+   {
+    "risk": "Key person (Lucy or Mark unavailable)",
+    "signal": "Missed weekly review",
+    "mitigation": "Written SOPs (05_Operating_Processes), VA from Year 3, shared logins",
+    "owner": "Both"
+   }
+  ],
+  "note": "Probability and impact scores live in 08_Risk_Register.xlsx (management estimates). This slide lists the eight that can stop the plan.",
+  "notes": "Eight risks, two of which can end the plan before it starts: the factory cost gap and the licensing documents. The rest are managed by the gates, the funding line and the compliance calendar. The full register has 25 or more risks with scores and triggers."
+ },
+ "s34": {
+  "title": "Kill criteria and Plan B",
+  "caption": "Flowchart 06: the Day 90 decision tree. Month 12 thresholds are on slide 19. {full_size}",
+  "planb_head": "Plan B: B2B installer distribution plus Korea wholesale",
+  "planb_table_head": [
+   "",
+   "Year 1",
+   "Year 2",
+   "Year 3"
+  ],
+  "planb_rows": [
+   {
+    "label": "B2B revenue (3PL only, no Amazon fees)",
+    "v": [
+     "{pb_y1_b2b}",
+     "{pb_y2_b2b}",
+     "{pb_y3_b2b}"
+    ]
+   },
+   {
+    "label": "Korea wholesale gross profit",
+    "v": [
+     "{pb_y1_korea}",
+     "{pb_y2_korea}",
+     "{pb_y3_korea}"
+    ]
+   },
+   {
+    "label": "Total revenue",
+    "v": [
+     "{pb_y1_rev}",
+     "{pb_y2_rev}",
+     "{pb_y3_rev}"
+    ]
+   },
+   {
+    "label": "Net",
+    "v": [
+     "{pb_y1_net}",
+     "{pb_y2_net}",
+     "{pb_y3_net}"
+    ]
+   }
+  ],
+  "planb_note": "Plan B is a side business, shown honestly: B2B at 60% of retail with 3PL fulfillment, plus four Korea deals a year at the August pace growing 15% per year (management estimate).",
+  "kill_head": "Kill means",
+  "kill_body": "No further capital. Sell down inventory. Delist losers. Move to Plan B. The decision belongs to Lucy; Mark prepares the numbers.",
+  "notes": "The decision tree makes the gate mechanical: five kill triggers, six pass tests, one retest allowed. Plan B is small, around {pb_y3_net} of net in its third year, but it keeps the factory relationship and the Korea business alive if Amazon fails."
+ },
+ "s35": {
+  "title": "The ask",
+  "cards": [
+   {
+    "n": "1",
+    "head": "Capital",
+    "body": "{opening_capital} of self funded opening capital now, and a line of credit or investor commitment of {gap_M} in place by {gap_month_M} (Medium). Low would need {gap_L}, High {gap_H}."
+   },
+   {
+    "n": "2",
+    "head": "Structure",
+    "body": "Approve BRAND LLC in Wyoming, Lucy as 100% owner, Mark under a consulting or commission agreement. Engage the attorney and the customs broker in week 1."
+   },
+   {
+    "n": "3",
+    "head": "Facts before money",
+    "body": "Written FOB quote, HDMI Adopter proof, ATC, FCC and CL3 documents from the factory. The brand name shortlist by week 2."
+   },
+   {
+    "n": "4",
+    "head": "Discipline",
+    "body": "Agree the Day 90 and Month 12 gate numbers on slide 19 before the first purchase order, and the kill rule: no further capital if a trigger fires."
+   }
+  ],
+  "upside_head": "What it buys in the Medium case",
+  "upside": "{m18_net_M} of net in 18 months, {y5_rev_M} of revenue in Year 5 at {y5_margin_M}, and {cum_net_5y_M} of cumulative net over five years from the same product that earns {hero_korea} a unit in Korea wholesale today.",
+  "notes": "The ask is four items: the money, the structure, the factory facts and the discipline to stop if the numbers say so. In exchange the Medium case returns {cum_net_5y_M} of cumulative net over five years. If the factory quote fails, the ask is withdrawn before any entity is formed."
+ },
+ "s36": {
+  "title": "First 30 days",
+  "weeks": [
+   {
+    "head": "Week 1",
+    "items": [
+     "Factory: written FOB quote, HDMI Adopter certificate, ATC, FCC and CL3 documents",
+     "Attorney engaged: trademark search, Wyoming LLC filing",
+     "Customs broker engaged, continuous bond, binding ruling request filed",
+     "Brand name shortlist"
+    ]
+   },
+   {
+    "head": "Week 2",
+    "items": [
+     "EIN with Form SS-4 by phone or fax",
+     "ODI report at the foreign exchange bank",
+     "Trademark application filed",
+     "Korean tax accountant meeting: incorporate H2 question, overseas account report"
+    ]
+   },
+   {
+    "head": "Week 3",
+    "items": [
+     "USD bank account (Mercury or Relay; Payoneer or WorldFirst as fallback)",
+     "Capital transfer, only after the ODI report",
+     "Amazon Professional account, tax interview as a foreign owned entity, identity verification",
+     "Product liability insurance quote"
+    ]
+   },
+   {
+    "head": "Week 4",
+    "items": [
+     "Brand Registry with the pending application",
+     "Test inventory PO: 5 hero SKUs, 100 to 300 units each, air DDP, third party QC booked",
+     "Photography and video brief, listing drafts from 09_Amazon_Listing_Kit",
+     "Compliance calendar and SOPs live (05 and 06)"
+    ]
+   }
+  ],
+  "monday_head": "Monday morning, three actions for Lucy",
+  "monday": [
+   "1. Email the factory for the FOB quote sheet and the four compliance documents.",
+   "2. Book the attorney and the customs broker calls.",
+   "3. Book the Korean tax accountant to prepare the ODI report."
+  ],
+  "notes": "Thirty days of setup before any inventory moves. Week 1 is about facts and engagements, week 2 about filings, week 3 about money and accounts, week 4 about Amazon and the first order. The three Monday actions are the ones that unblock everything else."
+ },
+ "s37": {
+  "title": "Glossary",
+  "terms": [
+   [
+    "AOC",
+    "active optical cable"
+   ],
+   [
+    "HDMI",
+    "High Definition Multimedia Interface"
+   ],
+   [
+    "ASP",
+    "average selling price"
+   ],
+   [
+    "COGS",
+    "cost of goods sold"
+   ],
+   [
+    "FOB",
+    "free on board (the price at the factory's port)"
+   ],
+   [
+    "DDP",
+    "delivered duty paid"
+   ],
+   [
+    "FBA",
+    "Fulfillment by Amazon"
+   ],
+   [
+    "FNSKU",
+    "Fulfillment Network Stock Keeping Unit (Amazon's barcode)"
+   ],
+   [
+    "ASIN",
+    "Amazon Standard Identification Number"
+   ],
+   [
+    "ACOS",
+    "advertising cost of sales (ad spend divided by ad attributed sales)"
+   ],
+   [
+    "TACOS",
+    "total advertising cost of sales (ad spend divided by total sales)"
+   ],
+   [
+    "PPC",
+    "pay per click advertising"
+   ],
+   [
+    "3PL",
+    "third party logistics warehouse"
+   ],
+   [
+    "HTS",
+    "Harmonized Tariff Schedule"
+   ],
+   [
+    "CBP",
+    "US Customs and Border Protection"
+   ],
+   [
+    "MFN",
+    "most favored nation duty rate"
+   ],
+   [
+    "Section 301",
+    "US trade law tariffs on China origin goods"
+   ],
+   [
+    "IEEPA",
+    "International Emergency Economic Powers Act"
+   ],
+   [
+    "EIN",
+    "Employer Identification Number"
+   ],
+   [
+    "LLC",
+    "limited liability company"
+   ],
+   [
+    "IRS",
+    "Internal Revenue Service"
+   ],
+   [
+    "PE",
+    "permanent establishment"
+   ],
+   [
+    "ODI",
+    "overseas direct investment report, in Korean 해외직접투자 신고"
+   ],
+   [
+    "Tax accountant",
+    "Korean licensed tax accountant, in Korean 세무사"
+   ],
+   [
+    "FTA",
+    "Foreign Exchange Transactions Act, in Korean 외국환거래법"
+   ],
+   [
+    "USPTO",
+    "United States Patent and Trademark Office"
+   ],
+   [
+    "ATC",
+    "HDMI Authorized Test Center"
+   ],
+   [
+    "HDMI LA",
+    "HDMI Licensing Administrator"
+   ],
+   [
+    "FCC",
+    "Federal Communications Commission"
+   ],
+   [
+    "Prop 65",
+    "California Proposition 65 warning label"
+   ],
+   [
+    "CL3",
+    "in wall cable fire rating (Class 3)"
+   ],
+   [
+    "KVM",
+    "keyboard, video and mouse extension"
+   ],
+   [
+    "DTC",
+    "direct to consumer website"
+   ],
+   [
+    "LOC",
+    "line of credit"
+   ],
+   [
+    "QC",
+    "quality control"
+   ],
+   [
+    "PO",
+    "purchase order"
+   ],
+   [
+    "SKU",
+    "stock keeping unit"
+   ],
+   [
+    "KPI",
+    "key performance indicator"
+   ],
+   [
+    "SOP",
+    "standard operating procedure"
+   ],
+   [
+    "VA",
+    "virtual assistant"
+   ],
+   [
+    "eARC",
+    "enhanced audio return channel"
+   ],
+   [
+    "Gbps",
+    "gigabits per second"
+   ],
+   [
+    "B2B",
+    "business to business"
+   ],
+   [
+    "IP",
+    "intellectual property"
+   ],
+   [
+    "BOI",
+    "beneficial ownership information report"
+   ],
+   [
+    "AV",
+    "audio video"
+   ],
+   [
+    "DP",
+    "DisplayPort"
+   ],
+   [
+    "SSN",
+    "Social Security Number"
+   ],
+   [
+    "CPA",
+    "certified public accountant (US tax preparer)"
+   ],
+   [
+    "FX",
+    "foreign exchange rate"
+   ]
+  ],
+  "notes": "Every acronym used in the deck, in the shared wording used across the whole package. The same definitions appear in 05_Operating_Processes and 09_Amazon_Listing_Kit so every document uses one wording."
+ }
+}

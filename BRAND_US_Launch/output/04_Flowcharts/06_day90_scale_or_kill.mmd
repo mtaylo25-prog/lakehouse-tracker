@@ -1,0 +1,60 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Liberation Sans, Noto Sans KR, sans-serif','fontSize':'18px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':24,'rankSpacing':70,'curve':'linear','padding':14,'htmlLabels':true,'wrappingWidth':1200}}}%%
+flowchart TD
+  START["Day 90 gate at the end of Month 3<br/>Owner: Lucy decides, Mark prepares the numbers<br/>Step 1: check the five kill triggers. Step 2: check the six pass tests"]
+  START --> K1["Kill trigger 1<br/>Hero SKU conversion below 5%?"]
+  START --> K2["Kill trigger 2<br/>TACOS above 40% in Month 3?"]
+  START --> K3["Kill trigger 3<br/>Return rate above 7%?"]
+  START --> K4["Kill trigger 4<br/>Hero contribution before<br/>advertising below $8 per unit?"]
+  START --> K5["Kill trigger 5<br/>Cash runway below 2 months?"]
+  K1 -->|"Yes"| KILL
+  K2 -->|"Yes"| KILL
+  K3 -->|"Yes"| KILL
+  K4 -->|"Yes"| KILL
+  K5 -->|"Yes"| KILL
+  K1 -->|"No"| CLEAR
+  K2 -->|"No"| CLEAR
+  K3 -->|"No"| CLEAR
+  K4 -->|"No"| CLEAR
+  K5 -->|"No"| CLEAR
+  KILL["KILL. Any one trigger kills. No further capital. Sell down inventory,<br/>delist losers, move to Plan B: B2B installer distribution plus Korea<br/>wholesale"]
+  CLEAR["No kill trigger hit. Now all six<br/>pass tests must pass"]
+  CLEAR --> P1["Pass test 1<br/>Conversion at or above 8% on at<br/>least 3 of the 5 launch SKUs?"]
+  CLEAR --> P2["Pass test 2<br/>TACOS at or below 30% in Month 3<br/>and falling month over month?"]
+  CLEAR --> P3["Pass test 3<br/>Return rate at or below 4%?"]
+  CLEAR --> P4["Pass test 4<br/>Contribution before advertising at<br/>or above $11 per unit on at least<br/>3 of 5 SKUs?"]
+  CLEAR --> P5["Pass test 5<br/>Cash runway at or above 4 months<br/>after funding the next PO?"]
+  CLEAR --> P6["Pass test 6<br/>No suppressed listing and no IP<br/>complaint open more than 14 days?"]
+  P1 -->|"No"| HOLD
+  P2 -->|"No"| HOLD
+  P3 -->|"No"| HOLD
+  P4 -->|"No"| HOLD
+  P5 -->|"No"| HOLD
+  P6 -->|"No"| HOLD
+  P1 -->|"Yes"| ALL
+  P2 -->|"Yes"| ALL
+  P3 -->|"Yes"| ALL
+  P4 -->|"Yes"| ALL
+  P5 -->|"Yes"| ALL
+  P6 -->|"Yes"| ALL
+  HOLD["REVIEW. Fix the failed test and retest in 30 days. No new capital<br/>beyond the committed PO. One retest only, then pass or kill"]
+  ALL["All six pass"]
+  ALL --> SCALE["SCALE. Ocean freight PO on proven SKUs, delist losers, keep air for<br/>new SKUs, next review at Month 12"]
+  HOLD -.->|"Retest once"| START
+  SCALE --> M12["Month 12 gate. Pass needs all of: revenue at or above $70K per month,<br/>cumulative net at or above $0, TACOS at or below 15%, return rate at<br/>or below 3%, operating cash flow positive two months in a row.<br/>Kill on any one of: revenue below $50K per month, cumulative net below<br/>($25K), TACOS above 25%, return rate above 5%, three months of<br/>negative operating cash flow with a funding gap above $50K"]
+  LEG["Legend. TACOS: total advertising cost of sales (ad spend divided by total revenue). SKU: stock keeping unit.<br/>PO: purchase order. IP: intellectual property. Contribution: price minus landed cost, referral, FBA fee and<br/>returns, before advertising. Hero SKU: 8K 10M. Thresholds from the kill criteria in the risk register."]
+
+  class START,CLEAR step
+  class K1,K2,K3,K4,K5,P1,P2,P3,P4,P5,P6 dec
+  class KILL kill
+  class SCALE,ALL good
+  class HOLD ext
+  class M12 step
+  class LEG legend
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:2px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:2px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef legend fill:#FFFFFF,stroke:#9AA5C4,stroke-width:1px,color:#141C36

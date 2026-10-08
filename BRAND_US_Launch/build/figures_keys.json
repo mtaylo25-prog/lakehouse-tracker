@@ -1,0 +1,3287 @@
+{
+ "scenarios.Low.m18.revenue": {
+  "name": "m18_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$C$60",
+  "scenario": 1
+ },
+ "scenarios.Low.m18.net": {
+  "name": "m18_net",
+  "ref": "'Monthly PL Y1 Y2'!$C$61",
+  "scenario": 1
+ },
+ "scenarios.Low.m18.net_margin": {
+  "name": "m18_net_margin",
+  "ref": "'Monthly PL Y1 Y2'!$C$62",
+  "scenario": 1
+ },
+ "scenarios.Low.m18.breakeven_month": {
+  "name": "m18_breakeven_month",
+  "ref": "'Monthly PL Y1 Y2'!$C$63",
+  "scenario": 1
+ },
+ "scenarios.Low.m18.run_rate": {
+  "name": "m18_run_rate",
+  "ref": "'Monthly PL Y1 Y2'!$C$64",
+  "scenario": 1
+ },
+ "scenarios.Low.m18.exit_margin": {
+  "name": "m18_exit_margin",
+  "ref": "'Monthly PL Y1 Y2'!$C$65",
+  "scenario": 1
+ },
+ "scenarios.Low.m18.units": {
+  "name": "m18_units",
+  "ref": "'Monthly PL Y1 Y2'!$C$66",
+  "scenario": 1
+ },
+ "scenarios.Low.m24.revenue": {
+  "name": "m24_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$C$68",
+  "scenario": 1
+ },
+ "scenarios.Low.m24.net": {
+  "name": "m24_net",
+  "ref": "'Monthly PL Y1 Y2'!$C$69",
+  "scenario": 1
+ },
+ "scenarios.Low.m24.breakeven_month": {
+  "name": "m24_breakeven_month",
+  "ref": "'Monthly PL Y1 Y2'!$C$67",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].units": {
+  "name": "monthly_units",
+  "ref": "'Monthly PL Y1 Y2'!$D$7:$AA$7",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].revenue": {
+  "name": "monthly_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$D$54:$AA$54",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].net": {
+  "name": "monthly_net",
+  "ref": "'Monthly PL Y1 Y2'!$D$55:$AA$55",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].cum_net": {
+  "name": "monthly_cum_net",
+  "ref": "'Monthly PL Y1 Y2'!$D$56:$AA$56",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].cash_balance": {
+  "name": "monthly_cash_balance",
+  "ref": "'Cash Flow and Working Capital'!$C$33:$AA$33",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].tacos": {
+  "name": "monthly_tacos",
+  "ref": "'Monthly PL Y1 Y2'!$D$24:$AA$24",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].contribution_before_ads": {
+  "name": "monthly_contribution_before_ads",
+  "ref": "'Monthly PL Y1 Y2'!$D$25:$AA$25",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].contribution_after_ads": {
+  "name": "monthly_contribution_after_ads",
+  "ref": "'Monthly PL Y1 Y2'!$D$26:$AA$26",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].amazon_revenue": {
+  "name": "monthly_amazon_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$D$9:$AA$9",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].amazon_net": {
+  "name": "monthly_amazon_net",
+  "ref": "'Monthly PL Y1 Y2'!$D$21:$AA$21",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].cash_balance_after_funding": {
+  "name": "monthly_cash_balance_after_funding",
+  "ref": "'Cash Flow and Working Capital'!$C$54:$AA$54",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].inventory_on_hand": {
+  "name": "monthly_inventory_on_hand",
+  "ref": "'Cash Flow and Working Capital'!$C$37:$AA$37",
+  "scenario": 1
+ },
+ "scenarios.Low.monthly[].inventory_in_transit": {
+  "name": "monthly_inventory_in_transit",
+  "ref": "'Cash Flow and Working Capital'!$C$38:$AA$38",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.revenue": {
+  "name": "annual_Y1_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$C$69",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.net": {
+  "name": "annual_Y1_net",
+  "ref": "'Annual PL Y1 to Y5'!$C$80",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.net_margin": {
+  "name": "annual_Y1_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$C$81",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.cogs": {
+  "name": "annual_Y1_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$C$70",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.fees": {
+  "name": "annual_Y1_fees",
+  "ref": "'Annual PL Y1 to Y5'!$C$71",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.fulfillment": {
+  "name": "annual_Y1_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$C$72",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.advertising": {
+  "name": "annual_Y1_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$C$73",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.returns": {
+  "name": "annual_Y1_returns",
+  "ref": "'Annual PL Y1 to Y5'!$C$74",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.contribution": {
+  "name": "annual_Y1_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$C$75",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.fixed": {
+  "name": "annual_Y1_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$C$76",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.seller_fee": {
+  "name": "annual_Y1_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$C$77",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.launch": {
+  "name": "annual_Y1_launch",
+  "ref": "'Annual PL Y1 to Y5'!$C$78",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.compliance": {
+  "name": "annual_Y1_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$C$79",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.cum_net": {
+  "name": "annual_Y1_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$C$82",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.amazon_units": {
+  "name": "annual_Y1_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$C$6",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.asp": {
+  "name": "annual_Y1_asp",
+  "ref": "'Annual PL Y1 to Y5'!$C$7",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.landed_pct": {
+  "name": "annual_Y1_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$C$8",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.ads_pct": {
+  "name": "annual_Y1_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$C$9",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.amazon_contribution_pct": {
+  "name": "annual_Y1_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$C$83",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.revenue_by_channel.amazon_us": {
+  "name": "annual_Y1_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$C$15",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y1_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$C$24",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.revenue_by_channel.b2b": {
+  "name": "annual_Y1_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$C$33",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.revenue_by_channel.dtc": {
+  "name": "annual_Y1_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$C$42",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y1_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$C$51",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y1.revenue_by_channel.pro_line": {
+  "name": "annual_Y1_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$C$60",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.revenue": {
+  "name": "annual_Y2_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$D$69",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.net": {
+  "name": "annual_Y2_net",
+  "ref": "'Annual PL Y1 to Y5'!$D$80",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.net_margin": {
+  "name": "annual_Y2_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$D$81",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.cogs": {
+  "name": "annual_Y2_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$D$70",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.fees": {
+  "name": "annual_Y2_fees",
+  "ref": "'Annual PL Y1 to Y5'!$D$71",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.fulfillment": {
+  "name": "annual_Y2_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$D$72",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.advertising": {
+  "name": "annual_Y2_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$D$73",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.returns": {
+  "name": "annual_Y2_returns",
+  "ref": "'Annual PL Y1 to Y5'!$D$74",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.contribution": {
+  "name": "annual_Y2_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$D$75",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.fixed": {
+  "name": "annual_Y2_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$D$76",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.seller_fee": {
+  "name": "annual_Y2_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$D$77",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.launch": {
+  "name": "annual_Y2_launch",
+  "ref": "'Annual PL Y1 to Y5'!$D$78",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.compliance": {
+  "name": "annual_Y2_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$D$79",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.cum_net": {
+  "name": "annual_Y2_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$D$82",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.amazon_units": {
+  "name": "annual_Y2_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$D$6",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.asp": {
+  "name": "annual_Y2_asp",
+  "ref": "'Annual PL Y1 to Y5'!$D$7",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.landed_pct": {
+  "name": "annual_Y2_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$D$8",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.ads_pct": {
+  "name": "annual_Y2_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$D$9",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.amazon_contribution_pct": {
+  "name": "annual_Y2_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$D$83",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.revenue_by_channel.amazon_us": {
+  "name": "annual_Y2_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$D$15",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y2_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$D$24",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.revenue_by_channel.b2b": {
+  "name": "annual_Y2_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$D$33",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.revenue_by_channel.dtc": {
+  "name": "annual_Y2_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$D$42",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y2_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$D$51",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y2.revenue_by_channel.pro_line": {
+  "name": "annual_Y2_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$D$60",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.revenue": {
+  "name": "annual_Y3_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$E$69",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.net": {
+  "name": "annual_Y3_net",
+  "ref": "'Annual PL Y1 to Y5'!$E$80",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.net_margin": {
+  "name": "annual_Y3_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$E$81",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.cogs": {
+  "name": "annual_Y3_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$E$70",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.fees": {
+  "name": "annual_Y3_fees",
+  "ref": "'Annual PL Y1 to Y5'!$E$71",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.fulfillment": {
+  "name": "annual_Y3_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$E$72",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.advertising": {
+  "name": "annual_Y3_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$E$73",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.returns": {
+  "name": "annual_Y3_returns",
+  "ref": "'Annual PL Y1 to Y5'!$E$74",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.contribution": {
+  "name": "annual_Y3_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$E$75",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.fixed": {
+  "name": "annual_Y3_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$E$76",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.seller_fee": {
+  "name": "annual_Y3_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$E$77",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.launch": {
+  "name": "annual_Y3_launch",
+  "ref": "'Annual PL Y1 to Y5'!$E$78",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.compliance": {
+  "name": "annual_Y3_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$E$79",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.cum_net": {
+  "name": "annual_Y3_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$E$82",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.amazon_units": {
+  "name": "annual_Y3_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$E$6",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.asp": {
+  "name": "annual_Y3_asp",
+  "ref": "'Annual PL Y1 to Y5'!$E$7",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.landed_pct": {
+  "name": "annual_Y3_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$E$8",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.ads_pct": {
+  "name": "annual_Y3_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$E$9",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.amazon_contribution_pct": {
+  "name": "annual_Y3_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$E$83",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.revenue_by_channel.amazon_us": {
+  "name": "annual_Y3_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$E$15",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y3_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$E$24",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.revenue_by_channel.b2b": {
+  "name": "annual_Y3_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$E$33",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.revenue_by_channel.dtc": {
+  "name": "annual_Y3_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$E$42",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y3_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$E$51",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y3.revenue_by_channel.pro_line": {
+  "name": "annual_Y3_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$E$60",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.revenue": {
+  "name": "annual_Y4_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$F$69",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.net": {
+  "name": "annual_Y4_net",
+  "ref": "'Annual PL Y1 to Y5'!$F$80",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.net_margin": {
+  "name": "annual_Y4_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$F$81",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.cogs": {
+  "name": "annual_Y4_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$F$70",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.fees": {
+  "name": "annual_Y4_fees",
+  "ref": "'Annual PL Y1 to Y5'!$F$71",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.fulfillment": {
+  "name": "annual_Y4_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$F$72",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.advertising": {
+  "name": "annual_Y4_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$F$73",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.returns": {
+  "name": "annual_Y4_returns",
+  "ref": "'Annual PL Y1 to Y5'!$F$74",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.contribution": {
+  "name": "annual_Y4_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$F$75",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.fixed": {
+  "name": "annual_Y4_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$F$76",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.seller_fee": {
+  "name": "annual_Y4_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$F$77",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.launch": {
+  "name": "annual_Y4_launch",
+  "ref": "'Annual PL Y1 to Y5'!$F$78",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.compliance": {
+  "name": "annual_Y4_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$F$79",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.cum_net": {
+  "name": "annual_Y4_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$F$82",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.amazon_units": {
+  "name": "annual_Y4_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$F$6",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.asp": {
+  "name": "annual_Y4_asp",
+  "ref": "'Annual PL Y1 to Y5'!$F$7",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.landed_pct": {
+  "name": "annual_Y4_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$F$8",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.ads_pct": {
+  "name": "annual_Y4_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$F$9",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.amazon_contribution_pct": {
+  "name": "annual_Y4_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$F$83",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.revenue_by_channel.amazon_us": {
+  "name": "annual_Y4_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$F$15",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y4_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$F$24",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.revenue_by_channel.b2b": {
+  "name": "annual_Y4_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$F$33",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.revenue_by_channel.dtc": {
+  "name": "annual_Y4_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$F$42",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y4_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$F$51",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y4.revenue_by_channel.pro_line": {
+  "name": "annual_Y4_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$F$60",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.revenue": {
+  "name": "annual_Y5_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$G$69",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.net": {
+  "name": "annual_Y5_net",
+  "ref": "'Annual PL Y1 to Y5'!$G$80",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.net_margin": {
+  "name": "annual_Y5_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$G$81",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.cogs": {
+  "name": "annual_Y5_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$G$70",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.fees": {
+  "name": "annual_Y5_fees",
+  "ref": "'Annual PL Y1 to Y5'!$G$71",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.fulfillment": {
+  "name": "annual_Y5_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$G$72",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.advertising": {
+  "name": "annual_Y5_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$G$73",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.returns": {
+  "name": "annual_Y5_returns",
+  "ref": "'Annual PL Y1 to Y5'!$G$74",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.contribution": {
+  "name": "annual_Y5_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$G$75",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.fixed": {
+  "name": "annual_Y5_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$G$76",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.seller_fee": {
+  "name": "annual_Y5_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$G$77",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.launch": {
+  "name": "annual_Y5_launch",
+  "ref": "'Annual PL Y1 to Y5'!$G$78",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.compliance": {
+  "name": "annual_Y5_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$G$79",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.cum_net": {
+  "name": "annual_Y5_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$G$82",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.amazon_units": {
+  "name": "annual_Y5_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$G$6",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.asp": {
+  "name": "annual_Y5_asp",
+  "ref": "'Annual PL Y1 to Y5'!$G$7",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.landed_pct": {
+  "name": "annual_Y5_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$G$8",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.ads_pct": {
+  "name": "annual_Y5_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$G$9",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.amazon_contribution_pct": {
+  "name": "annual_Y5_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$G$83",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.revenue_by_channel.amazon_us": {
+  "name": "annual_Y5_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$G$15",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y5_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$G$24",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.revenue_by_channel.b2b": {
+  "name": "annual_Y5_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$G$33",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.revenue_by_channel.dtc": {
+  "name": "annual_Y5_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$G$42",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y5_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$G$51",
+  "scenario": 1
+ },
+ "scenarios.Low.annual.Y5.revenue_by_channel.pro_line": {
+  "name": "annual_Y5_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$G$60",
+  "scenario": 1
+ },
+ "scenarios.Low.cash.peak_need": {
+  "name": "cash_peak_need",
+  "ref": "'Cash Flow and Working Capital'!$C$48",
+  "scenario": 1
+ },
+ "scenarios.Low.cash.peak_need_month": {
+  "name": "cash_peak_need_month",
+  "ref": "'Cash Flow and Working Capital'!$C$47",
+  "scenario": 1
+ },
+ "scenarios.Low.cash.peak_need_month_label": {
+  "name": "cash_peak_need_month_label",
+  "ref": "'Cash Flow and Working Capital'!$C$46",
+  "scenario": 1
+ },
+ "scenarios.Low.cash.min_balance": {
+  "name": "cash_min_balance",
+  "ref": "'Cash Flow and Working Capital'!$C$45",
+  "scenario": 1
+ },
+ "scenarios.Low.cash.funding_gap": {
+  "name": "cash_funding_gap",
+  "ref": "'Cash Flow and Working Capital'!$C$49",
+  "scenario": 1
+ },
+ "scenarios.Low.cash.funding_needed_by_month": {
+  "name": "cash_funding_needed_by_month",
+  "ref": "'Cash Flow and Working Capital'!$C$50",
+  "scenario": 1
+ },
+ "scenarios.Low.cash.runway_months_day90": {
+  "name": "cash_runway_months_day90",
+  "ref": "'Cash Flow and Working Capital'!$C$55",
+  "scenario": 1
+ },
+ "scenarios.Low.cash.runway_months_day90_unfunded": {
+  "name": "cash_runway_months_day90_unfunded",
+  "ref": "'Cash Flow and Working Capital'!$C$52",
+  "scenario": 1
+ },
+ "scenarios.Low.cash.opening_capital": {
+  "name": "cash_opening_capital",
+  "ref": "'Assumptions'!$F$106",
+  "scenario": 1
+ },
+ "scenarios.Low.gates.day90.metrics.tacos.value": {
+  "name": "gate_d90_tacos_value",
+  "ref": "'Funding and Breakeven'!$B$28",
+  "scenario": 1
+ },
+ "scenarios.Low.gates.day90.metrics.ret.value": {
+  "name": "gate_d90_ret_value",
+  "ref": "'Funding and Breakeven'!$B$29",
+  "scenario": 1
+ },
+ "scenarios.Low.gates.day90.metrics.cpu.value": {
+  "name": "gate_d90_cpu_value",
+  "ref": "'Funding and Breakeven'!$B$30",
+  "scenario": 1
+ },
+ "scenarios.Low.gates.day90.metrics.runway.value": {
+  "name": "gate_d90_runway_value",
+  "ref": "'Funding and Breakeven'!$B$31",
+  "scenario": 1
+ },
+ "scenarios.Low.gates.day90.result": {
+  "name": "gate_day90_result",
+  "ref": "'Funding and Breakeven'!$B$33",
+  "scenario": 1
+ },
+ "scenarios.Low.gates.month12.metrics.rev.value": {
+  "name": "gate_m12_rev_value",
+  "ref": "'Funding and Breakeven'!$B$36",
+  "scenario": 1
+ },
+ "scenarios.Low.gates.month12.metrics.cum.value": {
+  "name": "gate_m12_cum_value",
+  "ref": "'Funding and Breakeven'!$B$37",
+  "scenario": 1
+ },
+ "scenarios.Low.gates.month12.metrics.tacos.value": {
+  "name": "gate_m12_tacos_value",
+  "ref": "'Funding and Breakeven'!$B$38",
+  "scenario": 1
+ },
+ "scenarios.Low.gates.month12.metrics.ret.value": {
+  "name": "gate_m12_ret_value",
+  "ref": "'Funding and Breakeven'!$B$39",
+  "scenario": 1
+ },
+ "scenarios.Low.gates.month12.metrics.opcf.value": {
+  "name": "gate_m12_opcf_value",
+  "ref": "'Funding and Breakeven'!$B$40",
+  "scenario": 1
+ },
+ "scenarios.Low.gates.month12.result": {
+  "name": "gate_month12_result",
+  "ref": "'Funding and Breakeven'!$B$41",
+  "scenario": 1
+ },
+ "scenarios.Medium.m18.revenue": {
+  "name": "m18_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$C$60",
+  "scenario": 2
+ },
+ "scenarios.Medium.m18.net": {
+  "name": "m18_net",
+  "ref": "'Monthly PL Y1 Y2'!$C$61",
+  "scenario": 2
+ },
+ "scenarios.Medium.m18.net_margin": {
+  "name": "m18_net_margin",
+  "ref": "'Monthly PL Y1 Y2'!$C$62",
+  "scenario": 2
+ },
+ "scenarios.Medium.m18.breakeven_month": {
+  "name": "m18_breakeven_month",
+  "ref": "'Monthly PL Y1 Y2'!$C$63",
+  "scenario": 2
+ },
+ "scenarios.Medium.m18.run_rate": {
+  "name": "m18_run_rate",
+  "ref": "'Monthly PL Y1 Y2'!$C$64",
+  "scenario": 2
+ },
+ "scenarios.Medium.m18.exit_margin": {
+  "name": "m18_exit_margin",
+  "ref": "'Monthly PL Y1 Y2'!$C$65",
+  "scenario": 2
+ },
+ "scenarios.Medium.m18.units": {
+  "name": "m18_units",
+  "ref": "'Monthly PL Y1 Y2'!$C$66",
+  "scenario": 2
+ },
+ "scenarios.Medium.m24.revenue": {
+  "name": "m24_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$C$68",
+  "scenario": 2
+ },
+ "scenarios.Medium.m24.net": {
+  "name": "m24_net",
+  "ref": "'Monthly PL Y1 Y2'!$C$69",
+  "scenario": 2
+ },
+ "scenarios.Medium.m24.breakeven_month": {
+  "name": "m24_breakeven_month",
+  "ref": "'Monthly PL Y1 Y2'!$C$67",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].units": {
+  "name": "monthly_units",
+  "ref": "'Monthly PL Y1 Y2'!$D$7:$AA$7",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].revenue": {
+  "name": "monthly_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$D$54:$AA$54",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].net": {
+  "name": "monthly_net",
+  "ref": "'Monthly PL Y1 Y2'!$D$55:$AA$55",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].cum_net": {
+  "name": "monthly_cum_net",
+  "ref": "'Monthly PL Y1 Y2'!$D$56:$AA$56",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].cash_balance": {
+  "name": "monthly_cash_balance",
+  "ref": "'Cash Flow and Working Capital'!$C$33:$AA$33",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].tacos": {
+  "name": "monthly_tacos",
+  "ref": "'Monthly PL Y1 Y2'!$D$24:$AA$24",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].contribution_before_ads": {
+  "name": "monthly_contribution_before_ads",
+  "ref": "'Monthly PL Y1 Y2'!$D$25:$AA$25",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].contribution_after_ads": {
+  "name": "monthly_contribution_after_ads",
+  "ref": "'Monthly PL Y1 Y2'!$D$26:$AA$26",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].amazon_revenue": {
+  "name": "monthly_amazon_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$D$9:$AA$9",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].amazon_net": {
+  "name": "monthly_amazon_net",
+  "ref": "'Monthly PL Y1 Y2'!$D$21:$AA$21",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].cash_balance_after_funding": {
+  "name": "monthly_cash_balance_after_funding",
+  "ref": "'Cash Flow and Working Capital'!$C$54:$AA$54",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].inventory_on_hand": {
+  "name": "monthly_inventory_on_hand",
+  "ref": "'Cash Flow and Working Capital'!$C$37:$AA$37",
+  "scenario": 2
+ },
+ "scenarios.Medium.monthly[].inventory_in_transit": {
+  "name": "monthly_inventory_in_transit",
+  "ref": "'Cash Flow and Working Capital'!$C$38:$AA$38",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.revenue": {
+  "name": "annual_Y1_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$C$69",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.net": {
+  "name": "annual_Y1_net",
+  "ref": "'Annual PL Y1 to Y5'!$C$80",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.net_margin": {
+  "name": "annual_Y1_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$C$81",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.cogs": {
+  "name": "annual_Y1_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$C$70",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.fees": {
+  "name": "annual_Y1_fees",
+  "ref": "'Annual PL Y1 to Y5'!$C$71",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.fulfillment": {
+  "name": "annual_Y1_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$C$72",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.advertising": {
+  "name": "annual_Y1_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$C$73",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.returns": {
+  "name": "annual_Y1_returns",
+  "ref": "'Annual PL Y1 to Y5'!$C$74",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.contribution": {
+  "name": "annual_Y1_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$C$75",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.fixed": {
+  "name": "annual_Y1_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$C$76",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.seller_fee": {
+  "name": "annual_Y1_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$C$77",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.launch": {
+  "name": "annual_Y1_launch",
+  "ref": "'Annual PL Y1 to Y5'!$C$78",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.compliance": {
+  "name": "annual_Y1_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$C$79",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.cum_net": {
+  "name": "annual_Y1_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$C$82",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.amazon_units": {
+  "name": "annual_Y1_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$C$6",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.asp": {
+  "name": "annual_Y1_asp",
+  "ref": "'Annual PL Y1 to Y5'!$C$7",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.landed_pct": {
+  "name": "annual_Y1_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$C$8",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.ads_pct": {
+  "name": "annual_Y1_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$C$9",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.amazon_contribution_pct": {
+  "name": "annual_Y1_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$C$83",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.revenue_by_channel.amazon_us": {
+  "name": "annual_Y1_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$C$15",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y1_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$C$24",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.revenue_by_channel.b2b": {
+  "name": "annual_Y1_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$C$33",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.revenue_by_channel.dtc": {
+  "name": "annual_Y1_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$C$42",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y1_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$C$51",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y1.revenue_by_channel.pro_line": {
+  "name": "annual_Y1_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$C$60",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.revenue": {
+  "name": "annual_Y2_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$D$69",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.net": {
+  "name": "annual_Y2_net",
+  "ref": "'Annual PL Y1 to Y5'!$D$80",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.net_margin": {
+  "name": "annual_Y2_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$D$81",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.cogs": {
+  "name": "annual_Y2_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$D$70",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.fees": {
+  "name": "annual_Y2_fees",
+  "ref": "'Annual PL Y1 to Y5'!$D$71",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.fulfillment": {
+  "name": "annual_Y2_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$D$72",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.advertising": {
+  "name": "annual_Y2_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$D$73",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.returns": {
+  "name": "annual_Y2_returns",
+  "ref": "'Annual PL Y1 to Y5'!$D$74",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.contribution": {
+  "name": "annual_Y2_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$D$75",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.fixed": {
+  "name": "annual_Y2_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$D$76",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.seller_fee": {
+  "name": "annual_Y2_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$D$77",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.launch": {
+  "name": "annual_Y2_launch",
+  "ref": "'Annual PL Y1 to Y5'!$D$78",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.compliance": {
+  "name": "annual_Y2_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$D$79",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.cum_net": {
+  "name": "annual_Y2_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$D$82",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.amazon_units": {
+  "name": "annual_Y2_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$D$6",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.asp": {
+  "name": "annual_Y2_asp",
+  "ref": "'Annual PL Y1 to Y5'!$D$7",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.landed_pct": {
+  "name": "annual_Y2_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$D$8",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.ads_pct": {
+  "name": "annual_Y2_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$D$9",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.amazon_contribution_pct": {
+  "name": "annual_Y2_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$D$83",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.revenue_by_channel.amazon_us": {
+  "name": "annual_Y2_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$D$15",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y2_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$D$24",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.revenue_by_channel.b2b": {
+  "name": "annual_Y2_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$D$33",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.revenue_by_channel.dtc": {
+  "name": "annual_Y2_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$D$42",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y2_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$D$51",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y2.revenue_by_channel.pro_line": {
+  "name": "annual_Y2_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$D$60",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.revenue": {
+  "name": "annual_Y3_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$E$69",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.net": {
+  "name": "annual_Y3_net",
+  "ref": "'Annual PL Y1 to Y5'!$E$80",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.net_margin": {
+  "name": "annual_Y3_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$E$81",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.cogs": {
+  "name": "annual_Y3_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$E$70",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.fees": {
+  "name": "annual_Y3_fees",
+  "ref": "'Annual PL Y1 to Y5'!$E$71",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.fulfillment": {
+  "name": "annual_Y3_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$E$72",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.advertising": {
+  "name": "annual_Y3_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$E$73",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.returns": {
+  "name": "annual_Y3_returns",
+  "ref": "'Annual PL Y1 to Y5'!$E$74",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.contribution": {
+  "name": "annual_Y3_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$E$75",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.fixed": {
+  "name": "annual_Y3_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$E$76",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.seller_fee": {
+  "name": "annual_Y3_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$E$77",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.launch": {
+  "name": "annual_Y3_launch",
+  "ref": "'Annual PL Y1 to Y5'!$E$78",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.compliance": {
+  "name": "annual_Y3_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$E$79",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.cum_net": {
+  "name": "annual_Y3_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$E$82",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.amazon_units": {
+  "name": "annual_Y3_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$E$6",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.asp": {
+  "name": "annual_Y3_asp",
+  "ref": "'Annual PL Y1 to Y5'!$E$7",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.landed_pct": {
+  "name": "annual_Y3_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$E$8",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.ads_pct": {
+  "name": "annual_Y3_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$E$9",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.amazon_contribution_pct": {
+  "name": "annual_Y3_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$E$83",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.revenue_by_channel.amazon_us": {
+  "name": "annual_Y3_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$E$15",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y3_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$E$24",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.revenue_by_channel.b2b": {
+  "name": "annual_Y3_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$E$33",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.revenue_by_channel.dtc": {
+  "name": "annual_Y3_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$E$42",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y3_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$E$51",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y3.revenue_by_channel.pro_line": {
+  "name": "annual_Y3_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$E$60",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.revenue": {
+  "name": "annual_Y4_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$F$69",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.net": {
+  "name": "annual_Y4_net",
+  "ref": "'Annual PL Y1 to Y5'!$F$80",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.net_margin": {
+  "name": "annual_Y4_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$F$81",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.cogs": {
+  "name": "annual_Y4_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$F$70",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.fees": {
+  "name": "annual_Y4_fees",
+  "ref": "'Annual PL Y1 to Y5'!$F$71",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.fulfillment": {
+  "name": "annual_Y4_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$F$72",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.advertising": {
+  "name": "annual_Y4_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$F$73",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.returns": {
+  "name": "annual_Y4_returns",
+  "ref": "'Annual PL Y1 to Y5'!$F$74",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.contribution": {
+  "name": "annual_Y4_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$F$75",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.fixed": {
+  "name": "annual_Y4_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$F$76",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.seller_fee": {
+  "name": "annual_Y4_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$F$77",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.launch": {
+  "name": "annual_Y4_launch",
+  "ref": "'Annual PL Y1 to Y5'!$F$78",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.compliance": {
+  "name": "annual_Y4_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$F$79",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.cum_net": {
+  "name": "annual_Y4_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$F$82",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.amazon_units": {
+  "name": "annual_Y4_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$F$6",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.asp": {
+  "name": "annual_Y4_asp",
+  "ref": "'Annual PL Y1 to Y5'!$F$7",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.landed_pct": {
+  "name": "annual_Y4_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$F$8",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.ads_pct": {
+  "name": "annual_Y4_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$F$9",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.amazon_contribution_pct": {
+  "name": "annual_Y4_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$F$83",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.revenue_by_channel.amazon_us": {
+  "name": "annual_Y4_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$F$15",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y4_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$F$24",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.revenue_by_channel.b2b": {
+  "name": "annual_Y4_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$F$33",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.revenue_by_channel.dtc": {
+  "name": "annual_Y4_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$F$42",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y4_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$F$51",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y4.revenue_by_channel.pro_line": {
+  "name": "annual_Y4_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$F$60",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.revenue": {
+  "name": "annual_Y5_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$G$69",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.net": {
+  "name": "annual_Y5_net",
+  "ref": "'Annual PL Y1 to Y5'!$G$80",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.net_margin": {
+  "name": "annual_Y5_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$G$81",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.cogs": {
+  "name": "annual_Y5_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$G$70",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.fees": {
+  "name": "annual_Y5_fees",
+  "ref": "'Annual PL Y1 to Y5'!$G$71",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.fulfillment": {
+  "name": "annual_Y5_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$G$72",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.advertising": {
+  "name": "annual_Y5_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$G$73",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.returns": {
+  "name": "annual_Y5_returns",
+  "ref": "'Annual PL Y1 to Y5'!$G$74",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.contribution": {
+  "name": "annual_Y5_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$G$75",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.fixed": {
+  "name": "annual_Y5_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$G$76",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.seller_fee": {
+  "name": "annual_Y5_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$G$77",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.launch": {
+  "name": "annual_Y5_launch",
+  "ref": "'Annual PL Y1 to Y5'!$G$78",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.compliance": {
+  "name": "annual_Y5_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$G$79",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.cum_net": {
+  "name": "annual_Y5_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$G$82",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.amazon_units": {
+  "name": "annual_Y5_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$G$6",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.asp": {
+  "name": "annual_Y5_asp",
+  "ref": "'Annual PL Y1 to Y5'!$G$7",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.landed_pct": {
+  "name": "annual_Y5_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$G$8",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.ads_pct": {
+  "name": "annual_Y5_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$G$9",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.amazon_contribution_pct": {
+  "name": "annual_Y5_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$G$83",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.revenue_by_channel.amazon_us": {
+  "name": "annual_Y5_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$G$15",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y5_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$G$24",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.revenue_by_channel.b2b": {
+  "name": "annual_Y5_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$G$33",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.revenue_by_channel.dtc": {
+  "name": "annual_Y5_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$G$42",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y5_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$G$51",
+  "scenario": 2
+ },
+ "scenarios.Medium.annual.Y5.revenue_by_channel.pro_line": {
+  "name": "annual_Y5_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$G$60",
+  "scenario": 2
+ },
+ "scenarios.Medium.cash.peak_need": {
+  "name": "cash_peak_need",
+  "ref": "'Cash Flow and Working Capital'!$C$48",
+  "scenario": 2
+ },
+ "scenarios.Medium.cash.peak_need_month": {
+  "name": "cash_peak_need_month",
+  "ref": "'Cash Flow and Working Capital'!$C$47",
+  "scenario": 2
+ },
+ "scenarios.Medium.cash.peak_need_month_label": {
+  "name": "cash_peak_need_month_label",
+  "ref": "'Cash Flow and Working Capital'!$C$46",
+  "scenario": 2
+ },
+ "scenarios.Medium.cash.min_balance": {
+  "name": "cash_min_balance",
+  "ref": "'Cash Flow and Working Capital'!$C$45",
+  "scenario": 2
+ },
+ "scenarios.Medium.cash.funding_gap": {
+  "name": "cash_funding_gap",
+  "ref": "'Cash Flow and Working Capital'!$C$49",
+  "scenario": 2
+ },
+ "scenarios.Medium.cash.funding_needed_by_month": {
+  "name": "cash_funding_needed_by_month",
+  "ref": "'Cash Flow and Working Capital'!$C$50",
+  "scenario": 2
+ },
+ "scenarios.Medium.cash.runway_months_day90": {
+  "name": "cash_runway_months_day90",
+  "ref": "'Cash Flow and Working Capital'!$C$55",
+  "scenario": 2
+ },
+ "scenarios.Medium.cash.runway_months_day90_unfunded": {
+  "name": "cash_runway_months_day90_unfunded",
+  "ref": "'Cash Flow and Working Capital'!$C$52",
+  "scenario": 2
+ },
+ "scenarios.Medium.cash.opening_capital": {
+  "name": "cash_opening_capital",
+  "ref": "'Assumptions'!$F$106",
+  "scenario": 2
+ },
+ "scenarios.Medium.gates.day90.metrics.tacos.value": {
+  "name": "gate_d90_tacos_value",
+  "ref": "'Funding and Breakeven'!$B$28",
+  "scenario": 2
+ },
+ "scenarios.Medium.gates.day90.metrics.ret.value": {
+  "name": "gate_d90_ret_value",
+  "ref": "'Funding and Breakeven'!$B$29",
+  "scenario": 2
+ },
+ "scenarios.Medium.gates.day90.metrics.cpu.value": {
+  "name": "gate_d90_cpu_value",
+  "ref": "'Funding and Breakeven'!$B$30",
+  "scenario": 2
+ },
+ "scenarios.Medium.gates.day90.metrics.runway.value": {
+  "name": "gate_d90_runway_value",
+  "ref": "'Funding and Breakeven'!$B$31",
+  "scenario": 2
+ },
+ "scenarios.Medium.gates.day90.result": {
+  "name": "gate_day90_result",
+  "ref": "'Funding and Breakeven'!$B$33",
+  "scenario": 2
+ },
+ "scenarios.Medium.gates.month12.metrics.rev.value": {
+  "name": "gate_m12_rev_value",
+  "ref": "'Funding and Breakeven'!$B$36",
+  "scenario": 2
+ },
+ "scenarios.Medium.gates.month12.metrics.cum.value": {
+  "name": "gate_m12_cum_value",
+  "ref": "'Funding and Breakeven'!$B$37",
+  "scenario": 2
+ },
+ "scenarios.Medium.gates.month12.metrics.tacos.value": {
+  "name": "gate_m12_tacos_value",
+  "ref": "'Funding and Breakeven'!$B$38",
+  "scenario": 2
+ },
+ "scenarios.Medium.gates.month12.metrics.ret.value": {
+  "name": "gate_m12_ret_value",
+  "ref": "'Funding and Breakeven'!$B$39",
+  "scenario": 2
+ },
+ "scenarios.Medium.gates.month12.metrics.opcf.value": {
+  "name": "gate_m12_opcf_value",
+  "ref": "'Funding and Breakeven'!$B$40",
+  "scenario": 2
+ },
+ "scenarios.Medium.gates.month12.result": {
+  "name": "gate_month12_result",
+  "ref": "'Funding and Breakeven'!$B$41",
+  "scenario": 2
+ },
+ "scenarios.High.m18.revenue": {
+  "name": "m18_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$C$60",
+  "scenario": 3
+ },
+ "scenarios.High.m18.net": {
+  "name": "m18_net",
+  "ref": "'Monthly PL Y1 Y2'!$C$61",
+  "scenario": 3
+ },
+ "scenarios.High.m18.net_margin": {
+  "name": "m18_net_margin",
+  "ref": "'Monthly PL Y1 Y2'!$C$62",
+  "scenario": 3
+ },
+ "scenarios.High.m18.breakeven_month": {
+  "name": "m18_breakeven_month",
+  "ref": "'Monthly PL Y1 Y2'!$C$63",
+  "scenario": 3
+ },
+ "scenarios.High.m18.run_rate": {
+  "name": "m18_run_rate",
+  "ref": "'Monthly PL Y1 Y2'!$C$64",
+  "scenario": 3
+ },
+ "scenarios.High.m18.exit_margin": {
+  "name": "m18_exit_margin",
+  "ref": "'Monthly PL Y1 Y2'!$C$65",
+  "scenario": 3
+ },
+ "scenarios.High.m18.units": {
+  "name": "m18_units",
+  "ref": "'Monthly PL Y1 Y2'!$C$66",
+  "scenario": 3
+ },
+ "scenarios.High.m24.revenue": {
+  "name": "m24_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$C$68",
+  "scenario": 3
+ },
+ "scenarios.High.m24.net": {
+  "name": "m24_net",
+  "ref": "'Monthly PL Y1 Y2'!$C$69",
+  "scenario": 3
+ },
+ "scenarios.High.m24.breakeven_month": {
+  "name": "m24_breakeven_month",
+  "ref": "'Monthly PL Y1 Y2'!$C$67",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].units": {
+  "name": "monthly_units",
+  "ref": "'Monthly PL Y1 Y2'!$D$7:$AA$7",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].revenue": {
+  "name": "monthly_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$D$54:$AA$54",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].net": {
+  "name": "monthly_net",
+  "ref": "'Monthly PL Y1 Y2'!$D$55:$AA$55",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].cum_net": {
+  "name": "monthly_cum_net",
+  "ref": "'Monthly PL Y1 Y2'!$D$56:$AA$56",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].cash_balance": {
+  "name": "monthly_cash_balance",
+  "ref": "'Cash Flow and Working Capital'!$C$33:$AA$33",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].tacos": {
+  "name": "monthly_tacos",
+  "ref": "'Monthly PL Y1 Y2'!$D$24:$AA$24",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].contribution_before_ads": {
+  "name": "monthly_contribution_before_ads",
+  "ref": "'Monthly PL Y1 Y2'!$D$25:$AA$25",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].contribution_after_ads": {
+  "name": "monthly_contribution_after_ads",
+  "ref": "'Monthly PL Y1 Y2'!$D$26:$AA$26",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].amazon_revenue": {
+  "name": "monthly_amazon_revenue",
+  "ref": "'Monthly PL Y1 Y2'!$D$9:$AA$9",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].amazon_net": {
+  "name": "monthly_amazon_net",
+  "ref": "'Monthly PL Y1 Y2'!$D$21:$AA$21",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].cash_balance_after_funding": {
+  "name": "monthly_cash_balance_after_funding",
+  "ref": "'Cash Flow and Working Capital'!$C$54:$AA$54",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].inventory_on_hand": {
+  "name": "monthly_inventory_on_hand",
+  "ref": "'Cash Flow and Working Capital'!$C$37:$AA$37",
+  "scenario": 3
+ },
+ "scenarios.High.monthly[].inventory_in_transit": {
+  "name": "monthly_inventory_in_transit",
+  "ref": "'Cash Flow and Working Capital'!$C$38:$AA$38",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.revenue": {
+  "name": "annual_Y1_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$C$69",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.net": {
+  "name": "annual_Y1_net",
+  "ref": "'Annual PL Y1 to Y5'!$C$80",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.net_margin": {
+  "name": "annual_Y1_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$C$81",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.cogs": {
+  "name": "annual_Y1_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$C$70",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.fees": {
+  "name": "annual_Y1_fees",
+  "ref": "'Annual PL Y1 to Y5'!$C$71",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.fulfillment": {
+  "name": "annual_Y1_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$C$72",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.advertising": {
+  "name": "annual_Y1_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$C$73",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.returns": {
+  "name": "annual_Y1_returns",
+  "ref": "'Annual PL Y1 to Y5'!$C$74",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.contribution": {
+  "name": "annual_Y1_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$C$75",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.fixed": {
+  "name": "annual_Y1_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$C$76",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.seller_fee": {
+  "name": "annual_Y1_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$C$77",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.launch": {
+  "name": "annual_Y1_launch",
+  "ref": "'Annual PL Y1 to Y5'!$C$78",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.compliance": {
+  "name": "annual_Y1_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$C$79",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.cum_net": {
+  "name": "annual_Y1_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$C$82",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.amazon_units": {
+  "name": "annual_Y1_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$C$6",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.asp": {
+  "name": "annual_Y1_asp",
+  "ref": "'Annual PL Y1 to Y5'!$C$7",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.landed_pct": {
+  "name": "annual_Y1_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$C$8",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.ads_pct": {
+  "name": "annual_Y1_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$C$9",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.amazon_contribution_pct": {
+  "name": "annual_Y1_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$C$83",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.revenue_by_channel.amazon_us": {
+  "name": "annual_Y1_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$C$15",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y1_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$C$24",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.revenue_by_channel.b2b": {
+  "name": "annual_Y1_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$C$33",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.revenue_by_channel.dtc": {
+  "name": "annual_Y1_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$C$42",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y1_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$C$51",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y1.revenue_by_channel.pro_line": {
+  "name": "annual_Y1_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$C$60",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.revenue": {
+  "name": "annual_Y2_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$D$69",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.net": {
+  "name": "annual_Y2_net",
+  "ref": "'Annual PL Y1 to Y5'!$D$80",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.net_margin": {
+  "name": "annual_Y2_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$D$81",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.cogs": {
+  "name": "annual_Y2_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$D$70",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.fees": {
+  "name": "annual_Y2_fees",
+  "ref": "'Annual PL Y1 to Y5'!$D$71",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.fulfillment": {
+  "name": "annual_Y2_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$D$72",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.advertising": {
+  "name": "annual_Y2_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$D$73",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.returns": {
+  "name": "annual_Y2_returns",
+  "ref": "'Annual PL Y1 to Y5'!$D$74",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.contribution": {
+  "name": "annual_Y2_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$D$75",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.fixed": {
+  "name": "annual_Y2_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$D$76",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.seller_fee": {
+  "name": "annual_Y2_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$D$77",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.launch": {
+  "name": "annual_Y2_launch",
+  "ref": "'Annual PL Y1 to Y5'!$D$78",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.compliance": {
+  "name": "annual_Y2_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$D$79",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.cum_net": {
+  "name": "annual_Y2_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$D$82",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.amazon_units": {
+  "name": "annual_Y2_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$D$6",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.asp": {
+  "name": "annual_Y2_asp",
+  "ref": "'Annual PL Y1 to Y5'!$D$7",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.landed_pct": {
+  "name": "annual_Y2_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$D$8",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.ads_pct": {
+  "name": "annual_Y2_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$D$9",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.amazon_contribution_pct": {
+  "name": "annual_Y2_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$D$83",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.revenue_by_channel.amazon_us": {
+  "name": "annual_Y2_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$D$15",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y2_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$D$24",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.revenue_by_channel.b2b": {
+  "name": "annual_Y2_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$D$33",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.revenue_by_channel.dtc": {
+  "name": "annual_Y2_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$D$42",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y2_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$D$51",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y2.revenue_by_channel.pro_line": {
+  "name": "annual_Y2_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$D$60",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.revenue": {
+  "name": "annual_Y3_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$E$69",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.net": {
+  "name": "annual_Y3_net",
+  "ref": "'Annual PL Y1 to Y5'!$E$80",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.net_margin": {
+  "name": "annual_Y3_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$E$81",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.cogs": {
+  "name": "annual_Y3_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$E$70",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.fees": {
+  "name": "annual_Y3_fees",
+  "ref": "'Annual PL Y1 to Y5'!$E$71",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.fulfillment": {
+  "name": "annual_Y3_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$E$72",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.advertising": {
+  "name": "annual_Y3_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$E$73",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.returns": {
+  "name": "annual_Y3_returns",
+  "ref": "'Annual PL Y1 to Y5'!$E$74",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.contribution": {
+  "name": "annual_Y3_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$E$75",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.fixed": {
+  "name": "annual_Y3_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$E$76",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.seller_fee": {
+  "name": "annual_Y3_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$E$77",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.launch": {
+  "name": "annual_Y3_launch",
+  "ref": "'Annual PL Y1 to Y5'!$E$78",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.compliance": {
+  "name": "annual_Y3_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$E$79",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.cum_net": {
+  "name": "annual_Y3_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$E$82",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.amazon_units": {
+  "name": "annual_Y3_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$E$6",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.asp": {
+  "name": "annual_Y3_asp",
+  "ref": "'Annual PL Y1 to Y5'!$E$7",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.landed_pct": {
+  "name": "annual_Y3_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$E$8",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.ads_pct": {
+  "name": "annual_Y3_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$E$9",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.amazon_contribution_pct": {
+  "name": "annual_Y3_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$E$83",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.revenue_by_channel.amazon_us": {
+  "name": "annual_Y3_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$E$15",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y3_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$E$24",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.revenue_by_channel.b2b": {
+  "name": "annual_Y3_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$E$33",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.revenue_by_channel.dtc": {
+  "name": "annual_Y3_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$E$42",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y3_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$E$51",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y3.revenue_by_channel.pro_line": {
+  "name": "annual_Y3_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$E$60",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.revenue": {
+  "name": "annual_Y4_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$F$69",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.net": {
+  "name": "annual_Y4_net",
+  "ref": "'Annual PL Y1 to Y5'!$F$80",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.net_margin": {
+  "name": "annual_Y4_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$F$81",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.cogs": {
+  "name": "annual_Y4_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$F$70",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.fees": {
+  "name": "annual_Y4_fees",
+  "ref": "'Annual PL Y1 to Y5'!$F$71",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.fulfillment": {
+  "name": "annual_Y4_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$F$72",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.advertising": {
+  "name": "annual_Y4_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$F$73",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.returns": {
+  "name": "annual_Y4_returns",
+  "ref": "'Annual PL Y1 to Y5'!$F$74",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.contribution": {
+  "name": "annual_Y4_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$F$75",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.fixed": {
+  "name": "annual_Y4_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$F$76",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.seller_fee": {
+  "name": "annual_Y4_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$F$77",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.launch": {
+  "name": "annual_Y4_launch",
+  "ref": "'Annual PL Y1 to Y5'!$F$78",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.compliance": {
+  "name": "annual_Y4_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$F$79",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.cum_net": {
+  "name": "annual_Y4_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$F$82",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.amazon_units": {
+  "name": "annual_Y4_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$F$6",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.asp": {
+  "name": "annual_Y4_asp",
+  "ref": "'Annual PL Y1 to Y5'!$F$7",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.landed_pct": {
+  "name": "annual_Y4_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$F$8",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.ads_pct": {
+  "name": "annual_Y4_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$F$9",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.amazon_contribution_pct": {
+  "name": "annual_Y4_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$F$83",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.revenue_by_channel.amazon_us": {
+  "name": "annual_Y4_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$F$15",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y4_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$F$24",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.revenue_by_channel.b2b": {
+  "name": "annual_Y4_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$F$33",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.revenue_by_channel.dtc": {
+  "name": "annual_Y4_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$F$42",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y4_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$F$51",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y4.revenue_by_channel.pro_line": {
+  "name": "annual_Y4_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$F$60",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.revenue": {
+  "name": "annual_Y5_revenue",
+  "ref": "'Annual PL Y1 to Y5'!$G$69",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.net": {
+  "name": "annual_Y5_net",
+  "ref": "'Annual PL Y1 to Y5'!$G$80",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.net_margin": {
+  "name": "annual_Y5_net_margin",
+  "ref": "'Annual PL Y1 to Y5'!$G$81",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.cogs": {
+  "name": "annual_Y5_cogs",
+  "ref": "'Annual PL Y1 to Y5'!$G$70",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.fees": {
+  "name": "annual_Y5_fees",
+  "ref": "'Annual PL Y1 to Y5'!$G$71",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.fulfillment": {
+  "name": "annual_Y5_fulfillment",
+  "ref": "'Annual PL Y1 to Y5'!$G$72",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.advertising": {
+  "name": "annual_Y5_advertising",
+  "ref": "'Annual PL Y1 to Y5'!$G$73",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.returns": {
+  "name": "annual_Y5_returns",
+  "ref": "'Annual PL Y1 to Y5'!$G$74",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.contribution": {
+  "name": "annual_Y5_contribution",
+  "ref": "'Annual PL Y1 to Y5'!$G$75",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.fixed": {
+  "name": "annual_Y5_fixed",
+  "ref": "'Annual PL Y1 to Y5'!$G$76",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.seller_fee": {
+  "name": "annual_Y5_seller_fee",
+  "ref": "'Annual PL Y1 to Y5'!$G$77",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.launch": {
+  "name": "annual_Y5_launch",
+  "ref": "'Annual PL Y1 to Y5'!$G$78",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.compliance": {
+  "name": "annual_Y5_compliance",
+  "ref": "'Annual PL Y1 to Y5'!$G$79",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.cum_net": {
+  "name": "annual_Y5_cum_net",
+  "ref": "'Annual PL Y1 to Y5'!$G$82",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.amazon_units": {
+  "name": "annual_Y5_amazon_units",
+  "ref": "'Annual PL Y1 to Y5'!$G$6",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.asp": {
+  "name": "annual_Y5_asp",
+  "ref": "'Annual PL Y1 to Y5'!$G$7",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.landed_pct": {
+  "name": "annual_Y5_landed_pct",
+  "ref": "'Annual PL Y1 to Y5'!$G$8",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.ads_pct": {
+  "name": "annual_Y5_ads_pct",
+  "ref": "'Annual PL Y1 to Y5'!$G$9",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.amazon_contribution_pct": {
+  "name": "annual_Y5_amazon_contribution_pct",
+  "ref": "'Annual PL Y1 to Y5'!$G$83",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.revenue_by_channel.amazon_us": {
+  "name": "annual_Y5_revenue_by_channel_amazon_us",
+  "ref": "'Annual PL Y1 to Y5'!$G$15",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.revenue_by_channel.ebay_walmart": {
+  "name": "annual_Y5_revenue_by_channel_ebay_walmart",
+  "ref": "'Annual PL Y1 to Y5'!$G$24",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.revenue_by_channel.b2b": {
+  "name": "annual_Y5_revenue_by_channel_b2b",
+  "ref": "'Annual PL Y1 to Y5'!$G$33",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.revenue_by_channel.dtc": {
+  "name": "annual_Y5_revenue_by_channel_dtc",
+  "ref": "'Annual PL Y1 to Y5'!$G$42",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.revenue_by_channel.amazon_canada": {
+  "name": "annual_Y5_revenue_by_channel_amazon_canada",
+  "ref": "'Annual PL Y1 to Y5'!$G$51",
+  "scenario": 3
+ },
+ "scenarios.High.annual.Y5.revenue_by_channel.pro_line": {
+  "name": "annual_Y5_revenue_by_channel_pro_line",
+  "ref": "'Annual PL Y1 to Y5'!$G$60",
+  "scenario": 3
+ },
+ "scenarios.High.cash.peak_need": {
+  "name": "cash_peak_need",
+  "ref": "'Cash Flow and Working Capital'!$C$48",
+  "scenario": 3
+ },
+ "scenarios.High.cash.peak_need_month": {
+  "name": "cash_peak_need_month",
+  "ref": "'Cash Flow and Working Capital'!$C$47",
+  "scenario": 3
+ },
+ "scenarios.High.cash.peak_need_month_label": {
+  "name": "cash_peak_need_month_label",
+  "ref": "'Cash Flow and Working Capital'!$C$46",
+  "scenario": 3
+ },
+ "scenarios.High.cash.min_balance": {
+  "name": "cash_min_balance",
+  "ref": "'Cash Flow and Working Capital'!$C$45",
+  "scenario": 3
+ },
+ "scenarios.High.cash.funding_gap": {
+  "name": "cash_funding_gap",
+  "ref": "'Cash Flow and Working Capital'!$C$49",
+  "scenario": 3
+ },
+ "scenarios.High.cash.funding_needed_by_month": {
+  "name": "cash_funding_needed_by_month",
+  "ref": "'Cash Flow and Working Capital'!$C$50",
+  "scenario": 3
+ },
+ "scenarios.High.cash.runway_months_day90": {
+  "name": "cash_runway_months_day90",
+  "ref": "'Cash Flow and Working Capital'!$C$55",
+  "scenario": 3
+ },
+ "scenarios.High.cash.runway_months_day90_unfunded": {
+  "name": "cash_runway_months_day90_unfunded",
+  "ref": "'Cash Flow and Working Capital'!$C$52",
+  "scenario": 3
+ },
+ "scenarios.High.cash.opening_capital": {
+  "name": "cash_opening_capital",
+  "ref": "'Assumptions'!$F$106",
+  "scenario": 3
+ },
+ "scenarios.High.gates.day90.metrics.tacos.value": {
+  "name": "gate_d90_tacos_value",
+  "ref": "'Funding and Breakeven'!$B$28",
+  "scenario": 3
+ },
+ "scenarios.High.gates.day90.metrics.ret.value": {
+  "name": "gate_d90_ret_value",
+  "ref": "'Funding and Breakeven'!$B$29",
+  "scenario": 3
+ },
+ "scenarios.High.gates.day90.metrics.cpu.value": {
+  "name": "gate_d90_cpu_value",
+  "ref": "'Funding and Breakeven'!$B$30",
+  "scenario": 3
+ },
+ "scenarios.High.gates.day90.metrics.runway.value": {
+  "name": "gate_d90_runway_value",
+  "ref": "'Funding and Breakeven'!$B$31",
+  "scenario": 3
+ },
+ "scenarios.High.gates.day90.result": {
+  "name": "gate_day90_result",
+  "ref": "'Funding and Breakeven'!$B$33",
+  "scenario": 3
+ },
+ "scenarios.High.gates.month12.metrics.rev.value": {
+  "name": "gate_m12_rev_value",
+  "ref": "'Funding and Breakeven'!$B$36",
+  "scenario": 3
+ },
+ "scenarios.High.gates.month12.metrics.cum.value": {
+  "name": "gate_m12_cum_value",
+  "ref": "'Funding and Breakeven'!$B$37",
+  "scenario": 3
+ },
+ "scenarios.High.gates.month12.metrics.tacos.value": {
+  "name": "gate_m12_tacos_value",
+  "ref": "'Funding and Breakeven'!$B$38",
+  "scenario": 3
+ },
+ "scenarios.High.gates.month12.metrics.ret.value": {
+  "name": "gate_m12_ret_value",
+  "ref": "'Funding and Breakeven'!$B$39",
+  "scenario": 3
+ },
+ "scenarios.High.gates.month12.metrics.opcf.value": {
+  "name": "gate_m12_opcf_value",
+  "ref": "'Funding and Breakeven'!$B$40",
+  "scenario": 3
+ },
+ "scenarios.High.gates.month12.result": {
+  "name": "gate_month12_result",
+  "ref": "'Funding and Breakeven'!$B$41",
+  "scenario": 3
+ },
+ "unit_economics.hero.price": {
+  "name": "ue_hero_price",
+  "ref": "'SKU Unit Economics'!$B$33",
+  "scenario": "any"
+ },
+ "unit_economics.hero.list": {
+  "name": "ue_hero_list",
+  "ref": "'SKU Unit Economics'!$B$34",
+  "scenario": "any"
+ },
+ "unit_economics.hero.landed_cost": {
+  "name": "ue_hero_landed_cost",
+  "ref": "'SKU Unit Economics'!$B$36",
+  "scenario": "any"
+ },
+ "unit_economics.hero.landed_pct": {
+  "name": "ue_hero_landed_pct",
+  "ref": "'SKU Unit Economics'!$B$35",
+  "scenario": "any"
+ },
+ "unit_economics.hero.referral": {
+  "name": "ue_hero_referral",
+  "ref": "'SKU Unit Economics'!$B$38",
+  "scenario": "any"
+ },
+ "unit_economics.hero.fba": {
+  "name": "ue_hero_fba",
+  "ref": "'SKU Unit Economics'!$B$39",
+  "scenario": "any"
+ },
+ "unit_economics.hero.ads": {
+  "name": "ue_hero_ads",
+  "ref": "'SKU Unit Economics'!$B$41",
+  "scenario": "any"
+ },
+ "unit_economics.hero.returns_storage": {
+  "name": "ue_hero_returns_storage",
+  "ref": "'SKU Unit Economics'!$B$43",
+  "scenario": "any"
+ },
+ "unit_economics.hero.net": {
+  "name": "ue_hero_net",
+  "ref": "'SKU Unit Economics'!$B$44",
+  "scenario": "any"
+ },
+ "unit_economics.hero.net_pct": {
+  "name": "ue_hero_net_pct",
+  "ref": "'SKU Unit Economics'!$B$45",
+  "scenario": "any"
+ },
+ "unit_economics.hero.korea_wholesale_gross": {
+  "name": "ue_hero_korea_wholesale_gross",
+  "ref": "'SKU Unit Economics'!$B$46",
+  "scenario": "any"
+ },
+ "unit_economics.hero.contribution_before_ads": {
+  "name": "ue_hero_contribution_before_ads",
+  "ref": "'SKU Unit Economics'!$B$47",
+  "scenario": "any"
+ },
+ "unit_economics.hero.fob_usd": {
+  "name": "HeroFobUsd",
+  "ref": "'SKU Unit Economics'!$B$49",
+  "scenario": "any"
+ },
+ "unit_economics.hero.fob_share_of_price": {
+  "name": "HeroFobShare",
+  "ref": "'SKU Unit Economics'!$B$48",
+  "scenario": "any"
+ },
+ "unit_economics.per_sku": {
+  "name": "sku_table",
+  "ref": "'SKU Unit Economics'!$A$5:$AF$14",
+  "scenario": "any"
+ },
+ "unit_economics.cost_bases.h2.landed": {
+  "name": "cost_base_h2_landed",
+  "ref": "'SKU Unit Economics'!$D$53",
+  "scenario": "any"
+ },
+ "unit_economics.cost_bases.h2.net": {
+  "name": "cost_base_h2_net",
+  "ref": "'SKU Unit Economics'!$F$53",
+  "scenario": "any"
+ },
+ "unit_economics.cost_bases.august.landed": {
+  "name": "cost_base_august_landed",
+  "ref": "'SKU Unit Economics'!$D$54",
+  "scenario": "any"
+ },
+ "unit_economics.cost_bases.august.net": {
+  "name": "cost_base_august_net",
+  "ref": "'SKU Unit Economics'!$F$54",
+  "scenario": "any"
+ },
+ "unit_economics.cost_bases.alibaba_low.landed": {
+  "name": "cost_base_alibaba_low_landed",
+  "ref": "'SKU Unit Economics'!$D$55",
+  "scenario": "any"
+ },
+ "unit_economics.cost_bases.alibaba_low.net": {
+  "name": "cost_base_alibaba_low_net",
+  "ref": "'SKU Unit Economics'!$F$55",
+  "scenario": "any"
+ },
+ "unit_economics.cost_bases.alibaba_high.landed": {
+  "name": "cost_base_alibaba_high_landed",
+  "ref": "'SKU Unit Economics'!$D$56",
+  "scenario": "any"
+ },
+ "unit_economics.cost_bases.alibaba_high.net": {
+  "name": "cost_base_alibaba_high_net",
+  "ref": "'SKU Unit Economics'!$F$56",
+  "scenario": "any"
+ },
+ "duty.copper.rate": {
+  "name": "duty_copper_rate",
+  "ref": "'Landed Cost & Tariff Scenarios'!$G$5",
+  "scenario": "any"
+ },
+ "duty.copper.landed_pct_medium": {
+  "name": "duty_copper_landed_pct_medium",
+  "ref": "'Landed Cost & Tariff Scenarios'!$B$23",
+  "scenario": "any"
+ },
+ "duty.copper.hero_net": {
+  "name": "duty_copper_hero_net",
+  "ref": "'Landed Cost & Tariff Scenarios'!$D$28",
+  "scenario": "any"
+ },
+ "duty.fiber.rate": {
+  "name": "duty_fiber_rate",
+  "ref": "'Landed Cost & Tariff Scenarios'!$G$6",
+  "scenario": "any"
+ },
+ "duty.fiber.landed_pct_medium": {
+  "name": "duty_fiber_landed_pct_medium",
+  "ref": "'Landed Cost & Tariff Scenarios'!$C$23",
+  "scenario": "any"
+ },
+ "duty.fiber.hero_net": {
+  "name": "duty_fiber_hero_net",
+  "ref": "'Landed Cost & Tariff Scenarios'!$D$29",
+  "scenario": "any"
+ },
+ "duty.stress.rate": {
+  "name": "duty_stress_rate",
+  "ref": "'Landed Cost & Tariff Scenarios'!$G$7",
+  "scenario": "any"
+ },
+ "duty.stress.landed_pct_medium": {
+  "name": "duty_stress_landed_pct_medium",
+  "ref": "'Landed Cost & Tariff Scenarios'!$D$23",
+  "scenario": "any"
+ },
+ "duty.stress.hero_net": {
+  "name": "duty_stress_hero_net",
+  "ref": "'Landed Cost & Tariff Scenarios'!$D$30",
+  "scenario": "any"
+ },
+ "duty.fiber_list3_check.rate": {
+  "name": "duty_fiber_list3_check_rate",
+  "ref": "'Landed Cost & Tariff Scenarios'!$G$8",
+  "scenario": "any"
+ },
+ "duty.waterfall": {
+  "name": "waterfall_block",
+  "ref": "'Landed Cost & Tariff Scenarios'!$E$31:$G$35",
+  "scenario": "any"
+ },
+ "duty.tariff_stack": {
+  "name": "tariff_stack_block",
+  "ref": "'Landed Cost & Tariff Scenarios'!$A$39:$F$41",
+  "scenario": "any"
+ },
+ "sensitivity.tornado": {
+  "name": "tornado_block",
+  "ref": "'Sensitivity'!$A$48:$I$53",
+  "scenario": "any"
+ },
+ "sensitivity.tornado_m18": {
+  "name": "tornado18_block",
+  "ref": "'Sensitivity'!$A$57:$I$62",
+  "scenario": "any"
+ },
+ "sensitivity.table": {
+  "name": "sensitivity_table",
+  "ref": "'Sensitivity'!$A$25:$H$43",
+  "scenario": "any"
+ },
+ "sensitivity.base_y5_net": {
+  "name": "sens_base_y5_net",
+  "ref": "'Sensitivity'!$B$12",
+  "scenario": "any"
+ },
+ "sensitivity.base_m18_net": {
+  "name": "sens_base_m18_net",
+  "ref": "'Sensitivity'!$B$6",
+  "scenario": "any"
+ },
+ "levers": {
+  "name": "levers_block",
+  "ref": "'Levers'!$A$5:$J$16",
+  "scenario": "any"
+ },
+ "gate_thresholds.d90_conv_pass.value": {
+  "name": "gate_threshold_d90_conv_pass",
+  "ref": "'Assumptions'!$F$114",
+  "scenario": "any"
+ },
+ "gate_thresholds.d90_conv_kill.value": {
+  "name": "gate_threshold_d90_conv_kill",
+  "ref": "'Assumptions'!$F$115",
+  "scenario": "any"
+ },
+ "gate_thresholds.d90_tacos_pass.value": {
+  "name": "gate_threshold_d90_tacos_pass",
+  "ref": "'Assumptions'!$F$116",
+  "scenario": "any"
+ },
+ "gate_thresholds.d90_tacos_kill.value": {
+  "name": "gate_threshold_d90_tacos_kill",
+  "ref": "'Assumptions'!$F$117",
+  "scenario": "any"
+ },
+ "gate_thresholds.d90_ret_pass.value": {
+  "name": "gate_threshold_d90_ret_pass",
+  "ref": "'Assumptions'!$F$118",
+  "scenario": "any"
+ },
+ "gate_thresholds.d90_ret_kill.value": {
+  "name": "gate_threshold_d90_ret_kill",
+  "ref": "'Assumptions'!$F$119",
+  "scenario": "any"
+ },
+ "gate_thresholds.d90_cpu_pass.value": {
+  "name": "gate_threshold_d90_cpu_pass",
+  "ref": "'Assumptions'!$F$120",
+  "scenario": "any"
+ },
+ "gate_thresholds.d90_cpu_kill.value": {
+  "name": "gate_threshold_d90_cpu_kill",
+  "ref": "'Assumptions'!$F$121",
+  "scenario": "any"
+ },
+ "gate_thresholds.d90_run_pass.value": {
+  "name": "gate_threshold_d90_run_pass",
+  "ref": "'Assumptions'!$F$122",
+  "scenario": "any"
+ },
+ "gate_thresholds.d90_run_kill.value": {
+  "name": "gate_threshold_d90_run_kill",
+  "ref": "'Assumptions'!$F$123",
+  "scenario": "any"
+ },
+ "gate_thresholds.d90_ip_days.value": {
+  "name": "gate_threshold_d90_ip_days",
+  "ref": "'Assumptions'!$F$124",
+  "scenario": "any"
+ },
+ "gate_thresholds.m12_rev_pass.value": {
+  "name": "gate_threshold_m12_rev_pass",
+  "ref": "'Assumptions'!$F$125",
+  "scenario": "any"
+ },
+ "gate_thresholds.m12_rev_kill.value": {
+  "name": "gate_threshold_m12_rev_kill",
+  "ref": "'Assumptions'!$F$126",
+  "scenario": "any"
+ },
+ "gate_thresholds.m12_cum_pass.value": {
+  "name": "gate_threshold_m12_cum_pass",
+  "ref": "'Assumptions'!$F$127",
+  "scenario": "any"
+ },
+ "gate_thresholds.m12_cum_kill.value": {
+  "name": "gate_threshold_m12_cum_kill",
+  "ref": "'Assumptions'!$F$128",
+  "scenario": "any"
+ },
+ "gate_thresholds.m12_tacos_pass.value": {
+  "name": "gate_threshold_m12_tacos_pass",
+  "ref": "'Assumptions'!$F$129",
+  "scenario": "any"
+ },
+ "gate_thresholds.m12_tacos_kill.value": {
+  "name": "gate_threshold_m12_tacos_kill",
+  "ref": "'Assumptions'!$F$130",
+  "scenario": "any"
+ },
+ "gate_thresholds.m12_ret_pass.value": {
+  "name": "gate_threshold_m12_ret_pass",
+  "ref": "'Assumptions'!$F$131",
+  "scenario": "any"
+ },
+ "gate_thresholds.m12_ret_kill.value": {
+  "name": "gate_threshold_m12_ret_kill",
+  "ref": "'Assumptions'!$F$132",
+  "scenario": "any"
+ },
+ "gate_thresholds.m12_gap_kill.value": {
+  "name": "gate_threshold_m12_gap_kill",
+  "ref": "'Assumptions'!$F$133",
+  "scenario": "any"
+ },
+ "august_deal.units": {
+  "name": "august_deal_units",
+  "ref": "'FX'!$B$9",
+  "scenario": "any"
+ },
+ "august_deal.cost_krw": {
+  "name": "august_deal_cost_krw",
+  "ref": "'FX'!$B$10",
+  "scenario": "any"
+ },
+ "august_deal.revenue_krw": {
+  "name": "august_deal_revenue_krw",
+  "ref": "'FX'!$B$11",
+  "scenario": "any"
+ },
+ "august_deal.gross_profit_krw": {
+  "name": "august_deal_gross_profit_krw",
+  "ref": "'FX'!$B$12",
+  "scenario": "any"
+ },
+ "august_deal.gross_margin": {
+  "name": "august_deal_gross_margin",
+  "ref": "'FX'!$B$13",
+  "scenario": "any"
+ },
+ "plan_b.Y1.revenue": {
+  "name": "planb_Y1_revenue",
+  "ref": "'Plan B'!$C$28",
+  "scenario": "any"
+ },
+ "plan_b.Y1.net": {
+  "name": "planb_Y1_net",
+  "ref": "'Plan B'!$C$29",
+  "scenario": "any"
+ },
+ "plan_b.Y1.b2b_revenue": {
+  "name": "planb_Y1_b2b_revenue",
+  "ref": "'Plan B'!$C$5",
+  "scenario": "any"
+ },
+ "plan_b.Y1.korea_gross_profit": {
+  "name": "planb_Y1_korea_gross_profit",
+  "ref": "'Plan B'!$C$23",
+  "scenario": "any"
+ },
+ "plan_b.Y2.revenue": {
+  "name": "planb_Y2_revenue",
+  "ref": "'Plan B'!$D$28",
+  "scenario": "any"
+ },
+ "plan_b.Y2.net": {
+  "name": "planb_Y2_net",
+  "ref": "'Plan B'!$D$29",
+  "scenario": "any"
+ },
+ "plan_b.Y2.b2b_revenue": {
+  "name": "planb_Y2_b2b_revenue",
+  "ref": "'Plan B'!$D$5",
+  "scenario": "any"
+ },
+ "plan_b.Y2.korea_gross_profit": {
+  "name": "planb_Y2_korea_gross_profit",
+  "ref": "'Plan B'!$D$23",
+  "scenario": "any"
+ },
+ "plan_b.Y3.revenue": {
+  "name": "planb_Y3_revenue",
+  "ref": "'Plan B'!$E$28",
+  "scenario": "any"
+ },
+ "plan_b.Y3.net": {
+  "name": "planb_Y3_net",
+  "ref": "'Plan B'!$E$29",
+  "scenario": "any"
+ },
+ "plan_b.Y3.b2b_revenue": {
+  "name": "planb_Y3_b2b_revenue",
+  "ref": "'Plan B'!$E$5",
+  "scenario": "any"
+ },
+ "plan_b.Y3.korea_gross_profit": {
+  "name": "planb_Y3_korea_gross_profit",
+  "ref": "'Plan B'!$E$23",
+  "scenario": "any"
+ },
+ "scenario_summary.Low.m18_revenue": {
+  "name": "ss_Low_m18_revenue",
+  "ref": "'Scenario Summary'!$B$6",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.m18_net": {
+  "name": "ss_Low_m18_net",
+  "ref": "'Scenario Summary'!$B$7",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.m18_net_margin": {
+  "name": "ss_Low_m18_net_margin",
+  "ref": "'Scenario Summary'!$B$8",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.m18_breakeven_month": {
+  "name": "ss_Low_m18_breakeven_month",
+  "ref": "'Scenario Summary'!$B$9",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.m18_run_rate": {
+  "name": "ss_Low_m18_run_rate",
+  "ref": "'Scenario Summary'!$B$10",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.m18_exit_margin": {
+  "name": "ss_Low_m18_exit_margin",
+  "ref": "'Scenario Summary'!$B$11",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.annual_Y1_revenue": {
+  "name": "ss_Low_annual_Y1_revenue",
+  "ref": "'Scenario Summary'!$B$13",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.annual_Y1_net": {
+  "name": "ss_Low_annual_Y1_net",
+  "ref": "'Scenario Summary'!$B$14",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.annual_Y2_revenue": {
+  "name": "ss_Low_annual_Y2_revenue",
+  "ref": "'Scenario Summary'!$B$15",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.annual_Y2_net": {
+  "name": "ss_Low_annual_Y2_net",
+  "ref": "'Scenario Summary'!$B$16",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.annual_Y3_revenue": {
+  "name": "ss_Low_annual_Y3_revenue",
+  "ref": "'Scenario Summary'!$B$17",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.annual_Y3_net": {
+  "name": "ss_Low_annual_Y3_net",
+  "ref": "'Scenario Summary'!$B$18",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.annual_Y4_revenue": {
+  "name": "ss_Low_annual_Y4_revenue",
+  "ref": "'Scenario Summary'!$B$19",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.annual_Y4_net": {
+  "name": "ss_Low_annual_Y4_net",
+  "ref": "'Scenario Summary'!$B$20",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.annual_Y5_revenue": {
+  "name": "ss_Low_annual_Y5_revenue",
+  "ref": "'Scenario Summary'!$B$21",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.annual_Y5_net": {
+  "name": "ss_Low_annual_Y5_net",
+  "ref": "'Scenario Summary'!$B$22",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.annual_Y5_net_margin": {
+  "name": "ss_Low_annual_Y5_net_margin",
+  "ref": "'Scenario Summary'!$B$23",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.cash_peak_need": {
+  "name": "ss_Low_cash_peak_need",
+  "ref": "'Scenario Summary'!$B$25",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.cash_peak_need_month": {
+  "name": "ss_Low_cash_peak_need_month",
+  "ref": "'Scenario Summary'!$B$26",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.cash_peak_need_month_label": {
+  "name": "ss_Low_cash_peak_need_month_label",
+  "ref": "'Scenario Summary'!$B$27",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.cash_funding_gap": {
+  "name": "ss_Low_cash_funding_gap",
+  "ref": "'Scenario Summary'!$B$29",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.cash_funding_needed_by_month": {
+  "name": "ss_Low_cash_funding_needed_by_month",
+  "ref": "'Scenario Summary'!$B$30",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.cash_runway_months_day90": {
+  "name": "ss_Low_cash_runway_months_day90",
+  "ref": "'Scenario Summary'!$B$31",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.gate_day90": {
+  "name": "ss_Low_gate_day90",
+  "ref": "'Scenario Summary'!$B$32",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Low.gate_month12": {
+  "name": "ss_Low_gate_month12",
+  "ref": "'Scenario Summary'!$B$33",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.m18_revenue": {
+  "name": "ss_Medium_m18_revenue",
+  "ref": "'Scenario Summary'!$C$6",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.m18_net": {
+  "name": "ss_Medium_m18_net",
+  "ref": "'Scenario Summary'!$C$7",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.m18_net_margin": {
+  "name": "ss_Medium_m18_net_margin",
+  "ref": "'Scenario Summary'!$C$8",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.m18_breakeven_month": {
+  "name": "ss_Medium_m18_breakeven_month",
+  "ref": "'Scenario Summary'!$C$9",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.m18_run_rate": {
+  "name": "ss_Medium_m18_run_rate",
+  "ref": "'Scenario Summary'!$C$10",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.m18_exit_margin": {
+  "name": "ss_Medium_m18_exit_margin",
+  "ref": "'Scenario Summary'!$C$11",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.annual_Y1_revenue": {
+  "name": "ss_Medium_annual_Y1_revenue",
+  "ref": "'Scenario Summary'!$C$13",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.annual_Y1_net": {
+  "name": "ss_Medium_annual_Y1_net",
+  "ref": "'Scenario Summary'!$C$14",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.annual_Y2_revenue": {
+  "name": "ss_Medium_annual_Y2_revenue",
+  "ref": "'Scenario Summary'!$C$15",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.annual_Y2_net": {
+  "name": "ss_Medium_annual_Y2_net",
+  "ref": "'Scenario Summary'!$C$16",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.annual_Y3_revenue": {
+  "name": "ss_Medium_annual_Y3_revenue",
+  "ref": "'Scenario Summary'!$C$17",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.annual_Y3_net": {
+  "name": "ss_Medium_annual_Y3_net",
+  "ref": "'Scenario Summary'!$C$18",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.annual_Y4_revenue": {
+  "name": "ss_Medium_annual_Y4_revenue",
+  "ref": "'Scenario Summary'!$C$19",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.annual_Y4_net": {
+  "name": "ss_Medium_annual_Y4_net",
+  "ref": "'Scenario Summary'!$C$20",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.annual_Y5_revenue": {
+  "name": "ss_Medium_annual_Y5_revenue",
+  "ref": "'Scenario Summary'!$C$21",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.annual_Y5_net": {
+  "name": "ss_Medium_annual_Y5_net",
+  "ref": "'Scenario Summary'!$C$22",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.annual_Y5_net_margin": {
+  "name": "ss_Medium_annual_Y5_net_margin",
+  "ref": "'Scenario Summary'!$C$23",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.cash_peak_need": {
+  "name": "ss_Medium_cash_peak_need",
+  "ref": "'Scenario Summary'!$C$25",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.cash_peak_need_month": {
+  "name": "ss_Medium_cash_peak_need_month",
+  "ref": "'Scenario Summary'!$C$26",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.cash_peak_need_month_label": {
+  "name": "ss_Medium_cash_peak_need_month_label",
+  "ref": "'Scenario Summary'!$C$27",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.cash_funding_gap": {
+  "name": "ss_Medium_cash_funding_gap",
+  "ref": "'Scenario Summary'!$C$29",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.cash_funding_needed_by_month": {
+  "name": "ss_Medium_cash_funding_needed_by_month",
+  "ref": "'Scenario Summary'!$C$30",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.cash_runway_months_day90": {
+  "name": "ss_Medium_cash_runway_months_day90",
+  "ref": "'Scenario Summary'!$C$31",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.gate_day90": {
+  "name": "ss_Medium_gate_day90",
+  "ref": "'Scenario Summary'!$C$32",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.Medium.gate_month12": {
+  "name": "ss_Medium_gate_month12",
+  "ref": "'Scenario Summary'!$C$33",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.m18_revenue": {
+  "name": "ss_High_m18_revenue",
+  "ref": "'Scenario Summary'!$D$6",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.m18_net": {
+  "name": "ss_High_m18_net",
+  "ref": "'Scenario Summary'!$D$7",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.m18_net_margin": {
+  "name": "ss_High_m18_net_margin",
+  "ref": "'Scenario Summary'!$D$8",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.m18_breakeven_month": {
+  "name": "ss_High_m18_breakeven_month",
+  "ref": "'Scenario Summary'!$D$9",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.m18_run_rate": {
+  "name": "ss_High_m18_run_rate",
+  "ref": "'Scenario Summary'!$D$10",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.m18_exit_margin": {
+  "name": "ss_High_m18_exit_margin",
+  "ref": "'Scenario Summary'!$D$11",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.annual_Y1_revenue": {
+  "name": "ss_High_annual_Y1_revenue",
+  "ref": "'Scenario Summary'!$D$13",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.annual_Y1_net": {
+  "name": "ss_High_annual_Y1_net",
+  "ref": "'Scenario Summary'!$D$14",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.annual_Y2_revenue": {
+  "name": "ss_High_annual_Y2_revenue",
+  "ref": "'Scenario Summary'!$D$15",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.annual_Y2_net": {
+  "name": "ss_High_annual_Y2_net",
+  "ref": "'Scenario Summary'!$D$16",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.annual_Y3_revenue": {
+  "name": "ss_High_annual_Y3_revenue",
+  "ref": "'Scenario Summary'!$D$17",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.annual_Y3_net": {
+  "name": "ss_High_annual_Y3_net",
+  "ref": "'Scenario Summary'!$D$18",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.annual_Y4_revenue": {
+  "name": "ss_High_annual_Y4_revenue",
+  "ref": "'Scenario Summary'!$D$19",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.annual_Y4_net": {
+  "name": "ss_High_annual_Y4_net",
+  "ref": "'Scenario Summary'!$D$20",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.annual_Y5_revenue": {
+  "name": "ss_High_annual_Y5_revenue",
+  "ref": "'Scenario Summary'!$D$21",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.annual_Y5_net": {
+  "name": "ss_High_annual_Y5_net",
+  "ref": "'Scenario Summary'!$D$22",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.annual_Y5_net_margin": {
+  "name": "ss_High_annual_Y5_net_margin",
+  "ref": "'Scenario Summary'!$D$23",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.cash_peak_need": {
+  "name": "ss_High_cash_peak_need",
+  "ref": "'Scenario Summary'!$D$25",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.cash_peak_need_month": {
+  "name": "ss_High_cash_peak_need_month",
+  "ref": "'Scenario Summary'!$D$26",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.cash_peak_need_month_label": {
+  "name": "ss_High_cash_peak_need_month_label",
+  "ref": "'Scenario Summary'!$D$27",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.cash_funding_gap": {
+  "name": "ss_High_cash_funding_gap",
+  "ref": "'Scenario Summary'!$D$29",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.cash_funding_needed_by_month": {
+  "name": "ss_High_cash_funding_needed_by_month",
+  "ref": "'Scenario Summary'!$D$30",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.cash_runway_months_day90": {
+  "name": "ss_High_cash_runway_months_day90",
+  "ref": "'Scenario Summary'!$D$31",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.gate_day90": {
+  "name": "ss_High_gate_day90",
+  "ref": "'Scenario Summary'!$D$32",
+  "scenario": "any (Scenario Summary engines)"
+ },
+ "scenario_summary.High.gate_month12": {
+  "name": "ss_High_gate_month12",
+  "ref": "'Scenario Summary'!$D$33",
+  "scenario": "any (Scenario Summary engines)"
+ }
+}

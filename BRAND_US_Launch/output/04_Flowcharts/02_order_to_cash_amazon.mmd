@@ -1,0 +1,40 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Liberation Sans, Noto Sans KR, sans-serif','fontSize':'18px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':40,'rankSpacing':70,'curve':'basis','padding':14,'htmlLabels':true,'wrappingWidth':1200}}}%%
+flowchart TD
+  subgraph R1 ["1. Order and delivery"]
+    direction LR
+    S["Shopper session from Amazon search<br/>or a PPC ad"] --> C["Customer places the order on<br/>Amazon.com"]
+    C --> PAY["Amazon charges the card and<br/>collects marketplace sales tax"]
+    PAY --> FBA["FBA picks, packs and ships from an<br/>Amazon warehouse"]
+    FBA --> DEL["Delivery to the customer"]
+    DEL --> OK{"Kept or returned?"}
+  end
+  subgraph R2 ["2. Settlement and payout (Amazon<br/>side)"]
+    direction LR
+    RET["Returned in the window: refund<br/>issued, unit back to FBA (see<br/>chart 04)"] --> SET["Amazon settlement: sale price<br/>minus referral 15%, FBA fee,<br/>storage, ad spend, refunds"]
+    SET --> LAG["Disbursement 14 days after the<br/>sale. The payout lag is funded by<br/>the business"]
+  end
+  subgraph R3 ["3. Uses of cash (BRAND LLC side)"]
+    direction LR
+    BANK["BRAND LLC USD bank account<br/>(Mercury or Relay)"] --> U1["Factory PO deposits and balances"]
+    BANK --> U2["Ad spend (PPC budget buys the next<br/>sessions), software, insurance,<br/>3PL and broker invoices"]
+    BANK --> U3["Mark consulting fee under the<br/>written agreement"]
+    BANK --> U4["Retained earnings first, then<br/>owner draw to Lucy, reported on<br/>Form 5472"]
+    BANK --> CLOSE["Monthly close and KPI review<br/>(chart 05)<br/>Owner: Mark, VA"]
+  end
+  R1 -->|"Kept: straight to settlement. Returned: refund first"| R2
+  R2 -->|"Payout lands in the LLC account"| R3
+  LEG["Legend. PPC: pay per click advertising. FBA: Fulfillment by Amazon. PO: purchase order. 3PL: third party<br/>logistics warehouse. KPI: key performance indicator. VA: virtual assistant. Referral 15% and the 14 day payout<br/>lag are August model assumptions."]
+
+  class S,C,PAY,FBA,DEL,RET,SET,LAG,CLOSE step
+  class OK dec
+  class BANK money
+  class U1,U2,U3,U4 ext
+  class LEG legend
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:2px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:2px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef legend fill:#FFFFFF,stroke:#9AA5C4,stroke-width:1px,color:#141C36

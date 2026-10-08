@@ -1,0 +1,73 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Liberation Sans, Noto Sans KR, sans-serif','fontSize':'18px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':30,'rankSpacing':80,'curve':'basis','padding':14,'htmlLabels':true,'wrappingWidth':1200}}}%%
+flowchart TD
+  LUCY["Lucy (Hyejin Yoo), owner, Seoul"]
+  H2["H2 Company, Seoul. Korean sole<br/>proprietorship (599-64-00496)"]
+  DIO["Korean wholesale customers<br/>(Dioptek)"]
+  FXB["Foreign exchange bank, Seoul: ODI<br/>report and follow up reports"]
+  SEMU["Korean tax accountant (세무사)"]
+  FACT["Factory, China (HDMI Adopter, ATC<br/>and FCC reports)"]
+  LLC["BRAND LLC, Wyoming single member<br/>LLC, owned 100% by Lucy. No US<br/>office, no employees, no signing<br/>agent"]
+  BANK["LLC USD bank account, US (Mercury<br/>or Relay)"]
+  IRS["IRS"]
+  WY["Wyoming Secretary of State"]
+  USPTO["USPTO"]
+  BROKER["Customs broker, US. Continuous<br/>bond"]
+  CBP["US Customs (CBP): formal entry,<br/>duty under HTS 8544.42 or 8544.70"]
+  TPL["3PL warehouse, US"]
+  FBA["Amazon FBA warehouses, US (no<br/>permanent establishment under the<br/>treaty)"]
+  AMZ["Amazon marketplace"]
+  CUST["US customer"]
+  B2B["B2B installers, eBay and Walmart<br/>buyers, US"]
+  MARK["Mark Taylor, Memphis: consulting<br/>agreement, no equity, signs no<br/>contracts"]
+  subgraph LEGEND ["Legend"]
+    direction TB
+    LG1["Start"]
+    LG2["Goods: thick navy line"]
+    LM1["Start"]
+    LM2["Money: dotted violet line"]
+    LF1["Start"]
+    LF2["Filings and agreements: dashed<br/>amber line"]
+  end
+  LEG["Acronyms. LLC: limited liability company. ODI: overseas direct investment report. IRS: Internal Revenue<br/>Service. USPTO: US Patent and Trademark Office. CBP: US Customs and Border Protection. HTS: Harmonized Tariff<br/>Schedule. 3PL: third party logistics warehouse. FBA: Fulfillment by Amazon. B2B: business to business. DDP:<br/>delivered duty paid. LCL: less than container load. PO: purchase order."]
+  FACT ==>|"Air DDP first lots, ocean LCL on proven SKUs"| CBP
+  CBP ==>|"Released entry, bulk to the 3PL"| TPL
+  TPL ==>|"FBA inbound shipments"| FBA
+  FBA ==>|"Amazon delivers the order"| CUST
+  TPL ==>|"B2B and overflow orders from Year 2"| B2B
+  FACT ==>|"Korea wholesale lots"| H2
+  H2 ==>|"Korea wholesale sales (August deal pattern)"| DIO
+  LUCY -.->|"Capital to the US, after the ODI report"| FXB
+  FXB -.->|"Capital received by the LLC"| BANK
+  BANK -.->|"PO deposit 30%, balance 70% at shipment"| FACT
+  BANK -.->|"Duty, entry fee, continuous bond"| BROKER
+  AMZ -.->|"Payouts 14 days after sale, net of fees"| BANK
+  BANK -.->|"Storage, pick pack, prep"| TPL
+  BANK -.->|"Consulting fee under the written agreement"| MARK
+  BANK -.->|"Owner draw after retained earnings, reported on Form 5472"| LUCY
+  CUST -.->|"Pays Amazon, sales tax collected by Amazon"| AMZ
+  LUCY -->|"ODI report before capital moves, then follow up reports"| FXB
+  LUCY -->|"Overseas financial account check, incorporate H2 question"| SEMU
+  LLC -->|"Form 5472 with pro forma 1120 each year"| IRS
+  LLC -->|"Annual report"| WY
+  LLC -->|"Trademark via a US licensed attorney"| USPTO
+  BROKER -->|"Binding ruling request, formal entries, LLC as importer of record"| CBP
+  LLC -->|"Seller account, tax interview, Brand Registry"| AMZ
+  LUCY -->|"100% owner, single member LLC"| LLC
+  LG1 ==>|"Goods"| LG2
+  LM1 -.->|"Money"| LM2
+  LF1 -->|"Filings and agreements"| LF2
+  linkStyle 0,1,2,3,4,5,6,24 stroke:#141C36,stroke-width:4px
+  linkStyle 7,8,9,10,11,12,13,14,15,25 stroke:#8B5CF6,stroke-width:3px
+  linkStyle 16,17,18,19,20,21,22,23,26 stroke:#D98F1C,stroke-width:3px,stroke-dasharray:9 6
+  class LUCY,H2,DIO,FACT,LLC,TPL,FBA,AMZ,CUST,B2B,DIO step
+  class BANK money
+  class FXB,SEMU,IRS,WY,USPTO,BROKER,CBP,MARK ext
+  class LG1,LM1,LF1,LG2,LM2,LF2,LEG legend
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:2px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:2px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef legend fill:#FFFFFF,stroke:#9AA5C4,stroke-width:1px,color:#141C36

@@ -1,0 +1,43 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Liberation Sans, Noto Sans KR, sans-serif','fontSize':'18px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':40,'rankSpacing':70,'curve':'basis','padding':14,'htmlLabels':true,'wrappingWidth':1200}}}%%
+flowchart TD
+  subgraph R1 ["1. China: order, production, QC"]
+    direction LR
+    FC["Forecast and reorder point: 2.5<br/>months of forward units (Medium)<br/>Owner: Mark"] --> PO["PO to the factory, 30% deposit<br/>paid<br/>Owner: Lucy"]
+    PO --> PROD["Production. FNSKU labels and Prop<br/>65 label applied at the factory<br/>Owner: factory"]
+    PROD --> DOCS["Documents on file before shipment:<br/>HDMI Adopter status and ATC test<br/>report, FCC test report, CL3<br/>document<br/>Owner: Lucy"]
+    DOCS --> QC["Third party QC inspection before<br/>departure<br/>Owner: Lucy"]
+    QC --> QCD{"QC pass?"}
+    QCD -->|"Fail"| RW["Rework or reject the lot. Hold the<br/>70% balance"]
+    RW --> QC
+    QCD -->|"Pass"| BAL["70% balance paid at shipment<br/>Owner: Lucy"]
+  end
+  subgraph R2 ["2. Freight"]
+    direction LR
+    MODE{"SKU proven at the Day 90 gate?"} -->|"No"| AIR["Air freight DDP, about 1 month<br/>lead time. First lots 100 to 300<br/>units per SKU"]
+    MODE -->|"Yes"| OCEAN["Ocean LCL plus drayage, about 2<br/>months lead time. Proven SKUs only"]
+  end
+  subgraph R3 ["3. United States: customs and<br/>warehouses"]
+    direction LR
+    ENTRY["Formal customs entry filed by the<br/>broker. BRAND LLC is importer of<br/>record. Continuous bond. HTS<br/>8544.42 or 8544.70 per the binding<br/>ruling. Duty paid. No de minimis<br/>Owner: broker, Mark"] --> TPL["3PL receives bulk inventory,<br/>counts and inspects<br/>Owner: 3PL"]
+    TPL --> FBAIN["FBA inbound shipment plan,<br/>placement and prep, carton labels<br/>Owner: Mark, 3PL"]
+    FBAIN --> LIVE["Inventory live on Amazon, listing<br/>active. Sell through feeds the<br/>next forecast in step 1"]
+    TPL --> MCF["3PL also ships eBay, Walmart and<br/>B2B orders from Year 2"]
+  end
+  R1 -->|"Goods released by the factory"| R2
+  R2 -->|"Arrival at the US airport or port"| R3
+  LEG["Legend. PO: purchase order. FNSKU: Amazon barcode. ATC: HDMI Authorized Test Center. FCC: Federal<br/>Communications Commission. CL3: in wall cable rating. QC: quality control. DDP: delivered duty paid. LCL: less<br/>than container load. HTS: Harmonized Tariff Schedule. 3PL: third party logistics warehouse. FBA: Fulfillment<br/>by Amazon. B2B: business to business."]
+
+  class FC,PO,PROD,DOCS,QC,BAL,AIR,OCEAN,ENTRY,TPL,FBAIN step
+  class QCD,MODE dec
+  class RW kill
+  class LIVE good
+  class MCF ext
+  class LEG legend
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:2px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:2px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef legend fill:#FFFFFF,stroke:#9AA5C4,stroke-width:1px,color:#141C36

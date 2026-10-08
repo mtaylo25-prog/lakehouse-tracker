@@ -1,0 +1,1651 @@
+{
+ "_readme": "02_Business_Proposal_KO.pptx의 모든 표시 문자열. 슬라이드와 요소별 키. 중괄호 토큰({m18_rev_M})은 build/build_deck.js가 build/figures.json과 build/facts.json에서 build/fmt.js를 거쳐 채웁니다. 값만 번역하고 토큰, 키, BRAND, 양식 번호, 아마존 리스팅 문구는 영어로 둡니다. 어떤 값에도 하이픈이나 대시를 쓰지 않습니다.",
+ "common": {
+  "footer": "BRAND 미국 진출 제안. 수치는 03_Financial_Model_5Y.xlsx 기준이며 별도 표기가 없으면 Medium 케이스, 환율 USD당 {fx} KRW, Copper 관세입니다",
+  "estimate": "경영진 추정",
+  "evidence": "근거 기반",
+  "placeholder_prefix": "PLACEHOLDER",
+  "full_size": "전체 크기: output/04_Flowcharts/{file}",
+  "scenario_low": "Low",
+  "scenario_medium": "Medium",
+  "scenario_high": "High",
+  "year": "{n}년차",
+  "month": "{n}개월차",
+  "points": "{n}포인트",
+  "chart_month_axis": "모델 월",
+  "chart_revenue": "매출",
+  "chart_net": "순이익",
+  "low_revenue": "Low 매출",
+  "high_revenue": "High 매출",
+  "low_net": "Low 순이익",
+  "high_net": "High 순이익",
+  "medium_revenue": "Medium 매출",
+  "medium_net": "Medium 순이익",
+  "none": "없음"
+ },
+ "s01": {
+  "kicker": "BRAND",
+  "title": "케이블이 아니라 신호를 팝니다",
+  "subtitle": "하이브리드 액티브 광 HDMI 케이블의 미국 진출 제안. 아마존 US를 시작으로 5년간 채널 4개를 더합니다.",
+  "meta_line1": "H2 Company (서울)와 BRAND LLC (Wyoming, 설립 예정). 대표: Lucy (Hyejin Yoo). 미국 운영 지원: Mark Taylor.",
+  "meta_line2": "작성 {built}. 모든 수치는 03_Financial_Model_5Y.xlsx에서 가져왔습니다. BRAND는 미국 브랜드명이 정해질 때까지 쓰는 임시 표기입니다.",
+  "notes": "이 제안서는 Lucy에게 세 가지 결정을 요청합니다. 출시 자금 투입, Lucy 단독 소유의 Wyoming LLC 설립, 서면 중단 기준을 둔 90일 테스트입니다. 별도 표기가 없으면 수치는 재무 모델의 Medium 케이스입니다. 브랜드명은 아직 미정이므로 모든 곳에 BRAND로 표기합니다."
+ },
+ "s02": {
+  "title": "숫자 다섯 개로 보는 요약",
+  "stats": [
+   {
+    "value": "{m18_rev_M}",
+    "label": "18개월 아마존 US 매출, Medium(기준)",
+    "sub": "Low(보수) {m18_rev_L}, High(낙관) {m18_rev_H}"
+   },
+   {
+    "value": "{m18_net_M}",
+    "label": "18개월 순이익, 순이익률 {m18_margin_M}",
+    "sub": "Low {m18_net_L}, High {m18_net_H}"
+   },
+   {
+    "value": "{be_M}",
+    "label": "누적 손익분기",
+    "sub": "High {be_H}, Low는 18개월 내 {be_L}"
+   },
+   {
+    "value": "{y5_rev_M}",
+    "label": "5년차 매출, 순이익률 {y5_margin_M}",
+    "sub": "High {y5_rev_H}, Low {y5_rev_L}"
+   },
+   {
+    "value": "{gap_M}",
+    "label": "{gap_month_M}까지 필요한 신용한도",
+    "sub": "최대 현금 소요 {peak_M} ({peak_month_M})"
+   }
+  ],
+  "points": [
+   "무엇을 파는가: 48Gbps에서 구리선이 3 m를 넘으면 물리적으로 한계에 이르는 장거리 광 HDMI입니다. $8 구리 케이블과는 경쟁하지 않습니다.",
+   "어디서: 아마존 US에서 부모 ASIN(Amazon Standard Identification Number) 하나 아래 주력 SKU(재고 관리 단위) 5개로 시작하고, 이후 eBay와 Walmart 오버플로, B2B(기업 간 거래) 설치업체, DTC(소비자 직접 판매) 사이트, 아마존 캐나다, 프로 라인을 더합니다.",
+   "전제 조건: 공장 원가가 H2 기준 근처를 유지하고(Alibaba 벤치마크 원가면 주력 SKU는 적자), CBP 관세 판정이 Copper 이상으로 나오며, 90일 게이트를 통과해야 합니다."
+  ],
+  "notes": "핵심 숫자 다섯 개입니다. 18개월 매출 {m18_rev_M}, 순이익 {m18_net_M}, 손익분기 {be_M}, 5년차 매출 {y5_rev_M}, {gap_month_M}까지 필요한 신용한도 {gap_M}. Low 케이스는 18개월 내 손익분기에 이르지 못하고 12개월차 중단 기준에 걸립니다. 가장 중요한 가정 두 가지는 공장 원가와 관세 품목분류입니다."
+ },
+ "s03": {
+  "title": "오늘 결정할 세 가지",
+  "cards": [
+   {
+    "n": "1",
+    "head": "출시 자금 투입",
+    "body": "8월 요청액인 자기 자금 {opening_capital}를 투입하고, Medium 케이스 기준 {gap_month_M}까지 {gap_M}의 신용한도 대출(line of credit)을 준비합니다. Low 케이스는 {gap_L}, High 케이스는 {gap_H}가 필요합니다."
+   },
+   {
+    "n": "2",
+    "head": "미국 법인 설립",
+    "body": "BRAND LLC는 Lucy가 100% 소유하는 Wyoming 단일 구성원 LLC입니다. Mark는 지분 없이 서면 컨설팅 또는 커미션 계약으로 일하므로 LLC는 세무상 투과 법인(disregarded entity)으로 남고 조세조약상 지위도 깨끗하게 유지됩니다."
+   },
+   {
+    "n": "3",
+    "head": "90일 테스트 실행",
+    "body": "주력 SKU 5개를 각 100에서 300개씩 항공으로 들여와 부모 ASIN 하나로 판매합니다. 19번 슬라이드의 90일 게이트가 첫 발주 전에 적어 둔 숫자로 확대, 재검토, 중단을 결정합니다."
+   }
+  ],
+  "open_head": "오늘 결정하지 않는 항목",
+  "open_items": [
+   "미국 브랜드명 (BRAND 임시 표기. 한국 제안서의 MBF는 확정이 아닙니다)",
+   "Temu 현지 셀러 프로그램 (선택 사항, 기준 케이스 미포함)",
+   "H2 Company의 선 법인 전환 여부 (세무사 확인 사항)"
+  ],
+  "notes": "세 결정에는 순서가 있습니다. 해외직접투자 신고와 LLC 은행 계좌가 자금에 달려 있으므로 자금이 먼저, 법인이 두 번째, 테스트가 세 번째입니다. 각 결정에는 나중에 확인할 수 있도록 숫자가 붙어 있습니다. 오늘 결정하지 않는 항목은 보류일 뿐 잊지 않습니다."
+ },
+ "s04": {
+  "title": "시장과 광케이블을 택한 이유",
+  "subtitle": "5개 섹션 중 1",
+  "notes": "섹션 구분 슬라이드입니다."
+ },
+ "s05": {
+  "title": "48Gbps에서 구리선이 3 m를 넘지 못하는 이유",
+  "left_head": "한 문단으로 보는 물리",
+  "left_body": "Ultra High Speed HDMI는 48Gbps를 전송합니다. 구리선의 신호 손실은 주파수와 길이에 따라 커지므로 약 3 m를 넘는 패시브 구리 케이블은 8K 60Hz나 4K 120Hz를 깨끗하게 전달하지 못합니다. 해법은 양 끝의 액티브 전자 회로 또는 광섬유입니다. 하이브리드 액티브 광케이블은 영상을 광섬유 코어로 보내고 전원과 제어 신호는 가는 구리 도체로 보냅니다.",
+  "left_rule": "정확한 표현: 광섬유 HDMI, 하이브리드 액티브 광케이블. 순수 광섬유나 전체 유리라는 표현은 쓰지 않습니다.",
+  "table_head": [
+   "",
+   "패시브 구리",
+   "하이브리드 액티브 광 (당사)"
+  ],
+  "table_rows": [
+   [
+    "48Gbps 안정 길이",
+    "약 3 m",
+    "현재 라인업 7 m에서 50 m"
+   ],
+   [
+    "무게와 굽힘",
+    "길어지면 두껍고 뻣뻣함",
+    "얇고 가벼워 배관 통과 가능"
+   ],
+   [
+    "간섭",
+    "전기 노이즈를 탐",
+    "광섬유는 간섭에 면역"
+   ],
+   [
+    "방향",
+    "양방향",
+    "방향성: SOURCE와 DISPLAY 끝단 (당사 방향 오류 방지 설계)"
+   ],
+   [
+    "가격대",
+    "짧은 길이 약 $8",
+    "주력 10 m SKU {hero_price}"
+   ]
+  ],
+  "footnote": "길이 한계는 HDMI 규격에 대한 경영진 요약입니다. 브리프의 기술은 48Gbps에서 구리선이 3미터를 넘으면 물리적으로 한계에 이른다는 것입니다.",
+  "notes": "전략 전체가 하나의 물리적 사실에 기대고 있습니다. 48Gbps에서 패시브 구리선은 약 3 m에서 멈춥니다. 그 이상 길이에서는 액티브 전자 회로나 광섬유가 필요하고, 거기서는 범용 구리 케이블과의 가격 경쟁이 사라집니다. 액티브 케이블의 방향성은 실제 단점이지만 당사의 방향 오류 방지 설계가 이를 판매 포인트로 바꿉니다."
+ },
+ "s06": {
+  "title": "장거리 HDMI를 사는 사람",
+  "segments": [
+   {
+    "head": "홈시어터와 프로젝터 사용자",
+    "body": "AV 리시버에서 프로젝터까지 10 m에서 20 m. 4K 120Hz나 8K, eARC를 원합니다. 아마존에서 삽니다.",
+    "size": "[PLACEHOLDER: 세그먼트 규모, 출처 확인 필요]"
+   },
+   {
+    "head": "PS5와 Xbox 게이머",
+    "body": "4K 120Hz에는 48Gbps가 필요합니다. 길이는 짧지만 7 m와 10 m가 책상과 거실에 맞습니다.",
+    "size": "[PLACEHOLDER: 세그먼트 규모, 출처 확인 필요]"
+   },
+   {
+    "head": "커스텀 설치업체와 AV 통합업체",
+    "body": "벽내 배선에는 CL3, 배관 포설에는 분리형 헤드가 필요합니다. 2년차부터 소매가의 60%로 B2B 구매.",
+    "size": "[PLACEHOLDER: 설치업체 수, 출처 확인 필요]"
+   },
+   {
+    "head": "회의실, 교실, 교회, 사이니지",
+    "body": "랙에서 디스플레이나 프로젝터까지 장거리 배선. 여러 공간을 가진 반복 구매자입니다.",
+    "size": "[PLACEHOLDER: 세그먼트 규모, 출처 확인 필요]"
+   }
+  ],
+  "evidence_head": "한국 판매가 이미 보여주는 것 (근거 기반)",
+  "evidence_body": "2026년 8월 {deal_units}개 거래에서 8K 짧은 길이(7 m, 10 m, 20 m)가 수량의 {share_units}, 매출총이익의 {share_gp}를 차지했습니다. 미국 출시도 같은 길이로 시작합니다.",
+  "notes": "네 세그먼트가 장거리 HDMI를 사고, 모두 구리선으로는 제대로 충족되지 않습니다. 세그먼트 규모는 출처를 찾을 때까지 플레이스홀더로 두며 시장 규모를 지어내지 않습니다. 유일한 확정 데이터는 한국 거래 구성으로, 8K 짧은 길이가 가장 잘 팔리고 가장 많이 남는다는 점입니다."
+ },
+ "s07": {
+  "title": "가격 사다리와 포지셔닝",
+  "line": "케이블이 아니라 신호를 팝니다.",
+  "line_sub": "좁게 진입합니다. 장거리 고사양 광케이블을 차지합니다. $8 구리 케이블과 경쟁하지 않습니다.",
+  "cat_8k": "Ultra High Speed HDMI Cable",
+  "cat_4k": "Premium High Speed HDMI Cable (placeholder)",
+  "table_head": [
+   "출시 SKU",
+   "리스팅 카테고리명",
+   "길이",
+   "정가",
+   "판매가 (ASP 입력)",
+   "항공 기준 개당 순이익",
+   "순이익률"
+  ],
+  "table_note": "가격과 FBA 수수료는 아마존 요율표 확인 전까지 경영진 추정입니다. 개당 순이익은 H2 원가 기준, Copper 관세, 출시 물량 항공 운송을 적용했습니다.",
+  "ladder_head": "사다리의 작동 방식",
+  "ladder_items": [
+   "정가가 가치를 고정하고, 판매가를 모델에서 ASP(평균 판매가)로 씁니다.",
+   "주력 SKU: 10 m 8K 케이블 {hero_price} (정가 {hero_list}).",
+   "라인마다 부모 ASIN 하나, 길이별 자식 ASIN으로 리뷰와 광고를 모읍니다 (레버 6).",
+   "18개월 모델의 혼합 ASP: {asp42} (근거 기반, 8월 모델)."
+  ],
+  "notes": "사다리는 7 m에서 20 m 8K 케이블과 30 m 4K 케이블로 구성되며 모두 부모 ASIN 하나 아래에 있습니다. 주력은 {hero_price}의 10 m 8K 케이블입니다. 개당 순이익은 상향식 H2 원가 기준이므로 8월 모델의 착지 원가 38% 가정보다 좋습니다. 22번 슬라이드에서 둘을 함께 보여 줍니다."
+ },
+ "s08": {
+  "title": "제품",
+  "subtitle": "5개 섹션 중 2",
+  "notes": "섹션 구분 슬라이드입니다."
+ },
+ "s09": {
+  "title": "현재 라인업과 로드맵",
+  "table_head": [
+   "SKU",
+   "라인",
+   "길이",
+   "정가",
+   "판매가",
+   "H2 원가 (KRW)",
+   "출시"
+  ],
+  "line_8k": "Ultra High Speed HDMI Cable (8K 라인)",
+  "line_4k": "Premium High Speed HDMI Cable (4K 라인, placeholder)",
+  "yes": "예",
+  "no": "아니오",
+  "roadmap_head": "로드맵",
+  "roadmap": [
+   {
+    "when": "3년차",
+    "what": "HDMI 2.2 16K, DP 2.1, USB4 액티브 광케이블. ASP 3% 믹스 상승으로 모델링 (경영진 추정)."
+   },
+   {
+    "when": "4년차",
+    "what": "프로 라인: CL3, 플레넘, 배관 포설, 장거리 광 KVM. ASP $120, B2B 60%와 아마존 40% 판매 (경영진 추정)."
+   },
+   {
+    "when": "4년차에서 5년차",
+    "what": "미국 재고를 이전하는 아마존 캐나다."
+   }
+  ],
+  "note": "H2 원가는 2026년 8월 거래의 개당 한국 도착 매입 원가입니다 (근거 기반). HDMI 2.1 같은 규격명은 내부용이며 포장과 리스팅에는 절대 쓰지 않습니다.",
+  "notes": "현재 SKU는 10개이고 5개를 출시합니다. 8K 25 m와 50 m, 남은 4K 3개 길이는 부모 ASIN에 리뷰가 쌓이면 뒤따릅니다. 로드맵 제품은 실제 공장 품목이지만 미국 출시 시점과 ASP 3% 상승은 경영진 추정입니다."
+ },
+ "s10": {
+  "title": "다섯 가지 차별점",
+  "cards": [
+   {
+    "icon": "FiRepeat",
+    "head": "방향 오류 방지 설계",
+    "body": "색상 구분 SOURCE와 DISPLAY 끝단, 인쇄 화살표, 설치 영상 QR. 레버 3으로 반품률을 3%에서 2%로 낮춥니다."
+   },
+   {
+    "icon": "FiShield",
+    "head": "5년 신호 보증",
+    "body": "반품이 도착하기 전에 교체품을 먼저 보냅니다. 단순한 약속, 단순한 절차 (흐름도 04)."
+   },
+   {
+    "icon": "FiHome",
+    "head": "CL3 벽내 매립 등급",
+    "body": "공장의 CL3 문서를 확보한 뒤에만 표기합니다. 설치업체 세그먼트를 엽니다."
+   },
+   {
+    "icon": "FiTool",
+    "head": "배관 포설용 분리형 헤드",
+    "body": "작은 헤드가 배관을 통과한 뒤 커넥터를 끼웁니다. 설치업체가 가장 먼저 찾는 기능입니다."
+   },
+   {
+    "icon": "FiMail",
+    "head": "Spec Match 파인더와 트레이드업 등록",
+    "body": "보증 등록 시 길이와 사양을 점검해 줍니다. 아마존 외부 이메일 목록을 만듭니다 (레버 11)."
+   }
+  ],
+  "notes": "각 차별점은 모델의 숫자나 채널에 연결됩니다. 방향 오류 방지 설계는 반품률을 움직이고, 보증과 등록은 3년차 DTC 채널에 공급할 이메일 목록을 만들며, CL3와 분리형 헤드는 2년차 설치업체 채널을 엽니다. 공장 확인이 전제이지만 기존 라인 외에 새 금형은 필요하지 않습니다."
+ },
+ "s11": {
+  "title": "브랜드 구조와 HDMI 명칭 규칙",
+  "brand_root": "BRAND (미국 브랜드, 이름 선정 예정)",
+  "lines": [
+   {
+    "head": "Ultra High Speed HDMI Cable",
+    "body": "8K 라인. 부모 ASIN 하나, 자식은 7 m, 10 m, 15 m, 20 m, 25 m, 50 m."
+   },
+   {
+    "head": "Premium High Speed HDMI Cable",
+    "body": "4K 라인, 인증 대기 (placeholder). 부모 ASIN 하나, 자식은 15 m, 20 m, 30 m, 40 m."
+   },
+   {
+    "head": "프로 라인 (4년차)",
+    "body": "CL3, 플레넘, 배관 포설, 장거리 광 KVM. B2B 60%, 아마존 40% 판매."
+   }
+  ],
+  "rule_head": "명칭 규칙",
+  "rule_items": [
+   "포장과 홍보에 HDMI 버전 번호를 쓰지 않습니다. 케이블 카테고리명 Ultra High Speed HDMI Cable을 씁니다.",
+   "리스팅 제목에는 48Gbps와 8K를 표기할 수 있습니다.",
+   "광섬유 HDMI 또는 하이브리드 액티브 광케이블이라고 씁니다. 순수 광섬유나 전체 유리는 쓰지 않습니다.",
+   "공장은 ATC 시험 보고서를 갖춘 HDMI Adopter여야 합니다. HDMI LA는 압류를 집행합니다."
+  ],
+  "tm_head": "상표와 Brand Registry",
+  "tm_items": [
+   "해외 출원인은 미국 변호사를 통해 출원합니다. 클래스당 약 {tm_fee}에 변호사 비용 추가 [PLACEHOLDER: 변호사 견적].",
+   "아마존 Brand Registry는 출원 중인 상표도 받아 줍니다.",
+   "Brand Registry가 있어야 A+ 콘텐츠, 브랜드 스토어, 영상 광고, 하이재커 방어를 쓸 수 있습니다."
+  ],
+  "notes": "브랜드 아래에 소비자 라인 둘과 프로 라인 하나가 있고 각각 부모 ASIN 하나를 갖습니다. 명칭 규칙은 스타일이 아니라 라이선스 요건입니다. 상자에 버전 번호를 쓰면 압류를 부릅니다. 상표는 법인과 별개이며 미국 변호사가 출원해야 하고, 출원 중 상태로도 Brand Registry가 가능합니다."
+ },
+ "s12": {
+  "title": "구조와 컴플라이언스",
+  "subtitle": "5개 섹션 중 3",
+  "notes": "섹션 구분 슬라이드입니다."
+ },
+ "s13": {
+  "title": "미국 법인과 세금",
+  "cards": [
+   {
+    "head": "Wyoming 단일 구성원 LLC",
+    "items": [
+     "설립 {wy_form}, 연 약 {wy_annual}, 주 소득세 없음, 높은 프라이버시.",
+     "Delaware는 연 약 {de_annual}이며 투자 유치 때만 의미가 있습니다.",
+     "미국 설립 법인은 BOI 보고 의무가 없습니다 (FinCEN 면제 2026년 8월 11일 확정).",
+     "EIN은 Form SS-4로 전화나 팩스 신청, SSN 불필요. 주, IRS, 은행, 아마존의 법인명을 정확히 일치시킵니다."
+    ]
+   },
+   {
+    "head": "연간 신고",
+    "items": [
+     "외국인 소유 단일 구성원 LLC는 매년 Form 5472를 pro forma Form 1120과 함께 제출합니다.",
+     "누락 시 벌금: {penalty_5472}.",
+     "Wyoming 연례 보고서 약 {wy_annual}.",
+     "캘리포니아는 FBA 재고를 근거로 소득세 넥서스를 주장할 수 있습니다. CPA 확인 목록에 포함."
+    ]
+   },
+   {
+    "head": "조세조약상 지위",
+    "items": [
+     "1976년 한미 조세조약: 사업 소득은 고정사업장(PE)이 있는 곳에서만 과세됩니다.",
+     "FBA 창고에 보관하고 출고하는 재고는 제9조 3항(b)에 따라 PE를 만들지 않습니다.",
+     "미국 사무실, 미국 직원, 계약을 협상하거나 서명하는 미국 내 대리인을 두지 않습니다.",
+     "마켓플레이스 판매세는 아마존이 징수합니다."
+    ]
+   },
+   {
+    "head": "소유 구조",
+    "items": [
+     "Lucy 100% 소유. Mark는 서면 컨설팅 또는 커미션 계약으로 보수를 받습니다.",
+     "Mark가 지분을 가지면 LLC는 파트너십이 되어 Form 1065 제출과 Lucy 몫 이익에 37% 원천징수가 생깁니다.",
+     "대안으로 Mark의 미국 회사가 유통사 겸 수입자(importer of record)가 되고 Lucy는 도매 단계에 남는 구조를 열어 둡니다."
+    ]
+   }
+  ],
+  "notes": "Wyoming은 비용이 적고 프라이버시가 높으며 주 소득세가 없습니다. Delaware는 투자자가 올 때만 값어치가 있습니다. 미국 세금을 0으로 유지하는 두 가지는 조세조약의 PE 규칙과 누가 계약에 서명하는지에 대한 원칙입니다. Form 5472는 잊기 쉬운 신고이고 벌금이 {penalty_5472}이므로 첫날부터 컴플라이언스 달력에 올립니다."
+ },
+ "s14": {
+  "title": "자본 이체 전후의 한국 신고",
+  "steps": [
+   {
+    "when": "자본 이체 전",
+    "head": "해외직접투자 신고 (ODI)",
+    "body": "외국환거래법에 따라 Lucy는 자본이 움직이기 전에 외국환은행에 투자를 신고합니다. 지분 10% 이상이면 금액과 무관하게 대상입니다. 개인 온라인 셀러에 대한 단속이 강화되고 있습니다."
+   },
+   {
+    "when": "이체 후",
+    "head": "사후 보고",
+    "body": "송금 보고, 증권 취득 보고, 이후 연례 사업 실적 보고."
+   },
+   {
+    "when": "매년",
+    "head": "해외금융계좌 신고",
+    "body": "해외 계좌 잔액이 월말 합계 {kr_ofar}에 이르면 신고 대상입니다. 세무사에게 확인합니다."
+   },
+   {
+    "when": "2주차",
+    "head": "세무사에게 물을 질문",
+    "body": "H2 Company 사업자등록번호 {reg_no}(가운데 64)는 개인사업자를 뜻합니다. 미국 LLC를 소유하기 전에 H2를 법인으로 전환해야 할까요? 별도 지시가 없으면 Lucy 개인이 BRAND LLC를 소유하는 것으로 가정합니다."
+   }
+  ],
+  "side_head": "진행 순서",
+  "side_items": [
+   "1. 외국환은행에 해외직접투자 신고 (2주차).",
+   "2. LLC 계좌로 자본 이체 (3주차, 신고 후에만).",
+   "3. 송금 보고와 증권 취득 보고.",
+   "4. 연례 사업 실적 보고, 기준 도달 시 해외금융계좌 신고."
+  ],
+  "notes": "해외직접투자 신고는 늦게 할 수 없는 단계입니다. 자본 이체 뒤가 아니라 앞에 옵니다. 사후 보고는 정례 업무지만 일정에 올려야 합니다. 개인사업자 문제는 세무사의 몫이며, 제안서는 개인 소유를 가정하고 대안을 표시합니다."
+ },
+ "s15": {
+  "title": "제품 컴플라이언스",
+  "cards": [
+   {
+    "icon": "FiAward",
+    "head": "HDMI Adopter와 ATC",
+    "body": "공장은 Authorized Test Center(ATC) 보고서를 갖춘 HDMI Adopter여야 합니다. HDMI LA는 압류를 집행합니다.",
+    "status": "[PLACEHOLDER: 공장의 HDMI Adopter 인증번호와 ATC 보고서]"
+   },
+   {
+    "icon": "FiTag",
+    "head": "상자와 리스팅 명칭",
+    "body": "카테고리명만 사용 (Ultra High Speed HDMI Cable). 제목에 48Gbps와 8K 표기 가능. 버전 번호 금지.",
+    "status": "리스팅 키트에 규칙 적용됨"
+   },
+   {
+    "icon": "FiRadio",
+    "head": "FCC",
+    "body": "AOC 헤드에는 액티브 전자 회로가 있으므로 첫 선적 전에 공장의 FCC 시험 보고서를 확보합니다.",
+    "status": "[PLACEHOLDER: 공장의 FCC 시험 보고서]"
+   },
+   {
+    "icon": "FiAlertTriangle",
+    "head": "캘리포니아 Prop 65",
+    "body": "포장과 리스팅에 Prop 65 경고 라벨을 추가합니다.",
+    "status": "라벨 문구는 리스팅 키트에 있음"
+   },
+   {
+    "icon": "FiLayers",
+    "head": "CL3 벽내 매립",
+    "body": "CL3 문서를 확보한 뒤에만 벽내 매립을 표기합니다.",
+    "status": "[PLACEHOLDER: 공장의 CL3 문서]"
+   },
+   {
+    "icon": "FiUmbrella",
+    "head": "제조물 책임 보험",
+    "body": "월 매출이 {ins_trigger}를 넘으면 {ins_amount} 보장이 필요합니다 (Medium 케이스: {ins_month_M}).",
+    "status": "3주차에 견적"
+   }
+  ],
+  "notes": "컴플라이언스 항목 여섯 개 중 셋은 공장 문서를 기다리고 있습니다. 항구 압류는 모든 것을 한 번에 멈추는 유일한 실패이므로 HDMI Adopter 증빙과 FCC 보고서가 파일에 들어오기 전에는 아무것도 선적하지 않습니다. Medium 케이스의 보험 기준은 {ins_month_M}에 도달합니다."
+ },
+ "s16": {
+  "title": "관세 구조와 품목분류 판정",
+  "table_head": [
+   "시나리오",
+   "HTS",
+   "MFN",
+   "301조 목록",
+   "301조 강제노동",
+   "진행 중 조치",
+   "합계"
+  ],
+  "rows": [
+   {
+    "name": "Copper (기본)",
+    "hts": "8544.42.90",
+    "note": "근거 기반"
+   },
+   {
+    "name": "Fiber",
+    "hts": "8544.70.00",
+    "note": "목록 3 포함 여부는 관세사 확인"
+   },
+   {
+    "name": "Stress",
+    "hts": "8544.42.90 및 2차 301조 조치",
+    "note": "경영진 추정"
+   },
+   {
+    "name": "Fiber, 목록 3 포함 시",
+    "hts": "8544.70.00",
+    "note": "확인용 행"
+   }
+  ],
+  "chart_title": "관세 시나리오별 주력 SKU 개당 순이익",
+  "chart_cats": [
+   "Copper 순이익",
+   "Fiber 판정 상승분",
+   "Fiber 순이익",
+   "Stress 감소분",
+   "Stress 순이익"
+  ],
+  "history_head": "2026년에 바뀐 것",
+  "history": [
+   "{ieepa_date} 대법원이 IEEPA 관세를 무효화했습니다.",
+   "10% 122조 부가관세는 {s122_period} 시행된 뒤 만료되었습니다.",
+   "{fl_date} 301조 강제노동 조치가 모든 중국산 제품에 {fl_rate}를 추가했습니다. 어느 품목분류에도 적용됩니다.",
+   "{s301_2_opened} 개시된 2차 301조 조사는 진행 중입니다. Stress 케이스는 {pending_add}를 더합니다.",
+   "소액 면세(de minimis)는 폐지되었습니다. 모든 선적은 관세사를 통한 정식 통관이 필요합니다. 소포 직배송 모델은 없습니다."
+  ],
+  "effect_head": "Medium 케이스에 미치는 효과",
+  "effect": "Fiber 판정: 착지 COGS {landed_copper}에서 {landed_fiber}로, 주력 SKU 개당 순이익 {hero_net_copper}에서 {hero_net_fiber}로, 18개월 순이익 {m18_net_M}에서 {fiber_m18_net}로, 손익분기 {fiber_be}. Stress: 개당 순이익 {hero_net_stress}, 18개월 순이익 {stress_m18_net}.",
+  "notes": "관세 시나리오 셋이 계획의 범위를 정합니다. 사전 품목분류 심사(binding ruling) 신청은 1주차에 CBP로 가며 30에서 90일이 걸립니다. Fiber 분류는 18개월 순이익 약 {fiber_m18_delta}의 가치가 있고 자금 부족분을 줄입니다. Stress 케이스는 {stress_m18_delta_abs}의 비용입니다. 12.5% 강제노동 세율은 어느 쪽이든 적용되므로 계획은 이를 절대 빼지 않습니다."
+ },
+ "s17": {
+  "title": "출시",
+  "subtitle": "5개 섹션 중 4",
+  "notes": "섹션 구분 슬라이드입니다."
+ },
+ "s18": {
+  "title": "90일 게이트까지의 핵심 경로",
+  "caption": "흐름도 01, 모든 노드에 담당자와 주차 표기. {full_size}",
+  "steps": [
+   "1. 브랜드명과 상표. Lucy, 변호사. 1주차에서 2주차",
+   "2. Wyoming LLC와 EIN, 법인명 정확히 일치. Lucy, 변호사. 1주차에서 2주차",
+   "3. 자본 이체 전 한국 해외직접투자 신고. Lucy, 세무사. 2주차",
+   "4. USD 은행 계좌 (Mercury 또는 Relay). Lucy, Mark. 2주차에서 3주차",
+   "5. 관세사, 연간 보증, 품목분류 사전심사 신청. Mark, 관세사. 1주차",
+   "6. 아마존 Professional 계정, 세금 인터뷰, Brand Registry. Lucy, Mark. 3주차에서 4주차",
+   "7. 테스트 재고: 주력 5개 SKU, 각 100에서 300개, 항공 DDP, 출발 전 QC. Lucy, 공장. 4주차에서 8주차",
+   "8. 리스팅, 이미지, A+ 콘텐츠, 영상, PPC. Mark, VA. 6주차에서 9주차",
+   "9. 90일 검증: 전환율, TACOS, 반품률, SKU별 공헌이익. Mark, Lucy. 10주차에서 22주차",
+   "10. 승자 SKU는 해상 운송으로 확대, 패자 SKU 삭제. Lucy, Mark, 3PL. 22주차 이후"
+  ],
+  "notes": "담당자와 주차가 붙은 열 단계입니다. 1. 브랜드명과 상표. Lucy, 변호사. 1주차에서 2주차 2. Wyoming LLC와 EIN, 법인명 정확히 일치. Lucy, 변호사. 1주차에서 2주차 3. 자본 이체 전 한국 해외직접투자 신고. Lucy, 세무사. 2주차 4. USD 은행 계좌 (Mercury 또는 Relay). Lucy, Mark. 2주차에서 3주차 5. 관세사, 연간 보증, 품목분류 사전심사 신청. Mark, 관세사. 1주차 6. 아마존 Professional 계정, 세금 인터뷰, Brand Registry. Lucy, Mark. 3주차에서 4주차 7. 테스트 재고: 주력 5개 SKU, 각 100에서 300개, 항공 DDP, 출발 전 QC. Lucy, 공장. 4주차에서 8주차 8. 리스팅, 이미지, A+ 콘텐츠, 영상, PPC. Mark, VA. 6주차에서 9주차 9. 90일 검증: 전환율, TACOS, 반품률, SKU별 공헌이익. Mark, Lucy. 10주차에서 22주차 10. 승자 SKU는 해상 운송으로 확대, 패자 SKU 삭제. Lucy, Mark, 3PL. 22주차 이후. 다른 모든 것을 가로막는 세 항목은 1주차의 관세사 선임과 품목분류 사전심사 신청, 자본 이체 전 해외직접투자 신고, Brand Registry 신청입니다. 10주차에서 22주차가 테스트 기간이고 게이트 결정은 22주차에 합니다.",
+  "gates_head": "다른 모든 것을 가로막는 세 항목",
+  "gates": [
+   "1주차 관세사(customs broker) 선임과 품목분류 사전심사 신청: 판정 회신에 30에서 90일이 걸리고 해상 물량의 관세율을 정합니다.",
+   "2주차 외국환은행 해외직접투자 신고: LLC 은행 계좌로 자본이 움직이기 전에 합니다.",
+   "3주차에서 4주차 아마존 계정과 Brand Registry: Brand Registry가 있어야 A+ 콘텐츠, 브랜드 스토어, 영상 광고, 하이재커 방어를 쓸 수 있습니다."
+  ]
+ },
+ "s19": {
+  "title": "90일 게이트와 중단 기준",
+  "d90_head": "90일 게이트 (3개월차 말)",
+  "m12_head": "12개월차 게이트",
+  "chip_d90": "90일",
+  "chip_m12": "12개월차",
+  "result_labels": {
+   "PASS": "통과",
+   "REVIEW": "재검토",
+   "KILL": "중단"
+  },
+  "table_head": [
+   "지표",
+   "통과",
+   "중단",
+   "Medium 모델"
+  ],
+  "d90_rows": [
+   {
+    "metric": "출시 SKU 5개 중 3개의 세션 전환율",
+    "pass": "{gt_d90_conv_pass} 이상",
+    "kill": "주력 {gt_d90_conv_kill} 미만",
+    "model": "게이트에서 관측"
+   },
+   {
+    "metric": "3개월차 TACOS, 매월 하락",
+    "pass": "{gt_d90_tacos_pass} 이하",
+    "kill": "{gt_d90_tacos_kill} 초과",
+    "model": "{d90_tacos_M}"
+   },
+   {
+    "metric": "반품률",
+    "pass": "{gt_d90_ret_pass} 이하",
+    "kill": "{gt_d90_ret_kill} 초과",
+    "model": "{d90_ret_M}"
+   },
+   {
+    "metric": "5개 중 3개 SKU의 광고 전 개당 공헌이익",
+    "pass": "{gt_d90_cpu_pass} 이상",
+    "kill": "주력 {gt_d90_cpu_kill} 미만",
+    "model": "{d90_cpu_M}"
+   },
+   {
+    "metric": "다음 PO 자금 확보 후 현금 런웨이",
+    "pass": "{gt_d90_run_pass}개월 이상",
+    "kill": "{gt_d90_run_kill}개월 미만",
+    "model": "{d90_runway_M}개월"
+   },
+   {
+    "metric": "리스팅 정지 또는 IP 신고",
+    "pass": "미해결 건 없음",
+    "kill": "{gt_d90_ip_days}일 초과 미해결",
+    "model": "게이트에서 관측"
+   }
+  ],
+  "m12_rows": [
+   {
+    "metric": "12개월차 월 매출",
+    "pass": "{gt_m12_rev_pass} 이상",
+    "kill": "{gt_m12_rev_kill} 미만",
+    "model": "{m12_rev_M}"
+   },
+   {
+    "metric": "누적 순이익",
+    "pass": "{gt_m12_cum_pass} 이상",
+    "kill": "{gt_m12_cum_kill} 미만",
+    "model": "{m12_cum_M}"
+   },
+   {
+    "metric": "TACOS",
+    "pass": "{gt_m12_tacos_pass} 이하",
+    "kill": "{gt_m12_tacos_kill} 초과",
+    "model": "{m12_tacos_M}"
+   },
+   {
+    "metric": "반품률",
+    "pass": "{gt_m12_ret_pass} 이하",
+    "kill": "{gt_m12_ret_kill} 초과",
+    "model": "{m12_ret_M}"
+   },
+   {
+    "metric": "영업 현금흐름",
+    "pass": "2개월 연속 플러스",
+    "kill": "3개월 연속 마이너스에 자금 부족분 {gt_m12_gap_kill} 초과",
+    "model": "{m12_opcf_M} (11, 12개월차 중 낮은 값)"
+   }
+  ],
+  "results_head": "시나리오별 모델 결과",
+  "results": [
+   {
+    "scenario": "Low",
+    "d90": "{gate_d90_L}",
+    "m12": "{gate_m12_L}"
+   },
+   {
+    "scenario": "Medium",
+    "d90": "{gate_d90_M}",
+    "m12": "{gate_m12_M}"
+   },
+   {
+    "scenario": "High",
+    "d90": "{gate_d90_H}",
+    "m12": "{gate_m12_H}"
+   }
+  ],
+  "rule": "중단 트리거가 하나라도 걸리면 중단 KILL. 모든 기준을 충족하면 통과 PASS. 그 외는 재검토 REVIEW: 30일 내 보완 후 재검증. 중단은 추가 자본 없음, 재고 소진, 패자 SKU 삭제, Plan B 전환을 뜻합니다.",
+  "notes": "게이트 숫자는 첫 발주 전에 적어 두어 나중에 다투지 않게 합니다. 중단 트리거는 하나면 충분하고 통과는 모든 기준을 요구합니다. Low 케이스는 90일에 {gate_d90_L}, 12개월차에 {gate_m12_L}로 읽힙니다. 모델 스스로 언제 멈출지 말해 준다는 점이 핵심입니다."
+ },
+ "s20": {
+  "title": "경제성",
+  "subtitle": "5개 섹션 중 5",
+  "notes": "섹션 구분 슬라이드입니다."
+ },
+ "s21": {
+  "title": "아마존 US 주력 SKU 단위 경제성",
+  "chart_cats": [
+   "가격",
+   "착지 원가",
+   "판매 수수료 15%",
+   "FBA 수수료",
+   "광고",
+   "반품과 보관",
+   "순이익"
+  ],
+  "side": [
+   {
+    "label": "개당 순이익",
+    "value": "{hero_net}",
+    "sub": "{hero_price}의 {hero_net_pct}"
+   },
+   {
+    "label": "같은 제품의 한국 도매",
+    "value": "{hero_korea}",
+    "sub": "개당 매출총이익, 8월 거래"
+   },
+   {
+    "label": "광고 전 공헌이익",
+    "value": "{hero_cba42}",
+    "sub": "혼합 ASP {asp42} 기준. 90일 게이트 요구치는 {gt_d90_cpu_pass}"
+   }
+  ],
+  "compare": "{hero_net} 대 {hero_korea}: 같은 제품의 아마존 US와 한국 도매",
+  "note": "워터폴: 가격 {hero_price}에서 착지 원가 {hero_landed}, 판매 수수료 {hero_ref}, FBA {hero_fba}, 광고 {hero_ads}, 반품과 보관 {hero_ret}를 빼면 순이익 {hero_net}. 8월 모델, 근거 기반: 착지 원가(landed cost)는 관세 판정 전까지 가격의 {hero_landed_pct}로 가정. 광고 {hero_ads}는 18개월 혼합 비율입니다. Alibaba 벤치마크 원가면 같은 제품이 적자입니다 (다음 슬라이드).",
+  "notes": "주력 케이블 한 개가 아마존에서 {hero_net} 순이익을 내는 데 비해 한국 도매에서는 {hero_korea} 매출총이익입니다. 같은 물리적 제품에서 네 배가 넘는 이익입니다. 워터폴은 8월 모델의 착지 원가 38% 가정을 쓰는데, H2 원가 기준보다는 보수적이고 Alibaba 벤치마크보다는 낙관적입니다."
+ },
+ "s22": {
+  "title": "공장 원가 교차 확인",
+  "table_head": [
+   "원가 기준",
+   "주력 SKU 개당 착지 원가",
+   "{hero_price}에서 개당 순이익",
+   "근거"
+  ],
+  "rows": [
+   {
+    "name": "H2 원가 기준 (8월 거래, FOB = 한국 도착 원가의 {fob_factor}배)",
+    "landed": "{cb_h2_landed}",
+    "net": "{cb_h2_net}",
+    "basis": "근거 기반 원가, FOB 계수는 경영진 추정"
+   },
+   {
+    "name": "8월 모델 가정 (가격의 {hero_landed_pct})",
+    "landed": "{cb_aug_landed}",
+    "net": "{cb_aug_net}",
+    "basis": "근거 기반 (8월 제안서 가정)"
+   },
+   {
+    "name": "Alibaba 벤치마크, 낮은 값 (유사 30 ft AOC FOB {ali_lo})",
+    "landed": "{cb_ali_lo_landed}",
+    "net": "{cb_ali_lo_net}",
+    "basis": "근거 기반 견적, 주의 표시"
+   },
+   {
+    "name": "Alibaba 벤치마크, 높은 값 (FOB {ali_hi})",
+    "landed": "{cb_ali_hi_landed}",
+    "net": "{cb_ali_hi_net}",
+    "basis": "근거 기반 견적, 주의 표시"
+   }
+  ],
+  "chart_title": "원가 기준별 주력 SKU 개당 순이익",
+  "chart_cats": [
+   "H2 기준",
+   "8월 모델",
+   "Alibaba 낮음",
+   "Alibaba 높음"
+  ],
+  "callout_head": "있는 그대로 말하면",
+  "callout": "Alibaba 원가면 주력 SKU는 {hero_price}에서 적자입니다. H2 원가 기준은 개당 FOB {h2_fob}로 {ali_lo}에서 {ali_hi} 견적보다 훨씬 낮습니다. 공장이 미국 물량의 서면 FOB 가격을 확인해 주기 전까지 이 격차가 계획의 가장 큰 리스크입니다.",
+  "action": "1주차 조치: 출시 SKU 5개에 대해 300, 1,000, 5,000개 기준 공장 서면 FOB 견적서 [PLACEHOLDER: 공장 FOB 견적서].",
+  "notes": "모델은 8월 거래의 H2 매입 원가를 FOB 가치로 환산해 만들었습니다. 유사 케이블의 Alibaba 견적은 두세 배 높습니다. 실제 미국 물량 가격이 그 견적 근처라면 주력 SKU는 {hero_price}에서 적자이므로, 법인이나 계정을 열기 전에 공장의 서면 견적이 첫 번째 조치입니다.",
+  "table_note": "순이익은 8월 수수료 구조(FBA {hero_fba}) 기준입니다. 7번 슬라이드의 가격 사다리는 SKU 탭의 FBA 추정치 {hero_fba_sku}를 써서 {hero_net_sku_air}가 나옵니다."
+ },
+ "s23": {
+  "title": "18개월 아마존 US 손익",
+  "table_head": [
+   "",
+   "Low",
+   "Medium",
+   "High"
+  ],
+  "rows": [
+   {
+    "label": "매출",
+    "L": "{m18_rev_L}",
+    "M": "{m18_rev_M}",
+    "H": "{m18_rev_H}"
+   },
+   {
+    "label": "순이익",
+    "L": "{m18_net_L}",
+    "M": "{m18_net_M}",
+    "H": "{m18_net_H}"
+   },
+   {
+    "label": "순이익률",
+    "L": "{m18_margin_L}",
+    "M": "{m18_margin_M}",
+    "H": "{m18_margin_H}"
+   },
+   {
+    "label": "누적 손익분기",
+    "L": "{be_L}",
+    "M": "{be_M}",
+    "H": "{be_H}"
+   },
+   {
+    "label": "18개월차 연환산 매출",
+    "L": "{rr_L}",
+    "M": "{rr_M}",
+    "H": "{rr_H}"
+   },
+   {
+    "label": "출구 순이익률 (18개월차)",
+    "L": "{exit_L}",
+    "M": "{exit_M}",
+    "H": "{exit_H}"
+   },
+   {
+    "label": "판매 수량",
+    "L": "{m18_units_L}",
+    "M": "{m18_units_M}",
+    "H": "{m18_units_H}"
+   }
+  ],
+  "note": "Medium은 8월 모델을 재현합니다 (근거 기반): ASP {asp42}, 착지 COGS {hero_landed_pct}, 반품 3%, 광고비는 단계별로 매출의 {ads_p1}, {ads_p2}, {ads_p3}, {ads_p4}, 고정비 월 {fixed_monthly}, 셀러 수수료 {seller_fee}, 출시 비용 {launch_one_time}. Low와 High는 보정된 경영진 추정입니다. Low와 Medium을 가르는 단 하나의 변수는 관세 판정과 그에 따른 원가입니다. 워크북의 월 표기는 Month 1에서 Month 24이며, 손익분기 {be_M}는 워크북의 {be_M_en}입니다.",
+  "notes": "차트는 Medium의 월별 매출과 순이익을 굵은 선으로, Low와 High를 가는 선으로 보여 줍니다. Medium은 {be_M}에 누적 손익분기에 이르고 18개월차에 연환산 매출 {rr_M}, 순이익률 {exit_M}으로 마칩니다. Low는 18개월 내 손익분기에 이르지 못하고 High는 {be_H}에 이릅니다."
+ },
+ "s24": {
+  "title": "5년 궤적",
+  "chart_series": [
+   "아마존 US",
+   "eBay와 Walmart",
+   "B2B 설치업체",
+   "DTC 사이트",
+   "아마존 캐나다",
+   "프로 라인"
+  ],
+  "table_head": [
+   "",
+   "1년차",
+   "2년차",
+   "3년차",
+   "4년차",
+   "5년차",
+   "5년차 순이익"
+  ],
+  "rows": [
+   {
+    "label": "Low",
+    "key": "L"
+   },
+   {
+    "label": "Medium",
+    "key": "M"
+   },
+   {
+    "label": "High",
+    "key": "H"
+   }
+  ],
+  "note": "누적 막대: Medium 채널별 매출. 1년차는 아마존 US만이며 18개월 모델과 일치합니다. 2년차에 eBay와 Walmart 오버플로와 B2B 설치업체, 3년차에 DTC 사이트와 로드맵 SKU, 4년차와 5년차에 아마존 캐나다와 프로 라인을 더합니다.",
+  "notes": "Medium 케이스는 5년차에 매출 {y5_rev_M}, 순이익률 {y5_margin_M}로 $4M에서 $5M 목표 밴드 안에 있습니다. High는 {y5_rev_H}에 이르고, Low는 {y5_rev_L}에 순이익 {y5_net_L}로 정체하는 중단 케이스입니다. 아마존 US는 매년 가장 큰 채널이지만 5년차에는 매출의 약 절반으로 내려갑니다."
+ },
+ "s25": {
+  "title": "각 밴드가 성립하려면",
+  "col_head": [
+   "동인",
+   "Low",
+   "Medium",
+   "High"
+  ],
+  "rows": [
+   {
+    "driver": "아마존 수량: 1년차와 3년차에서 5년차 성장률",
+    "L": "{y1_units_L}개, 이후 {g3_L}, {g4_L}, {g5_L}",
+    "M": "{y1_units_M}개, 이후 {g3_M}, {g4_M}, {g5_M}",
+    "H": "{y1_units_H}개, 이후 {g3_H}, {g4_H}, {g5_H}"
+   },
+   {
+    "driver": "ASP 1년차에서 5년차",
+    "L": "{asp_y1_L}에서 {asp_y5_L}",
+    "M": "{asp_y1_M}에서 {asp_y5_M}",
+    "H": "{asp_y1_H}에서 {asp_y5_H}"
+   },
+   {
+    "driver": "착지 COGS 1년차에서 5년차",
+    "L": "{landed_y1_L}에서 {landed_y5_L}",
+    "M": "{landed_y1_M}에서 {landed_y5_M}",
+    "H": "{landed_y1_H}에서 {landed_y5_H}"
+   },
+   {
+    "driver": "광고비 1년차에서 5년차 (하한 8%)",
+    "L": "{ads_y1_L}에서 {ads_y5_L}",
+    "M": "{ads_y1_M}에서 {ads_y5_M}",
+    "H": "{ads_y1_H}에서 {ads_y5_H}"
+   },
+   {
+    "driver": "반품률",
+    "L": "4% 고정",
+    "M": "3%, 이후 2.5%",
+    "H": "2.5%, 이후 2%"
+   },
+   {
+    "driver": "관세와 운송",
+    "L": "Copper 세율, 항공만",
+    "M": "Copper 세율, 게이트 후 해상",
+    "H": "Fiber 판정, 해상, 물량 단가"
+   },
+   {
+    "driver": "아마존 US 외 채널",
+    "L": "eBay와 Walmart 오버플로, 3년차부터 B2B {y3_b2b_L}",
+    "M": "B2B 2년차 {y2_b2b_M}에서 {y5_b2b_M}로, DTC, 캐나다, 프로 라인",
+    "H": "Medium 채널 매출의 1.8배"
+   },
+   {
+    "driver": "잃어버린 분기 (리스팅 정지)",
+    "L": "19에서 21개월차 추세의 10%",
+    "M": "없음",
+    "H": "없음"
+   },
+   {
+    "driver": "5년차 결과",
+    "L": "{y5_rev_L}, 순이익 {y5_net_L}",
+    "M": "{y5_rev_M}, 순이익 {y5_net_M}",
+    "H": "{y5_rev_H}, 순이익 {y5_net_H}"
+   }
+  ],
+  "note": "1년차 Medium 동인은 8월 모델입니다 (근거 기반). 18개월차 이후는 모두 경영진 추정이며, 마진이 매년 최소 1포인트 줄고 광고비가 8% 아래로 내려가지 않도록 보정했습니다.",
+  "notes": "각 밴드는 예측이 아니라 조건의 묶음입니다. Medium은 게이트 후 해상 운송, 30%, 20%, 12%의 수량 성장, 일정대로 채널 추가가 필요합니다. High는 Fiber 판정과 물량 단가가 더 필요합니다. Low는 Copper 세율, 항공 운송, 수량 정체, 리스팅 정지로 잃어버린 분기 하나가 겹친 결과입니다."
+ },
+ "s26": {
+  "title": "채널 확장 로드맵",
+  "caption": "흐름도 07: 연도별 채널. 각 연도는 앞선 게이트를 지나야 시작합니다. 12개월차 게이트 통과 (2년차), 아마존 US와 B2B 흑자 (3년차), DTC 목록과 로드맵 SKU 가동 (4년차). {full_size}",
+  "table_head": [
+   "연도",
+   "추가 채널",
+   "Medium 매출"
+  ],
+  "rows": [
+   {
+    "year": "1년차",
+    "what": "아마존 US만: 주력 5개 SKU, 부모 ASIN 하나, FBA",
+    "rev": "{y1_rev_M}"
+   },
+   {
+    "year": "2년차",
+    "what": "eBay와 Walmart 오버플로 ({y2_ebay_M}), B2B 설치업체와 AV 통합업체 프로그램 ({y2_b2b_M})",
+    "rev": "{y2_rev_M}"
+   },
+   {
+    "year": "3년차",
+    "what": "이메일 목록으로 운영하는 DTC 사이트 ({y3_dtc_M}), 로드맵 SKU",
+    "rev": "{y3_rev_M}"
+   },
+   {
+    "year": "4년차",
+    "what": "아마존 캐나다 ({y4_ca_M}), 프로 라인 ({y4_pro_M})",
+    "rev": "{y4_rev_M}"
+   },
+   {
+    "year": "5년차",
+    "what": "모든 채널 확대. Temu 현지 셀러 프로그램은 선택 사항, 기준 케이스 미포함",
+    "rev": "{y5_rev_M}"
+   }
+  ],
+  "notes": "채널은 한 번에 하나씩, 앞선 게이트를 통과한 뒤에만 더합니다. eBay는 추가 비용이 거의 없고, B2B 프로그램은 Mark의 2년차 핵심 과제이며, DTC 사이트는 이메일 목록이 생길 때까지 기다립니다. 아마존 캐나다와 프로 라인은 미국 라인이 먼저 검증되어야 하므로 4년차입니다. 연도별 추가 채널: 1년차 아마존 US만, 부모 ASIN 하나 아래 주력 5개 SKU. 2년차 eBay와 Walmart 오버플로 ({y2_ebay_M})와 B2B 설치업체 프로그램 ({y2_b2b_M}). 3년차 DTC 사이트 ({y3_dtc_M})와 로드맵 SKU. 4년차 아마존 캐나다 ({y4_ca_M})와 프로 라인 ({y4_pro_M}). 5년차 모든 채널 확대, Temu는 선택 사항이며 기준 케이스 미포함.",
+  "chips_head": "연도별 Medium 매출"
+ },
+ "s27": {
+  "title": "월별 현금과 최대 소요 시점",
+  "chart_series": [
+   "Low",
+   "Medium",
+   "High",
+   "최저점"
+  ],
+  "cards": [
+   {
+    "label": "Medium 최대 현금 소요",
+    "value": "{peak_M}",
+    "sub": "{peak_month_M}. 신용한도 {gap_M}를 {gap_month_M}까지"
+   },
+   {
+    "label": "Low 최대 현금 소요",
+    "value": "{peak_L}",
+    "sub": "{peak_month_L}. 신용한도 {gap_L}를 {gap_month_L}까지"
+   },
+   {
+    "label": "High 최대 현금 소요",
+    "value": "{peak_H}",
+    "sub": "{peak_month_H}. 신용한도 {gap_H}를 {gap_month_H}까지"
+   }
+  ],
+  "assump_head": "현금 가정",
+  "assump": [
+   "초기 자본 {opening_capital}, 자기 자금.",
+   "재고 보유: 향후 판매량의 2.5개월 (Medium), 3.0 (Low), 2.0 (High).",
+   "PO 조건 발주 시 30%, 선적 시 70%. 리드타임 항공 1개월, 게이트 후 해상 2개월.",
+   "아마존 정산 지연 {payout_lag}일. 운송 중 재고는 회사가 부담합니다.",
+   "잔액은 신규 자금 조달 전 기준. 신용한도는 최대 소요의 1.2배."
+  ],
+  "notes": "케이블 사업을 죽이는 것은 마진이 아니라 운전자본입니다. 4개월차부터 흑자인 Medium 케이스조차 재고를 두 달 반 앞서 사고 아마존이 14일 늦게 정산하기 때문에 {peak_month_M}에 {peak_M}만큼 0 아래로 내려갑니다. 신용한도는 잔액이 처음 마이너스가 되기 전인 {gap_month_M}까지 확보해야 합니다."
+ },
+ "s28": {
+  "title": "자금 계획",
+  "table_head": [
+   "",
+   "Low",
+   "Medium",
+   "High"
+  ],
+  "rows": [
+   {
+    "label": "초기 자본 (Lucy 자기 자금)",
+    "L": "{opening_capital}",
+    "M": "{opening_capital}",
+    "H": "{opening_capital}"
+   },
+   {
+    "label": "자금 조달 전 최대 현금 소요",
+    "L": "{peak_L}",
+    "M": "{peak_M}",
+    "H": "{peak_H}"
+   },
+   {
+    "label": "최대 소요 시점",
+    "L": "{peak_month_L}",
+    "M": "{peak_month_M}",
+    "H": "{peak_month_H}"
+   },
+   {
+    "label": "신용한도 또는 투자금 (최대 소요의 1.2배)",
+    "L": "{gap_L}",
+    "M": "{gap_M}",
+    "H": "{gap_H}"
+   },
+   {
+    "label": "확보 기한",
+    "L": "{gap_month_L}",
+    "M": "{gap_month_M}",
+    "H": "{gap_month_H}"
+   },
+   {
+    "label": "자금 조달 후 90일 시점 런웨이",
+    "L": "{runway_L}개월",
+    "M": "{runway_M}개월",
+    "H": "{runway_H}개월"
+   },
+   {
+    "label": "자금 조달 후 24개월차 말 현금",
+    "L": "{cash24_L}",
+    "M": "{cash24_M}",
+    "H": "{cash24_H}"
+   },
+   {
+    "label": "자금 조달 후 5년차 말 현금",
+    "L": "{cash_y5_L}",
+    "M": "{cash_y5_M}",
+    "H": "{cash_y5_H}"
+   }
+  ],
+  "order_head": "자금 조달 순서",
+  "order": [
+   "1. 유보 이익 우선: 3년차까지 모든 순이익은 LLC에 남깁니다.",
+   "2. {gap_month_M}부터 필요에 따라 인출하는 {gap_M}(Medium)의 신용한도. 같은 규모의 투자금이 대안입니다.",
+   "3. Fiber 판정은 Medium 자금 부족분을 {fiber_gap}로 줄이고, Stress 케이스는 {stress_gap}로 늘립니다.",
+   "4. 대표 인출은 12개월차 게이트 통과와 한도 상환 후에만 시작합니다."
+  ],
+  "notes": "8월 요청액은 {opening_capital}였습니다. 모델은 그 금액이 출시는 감당하지만 재고 증가는 감당하지 못한다고 말합니다. 정직한 숫자는 Medium 케이스에서 자본 {opening_capital}에 {gap_month_M}까지의 신용한도 {gap_M}입니다. Low 케이스는 더 많은 돈이 필요한 뒤 12개월차 게이트에서 실패하므로, 중단 기준은 대표만큼 대출자도 보호합니다."
+ },
+ "s29": {
+  "title": "민감도: 5년차 순이익을 움직이는 것",
+  "chart_series": [
+   "하방",
+   "상방"
+  ],
+  "base_label": "기준: Medium 5년차 순이익 {y5_net_base}",
+  "table_head": [
+   "동인",
+   "하방 케이스",
+   "5년차 순이익",
+   "상방 케이스",
+   "5년차 순이익"
+  ],
+  "drivers": {
+   "Factory cost (FOB)": "공장 원가 (FOB)",
+   "Duty rate": "관세율",
+   "ASP": "ASP",
+   "Ad spend": "광고비",
+   "FX (KRW per USD)": "환율 (USD당 KRW)",
+   "Return rate": "반품률"
+  },
+  "labels": {
+   "Alibaba benchmark": "Alibaba 벤치마크",
+   "minus 10%": "10% 하락",
+   "plus 10%": "10% 상승",
+   "Stress 50.1%": "Stress 50.1%",
+   "Fiber 12.5%": "Fiber 12.5%",
+   "plus 3 points": "3포인트 상승",
+   "minus 3 points": "3포인트 하락",
+   "1,300": "1,300",
+   "1,550": "1,550",
+   "5%": "5%",
+   "2%": "2%"
+  },
+  "note": "Medium 5년차 순이익의 단일 변수 민감도이며 Sensitivity 탭의 실시간 수식입니다. 공장 원가 막대는 의도적으로 잘랐습니다. Alibaba 벤치마크에서 5년차 순이익은 {ali_y5_net}입니다.",
+  "notes": "공장 원가가 다른 모든 동인을 압도하므로 서면 FOB 견적이 첫 번째 조치입니다. 그다음 관세 판정, ASP, 광고비가 각각 5년차 순이익을 약 {sens_mid_swing} 움직입니다. 환율은 KRW 노출이 매입 가격뿐이어서 생각보다 영향이 적습니다."
+ },
+ "s30": {
+  "title": "레버 12개와 각각이 움직이는 것",
+  "table_head": [
+   "#",
+   "레버",
+   "움직이는 가정",
+   "현재",
+   "목표",
+   "담당",
+   "18개월 순이익 효과",
+   "근거"
+  ],
+  "levers": [
+   {
+    "lever": "CBP 품목분류 사전심사: 광케이블 분류 8544.70.00",
+    "moves": "관세율, 착지 COGS %",
+    "owner": "관세사, Mark",
+    "basis": "8월 제안서 레버"
+   },
+   {
+    "lever": "90일 게이트 후 항공에서 해상 운송으로",
+    "moves": "개당 운임, 착지 COGS %",
+    "owner": "Lucy, 3PL",
+    "basis": "8월 제안서 레버"
+   },
+   {
+    "lever": "방향 오류 방지 커넥터 설계",
+    "moves": "반품률",
+    "owner": "Lucy, 공장",
+    "basis": "8월 제안서 레버"
+   },
+   {
+    "lever": "키워드 정리와 제외 키워드",
+    "moves": "광고비 %",
+    "owner": "Mark, VA",
+    "basis": "8월 제안서 레버"
+   },
+   {
+    "lever": "리뷰 속도 (Vine, 동봉 카드, Brand Registry 후속 메시지)",
+    "moves": "전환율, 수량 램프",
+    "owner": "Mark",
+    "basis": "8월 제안서 레버"
+   },
+   {
+    "lever": "부모 ASIN 하나 아래 길이별 변형",
+    "moves": "전환율, 리뷰 통합, 광고 효율",
+    "owner": "Mark",
+    "basis": "8월 제안서 레버"
+   },
+   {
+    "lever": "공장 물량 단가 구간",
+    "moves": "FOB 원가",
+    "owner": "Lucy",
+    "basis": "경영진 추정"
+   },
+   {
+    "lever": "더 작은 FBA 크기 등급으로 포장",
+    "moves": "개당 FBA 수수료",
+    "owner": "Lucy, 공장",
+    "basis": "경영진 추정"
+   },
+   {
+    "lever": "3PL에서 FBA로 보급, 장기 재고 추가 요금 회피",
+    "moves": "보관과 입고 %",
+    "owner": "3PL, Lucy",
+    "basis": "경영진 추정"
+   },
+   {
+    "lever": "가격 사다리와 쿠폰 (정가 대 판매가)",
+    "moves": "ASP",
+    "owner": "Mark",
+    "basis": "경영진 추정"
+   },
+   {
+    "lever": "아마존 외부 이메일 목록 (Spec Match 파인더, 트레이드업 등록)",
+    "moves": "DTC 매출, 광고 %",
+    "owner": "Mark",
+    "basis": "경영진 추정"
+   },
+   {
+    "lever": "B2B 설치업체 프로그램 (AV 통합업체, 커스텀 설치업체)",
+    "moves": "B2B 채널 매출",
+    "owner": "Mark, Lucy",
+    "basis": "경영진 추정"
+   }
+  ],
+  "from_to": {
+   "1": [
+    "{landed_copper}",
+    "{landed_fiber}"
+   ],
+   "2": [
+    "항공 kg당 {air_kg}",
+    "해상 kg당 {ocean_kg}"
+   ],
+   "3": [
+    "3%",
+    "2.5% (목표 2%)"
+   ],
+   "4": [
+    "단계별 비율",
+    "2포인트 감소"
+   ],
+   "5": [
+    "기본 램프",
+    "수량 10% 증가"
+   ],
+   "6": [
+    "개별 ASIN",
+    "부모 하나"
+   ],
+   "7": [
+    "H2 기준",
+    "분기 5,000개에서 5% 인하"
+   ],
+   "8": [
+    "{fba_from}",
+    "7 m와 10 m에서 {fba_to}"
+   ],
+   "9": [
+    "2%",
+    "1.5%"
+   ],
+   "10": [
+    "{asp42}",
+    "5% 상하 테스트"
+   ],
+   "11": [
+    "0",
+    "3년차부터 DTC ({y3_dtc_M})"
+   ],
+   "12": [
+    "0",
+    "2년차 {y2_b2b_M}"
+   ]
+  },
+  "effect_notes": {
+   "6": "레버 4와 5를 뒷받침",
+   "11": "3년차 DTC 공헌이익",
+   "12": "2년차 B2B 공헌이익"
+  },
+  "notes": "모든 레버는 워크북의 가정 셀 하나에 대응하므로 각각 따로 검증할 수 있습니다. 판정, 해상 운송, FBA 크기 등급이 18개월 기준으로 가장 큰 가치가 있습니다. 레버 11과 12는 채널 레버라서 효과가 18개월 블록이 아니라 2년차와 3년차에 나타납니다."
+ },
+ "s31": {
+  "title": "마케팅 플레이북",
+  "cards": [
+   {
+    "icon": "FiTarget",
+    "head": "단계별 광고비",
+    "body": "1에서 3개월차 매출의 {ads_p1}, 4에서 6개월차 {ads_p2}, 7에서 12개월차 {ads_p3}, 13에서 18개월차 {ads_p4}. 8% 아래로는 내려가지 않습니다. TACOS 게이트: 3개월차 {gt_d90_tacos_pass}, 12개월차 {gt_m12_tacos_pass}."
+   },
+   {
+    "icon": "FiStar",
+    "head": "리뷰 속도",
+    "body": "출시 시 Vine, 보증 등록을 안내하는 동봉 카드, Brand Registry 후속 메시지. 목표: 부모 ASIN 하나에 리뷰 통합."
+   },
+   {
+    "icon": "FiImage",
+    "head": "콘텐츠",
+    "body": "이미지 7슬롯과 영상 슬롯, 7개 모듈의 A+ 콘텐츠, 브랜드 스토어. 제목에는 48Gbps와 8K를 쓰고 카테고리명만 사용, 버전 번호 금지."
+   },
+   {
+    "icon": "FiSearch",
+    "head": "키워드 관리",
+    "body": "매주 키워드 정리와 제외 키워드 (레버 4). 장거리와 광케이블 검색어에서 순위를 잡고 저가 구리 검색어는 버립니다."
+   },
+   {
+    "icon": "FiPercent",
+    "head": "가격 사다리와 쿠폰",
+    "body": "정가 {hero_list}가 주력 {hero_price}의 가치를 고정합니다. 레버 10: 쿠폰으로 5% 상하 테스트. Temu 테스트 전에 아마존 가격 하한을 정합니다."
+   },
+   {
+    "icon": "FiUsers",
+    "head": "아마존 외부 목록",
+    "body": "Spec Match 파인더와 트레이드업 등록이 광고비 없이 이메일을 모읍니다. 레버 11과 12: 3년차 DTC 사이트와 설치업체 프로그램에 공급합니다."
+   }
+  ],
+  "notes": "플레이북은 일부러 좁게 잡았습니다. 장거리 광케이블 검색에서 이기고, 부모 ASIN 하나에 리뷰를 모으고, 첫 세 달에만 크게 씁니다. 각 카드는 30번 슬라이드의 레버를 가리켜 마케팅 활동과 모델 가정이 연결되게 합니다."
+ },
+ "s32": {
+  "title": "운영 모델과 팀",
+  "people": [
+   {
+    "icon": "FiUser",
+    "head": "Lucy (Hyejin Yoo), 대표",
+    "body": "BRAND LLC 100% 소유. 공장 관계, 구매, QC, 한국 신고, 자본. 모든 게이트에서 결정합니다."
+   },
+   {
+    "icon": "FiUserCheck",
+    "head": "Mark Taylor, 미국 운영 지원",
+    "body": "서면 컨설팅 또는 커미션 계약, 지분 없음. 리스팅, PPC, 관세사와 3PL 조율, 게이트 준비, B2B 프로그램. 계약을 협상하거나 서명하는 대리인이 아닙니다."
+   },
+   {
+    "icon": "FiBriefcase",
+    "head": "변호사, 관세사, 세무사, 미국 CPA",
+    "body": "상표와 LLC. 통관, 보증과 품목분류 사전심사. 해외직접투자 신고와 한국 보고. Form 5472와 캘리포니아 넥서스 문제."
+   },
+   {
+    "icon": "FiTruck",
+    "head": "공장, 3PL, 가상 비서",
+    "body": "출고 시 FNSKU 라벨을 붙이는 HDMI Adopter 공장. 3PL이 대량 재고를 보관하고 FBA에 보급. 3년차부터 고객 응대와 키워드 작업을 맡는 VA."
+   }
+  ],
+  "cost_head": "고정비 증가 (Medium, 모델 기준)",
+  "cost_rows": [
+   {
+    "year": "1년차",
+    "amount": "{fixed_y1_M}",
+    "what": "소프트웨어, 보험, 기타 월 {fixed_monthly}에 셀러 수수료 {seller_fee}. 출시 비용 {launch_one_time}는 1개월차에 별도 표시"
+   },
+   {
+    "year": "2년차",
+    "amount": "{fixed_y2_M}",
+    "what": "컴플라이언스 추가: Form 5472 준비, Wyoming 보고서, 보증, 제조물 책임 보험"
+   },
+   {
+    "year": "3년차",
+    "amount": "{fixed_y3_M}",
+    "what": "Mark 컨설팅 리테이너, 가상 비서, 도구와 보험 추가"
+   },
+   {
+    "year": "4년차",
+    "amount": "{fixed_y4_M}",
+    "what": "파트타임 운영 지원"
+   },
+   {
+    "year": "5년차",
+    "amount": "{fixed_y5_M}",
+    "what": "소규모 팀, 여전히 미국 사무실과 직원 없음"
+   }
+  ],
+  "notes": "첫 두 해는 두 사람이 외부 전문가 넷과 함께 운영합니다. 조세조약상 지위가 조직도를 정합니다. 미국 사무실 없음, 미국 직원 없음, Mark는 LLC를 위해 계약에 서명하지 않습니다. 고정비는 컨설팅 리테이너와 VA가 더해지는 3년차 전까지 연 {fixed_y2_M} 아래에 머뭅니다."
+ },
+ "s33": {
+  "title": "리스크 등록부 요약: 상위 8개",
+  "table_head": [
+   "리스크",
+   "조기 경고 신호",
+   "대응",
+   "담당"
+  ],
+  "rows": [
+   {
+    "risk": "공장 원가 격차 (H2 기준 대 Alibaba 벤치마크)",
+    "signal": "서면 FOB 견적이 H2 기준보다 높음",
+    "mitigation": "1주차 견적. 사다리 재조정 또는 LLC 설립 전 중단",
+    "owner": "Lucy"
+   },
+   {
+    "risk": "관세 분류가 Copper 또는 그 이하로 판정",
+    "signal": "판정 회신, 2차 301조 조치",
+    "mitigation": "모델은 Copper 세율 적용, Stress 케이스 자금 확보, 해상 물량은 판정 대기",
+    "owner": "관세사, Mark"
+   },
+   {
+    "risk": "HDMI LA 압류 또는 라이선스 신고",
+    "signal": "Adopter 증빙이나 ATC 보고서 누락",
+    "mitigation": "문서 없이는 선적 없음, 포장에는 카테고리명만",
+    "owner": "Lucy"
+   },
+   {
+    "risk": "계정 정지 또는 리스팅 정지",
+    "signal": "계정 건전성 통지, IP 신고",
+    "mitigation": "Brand Registry, 규정에 맞는 표현, 14일 대응 규칙. Low 케이스에 잃어버린 분기 하나 반영",
+    "owner": "Mark"
+   },
+   {
+    "risk": "현금: 판매보다 앞선 재고 매입",
+    "signal": "잔액이 자금 조달 트리거 아래로",
+    "mitigation": "{gap_month_M}까지 신용한도 {gap_M} 확보, 시나리오별 보유 개월",
+    "owner": "Lucy"
+   },
+   {
+    "risk": "방향 혼동으로 인한 반품",
+    "signal": "반품률 {gt_d90_ret_pass} 초과",
+    "mitigation": "방향 오류 방지 설계, QR 설치 영상, 보증 교체 절차",
+    "owner": "Lucy, 공장"
+   },
+   {
+    "risk": "한국 또는 미국 신고 누락 (해외직접투자 신고, Form 5472)",
+    "signal": "달력 항목 기한 초과",
+    "mitigation": "컴플라이언스 달력. 자본 이체 전 해외직접투자 신고. Form 5472 벌금 {penalty_5472}",
+    "owner": "Lucy, 세무사와 CPA"
+   },
+   {
+    "risk": "핵심 인력 (Lucy 또는 Mark 부재)",
+    "signal": "주간 리뷰 누락",
+    "mitigation": "서면 SOP (05_Operating_Processes), 3년차부터 VA, 로그인 공유",
+    "owner": "양측"
+   }
+  ],
+  "note": "확률과 영향 점수는 08_Risk_Register.xlsx에 있습니다 (경영진 추정). 이 슬라이드는 계획을 멈출 수 있는 8개를 모았습니다.",
+  "notes": "리스크 여덟 개 중 둘은 시작 전에 계획을 끝낼 수 있습니다. 공장 원가 격차와 라이선스 문서입니다. 나머지는 게이트, 자금 한도, 컴플라이언스 달력으로 관리합니다. 전체 등록부에는 점수와 트리거가 붙은 리스크가 25개 이상 있습니다."
+ },
+ "s34": {
+  "title": "중단 기준과 Plan B",
+  "caption": "흐름도 06: 90일 결정 트리. 12개월차 기준은 19번 슬라이드에 있습니다. {full_size}",
+  "planb_head": "Plan B: B2B 설치업체 유통과 한국 도매",
+  "planb_table_head": [
+   "",
+   "1년차",
+   "2년차",
+   "3년차"
+  ],
+  "planb_rows": [
+   {
+    "label": "B2B 매출 (3PL만, 아마존 수수료 없음)",
+    "v": [
+     "{pb_y1_b2b}",
+     "{pb_y2_b2b}",
+     "{pb_y3_b2b}"
+    ]
+   },
+   {
+    "label": "한국 도매 매출총이익",
+    "v": [
+     "{pb_y1_korea}",
+     "{pb_y2_korea}",
+     "{pb_y3_korea}"
+    ]
+   },
+   {
+    "label": "총매출",
+    "v": [
+     "{pb_y1_rev}",
+     "{pb_y2_rev}",
+     "{pb_y3_rev}"
+    ]
+   },
+   {
+    "label": "순이익",
+    "v": [
+     "{pb_y1_net}",
+     "{pb_y2_net}",
+     "{pb_y3_net}"
+    ]
+   }
+  ],
+  "planb_note": "경영진 추정. Plan B는 부업 수준이며 있는 그대로 보여 줍니다. 소매가의 60%로 3PL 출고하는 B2B에, 8월 페이스로 연 4건의 한국 거래가 매년 15% 성장합니다.",
+  "kill_head": "중단이 뜻하는 것",
+  "kill_body": "추가 자본 없음. 재고 소진. 패자 SKU 삭제. Plan B 전환. 결정은 Lucy의 몫이고 Mark가 숫자를 준비합니다.",
+  "notes": "결정 트리는 게이트를 기계적으로 만듭니다. 중단 트리거 다섯 개, 통과 테스트 여섯 개, 재검증 한 번. Plan B는 3년차 순이익 약 {pb_y3_net}로 작지만, 아마존이 실패해도 공장 관계와 한국 사업을 살려 둡니다."
+ },
+ "s35": {
+  "title": "요청 사항",
+  "cards": [
+   {
+    "n": "1",
+    "head": "자본",
+    "body": "지금 자기 자금 {opening_capital}, 그리고 {gap_month_M}까지 {gap_M}의 신용한도 또는 투자 약정 (Medium). Low는 {gap_L}, High는 {gap_H}가 필요합니다."
+   },
+   {
+    "n": "2",
+    "head": "구조",
+    "body": "Wyoming의 BRAND LLC 승인, Lucy 100% 소유, Mark는 컨설팅 또는 커미션 계약. 1주차에 변호사와 관세사 선임."
+   },
+   {
+    "n": "3",
+    "head": "돈보다 사실 먼저",
+    "body": "공장의 서면 FOB 견적, HDMI Adopter 증빙, ATC, FCC, CL3 문서. 2주차까지 브랜드명 후보 목록."
+   },
+   {
+    "n": "4",
+    "head": "원칙",
+    "body": "첫 발주 전에 19번 슬라이드의 90일과 12개월차 게이트 숫자에 합의하고, 트리거가 걸리면 추가 자본 없음이라는 중단 규칙에 합의합니다."
+   }
+  ],
+  "upside_head": "Medium 케이스에서 얻는 것",
+  "upside": "18개월 순이익 {m18_net_M}, 5년차 매출 {y5_rev_M}과 순이익률 {y5_margin_M}, 5년 누적 순이익 {cum_net_5y_M}. 오늘 한국 도매에서 개당 {hero_korea}를 버는 같은 제품에서 나옵니다.",
+  "notes": "요청은 네 가지입니다. 돈, 구조, 공장의 사실, 그리고 숫자가 멈추라고 하면 멈추는 원칙입니다. 그 대가로 Medium 케이스는 5년간 누적 순이익 {cum_net_5y_M}를 돌려줍니다. 공장 견적이 어긋나면 법인을 세우기 전에 요청을 거둡니다."
+ },
+ "s36": {
+  "title": "첫 30일",
+  "weeks": [
+   {
+    "head": "1주차",
+    "items": [
+     "공장: 서면 FOB 견적, HDMI Adopter 인증서, ATC, FCC, CL3 문서",
+     "변호사 선임: 상표 검색, Wyoming LLC 설립 신청",
+     "관세사 선임, 연간 보증, 품목분류 사전심사 신청",
+     "브랜드명 후보 목록"
+    ]
+   },
+   {
+    "head": "2주차",
+    "items": [
+     "Form SS-4로 전화 또는 팩스 EIN 신청",
+     "외국환은행에 해외직접투자 신고",
+     "상표 출원",
+     "세무사 미팅: H2 법인 전환 문제, 해외금융계좌 신고"
+    ]
+   },
+   {
+    "head": "3주차",
+    "items": [
+     "USD 은행 계좌 (Mercury 또는 Relay, 대안은 Payoneer 또는 WorldFirst)",
+     "자본 이체, 해외직접투자 신고 후에만",
+     "아마존 Professional 계정, 외국인 소유 법인 세금 인터뷰, 신원 확인",
+     "제조물 책임 보험 견적"
+    ]
+   },
+   {
+    "head": "4주차",
+    "items": [
+     "출원 중인 상표로 Brand Registry",
+     "테스트 재고 PO: 주력 5개 SKU, 각 100에서 300개, 항공 DDP, 제3자 QC 예약",
+     "사진과 영상 브리프, 09_Amazon_Listing_Kit 기반 리스팅 초안",
+     "컴플라이언스 달력과 SOP 가동 (05와 06)"
+    ]
+   }
+  ],
+  "monday_head": "월요일 아침, Lucy의 세 가지 행동",
+  "monday": [
+   "1. 공장에 FOB 견적서와 컴플라이언스 문서 4종을 이메일로 요청합니다.",
+   "2. 변호사와 관세사 통화를 예약합니다.",
+   "3. 세무사에게 해외직접투자 신고 준비를 요청합니다."
+  ],
+  "notes": "재고가 움직이기 전 30일의 준비 기간입니다. 1주차는 사실 확인과 선임, 2주차는 신고, 3주차는 돈과 계좌, 4주차는 아마존과 첫 발주입니다. 월요일의 세 행동이 나머지 모든 것을 풀어 줍니다."
+ },
+ "s37": {
+  "title": "용어집",
+  "terms": [
+   [
+    "AOC",
+    "액티브 광케이블 (active optical cable)"
+   ],
+   [
+    "HDMI",
+    "High Definition Multimedia Interface"
+   ],
+   [
+    "ASP",
+    "평균 판매가 (average selling price)"
+   ],
+   [
+    "COGS",
+    "매출원가 (cost of goods sold)"
+   ],
+   [
+    "FOB",
+    "본선 인도 가격 (공장 측 항구 기준 가격)"
+   ],
+   [
+    "DDP",
+    "관세 포함 인도 (delivered duty paid)"
+   ],
+   [
+    "FBA",
+    "Fulfillment by Amazon (아마존 물류 대행)"
+   ],
+   [
+    "FNSKU",
+    "Fulfillment Network Stock Keeping Unit (아마존 바코드)"
+   ],
+   [
+    "ASIN",
+    "Amazon Standard Identification Number (아마존 상품 식별번호)"
+   ],
+   [
+    "ACOS",
+    "광고 매출 대비 광고비 (광고비 나누기 광고 귀속 매출)"
+   ],
+   [
+    "TACOS",
+    "총매출 대비 광고비 (광고비 나누기 총매출)"
+   ],
+   [
+    "PPC",
+    "클릭당 과금 광고 (pay per click)"
+   ],
+   [
+    "3PL",
+    "제3자 물류 창고"
+   ],
+   [
+    "HTS",
+    "미국 관세율표 (Harmonized Tariff Schedule)"
+   ],
+   [
+    "CBP",
+    "미국 관세국경보호청"
+   ],
+   [
+    "MFN",
+    "최혜국 관세율"
+   ],
+   [
+    "Section 301",
+    "301조, 중국산 제품에 대한 미국 통상법 관세"
+   ],
+   [
+    "IEEPA",
+    "국제비상경제권한법"
+   ],
+   [
+    "EIN",
+    "고용주 식별번호"
+   ],
+   [
+    "LLC",
+    "유한책임회사"
+   ],
+   [
+    "IRS",
+    "미국 국세청"
+   ],
+   [
+    "PE",
+    "고정사업장 (permanent establishment)"
+   ],
+   [
+    "ODI",
+    "해외직접투자 신고 (overseas direct investment report)"
+   ],
+   [
+    "세무사",
+    "한국 공인 세무사 (Korean licensed tax accountant)"
+   ],
+   [
+    "FTA",
+    "외국환거래법 (Foreign Exchange Transactions Act)"
+   ],
+   [
+    "USPTO",
+    "미국 특허상표청"
+   ],
+   [
+    "ATC",
+    "HDMI 공인 시험 센터 (Authorized Test Center)"
+   ],
+   [
+    "HDMI LA",
+    "HDMI Licensing Administrator (HDMI 라이선스 관리 기관)"
+   ],
+   [
+    "FCC",
+    "미국 연방통신위원회"
+   ],
+   [
+    "Prop 65",
+    "캘리포니아 발의안 65 경고 라벨"
+   ],
+   [
+    "CL3",
+    "벽내 매립 케이블 방화 등급 (Class 3)"
+   ],
+   [
+    "KVM",
+    "키보드, 영상, 마우스 연장"
+   ],
+   [
+    "DTC",
+    "소비자 직접 판매 웹사이트"
+   ],
+   [
+    "LOC",
+    "신용한도 대출 (line of credit)"
+   ],
+   [
+    "QC",
+    "품질 관리"
+   ],
+   [
+    "PO",
+    "발주서"
+   ],
+   [
+    "SKU",
+    "재고 관리 단위"
+   ],
+   [
+    "KPI",
+    "핵심 성과 지표"
+   ],
+   [
+    "SOP",
+    "표준 운영 절차"
+   ],
+   [
+    "VA",
+    "가상 비서 (virtual assistant)"
+   ],
+   [
+    "eARC",
+    "향상된 오디오 리턴 채널"
+   ],
+   [
+    "Gbps",
+    "초당 기가비트"
+   ],
+   [
+    "B2B",
+    "기업 간 거래"
+   ],
+   [
+    "IP",
+    "지식재산권"
+   ],
+   [
+    "BOI",
+    "실소유자 정보 보고"
+   ],
+   [
+    "AV",
+    "오디오 비디오"
+   ],
+   [
+    "DP",
+    "DisplayPort"
+   ],
+   [
+    "SSN",
+    "사회보장번호"
+   ],
+   [
+    "CPA",
+    "미국 공인회계사 (미국 세무 신고 담당)"
+   ],
+   [
+    "FX",
+    "환율"
+   ]
+  ],
+  "notes": "제안서에 쓰인 모든 약어를 패키지 전체에서 공유하는 표현으로 정리했습니다. 같은 정의가 05_Operating_Processes와 09_Amazon_Listing_Kit에도 있어 모든 문서가 하나의 표현을 씁니다."
+ }
+}

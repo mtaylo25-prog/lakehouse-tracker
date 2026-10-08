@@ -1,0 +1,6 @@
+build/qa/
+build/tmp/
+build/**/*.jpg
+node_modules/
+__pycache__/
+*.pyc

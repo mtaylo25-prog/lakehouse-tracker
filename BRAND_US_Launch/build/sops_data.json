@@ -1,0 +1,958 @@
+{
+ "wc_inputs": {
+  "fixed_y1": {
+   "Low": 850,
+   "Medium": 850,
+   "High": 850,
+   "Active": 850,
+   "basis": "Evidence based"
+  },
+  "form_5472_prep": {
+   "Low": 800,
+   "Medium": 800,
+   "High": 800,
+   "Active": 800,
+   "basis": "Management estimate"
+  },
+  "wyoming_annual_report": {
+   "Low": 60,
+   "Medium": 60,
+   "High": 60,
+   "Active": 60,
+   "basis": "Evidence based"
+  },
+  "bond_renewal": {
+   "Low": 500,
+   "Medium": 500,
+   "High": 500,
+   "Active": 500,
+   "basis": "Evidence based"
+  },
+  "insurance_per_year": {
+   "Low": 1200,
+   "Medium": 1200,
+   "High": 1200,
+   "Active": 1200,
+   "basis": "Management estimate"
+  },
+  "cover_months": {
+   "Low": 3,
+   "Medium": 2.5,
+   "High": 2,
+   "Active": 2.5,
+   "basis": "Management estimate"
+  },
+  "ocean_from_month": {
+   "Low": 99,
+   "Medium": 7,
+   "High": 7,
+   "Active": 7,
+   "basis": "Management estimate"
+  },
+  "air_lead_months": {
+   "Low": 1,
+   "Medium": 1,
+   "High": 1,
+   "Active": 1,
+   "basis": "Management estimate"
+  },
+  "ocean_lead_months": {
+   "Low": 2,
+   "Medium": 2,
+   "High": 2,
+   "Active": 2,
+   "basis": "Management estimate"
+  },
+  "inventory_days_y3_y5": {
+   "Low": 135,
+   "Medium": 95,
+   "High": 85,
+   "Active": 95,
+   "basis": "Management estimate"
+  },
+  "po_deposit": {
+   "Low": 0.3,
+   "Medium": 0.3,
+   "High": 0.3,
+   "Active": 0.3,
+   "basis": "Management estimate"
+  },
+  "payout_lag_days": {
+   "Low": 14,
+   "Medium": 14,
+   "High": 14,
+   "Active": 14,
+   "basis": "Evidence based"
+  }
+ },
+ "reorder": {
+  "Low": {
+   "cover_months": 3.0,
+   "ocean_from_month": 99,
+   "air_lead_months": 1,
+   "ocean_lead_months": 2,
+   "po_deposit": 0.3,
+   "fob_per_unit_usd": 7.3793006993007,
+   "landed_cost_per_unit_month1": 16.34,
+   "rows": [
+    {
+     "month": 0,
+     "units": 0,
+     "amazon_units": 0,
+     "next3_avg_units": 150.0,
+     "target_closing_stock": 0.0,
+     "arrivals": 0.0,
+     "arrival_mode": "n/a",
+     "po_units": 750.0,
+     "po_for_months": [
+      1
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 5534.475524475525,
+     "deposit_usd": 1660.3426573426575,
+     "balance_usd": 3874.1328671328674,
+     "inventory_on_hand_usd": 0.0,
+     "inventory_in_transit_usd": 0.0
+    },
+    {
+     "month": 1,
+     "units": 90,
+     "amazon_units": 90,
+     "next3_avg_units": 220.0,
+     "target_closing_stock": 660,
+     "arrivals": 750,
+     "arrival_mode": "Air",
+     "po_units": 390.0,
+     "po_for_months": [
+      2
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 2877.927272727273,
+     "deposit_usd": 863.3781818181819,
+     "balance_usd": 2014.549090909091,
+     "inventory_on_hand_usd": 10784.4,
+     "inventory_in_transit_usd": 2877.92727272727
+    },
+    {
+     "month": 2,
+     "units": 144,
+     "amazon_units": 144,
+     "next3_avg_units": 302.0,
+     "target_closing_stock": 906,
+     "arrivals": 390,
+     "arrival_mode": "Air",
+     "po_units": 492.0,
+     "po_for_months": [
+      3
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 3630.615944055944,
+     "deposit_usd": 1089.1847832167832,
+     "balance_usd": 2541.431160839161,
+     "inventory_on_hand_usd": 14804.04,
+     "inventory_in_transit_usd": 3630.61594405594
+    },
+    {
+     "month": 3,
+     "units": 216,
+     "amazon_units": 216,
+     "next3_avg_units": 394.0,
+     "target_closing_stock": 1182,
+     "arrivals": 492,
+     "arrival_mode": "Air",
+     "po_units": 600.0,
+     "po_for_months": [
+      4
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 4427.580419580419,
+     "deposit_usd": 1328.274125874126,
+     "balance_usd": 3099.306293706294,
+     "inventory_on_hand_usd": 19313.88,
+     "inventory_in_transit_usd": 4427.58041958042
+    },
+    {
+     "month": 4,
+     "units": 300,
+     "amazon_units": 300,
+     "next3_avg_units": 494.0,
+     "target_closing_stock": 1482,
+     "arrivals": 600,
+     "arrival_mode": "Air",
+     "po_units": 720.0,
+     "po_for_months": [
+      5
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 5313.096503496504,
+     "deposit_usd": 1593.9289510489511,
+     "balance_usd": 3719.167552447552,
+     "inventory_on_hand_usd": 24215.88,
+     "inventory_in_transit_usd": 5313.09650349651
+    },
+    {
+     "month": 5,
+     "units": 390,
+     "amazon_units": 390,
+     "next3_avg_units": 604.0,
+     "target_closing_stock": 1812,
+     "arrivals": 720,
+     "arrival_mode": "Air",
+     "po_units": 840.0,
+     "po_for_months": [
+      6
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 6198.612587412588,
+     "deposit_usd": 1859.5837762237763,
+     "balance_usd": 4339.028811188811,
+     "inventory_on_hand_usd": 29608.08,
+     "inventory_in_transit_usd": 6198.61258741259
+    },
+    {
+     "month": 6,
+     "units": 492,
+     "amazon_units": 492,
+     "next3_avg_units": 720.0,
+     "target_closing_stock": 2160,
+     "arrivals": 840,
+     "arrival_mode": "Air",
+     "po_units": 960.0,
+     "po_for_months": [
+      7
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 7084.128671328672,
+     "deposit_usd": 2125.2386013986015,
+     "balance_usd": 4958.89006993007,
+     "inventory_on_hand_usd": 35294.4,
+     "inventory_in_transit_usd": 7084.12867132867
+    },
+    {
+     "month": 7,
+     "units": 600,
+     "amazon_units": 600,
+     "next3_avg_units": 840.0,
+     "target_closing_stock": 2520,
+     "arrivals": 960,
+     "arrival_mode": "Air",
+     "po_units": 1080.0,
+     "po_for_months": [
+      8
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 7969.644755244755,
+     "deposit_usd": 2390.893426573427,
+     "balance_usd": 5578.751328671329,
+     "inventory_on_hand_usd": 41176.8,
+     "inventory_in_transit_usd": 7969.64475524476
+    },
+    {
+     "month": 8,
+     "units": 720,
+     "amazon_units": 720,
+     "next3_avg_units": 960.0,
+     "target_closing_stock": 2880,
+     "arrivals": 1080,
+     "arrival_mode": "Air",
+     "po_units": 1230.0,
+     "po_for_months": [
+      9
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 9076.539860139861,
+     "deposit_usd": 2722.961958041958,
+     "balance_usd": 6353.577902097903,
+     "inventory_on_hand_usd": 47059.2,
+     "inventory_in_transit_usd": 9076.53986013986
+    },
+    {
+     "month": 9,
+     "units": 840,
+     "amazon_units": 840,
+     "next3_avg_units": 1090.0000000000002,
+     "target_closing_stock": 3270,
+     "arrivals": 1230,
+     "arrival_mode": "Air",
+     "po_units": 1458.0,
+     "po_for_months": [
+      10
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 10759.02041958042,
+     "deposit_usd": 3227.706125874126,
+     "balance_usd": 7531.314293706294,
+     "inventory_on_hand_usd": 53431.8,
+     "inventory_in_transit_usd": 10759.0204195804
+    },
+    {
+     "month": 10,
+     "units": 960,
+     "amazon_units": 960,
+     "next3_avg_units": 1256.0000000000002,
+     "target_closing_stock": 3768,
+     "arrivals": 1458,
+     "arrival_mode": "Air",
+     "po_units": 1587.6,
+     "po_for_months": [
+      11
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 11715.37779020979,
+     "deposit_usd": 3514.6133370629373,
+     "balance_usd": 8200.764453146854,
+     "inventory_on_hand_usd": 61569.12,
+     "inventory_in_transit_usd": 11715.3777902098
+    },
+    {
+     "month": 11,
+     "units": 1080,
+     "amazon_units": 1080,
+     "next3_avg_units": 1425.2,
+     "target_closing_stock": 4275.6,
+     "arrivals": 1587.6,
+     "arrival_mode": "Air",
+     "po_units": 1684.8,
+     "po_for_months": [
+      12
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 12432.645818181818,
+     "deposit_usd": 3729.7937454545454,
+     "balance_usd": 8702.852072727272,
+     "inventory_on_hand_usd": 69863.304,
+     "inventory_in_transit_usd": 12432.6458181818
+    },
+    {
+     "month": 12,
+     "units": 1230,
+     "amazon_units": 1230,
+     "next3_avg_units": 1576.7999999999995,
+     "target_closing_stock": 4730.4,
+     "arrivals": 1684.8,
+     "arrival_mode": "Air",
+     "po_units": 1782.0,
+     "po_for_months": [
+      13
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 13149.913846153848,
+     "deposit_usd": 3944.9741538461544,
+     "balance_usd": 9204.939692307691,
+     "inventory_on_hand_usd": 77294.736,
+     "inventory_in_transit_usd": 13149.9138461538
+    }
+   ]
+  },
+  "Medium": {
+   "cover_months": 2.5,
+   "ocean_from_month": 7,
+   "air_lead_months": 1,
+   "ocean_lead_months": 2,
+   "po_deposit": 0.3,
+   "fob_per_unit_usd": 7.3793006993007,
+   "landed_cost_per_unit_month1": 15.959999999999996,
+   "rows": [
+    {
+     "month": 0,
+     "units": 0,
+     "amazon_units": 0,
+     "next3_avg_units": 250.0,
+     "target_closing_stock": 0.0,
+     "arrivals": 0.0,
+     "arrival_mode": "n/a",
+     "po_units": 1066.66666666667,
+     "po_for_months": [
+      1
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 7871.254079254104,
+     "deposit_usd": 2361.376223776231,
+     "balance_usd": 5509.877855477872,
+     "inventory_on_hand_usd": 0.0,
+     "inventory_in_transit_usd": 0.0
+    },
+    {
+     "month": 1,
+     "units": 150,
+     "amazon_units": 150,
+     "next3_avg_units": 366.66666666666794,
+     "target_closing_stock": 916.666666666667,
+     "arrivals": 1066.66666666667,
+     "arrival_mode": "Air",
+     "po_units": 581.666666666667,
+     "po_for_months": [
+      2
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 4292.293240093242,
+     "deposit_usd": 1287.6879720279728,
+     "balance_usd": 3004.6052680652697,
+     "inventory_on_hand_usd": 14630,
+     "inventory_in_transit_usd": 4292.29324009324
+    },
+    {
+     "month": 2,
+     "units": 240,
+     "amazon_units": 240,
+     "next3_avg_units": 503.33333333332985,
+     "target_closing_stock": 1258.33333333333,
+     "arrivals": 581.666666666667,
+     "arrival_mode": "Air",
+     "po_units": 743.333333333333,
+     "po_for_months": [
+      3
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 5485.280186480185,
+     "deposit_usd": 1645.5840559440553,
+     "balance_usd": 3839.696130536129,
+     "inventory_on_hand_usd": 20083,
+     "inventory_in_transit_usd": 5485.28018648019
+    },
+    {
+     "month": 3,
+     "units": 360,
+     "amazon_units": 360,
+     "next3_avg_units": 656.6666666666655,
+     "target_closing_stock": 1641.66666666667,
+     "arrivals": 743.333333333333,
+     "arrival_mode": "Air",
+     "po_units": 916.666666666667,
+     "po_for_months": [
+      4
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 6764.358974358977,
+     "deposit_usd": 2029.3076923076928,
+     "balance_usd": 4735.051282051284,
+     "inventory_on_hand_usd": 26201,
+     "inventory_in_transit_usd": 6764.35897435898
+    },
+    {
+     "month": 4,
+     "units": 500,
+     "amazon_units": 500,
+     "next3_avg_units": 823.3333333333298,
+     "target_closing_stock": 2058.33333333333,
+     "arrivals": 916.666666666667,
+     "arrival_mode": "Air",
+     "po_units": 1108.33333333333,
+     "po_for_months": [
+      5
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 8178.724941724919,
+     "deposit_usd": 2453.6174825174758,
+     "balance_usd": 5725.107459207442,
+     "inventory_on_hand_usd": 32851,
+     "inventory_in_transit_usd": 8178.72494172494
+    },
+    {
+     "month": 5,
+     "units": 650,
+     "amazon_units": 650,
+     "next3_avg_units": 1006.6666666666666,
+     "target_closing_stock": 2516.66666666667,
+     "arrivals": 1108.33333333333,
+     "arrival_mode": "Air",
+     "po_units": 2803.3333333333303,
+     "po_for_months": [
+      6,
+      7
+     ],
+     "po_lead_months": [
+      1,
+      2
+     ],
+     "po_fob_usd": 20686.639627039607,
+     "deposit_usd": 6205.991888111882,
+     "balance_usd": 14480.647738927722,
+     "inventory_on_hand_usd": 40166,
+     "inventory_in_transit_usd": 12938.3738927739
+    },
+    {
+     "month": 6,
+     "units": 820,
+     "amazon_units": 820,
+     "next3_avg_units": 1200.0,
+     "target_closing_stock": 3000,
+     "arrivals": 1303.33333333333,
+     "arrival_mode": "Air",
+     "po_units": 1700.0,
+     "po_for_months": [
+      8
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 12544.811188811189,
+     "deposit_usd": 3763.4433566433568,
+     "balance_usd": 8781.367832167833,
+     "inventory_on_hand_usd": 47880,
+     "inventory_in_transit_usd": 14832.3944055944
+    },
+    {
+     "month": 7,
+     "units": 1000,
+     "amazon_units": 1000,
+     "next3_avg_units": 1400.000000000003,
+     "target_closing_stock": 3500,
+     "arrivals": 1500,
+     "arrival_mode": "Ocean",
+     "po_units": 1941.66666666667,
+     "po_for_months": [
+      9
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 14328.142191142217,
+     "deposit_usd": 4298.4426573426645,
+     "balance_usd": 10029.69953379955,
+     "inventory_on_hand_usd": 55860,
+     "inventory_in_transit_usd": 16843.2538461539
+    },
+    {
+     "month": 8,
+     "units": 1200,
+     "amazon_units": 1200,
+     "next3_avg_units": 1599.9999999999998,
+     "target_closing_stock": 4000,
+     "arrivals": 1700,
+     "arrival_mode": "Ocean",
+     "po_units": 2622.3544973545,
+     "po_for_months": [
+      10
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 19351.142376142398,
+     "deposit_usd": 5805.342712842718,
+     "balance_usd": 13545.799663299676,
+     "inventory_on_hand_usd": 63840,
+     "inventory_in_transit_usd": 20133.4849039849
+    },
+    {
+     "month": 9,
+     "units": 1400,
+     "amazon_units": 1400,
+     "next3_avg_units": 1816.6666666666697,
+     "target_closing_stock": 4541.66666666667,
+     "arrivals": 1941.66666666667,
+     "arrival_mode": "Ocean",
+     "po_units": 2835.68783068783,
+     "po_for_months": [
+      11
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 20925.393191993186,
+     "deposit_usd": 6277.617957597956,
+     "balance_usd": 14647.775234395229,
+     "inventory_on_hand_usd": 72485,
+     "inventory_in_transit_usd": 25628.7603337403
+    },
+    {
+     "month": 10,
+     "units": 1600,
+     "amazon_units": 1600,
+     "next3_avg_units": 2225.6084656084668,
+     "target_closing_stock": 5564.02116402116,
+     "arrivals": 2622.3544973545,
+     "arrival_mode": "Ocean",
+     "po_units": 3012.3544973545,
+     "po_for_months": [
+      12
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 22229.06964886967,
+     "deposit_usd": 6668.720894660901,
+     "balance_usd": 15560.348754208766,
+     "inventory_on_hand_usd": 88801.7777777778,
+     "inventory_in_transit_usd": 27594.1140866541
+    },
+    {
+     "month": 11,
+     "units": 1800,
+     "amazon_units": 1800,
+     "next3_avg_units": 2639.8835978836,
+     "target_closing_stock": 6599.708994709,
+     "arrivals": 2835.68783068783,
+     "arrival_mode": "Ocean",
+     "po_units": 3276.8253968254,
+     "po_for_months": [
+      13
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 24180.679942279967,
+     "deposit_usd": 7254.20398268399,
+     "balance_usd": 16926.475959595973,
+     "inventory_on_hand_usd": 105331.355555556,
+     "inventory_in_transit_usd": 29483.2736315536
+    },
+    {
+     "month": 12,
+     "units": 2050,
+     "amazon_units": 2050,
+     "next3_avg_units": 3024.825396825397,
+     "target_closing_stock": 7562.06349206349,
+     "arrivals": 3012.3544973545,
+     "arrival_mode": "Ocean",
+     "po_units": 3447.8253968254,
+     "po_for_months": [
+      14
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 25442.540361860385,
+     "deposit_usd": 7632.762108558115,
+     "balance_usd": 17809.77825330227,
+     "inventory_on_hand_usd": 120690.533333333,
+     "inventory_in_transit_usd": 31813.4420508381
+    }
+   ]
+  },
+  "High": {
+   "cover_months": 2.0,
+   "ocean_from_month": 7,
+   "air_lead_months": 1,
+   "ocean_lead_months": 2,
+   "po_deposit": 0.3,
+   "fob_per_unit_usd": 7.3793006993007,
+   "landed_cost_per_unit_month1": 13.75999999999993,
+   "rows": [
+    {
+     "month": 0,
+     "units": 0,
+     "amazon_units": 0,
+     "next3_avg_units": 387.6666666666667,
+     "target_closing_stock": 0.0,
+     "arrivals": 0.0,
+     "arrival_mode": "n/a",
+     "po_units": 1369.66666666667,
+     "po_for_months": [
+      1
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 10107.182191142216,
+     "deposit_usd": 3032.1546573426644,
+     "balance_usd": 7075.027533799551,
+     "inventory_on_hand_usd": 0.0,
+     "inventory_in_transit_usd": 0.0
+    },
+    {
+     "month": 1,
+     "units": 233,
+     "amazon_units": 233,
+     "next3_avg_units": 568.3333333333331,
+     "target_closing_stock": 1136.66666666667,
+     "arrivals": 1369.66666666667,
+     "arrival_mode": "Air",
+     "po_units": 796.0,
+     "po_for_months": [
+      2
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 5873.923356643357,
+     "deposit_usd": 1762.177006993007,
+     "balance_usd": 4111.74634965035,
+     "inventory_on_hand_usd": 15640.5333333333,
+     "inventory_in_transit_usd": 5873.92335664336
+    },
+    {
+     "month": 2,
+     "units": 372,
+     "amazon_units": 372,
+     "next3_avg_units": 780.333333333333,
+     "target_closing_stock": 1560.66666666667,
+     "arrivals": 796,
+     "arrival_mode": "Air",
+     "po_units": 1033.33333333333,
+     "po_for_months": [
+      3
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 7625.277389277366,
+     "deposit_usd": 2287.58321678321,
+     "balance_usd": 5337.694172494155,
+     "inventory_on_hand_usd": 21474.7733333333,
+     "inventory_in_transit_usd": 7625.27738927739
+    },
+    {
+     "month": 3,
+     "units": 558,
+     "amazon_units": 558,
+     "next3_avg_units": 1017.9999999999997,
+     "target_closing_stock": 2036,
+     "arrivals": 1033.33333333333,
+     "arrival_mode": "Air",
+     "po_units": 1291.66666666667,
+     "po_for_months": [
+      4
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 9531.59673659676,
+     "deposit_usd": 2859.479020979028,
+     "balance_usd": 6672.117715617733,
+     "inventory_on_hand_usd": 28015.36,
+     "inventory_in_transit_usd": 9531.59673659674
+    },
+    {
+     "month": 4,
+     "units": 775,
+     "amazon_units": 775,
+     "next3_avg_units": 1276.3333333333333,
+     "target_closing_stock": 2552.66666666667,
+     "arrivals": 1291.66666666667,
+     "arrival_mode": "Air",
+     "po_units": 1576.0,
+     "po_for_months": [
+      5
+     ],
+     "po_lead_months": [
+      1
+     ],
+     "po_fob_usd": 11629.777902097903,
+     "deposit_usd": 3488.9333706293705,
+     "balance_usd": 8140.8445314685305,
+     "inventory_on_hand_usd": 35124.6933333333,
+     "inventory_in_transit_usd": 11629.7779020979
+    },
+    {
+     "month": 5,
+     "units": 1008,
+     "amazon_units": 1008,
+     "next3_avg_units": 1560.3333333333333,
+     "target_closing_stock": 3120.66666666667,
+     "arrivals": 1576,
+     "arrival_mode": "Air",
+     "po_units": 4040.3333333333303,
+     "po_for_months": [
+      6,
+      7
+     ],
+     "po_lead_months": [
+      1,
+      2
+     ],
+     "po_fob_usd": 29814.83459207457,
+     "deposit_usd": 8944.45037762237,
+     "balance_usd": 20870.3842144522,
+     "inventory_on_hand_usd": 42940.3733333333,
+     "inventory_in_transit_usd": 18605.6768298368
+    },
+    {
+     "month": 6,
+     "units": 1271,
+     "amazon_units": 1271,
+     "next3_avg_units": 1860.0,
+     "target_closing_stock": 3720,
+     "arrivals": 1870.33333333333,
+     "arrival_mode": "Air",
+     "po_units": 2480.0,
+     "po_for_months": [
+      8
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 18300.665734265734,
+     "deposit_usd": 5490.199720279721,
+     "balance_usd": 12810.466013986015,
+     "inventory_on_hand_usd": 51187.2,
+     "inventory_in_transit_usd": 21503.2822377622
+    },
+    {
+     "month": 7,
+     "units": 1550,
+     "amazon_units": 1550,
+     "next3_avg_units": 2170.0,
+     "target_closing_stock": 4340,
+     "arrivals": 2170,
+     "arrival_mode": "Ocean",
+     "po_units": 2842.0,
+     "po_for_months": [
+      9
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 20971.972587412587,
+     "deposit_usd": 6291.591776223777,
+     "balance_usd": 14680.380811188812,
+     "inventory_on_hand_usd": 59718.4,
+     "inventory_in_transit_usd": 24592.2575104895
+    },
+    {
+     "month": 8,
+     "units": 1860,
+     "amazon_units": 1860,
+     "next3_avg_units": 2480.0,
+     "target_closing_stock": 4960,
+     "arrivals": 2480,
+     "arrival_mode": "Ocean",
+     "po_units": 3803.14294573643,
+     "po_for_months": [
+      10
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 28064.535399013363,
+     "deposit_usd": 8419.36061970401,
+     "balance_usd": 19645.174779309353,
+     "inventory_on_hand_usd": 68249.6,
+     "inventory_in_transit_usd": 29391.3332071166
+    },
+    {
+     "month": 9,
+     "units": 2170,
+     "amazon_units": 2170,
+     "next3_avg_units": 2816.0,
+     "target_closing_stock": 5632,
+     "arrivals": 2842,
+     "arrival_mode": "Ocean",
+     "po_units": 4129.67627906977,
+     "po_for_months": [
+      11
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 30474.12305402507,
+     "deposit_usd": 9142.23691620752,
+     "balance_usd": 21331.886137817546,
+     "inventory_on_hand_usd": 77496.32,
+     "inventory_in_transit_usd": 37206.7723152209
+    },
+    {
+     "month": 10,
+     "units": 2480,
+     "amazon_units": 2480,
+     "next3_avg_units": 3477.5714728682165,
+     "target_closing_stock": 6955.14294573643,
+     "arrivals": 3803.14294573643,
+     "arrival_mode": "Ocean",
+     "po_units": 4426.0496124031,
+     "po_for_months": [
+      12
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 32661.150999945785,
+     "deposit_usd": 9798.345299983735,
+     "balance_usd": 22862.80569996205,
+     "inventory_on_hand_usd": 95702.7669333333,
+     "inventory_in_transit_usd": 40272.4683540088
+    },
+    {
+     "month": 11,
+     "units": 2790,
+     "amazon_units": 2790,
+     "next3_avg_units": 4147.4096124031,
+     "target_closing_stock": 8294.8192248062,
+     "arrivals": 4129.67627906977,
+     "arrival_mode": "Ocean",
+     "po_units": 5022.71441860465,
+     "po_for_months": [
+      13
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 37064.120021597,
+     "deposit_usd": 11119.236006479101,
+     "balance_usd": 25944.8840151179,
+     "inventory_on_hand_usd": 114136.712533333,
+     "inventory_in_transit_usd": 43780.3870064249
+    },
+    {
+     "month": 12,
+     "units": 3178,
+     "amazon_units": 3178,
+     "next3_avg_units": 4771.43441860465,
+     "target_closing_stock": 9542.8688372093,
+     "arrivals": 4426.0496124031,
+     "arrival_mode": "Ocean",
+     "po_units": 5301.35441860465,
+     "po_for_months": [
+      14
+     ],
+     "po_lead_months": [
+      2
+     ],
+     "po_fob_usd": 39120.28836845015,
+     "deposit_usd": 11736.086510535046,
+     "balance_usd": 27384.201857915104,
+     "inventory_on_hand_usd": 131309.8752,
+     "inventory_in_transit_usd": 48800.2065321321
+    }
+   ]
+  }
+ },
+ "hero_landed_cost": 17.0962,
+ "medium_month12_units": 2050,
+ "insurance_trigger_month": {
+  "Low": 4,
+  "Medium": 2,
+  "High": 1
+ },
+ "insurance_trigger_margin_usd": {
+  "Low": 1400,
+  "Medium": 80,
+  "High": 19
+ }
+}

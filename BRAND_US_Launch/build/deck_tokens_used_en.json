@@ -1,0 +1,740 @@
+{
+ "tokens": [
+  "ads_p1",
+  "ads_p2",
+  "ads_p3",
+  "ads_p4",
+  "ads_y1_H",
+  "ads_y1_L",
+  "ads_y1_M",
+  "ads_y5_H",
+  "ads_y5_L",
+  "ads_y5_M",
+  "air_kg",
+  "ali_hi",
+  "ali_lo",
+  "ali_y5_net",
+  "asp42",
+  "asp_y1_H",
+  "asp_y1_L",
+  "asp_y1_M",
+  "asp_y5_H",
+  "asp_y5_L",
+  "asp_y5_M",
+  "be_H",
+  "be_L",
+  "be_M",
+  "built",
+  "cash24_H",
+  "cash24_L",
+  "cash24_M",
+  "cash_y5_H",
+  "cash_y5_L",
+  "cash_y5_M",
+  "cb_ali_hi_landed",
+  "cb_ali_hi_net",
+  "cb_ali_lo_landed",
+  "cb_ali_lo_net",
+  "cb_aug_landed",
+  "cb_aug_net",
+  "cb_h2_landed",
+  "cb_h2_net",
+  "cum_net_5y_M",
+  "d90_cpu_M",
+  "d90_ret_M",
+  "d90_runway_M",
+  "d90_tacos_M",
+  "de_annual",
+  "deal_units",
+  "exit_H",
+  "exit_L",
+  "exit_M",
+  "fba_from",
+  "fba_to",
+  "fiber_be",
+  "fiber_gap",
+  "fiber_m18_delta",
+  "fiber_m18_net",
+  "fixed_monthly",
+  "fixed_y1_M",
+  "fixed_y2_M",
+  "fixed_y3_M",
+  "fixed_y4_M",
+  "fixed_y5_M",
+  "fl_date",
+  "fl_rate",
+  "fob_factor",
+  "fx",
+  "g3_H",
+  "g3_L",
+  "g3_M",
+  "g4_H",
+  "g4_L",
+  "g4_M",
+  "g5_H",
+  "g5_L",
+  "g5_M",
+  "gap_H",
+  "gap_L",
+  "gap_M",
+  "gap_month_H",
+  "gap_month_L",
+  "gap_month_M",
+  "gate_d90_H",
+  "gate_d90_L",
+  "gate_d90_M",
+  "gate_m12_H",
+  "gate_m12_L",
+  "gate_m12_M",
+  "gt_d90_conv_kill",
+  "gt_d90_conv_pass",
+  "gt_d90_cpu_kill",
+  "gt_d90_cpu_pass",
+  "gt_d90_ip_days",
+  "gt_d90_ret_kill",
+  "gt_d90_ret_pass",
+  "gt_d90_run_kill",
+  "gt_d90_run_pass",
+  "gt_d90_tacos_kill",
+  "gt_d90_tacos_pass",
+  "gt_m12_cum_kill",
+  "gt_m12_cum_pass",
+  "gt_m12_gap_kill",
+  "gt_m12_ret_kill",
+  "gt_m12_ret_pass",
+  "gt_m12_rev_kill",
+  "gt_m12_rev_pass",
+  "gt_m12_tacos_kill",
+  "gt_m12_tacos_pass",
+  "h2_fob",
+  "hero_ads",
+  "hero_cba42",
+  "hero_fba",
+  "hero_fba_sku",
+  "hero_korea",
+  "hero_landed",
+  "hero_landed_pct",
+  "hero_list",
+  "hero_net",
+  "hero_net_copper",
+  "hero_net_fiber",
+  "hero_net_pct",
+  "hero_net_sku_air",
+  "hero_net_stress",
+  "hero_price",
+  "hero_ref",
+  "hero_ret",
+  "ieepa_date",
+  "ins_amount",
+  "ins_month_M",
+  "ins_trigger",
+  "kr_ofar",
+  "landed_copper",
+  "landed_fiber",
+  "landed_y1_H",
+  "landed_y1_L",
+  "landed_y1_M",
+  "landed_y5_H",
+  "landed_y5_L",
+  "landed_y5_M",
+  "launch_one_time",
+  "m12_cum_M",
+  "m12_opcf_M",
+  "m12_ret_M",
+  "m12_rev_M",
+  "m12_tacos_M",
+  "m18_margin_H",
+  "m18_margin_L",
+  "m18_margin_M",
+  "m18_net_H",
+  "m18_net_L",
+  "m18_net_M",
+  "m18_rev_H",
+  "m18_rev_L",
+  "m18_rev_M",
+  "m18_units_H",
+  "m18_units_L",
+  "m18_units_M",
+  "ocean_kg",
+  "opening_capital",
+  "payout_lag",
+  "pb_y1_b2b",
+  "pb_y1_korea",
+  "pb_y1_net",
+  "pb_y1_rev",
+  "pb_y2_b2b",
+  "pb_y2_korea",
+  "pb_y2_net",
+  "pb_y2_rev",
+  "pb_y3_b2b",
+  "pb_y3_korea",
+  "pb_y3_net",
+  "pb_y3_rev",
+  "peak_H",
+  "peak_L",
+  "peak_M",
+  "peak_month_H",
+  "peak_month_L",
+  "peak_month_M",
+  "penalty_5472",
+  "pending_add",
+  "reg_no",
+  "rr_H",
+  "rr_L",
+  "rr_M",
+  "runway_H",
+  "runway_L",
+  "runway_M",
+  "s122_period",
+  "s301_2_opened",
+  "seller_fee",
+  "sens_mid_swing",
+  "share_gp",
+  "share_units",
+  "stress_gap",
+  "stress_m18_delta_abs",
+  "stress_m18_net",
+  "tm_fee",
+  "wy_annual",
+  "wy_form",
+  "y1_rev_H",
+  "y1_rev_L",
+  "y1_rev_M",
+  "y1_units_H",
+  "y1_units_L",
+  "y1_units_M",
+  "y2_b2b_M",
+  "y2_ebay_M",
+  "y2_rev_H",
+  "y2_rev_L",
+  "y2_rev_M",
+  "y3_b2b_L",
+  "y3_dtc_M",
+  "y3_rev_H",
+  "y3_rev_L",
+  "y3_rev_M",
+  "y4_ca_M",
+  "y4_pro_M",
+  "y4_rev_H",
+  "y4_rev_L",
+  "y4_rev_M",
+  "y5_b2b_M",
+  "y5_margin_M",
+  "y5_net_H",
+  "y5_net_L",
+  "y5_net_M",
+  "y5_net_base",
+  "y5_rev_H",
+  "y5_rev_L",
+  "y5_rev_M"
+ ],
+ "per_slide": {
+  "1": {
+   "tokens": [
+    "built"
+   ],
+   "figure_blocks": []
+  },
+  "2": {
+   "tokens": [
+    "be_H",
+    "be_L",
+    "be_M",
+    "gap_M",
+    "gap_month_M",
+    "m18_margin_M",
+    "m18_net_H",
+    "m18_net_L",
+    "m18_net_M",
+    "m18_rev_H",
+    "m18_rev_L",
+    "m18_rev_M",
+    "peak_M",
+    "peak_month_M",
+    "y5_margin_M",
+    "y5_rev_H",
+    "y5_rev_L",
+    "y5_rev_M"
+   ],
+   "figure_blocks": []
+  },
+  "3": {
+   "tokens": [
+    "gap_H",
+    "gap_L",
+    "gap_M",
+    "gap_month_M",
+    "opening_capital"
+   ],
+   "figure_blocks": []
+  },
+  "4": {
+   "tokens": [],
+   "figure_blocks": []
+  },
+  "5": {
+   "tokens": [
+    "hero_price"
+   ],
+   "figure_blocks": []
+  },
+  "6": {
+   "tokens": [
+    "deal_units",
+    "share_gp",
+    "share_units"
+   ],
+   "figure_blocks": []
+  },
+  "7": {
+   "tokens": [
+    "asp42",
+    "hero_list",
+    "hero_price"
+   ],
+   "figure_blocks": [
+    "unit_economics.per_sku"
+   ]
+  },
+  "8": {
+   "tokens": [],
+   "figure_blocks": []
+  },
+  "9": {
+   "tokens": [],
+   "figure_blocks": [
+    "unit_economics.per_sku"
+   ]
+  },
+  "10": {
+   "tokens": [],
+   "figure_blocks": []
+  },
+  "11": {
+   "tokens": [
+    "tm_fee"
+   ],
+   "figure_blocks": []
+  },
+  "12": {
+   "tokens": [],
+   "figure_blocks": []
+  },
+  "13": {
+   "tokens": [
+    "de_annual",
+    "penalty_5472",
+    "wy_annual",
+    "wy_form"
+   ],
+   "figure_blocks": []
+  },
+  "14": {
+   "tokens": [
+    "kr_ofar",
+    "reg_no"
+   ],
+   "figure_blocks": []
+  },
+  "15": {
+   "tokens": [
+    "ins_amount",
+    "ins_month_M",
+    "ins_trigger"
+   ],
+   "figure_blocks": []
+  },
+  "16": {
+   "tokens": [
+    "fiber_be",
+    "fiber_m18_delta",
+    "fiber_m18_net",
+    "fl_date",
+    "fl_rate",
+    "hero_net_copper",
+    "hero_net_fiber",
+    "hero_net_stress",
+    "ieepa_date",
+    "landed_copper",
+    "landed_fiber",
+    "m18_net_M",
+    "pending_add",
+    "s122_period",
+    "s301_2_opened",
+    "stress_m18_delta_abs",
+    "stress_m18_net"
+   ],
+   "figure_blocks": [
+    "duty.tariff_stack",
+    "duty.waterfall"
+   ]
+  },
+  "17": {
+   "tokens": [],
+   "figure_blocks": []
+  },
+  "18": {
+   "tokens": [],
+   "figure_blocks": []
+  },
+  "19": {
+   "tokens": [
+    "d90_cpu_M",
+    "d90_ret_M",
+    "d90_runway_M",
+    "d90_tacos_M",
+    "gate_d90_H",
+    "gate_d90_L",
+    "gate_d90_M",
+    "gate_m12_H",
+    "gate_m12_L",
+    "gate_m12_M",
+    "gt_d90_conv_kill",
+    "gt_d90_conv_pass",
+    "gt_d90_cpu_kill",
+    "gt_d90_cpu_pass",
+    "gt_d90_ip_days",
+    "gt_d90_ret_kill",
+    "gt_d90_ret_pass",
+    "gt_d90_run_kill",
+    "gt_d90_run_pass",
+    "gt_d90_tacos_kill",
+    "gt_d90_tacos_pass",
+    "gt_m12_cum_kill",
+    "gt_m12_cum_pass",
+    "gt_m12_gap_kill",
+    "gt_m12_ret_kill",
+    "gt_m12_ret_pass",
+    "gt_m12_rev_kill",
+    "gt_m12_rev_pass",
+    "gt_m12_tacos_kill",
+    "gt_m12_tacos_pass",
+    "m12_cum_M",
+    "m12_opcf_M",
+    "m12_ret_M",
+    "m12_rev_M",
+    "m12_tacos_M"
+   ],
+   "figure_blocks": []
+  },
+  "20": {
+   "tokens": [],
+   "figure_blocks": []
+  },
+  "21": {
+   "tokens": [
+    "asp42",
+    "gt_d90_cpu_pass",
+    "hero_ads",
+    "hero_cba42",
+    "hero_fba",
+    "hero_korea",
+    "hero_landed",
+    "hero_landed_pct",
+    "hero_net",
+    "hero_net_pct",
+    "hero_price",
+    "hero_ref",
+    "hero_ret"
+   ],
+   "figure_blocks": [
+    "unit_economics.hero"
+   ]
+  },
+  "22": {
+   "tokens": [
+    "ali_hi",
+    "ali_lo",
+    "cb_ali_hi_landed",
+    "cb_ali_hi_net",
+    "cb_ali_lo_landed",
+    "cb_ali_lo_net",
+    "cb_aug_landed",
+    "cb_aug_net",
+    "cb_h2_landed",
+    "cb_h2_net",
+    "fob_factor",
+    "h2_fob",
+    "hero_fba",
+    "hero_fba_sku",
+    "hero_landed_pct",
+    "hero_net_sku_air",
+    "hero_price"
+   ],
+   "figure_blocks": [
+    "unit_economics.cost_bases"
+   ]
+  },
+  "23": {
+   "tokens": [
+    "ads_p1",
+    "ads_p2",
+    "ads_p3",
+    "ads_p4",
+    "asp42",
+    "be_H",
+    "be_L",
+    "be_M",
+    "exit_H",
+    "exit_L",
+    "exit_M",
+    "fixed_monthly",
+    "hero_landed_pct",
+    "launch_one_time",
+    "m18_margin_H",
+    "m18_margin_L",
+    "m18_margin_M",
+    "m18_net_H",
+    "m18_net_L",
+    "m18_net_M",
+    "m18_rev_H",
+    "m18_rev_L",
+    "m18_rev_M",
+    "m18_units_H",
+    "m18_units_L",
+    "m18_units_M",
+    "rr_H",
+    "rr_L",
+    "rr_M",
+    "seller_fee"
+   ],
+   "figure_blocks": [
+    "scenarios.{Low,Medium,High}.monthly[1..18].amazon_revenue and amazon_net"
+   ]
+  },
+  "24": {
+   "tokens": [
+    "y1_rev_H",
+    "y1_rev_L",
+    "y1_rev_M",
+    "y2_rev_H",
+    "y2_rev_L",
+    "y2_rev_M",
+    "y3_rev_H",
+    "y3_rev_L",
+    "y3_rev_M",
+    "y4_rev_H",
+    "y4_rev_L",
+    "y4_rev_M",
+    "y5_margin_M",
+    "y5_net_L",
+    "y5_rev_H",
+    "y5_rev_L",
+    "y5_rev_M"
+   ],
+   "figure_blocks": [
+    "scenarios.Medium.annual.Y1..Y5.revenue_by_channel"
+   ]
+  },
+  "25": {
+   "tokens": [
+    "ads_y1_H",
+    "ads_y1_L",
+    "ads_y1_M",
+    "ads_y5_H",
+    "ads_y5_L",
+    "ads_y5_M",
+    "asp_y1_H",
+    "asp_y1_L",
+    "asp_y1_M",
+    "asp_y5_H",
+    "asp_y5_L",
+    "asp_y5_M",
+    "g3_H",
+    "g3_L",
+    "g3_M",
+    "g4_H",
+    "g4_L",
+    "g4_M",
+    "g5_H",
+    "g5_L",
+    "g5_M",
+    "landed_y1_H",
+    "landed_y1_L",
+    "landed_y1_M",
+    "landed_y5_H",
+    "landed_y5_L",
+    "landed_y5_M",
+    "y1_units_H",
+    "y1_units_L",
+    "y1_units_M",
+    "y2_b2b_M",
+    "y3_b2b_L",
+    "y5_b2b_M",
+    "y5_net_H",
+    "y5_net_L",
+    "y5_net_M",
+    "y5_rev_H",
+    "y5_rev_L",
+    "y5_rev_M"
+   ],
+   "figure_blocks": []
+  },
+  "26": {
+   "tokens": [
+    "y1_rev_M",
+    "y2_b2b_M",
+    "y2_ebay_M",
+    "y2_rev_M",
+    "y3_dtc_M",
+    "y3_rev_M",
+    "y4_ca_M",
+    "y4_pro_M",
+    "y4_rev_M",
+    "y5_rev_M"
+   ],
+   "figure_blocks": []
+  },
+  "27": {
+   "tokens": [
+    "gap_H",
+    "gap_L",
+    "gap_M",
+    "gap_month_H",
+    "gap_month_L",
+    "gap_month_M",
+    "opening_capital",
+    "payout_lag",
+    "peak_H",
+    "peak_L",
+    "peak_M",
+    "peak_month_H",
+    "peak_month_L",
+    "peak_month_M"
+   ],
+   "figure_blocks": [
+    "scenarios.{Low,Medium,High}.cash_balance_month0, monthly[].cash_balance, cash.peak_need, cash.peak_need_month"
+   ]
+  },
+  "28": {
+   "tokens": [
+    "cash24_H",
+    "cash24_L",
+    "cash24_M",
+    "cash_y5_H",
+    "cash_y5_L",
+    "cash_y5_M",
+    "fiber_gap",
+    "gap_H",
+    "gap_L",
+    "gap_M",
+    "gap_month_H",
+    "gap_month_L",
+    "gap_month_M",
+    "opening_capital",
+    "peak_H",
+    "peak_L",
+    "peak_M",
+    "peak_month_H",
+    "peak_month_L",
+    "peak_month_M",
+    "runway_H",
+    "runway_L",
+    "runway_M",
+    "stress_gap"
+   ],
+   "figure_blocks": []
+  },
+  "29": {
+   "tokens": [
+    "ali_y5_net",
+    "sens_mid_swing",
+    "y5_net_base"
+   ],
+   "figure_blocks": [
+    "sensitivity.tornado"
+   ]
+  },
+  "30": {
+   "tokens": [
+    "air_kg",
+    "asp42",
+    "fba_from",
+    "fba_to",
+    "landed_copper",
+    "landed_fiber",
+    "ocean_kg",
+    "y2_b2b_M",
+    "y3_dtc_M"
+   ],
+   "figure_blocks": [
+    "levers"
+   ]
+  },
+  "31": {
+   "tokens": [
+    "ads_p1",
+    "ads_p2",
+    "ads_p3",
+    "ads_p4",
+    "gt_d90_tacos_pass",
+    "gt_m12_tacos_pass",
+    "hero_list",
+    "hero_price"
+   ],
+   "figure_blocks": []
+  },
+  "32": {
+   "tokens": [
+    "fixed_monthly",
+    "fixed_y1_M",
+    "fixed_y2_M",
+    "fixed_y3_M",
+    "fixed_y4_M",
+    "fixed_y5_M",
+    "launch_one_time",
+    "seller_fee"
+   ],
+   "figure_blocks": []
+  },
+  "33": {
+   "tokens": [
+    "gap_M",
+    "gap_month_M",
+    "gt_d90_ret_pass",
+    "penalty_5472"
+   ],
+   "figure_blocks": []
+  },
+  "34": {
+   "tokens": [
+    "pb_y1_b2b",
+    "pb_y1_korea",
+    "pb_y1_net",
+    "pb_y1_rev",
+    "pb_y2_b2b",
+    "pb_y2_korea",
+    "pb_y2_net",
+    "pb_y2_rev",
+    "pb_y3_b2b",
+    "pb_y3_korea",
+    "pb_y3_net",
+    "pb_y3_rev"
+   ],
+   "figure_blocks": []
+  },
+  "35": {
+   "tokens": [
+    "cum_net_5y_M",
+    "gap_H",
+    "gap_L",
+    "gap_M",
+    "gap_month_M",
+    "hero_korea",
+    "m18_net_M",
+    "opening_capital",
+    "y5_margin_M",
+    "y5_rev_M"
+   ],
+   "figure_blocks": []
+  },
+  "36": {
+   "tokens": [],
+   "figure_blocks": []
+  },
+  "37": {
+   "tokens": [],
+   "figure_blocks": []
+  }
+ }
+}

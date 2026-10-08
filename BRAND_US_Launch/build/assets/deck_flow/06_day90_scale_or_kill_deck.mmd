@@ -1,0 +1,38 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Liberation Sans, Noto Sans KR, sans-serif','fontSize':'30px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':12,'rankSpacing':50,'curve':'linear','padding':10,'htmlLabels':true,'wrappingWidth':2000}}}%%
+flowchart LR
+  subgraph KT ["Day 90 gate at the end of Month 3<br/>Lucy decides, Mark prepares the numbers<br/>Step 1: five kill triggers, any one kills"]
+    direction LR
+    K1["1. Hero SKU conversion<br/>below 5%?"]
+    K2["2. TACOS above 40% in<br/>Month 3?"]
+    K3["3. Return rate above<br/>7%?"]
+    K4["4. Hero contribution<br/>before advertising<br/>below $8 per unit?"]
+    K5["5. Cash runway below 2<br/>months?"]
+    K1 ~~~ K2 ~~~ K3
+    K4 ~~~ K5
+  end
+  subgraph PT ["Step 2: six pass tests<br/>All must pass"]
+    direction LR
+    P1["1. Conversion at or<br/>above 8% on 3 of 5<br/>launch SKUs?"]
+    P2["2. TACOS at or below<br/>30% in Month 3 and<br/>falling month over<br/>month?"]
+    P3["3. Return rate at or<br/>below 4%?"]
+    P4["4. Contribution before<br/>advertising at or<br/>above $11 per unit on<br/>3 of 5 SKUs?"]
+    P5["5. Cash runway at or<br/>above 4 months after<br/>funding the next PO?"]
+    P6["6. No suppressed<br/>listing and no IP<br/>complaint open more<br/>than 14 days?"]
+    P1 ~~~ P2 ~~~ P3
+    P4 ~~~ P5 ~~~ P6
+  end
+  KT -->|"Any yes"| KILL["KILL. No further capital. Sell down<br/>inventory, delist losers, move to<br/>Plan B: B2B installers plus Korea<br/>wholesale"]
+  KT -->|"All no"| PT
+  PT -->|"All yes"| SCALE["SCALE. Ocean freight PO on proven<br/>SKUs, delist losers, keep air for<br/>new SKUs. Next review: Month 12<br/>gate"]
+  PT -->|"Any no"| HOLD["REVIEW. Fix the failed test, retest<br/>in 30 days. No new capital beyond<br/>the committed PO. One retest only,<br/>then pass or kill"]
+  class K1,K2,K3,K4,K5,P1,P2,P3,P4,P5,P6 dec
+  class KILL kill
+  class SCALE good
+  class HOLD ext
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:3px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:3px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:3px,color:#141C36

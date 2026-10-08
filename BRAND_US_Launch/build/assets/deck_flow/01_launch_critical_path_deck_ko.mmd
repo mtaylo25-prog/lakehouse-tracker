@@ -1,0 +1,46 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Noto Sans KR, Liberation Sans, sans-serif','fontSize':'30px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':20,'rankSpacing':44,'curve':'basis','padding':10,'htmlLabels':true,'wrappingWidth':2000}}}%%
+flowchart LR
+  subgraph P1 ["1주차에서 4주차: 준비"]
+    A1["1. 브랜드명과 상표<br/>Lucy, 변호사<br/>1주차에서 2주차"]
+    A2["2. Wyoming<br/>LLC와 EIN, 법인명<br/>정확히 일치<br/>Lucy, 변호사<br/>1주차에서 2주차"]
+    A5["5. 관세사, 연간<br/>보증, 품목분류 사전심사<br/>신청<br/>Mark, 관세사<br/>1주차"]
+    A3["3. 외국환은행에<br/>해외직접투자 신고<br/>Lucy, 세무사<br/>2주차, 자본 이체 전"]
+    A4["4. USD 은행 계좌<br/>Lucy, Mark<br/>2주차에서 3주차"]
+    A6["6. 아마존 계정과<br/>Brand<br/>Registry<br/>Lucy, Mark<br/>3주차에서 4주차"]
+    CAP["자본 이체<br/>Lucy<br/>3주차, 해외직접투자<br/>신고 후"]
+    A2 --> A4 --> CAP
+    A3 --> CAP
+    A1 --> A6
+    A2 --> A6
+    A5 ~~~ A4
+  end
+  subgraph P2 ["4주차에서 9주차:<br/>재고와 콘텐츠"]
+    B7["7. 테스트 재고: 주력<br/>5개 SKU, 각<br/>100에서 300개,<br/>항공 DDP, 출발 전<br/>QC<br/>Lucy, 공장,<br/>관세사, 3PL<br/>4주차에서 8주차"]
+    B8["8. 리스팅, 이미지,<br/>A+ 콘텐츠, 영상,<br/>PPC<br/>Mark, VA<br/>6주차에서 9주차"]
+    B7 --> B8
+  end
+  subgraph P3 ["10주차에서 22주차: 검증"]
+    C9["9. 90일 검증:<br/>전환율, TACOS,<br/>반품률, SKU별<br/>공헌이익<br/>Mark, Lucy<br/>10주차에서 22주차"]
+    G{{"90일 게이트<br/>Lucy 결정<br/>22주차"}}
+    C9 --> G
+  end
+  subgraph P4 ["22주차 이후"]
+    S10["10. 판정된 관세율로<br/>해상 운송, 승자 SKU<br/>확대, 패자 SKU 삭제<br/>Lucy, Mark,<br/>3PL"]
+    PB["Plan B: B2B 설치업체와 한국<br/>도매<br/>Lucy, Mark"]
+  end
+  CAP --> B7
+  A6 --> B8
+  B8 --> C9
+  G -->|"통과"| S10
+  G -->|"중단"| PB
+  class A1,A2,A3,A4,A5,A6,B7,B8,C9,S10 step
+  class CAP money
+  class G dec
+  class PB kill
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:3px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:3px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:3px,color:#141C36

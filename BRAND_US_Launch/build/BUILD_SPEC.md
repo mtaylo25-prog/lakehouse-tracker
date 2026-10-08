@@ -69,7 +69,7 @@ Medium (August deck, evidence based): ASP $42, landed COGS 38%, returns 3%, ad s
 
 Low (calibrated to the brief's results, management estimate): units = Medium times 0.60 rounded, ASP $38, landed COGS 43%, returns 4%, ad spend 7 points above Medium in every phase (37, 29, 22, 18). Reproduces revenue $633,156 (brief $633K), net ($19,636) (brief ($19K)), no cumulative breakeven in 18 months.
 
-High (calibrated, management estimate): units = Medium times 1.55 rounded, ASP $43, landed COGS 32% (fiber ruling plus ocean freight plus volume pricing), returns 2.5%, ad spend 4 points below Medium (26, 18, 11, 8, never below 8). Reproduces revenue $1,850,935 (brief $1.85M), net $457,804 (24.7%; brief $455K, 24.6%), cumulative breakeven Month 5, Month 18 run rate $2,439,648 (brief $2.4M).
+High (calibrated, management estimate): units = Medium times 1.55 rounded, ASP $43, landed COGS 32% (fiber ruling plus ocean freight plus volume pricing), returns 2.5%, ad spend 4 points below Medium in Months 1 to 12 and at the 8% floor in Months 13 to 18 (26, 18, 11, 8, never below 8). Reproduces revenue $1,851,021 (brief $1.85M; Excel ROUND half up on 232.5 and 4262.5 units adds $86 to a pure decimal build), net $447,155 (24.2%; brief $455K, 24.6%, inside the 2% tolerance), cumulative breakeven Month 5, Month 18 run rate $2,439,648 (brief $2.4M). Amended in fix round 2: the earlier figure $457,804 (24.7%) needed 7% ads in Months 13 to 18, which breaks the 8% floor, so it is not reproducible. Decks quote $447K and 24.2% from figures.json. Months 19 to 24 carry a separate ad spend row (High 9.5%, its Year 3 rate) so High Year 2 ad spend across all channels stays above 8% (8.1% blended).
 
 Tolerance for reconciliation: within 1% of the brief's figures for Medium; within 2% for Low and High. Report the exact model values; the decks quote the model, not the brief.
 
@@ -93,7 +93,7 @@ Amazon US drivers:
 | Driver | Low | Medium | High | Bounds |
 |---|---|---|---|---|
 | Months 19 to 24 units | flat at Month 18 | Month 18 + 100 per month | Month 18 + 160 per month | |
-| Lost quarter | Months 15, 16, 17 units at 10% of trend (listing suppression) | none | none | Low must include it |
+| Lost quarter | Months 19, 20, 21 units at 10% of trend (listing suppression). Amended in fix round 2: the starting value was Months 15 to 17, but that makes the Low 18 month reconciliation in 2.3 impossible (about $169K of revenue lost). The brief only requires one lost quarter in Low. Do not move it back without re calibrating the Low 18 month block | none | none | Low must include it |
 | Unit growth Y3, Y4, Y5 | +5%, +3%, 0% | +30%, +20%, +12% | +35%, +25%, +15% | adjust ±5 points |
 | ASP Y1 and Y2, then yearly change | $38, then minus 3% per year | $42, then minus 2% per year | $43, then minus 1.5% per year | compression at least 1 point of margin per year overall |
 | Ad spend % Y3, Y4, Y5 | 12, 12, 12 | 9.5, 9.0, 8.5 | 9.0, 8.5, 8.0 | never below 8% |
@@ -110,7 +110,7 @@ Other channels (revenue, Medium; High = 1.8 times; Low as stated):
 | Channel | Y2 | Y3 | Y4 | Y5 | Economics | Low case |
 |---|---|---|---|---|---|---|
 | eBay and Walmart overflow | 8% of Amazon US revenue | 10% | 12% | 12% | referral 13%, multi channel fulfillment $6.50 per unit, ads 5%, returns 3%, same landed COGS | 8% of Amazon |
-| B2B installer and AV integrator | $120K | $350K | $600K | $850K | price 60% of retail, landed COGS, 3PL pick pack ship $4 per unit, sales commission 5%, marketing 3%, returns 1.5% | $60K from Y3, flat |
+| B2B installer and AV integrator | $120K | $350K | $600K | $850K | price 60% of retail, landed COGS, 3PL pick pack ship $4 per unit, sales commission 5%, marketing 3%, returns 2% (amended in fix round 2 from 1.5%: the brief's floor, returns never below 2%, wins) | $60K from Y3, flat |
 | DTC site | 0 | $100K | $250K | $400K | retail price, payment 3%, fulfillment and shipping $11 per unit, ads 15%, returns 3% | none |
 | Amazon Canada | 0 | 0 | $120K | $250K | ASP 8% below US, FBA $6.50, referral 15%, ads 12%, returns 3%, duty on US to Canada transfer placeholder 0 | none |
 | Pro line (CL3, plenum, conduit pull, long run fiber KVM) | 0 | 0 | $150K | $350K | ASP $120, landed COGS 40%, sold 60% B2B and 40% Amazon with those channels' cost structures | none |
@@ -124,6 +124,8 @@ Inputs: opening capital $39,000 (DECISIONS, self funded); inventory cover target
 Outputs: monthly cash balance, minimum cash balance and its month (peak cash need), runway in months at the Day 90 gate (cash at end of Month 3 divided by average monthly operating cash burn of Months 4 to 6 if negative, else "funded"), funding gap = max(0, 1.2 times negative minimum balance) and the month it must be in place (the month before the balance first goes negative). Funding plan rows: retained earnings first, then a line of credit or investor amount with the date. Show the result for all three scenarios in Scenario Summary.
 
 ### 2.7 Kill criteria (Funding and Breakeven tab, Risk Register, decks, SOPs, decision tree)
+
+Gate results are PASS, REVIEW or KILL: KILL if any kill trigger fires, PASS if every modeled pass threshold is met, REVIEW otherwise (fix and retest within 30 days; added in fix round 2 because Low misses the Day 90 pass thresholds without firing a kill trigger). The thresholds live in one Gate thresholds block on Assumptions (figures.json gate_thresholds) and every gate formula and its wording reads them.
 
 Day 90 gate (end of Month 3). Pass requires all of: unit session conversion at or above 8% on at least 3 of the 5 launch SKUs; TACOS (total advertising cost of sales, ad spend divided by total revenue) at or below 30% in Month 3 and falling month over month; return rate at or below 4%; contribution per unit before advertising at or above $11 on at least 3 of 5 SKUs (Medium hero: $12.14); cash runway at or above 4 months after funding the next purchase order; no suppressed listing and no intellectual property complaint open more than 14 days. Kill triggers (any one): hero conversion below 5%; TACOS above 40% in Month 3; return rate above 7%; hero contribution before advertising below $8; runway below 2 months.
 
@@ -154,7 +156,7 @@ The model builder writes build/facts.json from the brief: duty table (2.4), enti
 
 ## 3. Workbook structure (03_Financial_Model_5Y.xlsx)
 
-Exact tab names in this order: `Cover`, `Assumptions`, `FX`, `SKU Unit Economics`, `Landed Cost and Tariff Scenarios`, `Monthly PL Y1 Y2`, `Annual PL Y1 to Y5`, `Cash Flow and Working Capital`, `Funding and Breakeven`, `Sensitivity`, `KPI Dashboard`, `Levers`, `Scenario Summary`, `Plan B`.
+Exact tab names in this order: `Cover`, `Assumptions`, `FX`, `SKU Unit Economics`, `Landed Cost & Tariff Scenarios`, `Monthly PL Y1 Y2`, `Annual PL Y1 to Y5`, `Cash Flow and Working Capital`, `Funding and Breakeven`, `Sensitivity`, `KPI Dashboard`, `Levers`, `Scenario Summary`, `Plan B`. (Amended in fix round 2: the duty tab was specified as `Landed Cost and Tariff Scenarios`, 32 characters, but Excel caps sheet names at 31, so the 30 character ampersand form is the delivered name; the tab's A1 title carries the full wording. Documents that name the tab use the 30 character form.)
 
 - Cover: title, how to use, legend (yellow fill with blue text = input; black = formula; green = link to another sheet), the scenario selector description, build date, the no hyphen note is not needed here.
 - Assumptions: Low, Medium, High in three adjacent columns for every driver, and a fourth "Active" column pulled by `=INDEX(Low:High, selector)` style formulas (use CHOOSE or INDEX with the selector cell). Selector cells on Assumptions, named ranges: `Scenario` (1 Low, 2 Medium, 3 High; default 2), `DutyScenario` (1 Copper, 2 Fiber, 3 Stress; default 1), `FXRate` (default 1430). Every other sheet reads the Active column, never the Low, Medium or High columns directly. Put a data validation list on the selectors and a text cell that shows the active scenario name.

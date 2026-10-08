@@ -1,0 +1,57 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Liberation Sans, Noto Sans KR, sans-serif','fontSize':'18px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':30,'rankSpacing':60,'curve':'basis','padding':14,'htmlLabels':true,'wrappingWidth':1200}}}%%
+flowchart LR
+  subgraph P1 ["Weeks 1 to 4: set up"]
+    direction TB
+    A1["1. Brand name and trademark filing<br/>(US licensed attorney)<br/>Owner: Lucy, attorney<br/>Weeks 1 to 2"]
+    A2["2. Wyoming LLC and EIN (Form SS-4)<br/>Exact legal name match: state,<br/>IRS, bank, Amazon<br/>Owner: Lucy, attorney<br/>Weeks 1 to 2"]
+    A5["5. Customs broker engaged,<br/>continuous bond, binding ruling<br/>filed<br/>Owner: Mark, broker<br/>Week 1 (ruling answer takes 30 to<br/>90 days)"]
+    A3["3. Korean ODI report at the<br/>foreign exchange bank<br/>Owner: Lucy, Korean tax accountant<br/>(세무사)<br/>Week 2, before any capital moves"]
+    A4["4. USD bank account for BRAND LLC<br/>(Mercury or Relay)<br/>Owner: Lucy, Mark<br/>Weeks 2 to 3"]
+    A4b["Capital transfer to the LLC<br/>account<br/>Owner: Lucy<br/>Week 3, only after the ODI report"]
+    A6["6. Amazon Professional account,<br/>tax interview, Brand Registry<br/>Owner: Lucy, Mark<br/>Weeks 3 to 4"]
+  end
+  subgraph P2 ["Weeks 4 to 9: inventory and<br/>content"]
+    direction TB
+    A7["7. Test inventory: 5 hero SKUs,<br/>100 to 300 units each, air DDP, QC<br/>before departure<br/>Owner: Lucy, factory, broker, 3PL<br/>Weeks 4 to 8"]
+    A8["8. Listings, images, A+ content,<br/>video, PPC campaigns<br/>Owner: Mark, VA<br/>Weeks 6 to 9"]
+  end
+  subgraph P3 ["Weeks 10 to 22: validate"]
+    direction TB
+    A9["9. 90 day validation: conversion,<br/>TACOS, return rate, contribution<br/>per SKU<br/>Owner: Mark, Lucy<br/>Weeks 10 to 22"]
+    G{"Day 90 gate decision<br/>Owner: Lucy decides, Mark prepares<br/>Week 22"}
+  end
+  subgraph P4 ["Week 22 onward"]
+    direction TB
+    A10["10. Scale winners on ocean<br/>freight, delist losers<br/>Owner: Lucy, Mark, 3PL<br/>Week 22 onward"]
+    PB["Plan B: B2B installer distribution<br/>and Korea wholesale<br/>Owner: Lucy, Mark<br/>Week 22 onward"]
+  end
+  LEG["Legend. LLC: limited liability company. EIN: Employer Identification Number. ODI: overseas direct investment<br/>report. SKU: stock keeping unit. DDP: delivered duty paid. QC: quality control. 3PL: third party logistics<br/>warehouse. VA: virtual assistant. PPC: pay per click ads. TACOS: total advertising cost of sales. B2B:<br/>business to business."]
+
+  A1 --> A6
+  A2 --> A4
+  A2 --> A6
+  A3 --> A4b
+  A4 --> A4b
+  A4b --> A7
+  A5 --> A7
+  A6 --> A8
+  A7 --> A8
+  A8 --> A9
+  A9 --> G
+  G -->|"Pass"| A10
+  G -->|"Kill"| PB
+  A5 -.->|"Ruling result sets the duty rate for ocean lots"| A10
+
+  class A1,A2,A3,A4,A4b,A5,A6,A7,A8,A9 step
+  class G dec
+  class A10 good
+  class PB kill
+  class LEG legend
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:2px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:2px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef legend fill:#FFFFFF,stroke:#9AA5C4,stroke-width:1px,color:#141C36

@@ -1,0 +1,29 @@
+{
+ "theme": "base",
+ "fontFamily": "Noto Sans KR, Liberation Sans, sans-serif",
+ "themeVariables": {
+  "fontFamily": "Noto Sans KR, Liberation Sans, sans-serif",
+  "fontSize": "30px",
+  "primaryColor": "#141C36",
+  "primaryTextColor": "#141C36",
+  "primaryBorderColor": "#2DE2FF",
+  "lineColor": "#141C36",
+  "textColor": "#141C36",
+  "secondaryColor": "#EEF2FF",
+  "tertiaryColor": "#F5F7FF",
+  "tertiaryTextColor": "#141C36",
+  "edgeLabelBackground": "#FFFFFF",
+  "clusterBkg": "#F5F7FF",
+  "clusterBorder": "#9AA5C4",
+  "titleColor": "#141C36"
+ },
+ "themeCSS": ".edgeLabel, .edgeLabel p, .edgeLabel span, .cluster-label span, .cluster-label { color: #141C36 !important; } .cluster-label span { font-weight: bold; } .label, .nodeLabel, .edgeLabel, .cluster-label, p, span, text { font-family: 'Noto Sans KR', 'Liberation Sans', sans-serif !important; } .cluster-label span { font-size: 32px; } .label, .nodeLabel, .edgeLabel, p, span { word-break: keep-all; }",
+ "flowchart": {
+  "htmlLabels": true,
+  "wrappingWidth": 2000,
+  "nodeSpacing": 30,
+  "rankSpacing": 60,
+  "curve": "basis",
+  "padding": 14
+ }
+}

@@ -1,0 +1,51 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Liberation Sans, Noto Sans KR, sans-serif','fontSize':'30px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':20,'rankSpacing':50,'curve':'basis','padding':10,'htmlLabels':true,'wrappingWidth':2000}}}%%
+flowchart LR
+  subgraph Y1 ["Year 1: Amazon US only"]
+    direction TB
+    A1["Amazon US. 5 hero SKUs<br/>under one parent ASIN.<br/>FBA. Brand Registry"]
+    G1{{"Day 90 gate"}}
+    G2{{"Month 12 gate"}}
+    PB["Plan B if Amazon fails: B2B installer<br/>distribution plus Korea wholesale"]
+    A1 --> G1
+    G1 -->|"Pass"| G2
+    G1 -->|"Kill"| PB
+    G2 -->|"Kill"| PB
+  end
+  subgraph Y2 ["Year 2: overflow<br/>and installers"]
+    direction TB
+    B1["Amazon US: full length<br/>ladder, ocean freight on<br/>proven SKUs"]
+    B2["eBay and Walmart as<br/>overflow. Multi channel<br/>fulfillment, near zero<br/>extra effort"]
+    B3["B2B installer and AV<br/>integrator program. 3PL<br/>ships, price 60% of<br/>retail"]
+    B1 ~~~ B2 ~~~ B3
+  end
+  subgraph Y3 ["Year 3: own channel<br/>and new products"]
+    direction TB
+    C1["DTC site fed by the off<br/>Amazon email list (Spec<br/>Match finder, trade up<br/>registration)"]
+    C2["Roadmap SKUs: HDMI 2.2<br/>16K, DP 2.1, USB4 AOC"]
+    C1 ~~~ C2
+  end
+  subgraph Y4 ["Year 4: Canada<br/>and the pro line"]
+    direction TB
+    D1["Amazon Canada, stock<br/>transferred from the US"]
+    D2["Pro line: CL3, plenum,<br/>conduit pull, long run<br/>fiber KVM. Sold 60% B2B,<br/>40% Amazon"]
+    D1 ~~~ D2
+  end
+  subgraph Y5 ["Year 5: scale"]
+    direction TB
+    E1["Scale every channel.<br/>Medium band target: 10%<br/>to 15% net (see the<br/>model)"]
+    E2["Temu local seller<br/>program: optional, only<br/>after the Amazon price<br/>floor holds. Not in the<br/>base case"]
+    E1 ~~~ E2
+  end
+  Y1 --> Y2 --> Y3 --> Y4 --> Y5
+  class A1,B1,B2,B3,C1,C2,D1,D2 step
+  class G1,G2 dec
+  class E1 good
+  class E2 ext
+  class PB kill
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:3px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:3px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:3px,color:#141C36

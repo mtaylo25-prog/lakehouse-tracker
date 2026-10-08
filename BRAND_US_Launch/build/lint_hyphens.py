@@ -22,6 +22,8 @@ ALLOW = [
     r"\b8544\.\d{2}\.\d{2}\b",
     r"\bNoto Sans KR\b",
     r"(?<=\d)-(?=\d{4}\b)",            # date ranges inside official citations only
+    r"<!--",                           # markitdown slide markers, not document text
+    r"(?<=\|\s)-(?=\d)",             # raw negative numbers in markitdown chart data tables (the rendered labels use parentheses)
 ]
 ALLOW_RE = re.compile("|".join(ALLOW))
 DASH_RE = re.compile(r"[-–—−]")
@@ -53,6 +55,8 @@ def violations(text: str):
         if "```" in line: continue
         if re.match(r"^\s*[-*+]\s", line): line = re.sub(r"^\s*[-*+]\s", "", line, count=1)   # markdown list marker
         if re.match(r"^\s*\|?\s*:?-{2,}", line): continue                                    # markdown table rule
+        if re.match(r"^\s*\+(?:[-=]+\+)+\s*$", line): continue                               # pandoc grid table rule (docx tables rendered by pandoc -t plain)
+        line = re.sub(r"(\|\s+)-(\s{3})", r"\1 \2", line)                                    # pandoc bullet marker inside a grid table cell
         cleaned = ALLOW_RE.sub("", line)
         if DASH_RE.search(cleaned):
             out.append((i, line.strip()[:160]))

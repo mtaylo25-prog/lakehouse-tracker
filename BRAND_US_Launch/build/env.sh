@@ -12,7 +12,7 @@ export VALIDATE="python3 $SKILLS/pptx/scripts/office/validate.py" # usage: $VALI
 export APPLY_THEME=$SKILLS/pptx/scripts/apply_theme.js
 export KO_FONT="Noto Sans KR"
 # Render a mermaid file to PNG and PDF: render_mmd input.mmd
-render_mmd() { local f="$1"; local b="${f%.mmd}"; mmdc -p "$MMDC_CFG" -i "$f" -o "$b.png" -b white -w 2400 -s 2 && mmdc -p "$MMDC_CFG" -i "$f" -o "$b.pdf" -b white -w 2400 -s 2; }
+render_mmd() { local f="$1"; local b="${f%.mmd}"; mmdc -q -p "$MMDC_CFG" -c "$BUILD/mermaid_config.json" -i "$f" -o "$b.png" -b white --size 2400 -s 1 && mmdc -q -p "$MMDC_CFG" -c "$BUILD/mermaid_config.json" -i "$f" -o "$b.pdf" -b white --size 2400 -s 1; }
 # Convert any office file to PDF next to it: to_pdf file.pptx
 to_pdf() { local f="$1"; $SOFFICE --headless --convert-to pdf --outdir "$(dirname "$f")" "$f"; }
 # Render a PDF to JPG pages at 110 dpi into a directory: to_jpg file.pdf outdir

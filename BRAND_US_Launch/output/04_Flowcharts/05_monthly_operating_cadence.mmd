@@ -1,0 +1,38 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Liberation Sans, Noto Sans KR, sans-serif','fontSize':'18px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':40,'rankSpacing':70,'curve':'basis','padding':14,'htmlLabels':true,'wrappingWidth':1200}}}%%
+flowchart TD
+  subgraph W1 ["Week 1: close and review"]
+    direction LR
+    C1["Days 1 to 3: reconcile Amazon<br/>settlements, 3PL, broker and ad<br/>invoices<br/>Owner: VA, Mark"] --> C2["Days 3 to 5: monthly close in USD<br/>with a KRW view at the FX input<br/>Owner: Mark, Korean tax accountant<br/>(세무사)"]
+    C2 --> C3["Day 5: KPI review call. Revenue,<br/>units, conversion, TACOS, return<br/>rate, contribution per unit, cash<br/>balance, runway<br/>Owner: Lucy, Mark"]
+  end
+  subgraph W2 ["Week 2: inventory and cash"]
+    direction LR
+    I1["Forward forecast, cover target and<br/>reorder point by SKU (chart 03)<br/>Owner: Mark"] --> I2["PO decision and 30% deposit. Air<br/>for new SKUs, ocean for proven<br/>SKUs<br/>Owner: Lucy"]
+    I2 --> I3["Cash forecast 3 months ahead,<br/>funding gap check against the line<br/>of credit plan<br/>Owner: Mark"]
+  end
+  subgraph W3 ["Week 3: listings and ads"]
+    direction LR
+    P1["PPC: keyword pruning, negative<br/>keywords, bid and budget review<br/>Owner: Mark, VA"] --> P2["Listings: Q and A, review follow<br/>up, Vine, insert card results, A+<br/>updates<br/>Owner: VA"]
+    P2 --> P3["Price ladder and coupon test (list<br/>vs sale price)<br/>Owner: Mark"]
+  end
+  subgraph W4 ["Week 4: compliance and plan"]
+    direction LR
+    K1["Account health, IP complaints,<br/>listing suppressions, insurance<br/>threshold ($10K sales month)<br/>Owner: Mark"] --> K2["Filing calendar: Form 5472,<br/>Wyoming annual report, Korean<br/>follow up reports, trademark dates<br/>Owner: Lucy, attorney, 세무사"]
+    K2 --> K3["Next month plan and owner actions<br/>agreed, then back to Week 1<br/>Owner: Lucy, Mark"]
+  end
+  W1 --> W2
+  W2 --> W3
+  W3 --> W4
+  LEG["Legend. KPI: key performance indicator. TACOS: total advertising cost of sales. FX: foreign exchange rate.<br/>SKU: stock keeping unit. PO: purchase order. PPC: pay per click advertising. VA: virtual assistant. IP:<br/>intellectual property. 3PL: third party logistics warehouse."]
+
+  class C1,C2,I1,I2,I3,P1,P2,P3,K1,K2 step
+  class C3,K3 dec
+  class LEG legend
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:2px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:2px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:2px,color:#141C36
+classDef legend fill:#FFFFFF,stroke:#9AA5C4,stroke-width:1px,color:#141C36

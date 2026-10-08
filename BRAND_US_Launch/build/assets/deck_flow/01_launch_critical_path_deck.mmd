@@ -1,0 +1,46 @@
+%%{init: {'theme':'base','themeVariables': {'fontFamily':'Liberation Sans, Noto Sans KR, sans-serif','fontSize':'30px','primaryColor':'#141C36','primaryTextColor':'#141C36','primaryBorderColor':'#2DE2FF','lineColor':'#141C36','secondaryColor':'#EEF2FF','tertiaryColor':'#F5F7FF','tertiaryTextColor':'#141C36','edgeLabelBackground':'#FFFFFF','clusterBkg':'#F5F7FF','clusterBorder':'#9AA5C4','titleColor':'#141C36','textColor':'#141C36','labelTextColor':'#141C36'},'flowchart': {'nodeSpacing':20,'rankSpacing':44,'curve':'basis','padding':10,'htmlLabels':true,'wrappingWidth':2000}}}%%
+flowchart LR
+  subgraph P1 ["Weeks 1 to 4: set up"]
+    A1["1. Brand name and<br/>trademark<br/>Lucy, attorney<br/>Weeks 1 to 2"]
+    A2["2. Wyoming LLC and<br/>EIN, exact legal name<br/>match<br/>Lucy, attorney<br/>Weeks 1 to 2"]
+    A5["5. Broker, bond,<br/>binding ruling filed<br/>Mark, broker<br/>Week 1"]
+    A3["3. Korean ODI report<br/>at the bank<br/>Lucy, tax accountant<br/>Week 2, before capital<br/>moves"]
+    A4["4. USD bank account<br/>Lucy, Mark<br/>Weeks 2 to 3"]
+    A6["6. Amazon account and<br/>Brand Registry<br/>Lucy, Mark<br/>Weeks 3 to 4"]
+    CAP["Capital transfer<br/>Lucy<br/>Week 3, after the ODI<br/>report"]
+    A2 --> A4 --> CAP
+    A3 --> CAP
+    A1 --> A6
+    A2 --> A6
+    A5 ~~~ A4
+  end
+  subgraph P2 ["Weeks 4 to 9: inventory<br/>and content"]
+    B7["7. Test inventory: 5<br/>hero SKUs, 100 to 300<br/>units each, air DDP,<br/>QC before departure<br/>Lucy, factory, broker,<br/>3PL<br/>Weeks 4 to 8"]
+    B8["8. Listings, images,<br/>A+ content, video, PPC<br/>Mark, VA<br/>Weeks 6 to 9"]
+    B7 --> B8
+  end
+  subgraph P3 ["Weeks 10 to 22: validate"]
+    C9["9. 90 day validation:<br/>conversion, TACOS,<br/>return rate,<br/>contribution per SKU<br/>Mark, Lucy<br/>Weeks 10 to 22"]
+    G{{"Day 90 gate<br/>Lucy decides<br/>Week 22"}}
+    C9 --> G
+  end
+  subgraph P4 ["Week 22 onward"]
+    S10["10. Scale winners on<br/>ocean freight at the<br/>ruled duty rate,<br/>delist losers<br/>Lucy, Mark, 3PL"]
+    PB["Plan B: B2B installers and Korea<br/>wholesale<br/>Lucy, Mark"]
+  end
+  CAP --> B7
+  A6 --> B8
+  B8 --> C9
+  G -->|"Pass"| S10
+  G -->|"Kill"| PB
+  class A1,A2,A3,A4,A5,A6,B7,B8,C9,S10 step
+  class CAP money
+  class G dec
+  class PB kill
+
+classDef step fill:#141C36,stroke:#2DE2FF,stroke-width:3px,color:#F3F6FF
+classDef dec fill:#FFB547,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef good fill:#3DDC97,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef kill fill:#FF4FD8,stroke:#141C36,stroke-width:3px,color:#141C36
+classDef money fill:#8B5CF6,stroke:#141C36,stroke-width:3px,color:#F3F6FF
+classDef ext fill:#FFFFFF,stroke:#141C36,stroke-width:3px,color:#141C36
